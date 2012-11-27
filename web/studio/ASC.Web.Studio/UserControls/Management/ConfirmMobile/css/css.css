@@ -1,0 +1,105 @@
+﻿#error
+{
+    display:none;
+    width:510px;
+}
+
+.btn 
+{
+    margin-top:20px;
+}
+
+#sendAuthCode
+{
+    width:550px;text-align:center;
+}
+a.baseLinkButton:hover
+{
+    padding:0 !importent;
+    height:29px;
+}
+#sendAuthCode .label,
+#putAuthCode .label
+{
+    margin: 0px 0 40px 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+#putAuthCode .label
+{
+    margin-bottom:20px;
+}
+
+#sendAuthCode .help_center
+{
+    float:none;
+}
+#sendAuthCode .help_center .linkDescribe 
+{
+    
+    margin: 2px 0 -4px 8px;
+}
+
+#sendAuthCode .phoneLabel
+{
+    width:400px; text-align:left;margin:0 auto;
+}
+#sendAuthCode #studio_phone
+{
+    width: 360px;
+}
+
+#sendAuthCode .send,
+#putAuthCode .send
+{
+    margin-top: 7px;padding-right:40px;padding-left:40px;
+}
+#putAuthCode .again
+{
+    margin-left: 0; margin-top: 10px; padding-right: 30px; padding-left: 30px;
+}
+#putAuthCode
+{
+    width: 550px; text-align: center; 
+}
+
+#putAuthCode .again
+{
+    position: absolute;
+    left: 243px;
+    top: -4px;
+    width: 82px;
+}
+#putAuthCode #studio_phone_authcode
+{
+    width:360px;
+}
+
+#putAuthCode .label .noise
+{
+    font-weight:bold;
+}
+
+#putAuthCode .check
+{
+    width: 400px;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+#putAuthCode .check #studio_phone_keepUser
+{
+    margin: 0 5px 0 0;float:left;
+}
+#putAuthCode #GreetingBlock
+{
+    width:392px;
+    text-align:left;
+}
+
+
+#answerPhoneFormat
+{
+    text-align:left;
+}

@@ -1,0 +1,441 @@
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+/*headers*/
+/* >> The Magnificent CLEARFIX << */
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix
+{
+    display: inline-block;
+}
+* html .clearfix
+{
+    height: 1%;
+}
+/* Hides from IE-mac \*/
+.clearfix
+{
+    display: block;
+}
+
+.lab
+{
+    color: #a1ceed;
+}
+
+.toc
+{
+    padding: 0;
+    margin-left: 20px;
+    list-style: none;
+}
+
+ul code { background-color: #F4F8F9;}
+code
+{
+    background-color: #fff;
+}
+
+.treeview a
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #0082B9;
+}
+
+.treeview li  
+{
+    padding: 3px 0 6px 23px;
+    color: #0082B9;
+    }
+
+.treeview .selected
+{
+    background-color: #0082B9;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding:5px 10px;
+    margin-left: -10px;
+    white-space: nowrap;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 150px;
+}
+
+.treeview li.collapsable {
+    background-position:0 10px;
+}
+
+.toc-separator
+{
+    clear: left;
+}
+
+.toc-separator span
+{
+    display: block;
+    background: #FFF;
+    float: left;
+}
+
+.toc-separator .line
+{
+    float: none;
+    height: 1px;
+    padding-top: 18px;
+    border-bottom: solid 1px #AAA;
+}
+
+/*param*/
+.parameter
+{
+    border-bottom: 1px solid #EEE;
+    padding: 8px 5px;
+}
+.parameter:first-child
+{
+    border-top: 1px solid #EEE;
+}
+.parameter:hover
+{
+    background-color: #F8F8F8;
+}
+.parameter .param
+{
+    display: block;
+    float: left;
+    width: 220px;
+    color: #333;
+    font-weight: bold;
+}
+.parameter .param span
+{
+    display: block;
+    color: #999;
+    font-weight: normal;
+}
+.parameter p
+{
+    margin-left: 220px;
+}
+
+pre
+{
+    padding: 0.5em;
+    margin: 1em 0;
+    border: 1px solid #CCC;
+    background-color: #F8F8F8;
+    color: #222;
+    line-height: 1.3;
+}
+
+span.bracket
+{
+    color: #090;
+    font-weight: normal;
+}
+a.param-name
+{
+    color: #36C;
+}
+
+.auth,.auth a {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    text-indent: -1000em;
+    line-height: 16px;
+}
+
+.auth
+{
+    background-image: url("sprite/sprite.png");
+    background-position: -10px -183px;
+}
+
+.tip {
+    cursor: pointer;
+}
+
+.logo
+{
+    background-image: url("sprite/sprite.png");
+    background-position: -10px -10px;
+    height:58px;
+    width:168px;
+    display:inline-block;
+    float:left;
+}
+
+.betta
+{
+    display:inline-block;
+    background-image: url("sprite/sprite.png");
+    background-position: -10px -88px;
+    height:32px;
+    width:17px;
+    float:left;
+    margin-left:5px;
+    }
+
+.dashboard .thumbnail
+{
+    text-align: center;
+}
+.topbar 
+{
+    height: 58px;
+}
+
+.aside
+{
+    width: 243px;
+    float: left;
+    margin-left: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.aside > ul {padding-left:10px;}
+
+.main
+{
+    width: 677px;
+    float: left;
+    margin-left: 20px;
+}
+
+.first
+{
+    margin-left: 0;
+}
+
+.highlite, .highlite:hover
+{
+    background-color: #dce7fd;
+}
+
+.footer
+{
+    background-color: #DEDFE1;
+    clear: both;
+    height: 42px;
+    margin-top: -68px;
+    min-width: 1022px;
+    position: relative;
+    padding-top: 26px;
+    border-top:none;
+    color: #555555;
+    font-size: 13px;
+    }
+    
+#container 
+{
+    margin-bottom: -68px;
+    min-height: 100%;
+    }    
+        
+body, html {
+    height: 100%;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+    width: 100%;
+    font-family:Arial;
+    background-color:#f4f8f9;
+}
+
+.header {
+    height:58px;
+    background-color:#1b5f90;
+    background-image:url('img/bg_header.png');
+    background-repeat:repeat-x;    
+    }
+    
+.header .pull-left 
+{
+    margin-top:10px;
+    }    
+    
+.header .pull-left input 
+{
+    height:26px;
+    background-color:#fff;
+    width:656px;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    font-size:14px;
+    border:1px solid transparent;
+    }    
+    
+.header .pull-left .search    
+{
+    background-image: url("sprite/sprite.png");
+    background-position: -10px -140px;
+    background-repeat: no-repeat;
+    height: 23px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    width: 23px;
+    }
+
+.topbar .header .pull-left input:-moz-placeholder {color:#9a9a9a;}   
+
+.topbar .header .pull-left input::-webkit-input-placeholder { color:#9a9a9a;}
+
+ /*Internal pages*/
+ 
+ #main 
+ {
+     margin-top:85px;
+     font-size:14px;
+     padding-bottom: 100px;
+     }   
+     
+*:first-child+html #main { padding-top:85px;}
+ 
+#main p {font-size:14px;} 
+ 
+.toc-separator span 
+{
+    background-color:transparent;
+    }
+
+.alert-message.block-message 
+{
+    background-color: #fff;
+    border-color: #dae5eb;
+    margin-left:10px;
+    text-shadow:none;
+}
+
+.aside .treeview.help li {padding-left:0;}
+
+h1,h2,h3,h4{color:#0082b9;}
+
+h1 {font-size: 25px;}
+h2{font-size: 21px;}
+
+pre{background-color:#fff;}
+
+.tabs > li.active > a 
+{
+    background-color: #0082b9;
+    border-color: #00577b;
+    color: #fff;
+}
+
+.tabs > li > a 
+{
+    border: 1px solid #dae5eb;
+    background-color:#fff;
+    color:#0082b9;
+}
+
+.btn.info, .alert-message.info 
+{
+    background-color: #439bdd;
+    background-image:none !important;
+    border-color: #0082b9;
+    padding:14px;
+    margin-left:10px;
+    text-shadow:none;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#439bdd', endColorstr='#439bdd', GradientType=0);
+}
+
+.btn.info, .alert-message.warning 
+{
+    padding:14px;
+    margin-left:10px;
+    text-shadow:none;
+}
+
+.zebra-striped tbody tr:nth-child(2n) td 
+{
+    background-color: #fff;
+}
+
+thead  
+{
+    background-color: #fff;
+}
+
+table 
+{
+    border: 1px solid #dae5eb;
+}
+
+table a {color:#0082B9;}
+
+h2.toc-separator {color:Black;}
+
+li {color:Black;}
+ul.tabs>li>a {text-decoration:none;}
+a  {color: #0082B9;text-decoration:underline;}
+a:hover{color: #0082B9;text-decoration:none;}
+
+.expandable>a, .collapsable>a {text-decoration:none;}
+
+a.BackToTop 
+{
+    height:25px; 
+    width:103px; 
+    background-color: #439BDD;
+    bottom: 53px; 
+    right:0; 
+    position:absolute;
+    color:#fff;
+    border:1px solid #0082B9;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;    text-align:center;
+    padding-top:6px;
+    display:block;
+    text-decoration:none;
+    cursor:pointer;
+    font-size:14px;
+    border-bottom:none;    
+    border-color:#16639b;
+    background-image:-khtml-gradient(linear, left top, left bottom, from(#53a8e9), to(#2382c6));
+    background-image:-moz-linear-gradient(top, #53a8e9, #2382c6);
+    background-image:-ms-linear-gradient(top, #53a8e9, #2382c6);
+    background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #53a8e9), color-stop(100%, #2382c6));
+    background-image:-webkit-linear-gradient(top, #53a8e9, #2382c6);
+    background-image:-o-linear-gradient(top, #53a8e9, #2382c6);
+    background-image:linear-gradient(top, #53a8e9, #2382c6);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#53a8e9', endColorstr='#2382c6', GradientType=0);
+    }
+    
+.treeview li.expandable 
+{
+    background-image: url("sprite/sprite.png");
+    background-position: -6px -211px;
+}    
+
+.treeview .hitarea { margin-left: -25px;}
+
+.parameter:first-child {
+    border-top: 1px solid #dfdfdf;
+}
+.parameter {
+    border-bottom: 1px solid #dfdfdf;
+    }
+
+.topbar input,
+.topbar input:hover {color:#000;}

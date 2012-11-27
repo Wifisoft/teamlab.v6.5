@@ -1,0 +1,46 @@
+﻿#studio_premiumStubDialog
+{
+    display:none; 
+}
+
+#premiumStubContant
+{    
+}
+
+#premiumStubContant .description
+{
+    margin-top:3px;
+    padding-bottom:15px;
+}
+
+#premiumStubContant ul
+{
+    padding:0;
+    margin:0;
+}
+
+#premiumStubContant ul li
+{
+    background-image:url('img/feature.gif');
+    background-repeat:no-repeat;
+    list-style-type:none;
+    margin-bottom:15px;
+    padding-left:40px;
+}
+
+#premiumStubContant ul li .title
+{
+    font-weight:bold;
+}
+
+#premiumStubBtn
+{    
+    margin-top:20px;
+}
+
+#premiumStubBtn .learnMore
+{
+    margin-left:30px;
+    padding-top:10px;
+    float:left;
+}

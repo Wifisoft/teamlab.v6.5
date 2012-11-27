@@ -1,0 +1,169 @@
+﻿/*******************************************************************************
+Cases.aspx
+*******************************************************************************/
+#casesCustomFieldsList
+{
+    clear: both;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+#casesCustomFieldsList dt, #casesCustomFieldsList dd{
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#casesCustomFieldsList dt{
+    text-align: right;
+    width: 140px;
+    float: left;
+    clear:left;
+}
+#casesCustomFieldsList dd {
+    margin-left: 150px;
+    text-align: left;
+    width: auto;
+}
+#casesCustomFieldsList dd > div
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#casesCustomFieldsList dt.headerExpand, #casesCustomFieldsList dt.headerCollapse, #casesCustomFieldsList dd.underHeaderBase{
+    width: 100%;
+    text-align: left;
+}
+#casesCustomFieldsList dd.underHeaderBase {
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+#crm_caseMakerDialog dl dt{
+    margin: 15px 0 7px;
+}
+#crm_caseMakerDialog .requiredField .headerPanelSmall{
+    margin: 5px 0 7px;
+}
+
+#crm_caseMakerDialog dl dd {
+    clear: both;
+    position: relative;
+}
+
+#membersCasesSelectorsContainer > div{
+    margin-bottom: 4px;
+    position: relative;
+}
+#membersCasesSelectorsContainer .delete_member {
+    background: url("../images/delete_small.png") no-repeat scroll left center transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    margin: 2px;
+    position: absolute;
+    right: -25px;
+    top: 0;
+    width: 16px;
+}
+#membersCasesSelectorsContainer .add_new_member{
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+/*******************************************************************************
+ListCasesView.aspx
+*******************************************************************************/
+#caseList
+{
+    min-height: 400px;
+    padding-top:10px;
+}
+#caseFilterContainer, #emptyContentForCasesFilter, #tableForCasesNavigation
+{
+    display: none;
+}
+#caseButtonsPanel
+{
+    display: none;
+    margin-bottom: 15px;
+}
+#divForCasesPager
+{
+    display: inline-block;
+    clear: right;
+}
+#totalCasesOnPage
+{
+    margin-right: 20px;
+}
+#simpleCasesPageNavigator
+{
+    display: block;
+    float: right;
+    height: 21px;
+    margin-top: -23px;
+}
+#simpleCasesPageNavigator a
+{
+   font-size: 11px;
+}
+#simpleCasesPageNavigator a.pagerPrevButtonCSSClass
+{
+    margin-right: 0;
+}
+#simpleCasesPageNavigator a.pagerNextButtonCSSClass
+{
+    margin-left: 0;
+}
+/*******************************************************************************
+CasesDetailsView.aspx
+*******************************************************************************/
+
+#addCaseParticipantButton
+{
+    display: none;
+    height: 50px;
+}
+#emptyCaseParticipantPanel
+{
+    display: none;
+}
+#caseParticipantPanel
+{
+    display: none;
+    margin-bottom: 14px;
+    margin-top: -5px;
+    width: 400px;
+}
+
+#openCase, #closeCase{
+    border-bottom: 1px dotted;
+    cursor: pointer;
+    position: relative;
+    margin: 0 0 10px 30px;
+    text-decoration: none;
+}
+
+#openCase:after{
+    background: url( "../images/open_case.png" ) repeat scroll 0 0 transparent;
+    content: "";
+    cursor: pointer;
+    display: block;
+    height: 14px;
+    left: -18px;
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    width: 14px;
+}
+#closeCase:after{
+    background: url( "../images/end_case.png" ) repeat scroll 0 0 transparent;
+    content: "";
+    cursor: pointer;
+    display: block;
+    height: 14px;
+    left: -18px;
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    width: 14px;
+}

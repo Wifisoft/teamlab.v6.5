@@ -1,0 +1,47 @@
+﻿
+div.userProfileCard{}
+div.userProfileCard span.link{display:inline-block; text-decoration:underline; font-size:12px; cursor:pointer !important;}
+div.userProfileCard span.link:hover{text-decoration:none;}
+div.userProfileCard div.additionInfo{width:auto; float:left;}
+div.userProfileCard div.additionInfo div.userPhoto{border: solid 1px #e6e6e8;}
+div.userProfileCard div.additionInfo ul.info{margin:3px 0 0; padding:0; list-style:none; border-top:1px solid #D1D1D1;}
+div.userProfileCard div.additionInfo ul.info li.field{border-bottom:1px solid #D1D1D1; height:26px; line-height:26px; margin:0;}
+div.userProfileCard div.additionInfo ul.info li.field.contact{background-image:url(./images/status_offline.png); background-position:5px center; background-repeat:no-repeat;}
+div.userProfileCard div.additionInfo ul.info li.field.contact span{padding-left:25px;}
+div.userProfileCard div.additionInfo ul.info li.field.contact.online{background-image:url(./images/status_online.png); background-position:5px center; background-repeat:no-repeat;}
+div.userProfileCard div.additionInfo ul.info li.field.talk{background-image:url(./images/messages_user.png); background-position:5px center; background-repeat:no-repeat; padding-left:25px;}
+div.userProfileCard div.additionInfo ul.info li.field img{border:0;}
+div.userProfileCard div.additionInfo ul.info li.field a{display:inline-block;}
+div.userProfileCard div.additionInfo ul.info li.field span{display:block; height:100%; padding:0 0 0 10px; cursor:default;}
+
+div.userProfileCard div.userInfo{margin:0 0 0 230px; clear:right;}
+div.userProfileCard div.userInfo table.info{margin:0; padding:0; border:0; border-collapse:collapse;}
+div.userProfileCard div.userInfo table.info tr.field{}
+div.userProfileCard div.userInfo table.info tr.field td{margin:0; padding:8px 0; border:0; border-collapse:collapse;width:auto;}
+div.userProfileCard div.userInfo table.info tr.field td.name{white-space:nowrap; text-align:right;}
+div.userProfileCard div.userInfo table.info tr.field td.social{padding-top:17px;}
+div.userProfileCard div.userInfo table.info tr.field td.value{padding-left:20px; text-align:left;max-width: 600px; word-wrap: break-word;}
+div.userProfileCard div.userInfo table.info tr.field td.value div.row{border-top:1px solid #D1D1D1;width:100%;height:1px;}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact a, div.userProfileCard div.userInfo table.info tr.field td.value.contact span{height:18px; line-height:18px; padding:0 0 0 25px; background:none left center no-repeat; outline:none; display:inline-block;}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .aim{background-image:url(./images/sc_aim.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .primarymobile{background-image:url(./images/sc_mobile_key.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .mail{background-image:url(./images/sc_mail.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .facebook{background-image:url(./images/sc_facebook.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .livejournal{background-image:url(./images/sc_livejournal.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .myspace{background-image:url(./images/sc_myspace.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .yahoo{background-image:url(./images/sc_yahoo.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .jabber{background-image:url(./images/sc_jabber.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .skype{background-image:url(./images/sc_skype.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .twitter{background-image:url(./images/sc_twitter.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .blogger{background-image:url(./images/sc_blogger.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .msn{background-image:url(./images/sc_msn.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .icq{background-image:url(./images/sc_icq.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .gtalk{background-image:url(./images/sc_gtalk.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .gbuzz{background-image:url(./images/sc_gbuzz.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .gmail{background-image:url(./images/sc_gmail.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .phone{background-image:url(./images/sc_phone.png);}
+div.userProfileCard div.userInfo table.info tr.field td.value.contact .mobphone{background-image:url(./images/sc_mobile.png);}
+div.userProfileCard div.userInfo table.info tr.field td div.hint{padding:10px 0 0 0;text-align:left;}
+div.userProfileCard div.userInfo table.info tr.field td.social .help_center { float: right;}
+div.userProfileCard div.userInfo table.info tr.field td.social .help_center .linkDescribe {margin: 0 9px 0 8px;}
+

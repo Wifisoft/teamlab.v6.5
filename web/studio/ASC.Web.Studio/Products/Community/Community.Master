@@ -1,0 +1,44 @@
+﻿<%@ Assembly Name="ASC.Web.Community" %>
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Masters/BaseTemplate.master" CodeBehind="Community.Master.cs" Inherits="ASC.Web.Community.CommunityMasterPage" %>
+<%@ Import Namespace="ASC.Web.Community.Resources" %>
+<%@ Register TagPrefix="ucc" Namespace="ASC.Web.Studio.UserControls.Common.WhatsNew" Assembly="ASC.Web.Studio" %>
+<%@ Assembly Name="ASC.Common" %>
+<%@ Assembly Name="ASC.Core.Common" %>
+<%@ Import Namespace="ASC.Core" %>
+<%@ Register Assembly="ASC.Web.Studio" Namespace="ASC.Web.Studio.Controls.Users" TagPrefix="ascwc" %>
+
+<asp:Content ID="HeaderContent" ContentPlaceHolderID="HeaderContent" runat="server">     
+    <asp:ContentPlaceHolder runat="server" ID="CommunityPageHeader"></asp:ContentPlaceHolder>
+    <ucc:feedcontrol runat="server" title="Teamlab Community" AutoFill="true" ></ucc:feedcontrol>
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="TopContent" runat="server" ID="TopContent">
+    <asp:PlaceHolder ID="_topBannerZoneHolder" runat="server"></asp:PlaceHolder>
+    <asp:PlaceHolder ID="_topNavigatorPlaceHolder" runat="server"></asp:PlaceHolder>
+</asp:Content>
+
+<asp:Content ID="TitleContent" ContentPlaceHolderID="TitleContent" runat="server">
+        <div style="height:20px;"> </div>
+        <asp:ContentPlaceHolder id="CommunityTitleContent" runat="server">
+        </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="PageContent" ContentPlaceHolderID="PageContent" runat="server">        
+    <asp:PlaceHolder id="_contentHolder" runat="server"></asp:PlaceHolder>
+    <asp:ContentPlaceHolder id="CommunityPageContent" runat="server">
+    </asp:ContentPlaceHolder> 
+    <asp:ContentPlaceHolder ID="phOnlineUsers" runat="server" />
+    <asp:ContentPlaceHolder ID="phVisitedUsers" runat="server" />
+</asp:Content>
+
+<asp:Content ID="SidePanel" ContentPlaceHolderID="SidePanel" runat="server">   
+    <asp:PlaceHolder id="_navigationHolder" runat="server"></asp:PlaceHolder>    
+    <asp:PlaceHolder id="_underProfileZoneHolder" runat="server"></asp:PlaceHolder>
+    <asp:PlaceHolder id="_sideHolder" runat="server"></asp:PlaceHolder>
+    <asp:ContentPlaceHolder runat="server" ID="CommunitySidePanel">            
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="FooterContent" ContentPlaceHolderID="FooterContent" runat="server">    
+    <asp:PlaceHolder runat="server" ID="_bottomNavigatorPlaceHolder"></asp:PlaceHolder>
+</asp:Content>

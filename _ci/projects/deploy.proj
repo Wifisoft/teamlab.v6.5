@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Deploy">
+  <UsingTask AssemblyFile="..\msbuild\MSBuild.Community.Tasks.dll" TaskName="MSBuild.Community.Tasks.XmlUpdate" />
+  <UsingTask AssemblyFile="..\msbuild\MSBuild.Community.Tasks.dll" TaskName="MSBuild.Community.Tasks.Xml.XmlMassUpdate" />
+  <PropertyGroup>
+    <Version>6.5</Version>
+    <RootDir>..\..\</RootDir>
+    <WebStudioDir>$(RootDir)web\studio\ASC.Web.Studio\</WebStudioDir>
+    <MobileDir>$(RootDir)web\studio\ASC.Web.Mobile\</MobileDir>
+    <ApiDir>$(RootDir)web\api\Api.Host\</ApiDir>
+    <OutDir>$(RootDir)_ci\deploy\$(Version)\</OutDir>
+    <SQLite3>$(RootDir)redistributable\third-party\db\sqlite\sqlite3</SQLite3>
+    <DeployTo Condition=" '$(DeployTo)' == '' ">localhost</DeployTo>
+    <Community Condition=" '$(Community)' == ''      ">1</Community>
+    <PM Condition=" '$(PM)' == ''             ">1</PM>
+    <Files Condition=" '$(Files)' == ''          ">1</Files>
+    <CRM Condition=" '$(CRM)' == ''            ">1</CRM>
+    <Tools Condition=" '$(Tools)' == ''          ">0</Tools>
+    <Mobile Condition=" '$(Mobile)' == ''         ">0</Mobile>
+    <Api Condition=" '$(Api)' == ''            ">0</Api>
+    <Talk Condition=" '$(Talk)' == ''           ">1</Talk>
+    <Mail Condition=" '$(Mail)' == ''           ">0</Mail>
+    <Organizer Condition=" '$(Organizer)' == ''      ">0</Organizer>
+    <Quicklinks Condition=" '$(Quicklinks)' == ''     ">0</Quicklinks>
+    <Todo Condition=" '$(Todo)' == ''           ">0</Todo>
+    <Calendar Condition=" '$(Calendar)' == ''       ">1</Calendar>
+  </PropertyGroup>
+  <ItemGroup>
+    <ServiceFiles Include="$(RootDir)redistributable\third-party\log4net\log4net.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\third-party\db\sqlite\System.Data.SQLite.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\third-party\db\mysql\MySql.Data.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\third-party\Microsoft\AntiXss\HtmlSanitizationLibrary.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\third-party\SharpZipLib\ICSharpCode.SharpZipLib.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\third-party\HtmlAgilityPack\HtmlAgilityPack.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\asc\ASC.Common.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\asc\ASC.Core.Common.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\asc\TeamLabSvc.exe" />
+    <ServiceFiles Include="$(RootDir)_ci\additionals\TeamLabSvc.exe.Config" />
+    <ServiceFiles Include="$(RootDir)redistributable\asc\ASC.Data.Storage.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\asc\ASC.Data.Backup.dll" />
+    <ServiceFiles Include="$(RootDir)redistributable\asc\ASC.Data.Backup.Restore.exe" />
+    <JabberFiles Include="$(RootDir)redistributable\asc\ASC.Xmpp.Core.dll" />
+    <JabberFiles Include="$(RootDir)redistributable\asc\ASC.Xmpp.Common.dll" />
+    <JabberFiles Include="$(RootDir)redistributable\asc\ASC.Xmpp.Server.dll" />
+    <JabberFiles Include="$(RootDir)redistributable\asc\ASC.Xmpp.Host.dll" />
+    <JabberFiles Include="$(RootDir)module\ASC.Jabber\ASC.Xmpp.Server\crossdomain.xml" />
+    <IndexFiles Include="$(RootDir)redistributable\asc\ASC.FullTextIndex.dll" />
+    <IndexFiles Include="$(RootDir)redistributable\third-party\Lucene.Net\Lucene.Net.dll" />
+    <IndexFiles Include="$(RootDir)redistributable\third-party\Lucene.Net\Lucene.Net.Contrib.Snowball.dll" />
+    <NotifyFiles Include="$(RootDir)redistributable\asc\ASC.Notify.dll" />
+    <NotifyFiles Include="$(RootDir)redistributable\third-party\Amazon\AWSSDK.dll" />
+    <WebHostFiles Include="$(RootDir)redistributable\asc\ASC.Web.Host.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebStudioIncludeFiles Include="$(WebStudioDir)**\*.*" Exclude="$(WebStudioDir)**\.svn\**\*.*" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\Community\**\*.*" Condition=" '$(Community)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\Projects\**\*.*" Condition=" '$(PM)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\Files\**\*.*" Condition=" '$(Files)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\Tools\**\*.*" Condition=" '$(Tools)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\CRM\**\*.*" Condition=" '$(CRM)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\talk\**\*.*" Condition=" '$(Talk)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\organizer\**\*.*" Condition=" '$(Organizer)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\quicklinks\**\*.*" Condition=" '$(Quicklinks)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\mail\**\*.*" Condition=" '$(Mail)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\todo\**\*.*" Condition=" '$(Todo)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\calendar\**\*.*" Condition=" '$(Calendar)' != '1' " />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\Data\**\*.*" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\obj\**\*.*" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\bin\*.pdb" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\bin\*.xml" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\*.cs" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\*.csproj" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\*.sln" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\*.suo" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\*.user" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)**\Thumbs.db" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Common.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Core.Common.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Data.Storage.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Data.Backup.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.FullTextIndex.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Notify.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Mail.*" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Xmpp.*" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Web.Core.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Web.Studio.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Web.Controls.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\**\ASC.Web.Controls.resources.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.FederatedLogin.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ASC.Thrdparty.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\TMResourceData.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\**\bin\ASC.FullTextIndex.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\**\bin\TMResourceData.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\AjaxControlToolkit.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\AjaxPro.2.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\FredCK.FCKeditorV2.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\FUA.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\NVelocity.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\System.Web.Extensions.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\System.Web.Extensions.Design.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\System.Data.SQLite.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\MySql.Data.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\log4net.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\NUnit.Framework.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\HtmlAgilityPack.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\ICSharpCode.SharpZipLib.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\Microsoft.*.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\DotNetOpenAuth.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\DotNetOpenAuth.ApplicationBlock.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\Facebook.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\HtmlAgilityPack.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)addons\**\bin\HtmlAgilityPack.dll" />
+    <WebStudioExcludeFiles Include="$(WebStudioDir)Products\**\bin\Facebook.dll" />
+    <WebStudioFiles Include="@(WebStudioIncludeFiles)" Exclude="@(WebStudioExcludeFiles)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Mobile)' == '1'">
+    <MobileIncludeFiles Include="$(MobileDir)**\*.*" Exclude="$(MobileDir)**\.svn\**\*.*" />
+    <MobileExcludeFiles Include="$(MobileDir)**\obj\**\*.*" />
+    <MobileExcludeFiles Include="$(MobileDir)**\bin\*.pdb" />
+    <MobileExcludeFiles Include="$(MobileDir)**\bin\*.xml" />
+    <MobileExcludeFiles Include="$(MobileDir)**\*.cs" />
+    <MobileExcludeFiles Include="$(MobileDir)**\*.csproj" />
+    <MobileExcludeFiles Include="$(MobileDir)**\*.sln" />
+    <MobileExcludeFiles Include="$(MobileDir)**\*.suo" />
+    <MobileExcludeFiles Include="$(MobileDir)**\*.user" />
+    <MobileExcludeFiles Include="$(MobileDir)**\Thumbs.db" />
+    <MobileFiles Include="@(MobileIncludeFiles)" Exclude="@(MobileExcludeFiles)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Api)' == '1'">
+    <ApiIncludeFiles Include="$(ApiDir)**\*.*" Exclude="$(ApiDir)**\.svn\**\*.*" />
+    <ApiExcludeFiles Include="$(ApiDir)**\obj\**\*.*" />
+    <ApiExcludeFiles Include="$(ApiDir)**\bin\*.pdb" />
+    <ApiExcludeFiles Include="$(ApiDir)**\bin\*.xml" />
+    <ApiExcludeFiles Include="$(ApiDir)**\*.cs" />
+    <ApiExcludeFiles Include="$(ApiDir)**\*.csproj" />
+    <ApiExcludeFiles Include="$(ApiDir)**\*.sln" />
+    <ApiExcludeFiles Include="$(ApiDir)**\*.suo" />
+    <ApiExcludeFiles Include="$(ApiDir)**\*.user" />
+    <ApiExcludeFiles Include="$(ApiDir)**\Thumbs.db" />
+    <ApiExcludeFiles Include="$(ApiDir)data\**\*.*" />
+    <ApiFiles Include="@(ApiIncludeFiles)" Exclude="@(ApiExcludeFiles)" />
+  </ItemGroup>
+  <Target Name="Deploy">
+    <Message Text="Deploy parameters:" />
+    <Message Text="   Community = $(Community)" />
+    <Message Text="   Projects = $(PM)" />
+    <Message Text="   Files = $(Files)" />
+    <Message Text="   CRM = $(CRM)" />
+    <Message Text="   Tools = $(Tools)" />
+    <Message Text="   Mail = $(Mail)" />
+    <Message Text="   Talk = $(Talk)" />
+    <Message Text="   Organizer = $(Organizer)" />
+    <Message Text="   Quicklinks = $(Quicklinks)" />
+    <Message Text="   Todo = $(Todo)" />
+    <RemoveDir Directories="$(OutDir)" ContinueOnError="true" />
+    <Copy SourceFiles="@(ServiceFiles)" DestinationFiles="@(ServiceFiles-&gt;'$(OutDir)Service\%(Filename)%(Extension)')" />
+    <Copy SourceFiles="$(RootDir)redistributable\third-party\db\sqlite\x86\SQLite.Interop.dll" DestinationFolder="$(OutDir)Service\x86" />
+    <Copy SourceFiles="$(RootDir)redistributable\third-party\db\sqlite\x64\SQLite.Interop.dll" DestinationFolder="$(OutDir)Service\x64" />
+    <Copy SourceFiles="@(JabberFiles)" DestinationFiles="@(JabberFiles-&gt;'$(OutDir)Service\Jabber\%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(IndexFiles)" DestinationFiles="@(IndexFiles-&gt;'$(OutDir)Service\Index\%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(NotifyFiles)" DestinationFiles="@(NotifyFiles-&gt;'$(OutDir)Service\Notify\%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(WebHostFiles)" DestinationFiles="@(WebHostFiles-&gt;'$(OutDir)Service\Web\%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(WebStudioFiles)" DestinationFiles="@(WebStudioFiles-&gt;'$(OutDir)WebStudio\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy Condition="'$(Mobile)' == '1'" SourceFiles="@(MobileFiles)" DestinationFiles="@(MobileFiles-&gt;'$(OutDir)Mobile\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy Condition="'$(Api)' == '1'" SourceFiles="@(ApiFiles)" DestinationFiles="@(ApiFiles-&gt;'$(OutDir)Api\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Message Text="Change configuration files for $(DeployTo)." />
+    <CallTarget Targets="ChangeConfigs" Condition=" '$(DeployTo)' != 'localhost' " />
+    <Message Text="Create SQLite Databases." />
+    <CallTarget Targets="CreateSQLiteDatabases" />
+    <Copy SourceFiles="..\additionals\permissions.bat" DestinationFolder="$(OutDir)" Condition=" '$(DeployTo)' != 'localhost' " />
+  </Target>
+  <Target Name="ChangeConfigs">
+    <CreateItem Include="$(OutDir)WebStudio\*.config">
+      <Output ItemName="ConfigurationFiles" TaskParameter="Include" />
+    </CreateItem>
+    <CreateItem Include="@(ConfigurationFiles)" Condition="Exists('..\additionals\private\%(FileName).config.substitutions.xml')">
+      <Output ItemName="ConfigFilesWithSubstitutions" TaskParameter="Include" />
+    </CreateItem>
+    <XmlMassUpdate ContentFile="%(ConfigFilesWithSubstitutions.FullPath)" SubstitutionsFile="..\additionals\private\%(ConfigFilesWithSubstitutions.FileName).config.substitutions.xml" ContentRoot="/" SubstitutionsRoot="/configuration/substitutions/$(DeployTo)" />
+    <XmlMassUpdate ContentFile="$(OutDir)WebStudio\addons\talk\web.config" SubstitutionsFile="..\additionals\private\Web.Talk.Config.Substitutions.xml" ContentRoot="/configuration" SubstitutionsRoot="/configuration/substitutions/$(DeployTo)" />
+    <XmlMassUpdate Condition=" '$(Mobile)' == '1' " ContentFile="$(OutDir)Mobile\web.log4net.config" SubstitutionsFile="..\additionals\private\Web.log4net.Config.Substitutions.xml" ContentRoot="/" SubstitutionsRoot="/configuration/substitutions/$(DeployTo)" />
+    <XmlMassUpdate Condition=" '$(Api)' == '1' " ContentFile="$(OutDir)Api\web.log4net.config" SubstitutionsFile="..\additionals\private\Web.log4net.Config.Substitutions.xml" ContentRoot="/" SubstitutionsRoot="/configuration/substitutions/$(DeployTo)" />
+    <XmlMassUpdate ContentFile="$(OutDir)Service\TeamLabSvc.exe.config" SubstitutionsFile="..\additionals\private\TeamLabSvc.exe.Config.Substitutions.xml" ContentRoot="/" SubstitutionsRoot="/configuration/substitutions/$(DeployTo)" />
+    <XmlMassUpdate Condition="'$(Mobile)' == '1'" ContentFile="$(OutDir)Mobile\Web.config" SubstitutionsFile="..\additionals\private\Web.Mobile.Config.Substitutions.xml" ContentRoot="/" SubstitutionsRoot="/configuration/substitutions/$(DeployTo)" />
+  </Target>
+  <Target Name="CreateSQLiteDatabases">
+    <MakeDir Directories="$(OutDir)Data\Db\" ContinueOnError="true" />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Core.db3                      &lt;    $(RootDir)SQL_Scripts\SQLite\Core.sql        " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Core.db3                      &lt;    $(RootDir)SQL_Scripts\SQLite\Core.Data.sql   " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\WebStudio.db3                 &lt;    $(RootDir)SQL_Scripts\SQLite\WebStudio.sql   " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\WebStudio.db3                 &lt;    $(RootDir)SQL_Scripts\SQLite\WebStudio.Data.sql   " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Resources.db3                 &lt;    $(RootDir)SQL_Scripts\SQLite\Resource.sql    " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Resources.db3                 &lt;    $(RootDir)SQL_Scripts\res_cultures.sql    " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Resources.db3                 &lt;    $(RootDir)SQL_Scripts\res_files.sql    " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Resources.db3                 &lt;    $(RootDir)SQL_Scripts\res_data.sql    " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Files.db3                     &lt;    $(RootDir)SQL_Scripts\SQLite\Files.sql   " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Projects.db3                  &lt;    $(RootDir)SQL_Scripts\SQLite\Projects.sql   " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Crm.db3                       &lt;    $(RootDir)SQL_Scripts\SQLite\Crm.sql   " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Community.db3                 &lt;    $(RootDir)SQL_Scripts\SQLite\Community.sql   " />
+    <Exec Command="   $(SQLite3)       $(OutDir)Data\Db\Calendar.db3                  &lt;    $(RootDir)SQL_Scripts\SQLite\Calendar.sql   " />
+  </Target>
+</Project>

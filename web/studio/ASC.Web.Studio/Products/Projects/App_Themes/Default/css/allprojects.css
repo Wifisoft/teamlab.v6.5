@@ -1,0 +1,332 @@
+﻿.addProject
+{
+	display:inline-block;
+	background-image: url("../images/plus.png");
+	background-position:left;
+	background-repeat:no-repeat;
+	padding: 3px 0px 3px 20px;
+	margin-bottom:18px;
+}
+#showNextProjects {
+    color: #9CA0A4;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px 0 0 31px;
+    text-decoration: underline;
+	display: none;
+}
+
+#showNextProjects:hover {
+    color: #1A6DB3;
+}
+.loaderProjects {
+    background: url("../images/loader16.gif") no-repeat scroll 2px 7px transparent;
+    height: 25px;
+    padding-left: 25px;
+	display: none;
+}
+#emptyFilter{ display: none;}
+#escNoProj { display: block;}
+#escNoProj .projectsEmpty {
+	border: none;
+	text-decoration: underline !important;
+}
+/*-----------------*/
+#tableListProjectsContainer {
+	min-height: 400px;
+	height: auto;
+}
+#tableListProjectsContainer .noProject {
+	display: none;
+	color: #ccc;
+	font-size: 20px;
+	padding-left: 15px;
+}
+#tableListProjects
+{
+	margin-top:18px;
+	margin-bottom: 20px;
+	display: none;
+}
+#tableListProjects tbody tr:hover {
+	background-color: #F2F2F2;
+}
+
+#tableListProjects tr.openList {
+	background-color: #F2F2F2;
+}
+#tableListProjects tr th
+{
+	font-weight:normal;
+	padding-bottom: 8px;
+}
+
+#tableListProjects tr td 
+{
+	height: 40px;
+	border-top: 1px solid #D1D1D1;
+}
+
+#tableListProjects tr .action
+{
+	width:40px;
+}
+#tableListProjects tr .nameProject
+{
+	padding-left: 10px;
+	width:560px;
+}
+#tableListProjects tr.noActiveProj .nameProject a, #tableListProjects tr.noActiveProj,
+#tableListProjects tr.noActiveProj .responsible .userLink,
+#tableListProjects tr.noActiveProj .responsible .userLink.my,
+#tableListProjects tr.noActiveProj .responsible .participants,
+#tableListProjects tr.noActiveProj .milestoneCount a,
+#tableListProjects tr.noActiveProj .taskCount a{
+	color: #83888D;
+}
+#tableListProjects tr.noActiveProj .responsible span{
+	border-bottom-color: #83888D;
+}
+#tableListProjects tr .nameProject span.private {
+	background:url('../images/lock.png') no-repeat;
+	margin-right: 3px;
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+}
+#tableListProjects tr .nameProject a
+{
+	font-weight:bold;
+    font-size: 12px;
+    font-family: Arial;
+    color: #333333;
+	display:block;
+	float: left;
+	width: 520px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-decoration: none;
+}
+#tableListProjects tr .nameProject a:hover {
+	text-decoration: underline;
+}
+#tableListProjects tr td.nameProject span.description {
+	display: none;
+}
+#tableListProjects tr .milestoneCount, #tableListProjects tr .lastActivity
+{
+	width:70px;
+	text-align: center;
+}
+#tableListProjects tr .taskCount
+{
+	width:70px;	
+	text-align: center;
+}
+#tableListProjects tr .milestoneCount a,
+#tableListProjects tr .taskCount a{ 
+	color: #333333;
+	text-decoration: none;
+}
+#tableListProjects tr .milestoneCount a:hover,
+#tableListProjects tr:hover .milestoneCount a,
+#tableListProjects tr .taskCount a:hover,
+#tableListProjects tr:hover .taskCount a {
+	text-decoration: underline;
+ }
+#tableListProjects tr .responsible
+{
+	width:170px;
+}
+#tableListProjects tr td.responsible .userLink {
+	display: block;
+	float: left;
+	max-width: 130px;
+	height: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+	border-bottom: 1px dotted transparent;
+	background-image: none;
+	padding-left: 0;
+	cursor: pointer;
+}
+#tableListProjects tr:hover td.responsible .userLink,
+#tableListProjects tr:hover td.responsible .userLink:hover {
+	border-bottom: 1px dotted;
+}
+#tableListProjects tr td.responsible .userLink.my {
+	color: #666;
+	font-weight: bold;
+}
+
+#tableListProjects tr td.responsible a.participants
+{
+	margin-right:8px;
+	color:#666;
+	float: right;
+	text-decoration: none;
+}
+#tableListProjects tr:hover td.responsible a.participants {
+	text-decoration: underline;
+}
+/*-----describe panel--------*/
+div#projectDescrPanel {
+  min-width:300px;
+  max-width:420px;
+  line-height: 20px;
+  xoverflow:hidden;
+}
+div#projectDescrPanel div.popup-corner {
+  left:10px;
+}
+div#projectDescrPanel .param {
+  float:left;
+  height:20px;
+  padding-right:12px;  
+  color:#83888d;
+  width:100px;  
+  white-space: nowrap;
+}
+div#projectDescrPanel .param div {height:20px;}
+div#projectDescrPanel .value {
+  height:20px;
+  display: table;
+  color:#333333;
+}
+div#projectDescrPanel .created {
+  display: inline-block;
+}
+div#projectDescrPanel .created .value {
+  display: inline-block;
+  margin-right:15px;
+  white-space: nowrap;
+  line-height: 20px;
+}
+div#projectDescrPanel .value .descrValue {
+  max-height: 60px;
+  max-width:185px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  
+}
+div#projectDescrPanel .value a.readMore{
+    text-decoration: underline;
+    display: none;
+}
+div#taskDescrPanel .value a.readMore:hover {
+    text-decoration: none;
+}
+/*------status combobox-------*/
+.openList{}
+.statusContainer {
+	position: relative;
+}
+
+.statusContainer span[id^='statusCombobox_'] 	
+{
+  display: block;
+  width:38px;
+  height:22px;
+  margin:3px 0px 3px 5px;
+  text-align: center;  
+}
+.statusContainer span[id^='statusCombobox_'] span {
+	margin-top: 1px;
+	display: block;
+	width: 14px;
+	height: 16px;
+	margin-left: 3px;
+	background-repeat: no-repeat;
+	background-position: 0 2px;
+}
+.statusContainer span[id^='statusCombobox_'] .open {
+	background-image: url('../images/status_open_active_new.png');
+}
+.statusContainer span[id^='statusCombobox_'] .closed {
+	background-image: url('../images/status_closed_new.png');
+}
+.statusContainer span[id^='statusCombobox_'] .paused {
+	background-image: url('../images/status_paused.png');
+}
+
+div.statusContainer span[id^='statusCombobox_'][class="canEdit"] {
+	background: white url('../images/tr_off.png') no-repeat 24px 9px;
+	border: 1px solid  #d1d1d1;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer;
+}
+
+.statusContainer span[id^='statusCombobox_'][class="canEdit"]:hover,
+tr:hover .statusContainer span[id^='statusCombobox_'][class="canEdit"],
+tr.openList div.statusContainer span[id^='statusCombobox_'][class="canEdit"]
+{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#cecece');
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -moz-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -ms-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+    background: url('../images/tr_on.png') no-repeat 24px 9px, -webkit-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -webkit-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -o-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	border-color: #a8a8a8;
+}
+
+span[id^='statusCombobox_'][class="noEdit"] {
+	border: 1px solid  transparent;
+	background-image: none;
+	background-color: transparent;
+}
+span[id^='statusCombobox_'][class='noEdit']:hover {
+	background-image: none;
+	background-color: transparent;
+	border:1px solid transparent;
+}
+
+
+/*---New---*/
+.comboboxContainer {
+	display: none;
+	min-width: 115px;
+	position: absolute;
+	z-index: 101;
+}
+
+.comboboxContainer .containerTop {
+	display: block;
+	background: url('../images/popup-corner.png') no-repeat;
+	width: 9px;
+	height: 5px;
+	left: 20px;
+	top: 6px;
+	position: absolute;
+	z-index: 1;
+}
+.comboboxContainer #statusList {
+	list-style-type: none;
+	border: 1px solid #8E908F;
+	margin-top: 10px;
+	background-color: #fff;
+	padding: 10px 10px 10px 10px;
+}
+
+.comboboxContainer #statusList li {
+	display: block;
+	padding:6px 5px 5px 24px;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+	cursor: pointer;
+}
+.comboboxContainer #statusList li.current{}
+.comboboxContainer #statusList li:hover {
+	background-color: #DDEAF4;
+}
+.comboboxContainer #statusList li.open {
+	background-image: url('../images/status_open_active_new.png');
+}
+.comboboxContainer #statusList li.closed {
+	background-image: url('../images/status_closed_new.png');
+}
+.comboboxContainer #statusList li.paused {
+	background-image: url('../images/status_paused.png');
+}

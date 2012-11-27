@@ -1,0 +1,18 @@
+﻿
+span.link.bigLinkButton, a.bigLinkButton, span.link.bigLinkButton:visited, a.bigLinkButton:visited, span.link.bigLinkButton:active, a.bigLinkButton:active{display:inline-block; background:#0E4969 url(imagescss/bg-button-blue02.png) left top repeat-x; border:solid 1px #105777; height:40px; line-height:40px; padding:0 25px; font-size:18px; white-space:nowrap; text-decoration:none; color:#FFF; font-weight:normal; cursor:pointer;}
+
+span.link.bigLinkButton:hover, a.bigLinkButton:hover{background-position:left bottom;}
+
+.talkAreaWithBottomBorder{border-bottom:1px solid #D1D1D1; padding-bottom:30px; padding-top:30px;}
+
+.talkScreenshots{margin-left:27px; float:left;}
+
+.talkDesctopClientImage, .talkTrillianClientImage, .talkMirandaIMClientImage, .talkPidginClientImage, .talkPsiClientImage{height:16px; margin-bottom:10px; padding-left:25px; padding-top:4px;}
+
+.talkScreenshot{padding-top:15px; width:215px;}
+
+.talkTrillianClientImage, .talkMirandaIMClientImage, .talkPidginClientImage, .talkPsiClientImage{background:transparent left center no-repeat;}
+.talkTrillianClientImage{background-image:url(imagescss/icon-trillian16.png);}
+.talkMirandaIMClientImage{background-image:url(imagescss/icon-miranda16.png);}
+.talkPidginClientImage{background-image:url(imagescss/icon-pidgin16.png);}
+.talkPsiClientImage{background-image:url(imagescss/icon-psi16.png);}

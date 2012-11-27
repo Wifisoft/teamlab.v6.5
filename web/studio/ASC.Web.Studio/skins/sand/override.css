@@ -1,0 +1,24 @@
+﻿body
+{
+    background-color:#E3E0D9;
+}
+
+.tintMedium
+{
+    background-color:#F8F7F0;
+}
+
+#studioFooter
+{
+    background: #959189 url('imgcss/footer_bg.gif') bottom repeat-x;
+}
+span.footerCopyright,
+.footerMenu
+{
+    color:#EEECE7 !important;
+}
+
+#linkAllProjectsCombobox, #linkAllProjectsCombobox:visited
+{
+    color:#EFEBE3 !important;
+}

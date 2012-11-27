@@ -1,0 +1,5 @@
+﻿
+div#talkStartSplash div.container{width:480px; margin-left:-240px;}
+
+div#talkDialogsContainer div.dialog div.content div.body div.field label.hint{left:85px;}
+div#talkDialogsContainer div.dialog div.content div.body div.field div.textfield{margin-left:85px;}

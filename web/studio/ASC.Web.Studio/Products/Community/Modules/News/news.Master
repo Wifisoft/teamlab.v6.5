@@ -1,0 +1,46 @@
+﻿<%@ Assembly Name="ASC.Web.Community.News" %>
+<%@ Import Namespace="ASC.Web.Community.News" %>
+<%@ Import Namespace="ASC.Web.Community.News.Code" %>
+<%@ Import Namespace="ASC.Web.Community.News.Code.DAO" %>
+<%@ Import Namespace="ASC.Web.Community.News.Resources" %>
+<%@ Import Namespace="ASC.Data.Storage" %>
+
+<%@ Master Language="C#" MasterPageFile="~/Products/Community/Community.master" AutoEventWireup="true"
+    CodeBehind="news.master.cs" Inherits="ASC.Web.Community.News.NewsMaster" %>
+
+<%@ Register Assembly="ASC.Web.Controls" Namespace="ASC.Web.Controls" TagPrefix="ascwc" %>
+<%@ Register TagPrefix="ascshc" Namespace="ASC.Web.Studio.Controls.Common" Assembly="ASC.Web.Studio" %>
+<%@ Register Namespace="ASC.Web.Community.News.Controls" Assembly=" ASC.Web.Community.News"
+    TagPrefix="ucc" %>
+<%@ Register TagPrefix="ascwc" Namespace="ASC.Web.Studio.Controls.Common" Assembly="ASC.Web.Studio" %>
+   
+<asp:Content ID="ContentHeader" ContentPlaceHolderID="CommunityPageHeader" runat="server">
+
+    <link href="<%=ASC.Web.Core.Utility.Skins.WebSkin.GetUserSkin().GetAbsoluteWebPath("/products/community/modules/news/app_themes/<theme_folder>/newsstylesheet.css")%>" rel="stylesheet" type="text/css" />
+    <script language="javascript" src="<%=WebPath.GetPath("/products/community/modules/news/js/news.js")%>" type="text/javascript"></script>
+
+    
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="SideContent" ContentPlaceHolderID="CommunitySidePanel" runat="server">
+    <asp:PlaceHolder ID="PanelManage" runat="server" Visible="false">
+        <ascshc:SideActions ID="NewsActions" runat="Server">
+            <ascshc:NavigationItem Name="" id="editNews" runat="Server" />
+            <ascshc:NavigationItem id="editPoll" runat="Server" />
+        </ascshc:SideActions>
+    </asp:PlaceHolder>
+    <ascshc:SideNavigator ID="NewsNavigator" runat="Server">
+        <ascshc:NavigationItem id="niTypeAllNews" runat="Server" />
+    </ascshc:SideNavigator>
+    <ascwc:SideRecentActivity id="sideRecentActivity" runat="server" />
+</asp:Content>
+<asp:Content ID="PageContent" ContentPlaceHolderID="CommunityPageContent" runat="server">
+    <ascwc:Container ID="MainNewsContainer" runat="server">
+        <header></header>
+        <body>
+            <asp:ContentPlaceHolder ID="NewsContents" runat="server">
+            </asp:ContentPlaceHolder>
+        </body>
+    </ascwc:Container>
+</asp:Content>

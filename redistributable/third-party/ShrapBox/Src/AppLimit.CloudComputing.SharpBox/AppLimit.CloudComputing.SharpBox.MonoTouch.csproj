@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27DD9940-1A83-4A49-86A6-79167C8C31F8}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AppLimit.CloudComputing.SharpBox.MonoTouch</RootNamespace>
+    <AssemblyName>AppLimitCloudComputingSharpBoxMonoTouch</AssemblyName>
+    <MtouchSdkVersion>3.1.3</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;MONOTOUCH</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <DefineConstants>MONOTOUCH</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;MONOTOUCH</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>true</MtouchDebug>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>MONOTOUCH</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="CloudStorage.cs" />
+    <Compile Include="ICloudDirectoryEntry.cs" />
+    <Compile Include="ICloudFileSystemEntry.cs" />
+    <Compile Include="ICloudStorageConfiguration.cs" />
+    <Compile Include="ICloudStorageProvider.cs" />
+    <Compile Include="Exceptions\SharpBoxErrorCodes.cs" />
+    <Compile Include="Exceptions\SharpBoxException.cs" />
+    <Compile Include="ICloudStorageAccessToken.cs" />
+    <Compile Include="Exceptions\ErrorMessages.Designer.cs" />
+    <Compile Include="CloudStorageAsyncFunctions.cs" />
+    <Compile Include="ICloudStorageAsyncInterface.cs" />
+    <Compile Include="Common\AsyncObjectRequest.cs" />
+    <Compile Include="Common\AsyncResultEx.cs" />
+    <Compile Include="Common\Diagnostics\StopWatch.cs" />
+    <Compile Include="Common\IO\PathHelper.cs" />
+    <Compile Include="Common\IO\StreamHelper.cs" />
+    <Compile Include="Common\Net\HttpUtilityEx.cs" />
+    <Compile Include="Common\Net\Json\JsonDateTimeConverter.cs" />
+    <Compile Include="Common\Net\Json\JsonHelper.cs" />
+    <Compile Include="Common\Net\oAuth\OAuthService.cs" />
+    <Compile Include="Common\Net\oAuth\Context\OAuthConsumerContext.cs" />
+    <Compile Include="Common\Net\oAuth\Context\OAuthServiceContext.cs" />
+    <Compile Include="Common\Net\oAuth\Impl\OAuthBase.cs" />
+    <Compile Include="Common\Net\oAuth\Impl\OAuthStreamParser.cs" />
+    <Compile Include="Common\Net\oAuth\Impl\OAuthUrlGenerator.cs" />
+    <Compile Include="Common\Net\oAuth\Token\OAuthToken.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxConfiguration.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxStorageProvider.cs" />
+    <Compile Include="Common\Net\Web\WebRequestExecutedEventArgs.cs" />
+    <Compile Include="Common\Net\Web\WebRequestExecutingEventArgs.cs" />
+    <Compile Include="Common\Net\Web\WebRequestManager.cs" />
+    <Compile Include="Common\Net\Web\WebRequestMethods.cs" />
+    <Compile Include="Common\Net\Web\WebRequestMultipartFormDataSupport.cs" />
+    <Compile Include="Common\Net\Web\WebRequestService.cs" />
+    <Compile Include="Common\Net\Web\WebRequestStream.cs" />
+    <Compile Include="Common\Net\Web\WebRequestStreamHelper.cs" />
+    <Compile Include="Common\Net\Web\WebResponseStream.cs" />
+    <Compile Include="StorageProvider\API\GenericHelper.cs" />
+    <Compile Include="StorageProvider\API\IStorageProviderService.cs" />
+    <Compile Include="StorageProvider\API\IStorageProviderSession.cs" />
+    <Compile Include="StorageProvider\BaseObjects\BaseDirectoryEntry.cs" />
+    <Compile Include="StorageProvider\BaseObjects\BaseFileEntry.cs" />
+    <Compile Include="StorageProvider\BaseObjects\BaseFileEntryDataTransfer.cs" />
+    <Compile Include="StorageProvider\BaseObjects\BaseFileEntryDownloadStream.cs" />
+    <Compile Include="StorageProvider\GenericCurrentCredentials.cs" />
+    <Compile Include="StorageProvider\GenericNetworkCredentials.cs" />
+    <Compile Include="StorageProvider\GenericStorageProvider.cs" />
+    <Compile Include="StorageProvider\GenericStorageProviderService.cs" />
+    <Compile Include="StorageProvider\DropBox\Logic\DropBoxRequestParser.cs" />
+    <Compile Include="StorageProvider\DropBox\Logic\DropBoxStorageProviderService.cs" />
+    <Compile Include="StorageProvider\DropBox\Logic\DropBoxStorageProviderSession.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxAccountInfo.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxQuotaInfo.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxStorageProviderTools.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxToken.cs" />
+    <Compile Include="ICloudFileDataTransfer.cs" />
+    <Compile Include="Common\Net\Web\Dav\DavService.cs" />
+    <Compile Include="StorageProvider\WebDav\WebDavConfiguration.cs" />
+    <Compile Include="StorageProvider\WebDav\WebDavStorageProvider.cs" />
+    <Compile Include="StorageProvider\WebDav\Logic\WebDavRequestParser.cs" />
+    <Compile Include="StorageProvider\WebDav\Logic\WebDavStorageProviderService.cs" />
+    <Compile Include="StorageProvider\WebDav\Logic\WebDavStorageProviderSession.cs" />
+    <Compile Include="StorageProvider\CIFS\CIFSConfiguration.cs" />
+    <Compile Include="StorageProvider\CIFS\CIFSStorageProvider.cs" />
+    <Compile Include="StorageProvider\CIFS\Logic\CIFSStorageProviderService.cs" />
+    <Compile Include="StorageProvider\CIFS\Logic\CIFSStorageProviderSession.cs" />
+    <Compile Include="CloudStorageLimits.cs" />
+    <Compile Include="CloudStorageComfortFunctions.cs" />
+    <Compile Include="..\AssemblyInfo.cs">
+      <Link>AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ICloudStoragePublicAPI.cs" />
+    <Compile Include="Common\Net\Web\WebRequestManagerNullProxy.cs" />
+    <Compile Include="StorageProvider\API\GenericStorageProviderFactory.cs" />
+    <Compile Include="Common\Net\HttpException.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxBaseTokenInformation.cs" />
+    <Compile Include="Common\Net\Web\Ftp\FtpService.cs" />
+    <Compile Include="Common\Net\Web\Http\HttpService.cs" />
+    <Compile Include="StorageProvider\Ftp\FtpConfiguration.cs" />
+    <Compile Include="StorageProvider\Ftp\FtpStorageProvider.cs" />
+    <Compile Include="StorageProvider\Ftp\Logic\FtpStorageProviderService.cs" />
+    <Compile Include="StorageProvider\Ftp\Logic\FtpStorageProviderSession.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxRequestToken.cs" />
+    <Compile Include="StorageProvider\BoxNet\BoxNetConfiguration.cs" />
+    <Compile Include="StorageProvider\BoxNet\BoxNetStorageProvider.cs" />
+    <Compile Include="StorageProvider\BoxNet\Logic\BoxNetStorageProviderService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Exceptions\ErrorMessages.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="StorageProvider\DropBox\Logic\" />
+  </ItemGroup>
+</Project>

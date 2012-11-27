@@ -1,0 +1,38 @@
+﻿.ftUnknown, .ftArchive, .ftVideo, .ftAudio, .ftImage, .ftSpreadsheet, .ftPresentation, .ftDocument
+{
+	background-position: 7px center !important;
+	background-repeat:no-repeat;
+}
+
+.ftUnknown
+{
+	background-image:url('../wikiimages/filetype/file_na.png');
+}
+.ftArchive
+{
+	background-image:url('../wikiimages/filetype/file_zip.png');
+}
+.ftVideo
+{
+	background-image:url('../wikiimages/filetype/file_mpg.png');
+}
+.ftAudio
+{
+	background-image:url('../wikiimages/filetype/file_sound.png');
+}
+.ftImage
+{
+	background-image:url('../wikiimages/filetype/file_image.png');
+}
+.ftSpreadsheet
+{
+	background-image:url('../wikiimages/filetype/file_xls.png');
+}
+.ftPresentation
+{
+	background-image:url('../wikiimages/filetype/file_ppt.png');
+}
+.ftDocument
+{
+	background-image:url('../wikiimages/filetype/file_txt.png');
+}

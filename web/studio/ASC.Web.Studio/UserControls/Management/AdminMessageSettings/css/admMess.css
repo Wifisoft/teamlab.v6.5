@@ -1,0 +1,18 @@
+﻿#admMessSettingsTitle
+{
+    margin-top: 20px;
+padding-left: 15px;
+padding-bottom: 5px;
+border-top: none;
+border-right: none;
+border-left: none;
+}
+
+#studio_admMessSettings {
+padding: 20px 15px;
+}
+
+#studio_admMessSettings input {
+float: left;
+margin: 0px 3px 0 0px;
+}

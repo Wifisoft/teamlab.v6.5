@@ -1,0 +1,120 @@
+﻿.poll_clearFix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+/* MSIE6- */
+* html .poll_clearFix {
+    height: 1%;
+}
+
+/* MSIE7- */
+.poll_clearFix {
+    zoom: 1;
+}
+.poll_clearFix {
+    display:block;
+}
+
+a.poll_customButton, a.poll_customButton:visited
+{
+    display:inline-block;   
+    background-position:bottom;
+    text-decoration:none;  
+    background-color:#ffffff;
+    border-left:1px solid #dfdfdf;
+    border-top:1px solid #dfdfdf;    
+    border-right:1px solid #afb2b7;    
+    border-bottom:1px solid #afb2b7;
+    color:#000000;
+    font-weight:normal;
+    cursor:pointer;    
+    font-size:11px;
+    padding:2px 4px;
+    text-align:center;
+}
+a.poll_customButton:hover
+{ 
+    display:inline-block;  
+    background-position:bottom;
+    text-decoration:none;  
+    background-color:#ffffff;
+    border-left:1px solid #afb2b7;
+    border-top:1px solid #afb2b7;    
+    border-right:1px solid #afb2b7;    
+    border-bottom:1px solid #afb2b7;  
+    color:#ef5b08;
+    font-weight:normal;
+    cursor:pointer;    
+    font-size:11px;
+    padding:2px 4px;
+    text-align:center;
+}
+
+.poll_variantLabel
+{
+	top:4px;	
+	position:relative;
+}
+
+.poll_variantDiv
+{
+	height:16px;
+	padding-bottom:12px;
+}
+
+.poll_header
+{
+	font-size:16px;
+	color:#373737;
+	font-weight:bold;
+	margin:5px 0px 11px 0px;
+}
+.poll_textEdit
+{
+	border:solid 1px #c7c7c7;
+    font-family:Arial;
+    font-size:12px;
+    height:16px;
+}
+
+.poll_statisticBar
+{
+	background-color:#353A40;
+	float:left;
+	height:4px;
+	overflow:hidden;
+	margin: 7px 8px 11px 0px;
+	
+}
+
+.poll_liaderBar
+{
+	background-color:#155F82;	
+	float:left;
+	height:4px;
+	overflow:hidden;
+	margin: 7px 8px 11px 0px;
+}
+
+.poll_VariantName
+{
+	font-size:13px;
+	padding-bottom:6px;
+}
+
+.poll_CountText
+{
+	color:#666668;
+	font-size:13px;
+	font-family:Arial;
+	margin-left:8px;
+}
+
+.poll_CountText #strong
+{
+	color:#333A40;
+	font-weight:bold;
+}

@@ -1,0 +1,94 @@
+#addTaskPanel .taskProcess {
+  height:25px;
+  padding-left:25px;
+  background: url('../images/loader16.gif') no-repeat 2px 7px;
+}
+#addTaskPanel label.priority.high {
+  line-height:14px;
+  margin-right:12px;
+  cursor:pointer;
+  vertical-align:top;
+  background: url('../images/high_priority.png') no-repeat 4px -1px;
+  padding-left:22px;
+}
+#addTaskPanel label.priority span {
+  display:inline-block;
+  width:9px;
+  height:9px;
+  border:1px solid #8E908F;
+  margin:0 4px 0 6px;
+}
+#addTaskPanel .priority.high span {background-color: #E46850;}
+#addTaskPanel .priority.medium span {background-color: #f4f4f4;}
+#addTaskPanel .priority.low span {background-color: #c3c3c3;}
+#addTaskPanel .pm-fieldRight input {
+  vertical-align: middle;
+  margin-bottom: auto;
+  padding:0;
+  margin:0;
+}
+#addTaskPanel #taskDeadline {
+  cursor:pointer;
+  background-image: url("../images/calendar.gif");
+  background-position: 72px center;
+  background-repeat: no-repeat;
+  width: 83px;
+  text-align: left;
+  padding-left: 7px;
+}
+#addTaskPanel .pm-fieldRight input[type=radio] {
+  float:left;
+} 
+#addTaskPanel #fullFormUserList {
+  display:none;
+  margin-bottom:5px;
+  overflow:hidden;
+  width: 370px;
+}
+#addTaskPanel #fullFormUserList .user {
+    background: url("../images/profile.gif") no-repeat scroll left center transparent;
+    display: inline-block;
+    float: left;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 0 0 0 17px;
+    white-space: nowrap;
+    margin: 0 12px 0 0;
+}
+#addTaskPanel #fullFormUserList .user:hover {
+    background: url("../images/delete_small.png") no-repeat scroll left center transparent;
+    cursor:pointer;
+    text-decoration:underline;
+}
+#addTaskPanel .adduser {
+  background: url("../images/add_user.png") no-repeat left center transparent;
+  display:inline-block;
+  width:20px;
+  height:16px;  
+  float:left;
+}
+.fullformPopUp {
+  margin:16px 0 0 0;  
+}
+#addTaskPanel .notify label {
+  cursor:pointer;
+  padding-left:5px;
+}
+#addTaskPanel .infoPanel {display:none;padding: 10px 0 10px 30px;}
+#addTaskPanel .requiredFieldError input {border: 1px solid #cc0000;}
+
+#addTaskPanel .pm-headerLeft {width:130px; }
+#addTaskPanel .pm-fieldRight {width:360px;}
+#addtask_description {
+    min-height: 60px;
+    max-height: 400px;
+}
+#addTaskPanel #addtask_title {
+    font-family: Arial;
+    font-size: 12px;
+}
+#addTaskPanel .pm-headerLeft .requiredField {margin-top:-3px;}
+
+#taskProject, #taskProject option {
+	max-width: 250px;
+}

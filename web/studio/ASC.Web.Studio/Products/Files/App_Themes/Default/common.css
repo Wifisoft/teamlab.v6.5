@@ -1,0 +1,384 @@
+﻿/*******************************************************************************
+   CSS Reset
+*******************************************************************************/
+
+dl, dt, dd
+{
+    padding: 0px;
+    margin: 0px;
+}
+/*******************************************************************************
+*******************************************************************************/
+.beta {
+    color: #f00;
+}
+.comming_soon, div.comming_soon, .comming_soon div, .comming_soon a
+{
+    color: #888888 !important;
+    opacity: 0.5 !important;
+    background: white !important;
+    border: none !important;
+    cursor: wait !important;
+    display: none !important;
+}
+.blockDialog div.seporator
+{
+    border-top: 1px solid #D1D1D1;
+    margin: 10px 0;
+}
+.button-splitter
+{
+    padding: 0px 4px;
+}
+.select_action,
+.select_action a,
+.select_action input,
+.select_action span,
+.select_action div
+{
+    cursor: default !important;
+}
+.popupModal
+{
+    display: none;
+}
+.may-row-to.row-to
+{
+    background-color: #F9EEC2 !important;
+}
+.files_popup_win
+{
+    display:none;
+}
+/*******************************************************************************
+    files_action_panel
+*******************************************************************************/
+div.files_action_panel
+{
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    padding: 10px 15px 15px;
+    position: absolute;
+    z-index: 255;
+    
+    -moz-box-shadow: 0 0 8px #D1D1D1;
+    -webkit-box-shadow: 0 0 8px #D1D1D1;
+    box-shadow: 0 0 8px #D1D1D1;
+}
+div.files_action_panel ul
+{
+	list-style: none;
+	margin: 0;
+    padding: 0;
+}
+div.files_action_panel div.popup-corner,
+div.treeViewPanel div.popup-corner,
+#entryTooltip div.popup-corner
+{
+    background: url("images/popup-corner.png") no-repeat;
+    width: 9px;
+    height: 6px;
+    margin-top: -15px;
+    position: absolute;
+    z-index: 261;
+}
+div.files_action_panel a
+{
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+div.files_action_panel a
+{
+	display: block;
+    padding: 5px;
+    border: 1px solid #FFF;
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+}
+div.files_action_panel.withIcon a
+{
+    padding-left: 30px;
+}
+div.files_action_panel a:hover
+{
+    background-color: #DDEAF4;
+}
+
+/*******************************************************************************
+     Searched documents styles
+*******************************************************************************/
+#searchedDocuments div.document
+{
+    border-left: none !important;
+    border-right: none !important;
+    margin-bottom: -1px !important;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+div.employeesSearch
+{
+    border-right: none;
+    border-left: none;
+    line-height: 18px;
+    margin:-1px;
+    padding: 5px 5px 5px 30px;
+}
+div.searchResults div.document
+{
+    min-height: 40px;
+    border-top:1px solid #d1d1d1;
+    padding:5px 10px;
+    overflow: hidden;
+}
+
+div.searchResults div.document div.body
+{
+    float: left;
+    margin-top: 3px;
+    max-width: 885px;
+    word-wrap: break-word;
+}
+
+div.searchResults div.document div.body div.textSmallDescribe
+{
+    color:#787878;
+    font-size:10px;
+    margin-top: 2px;
+}
+
+div.searchResults div.document div.adv
+{
+    float:right;
+    height: 100%;
+    line-height:40px;
+    color:#787878;
+}
+
+#searchedDocuments div.document div.icon, div.searchResults div.document div.icon
+{
+    vertical-align:middle;
+    float: left;
+    margin:0 10px 0 0;
+}
+span.separator
+{
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+/*******************************************************************************
+     Progress
+*******************************************************************************/
+
+div.files_progress_box
+{
+    background-color: White;
+    border: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 7px 7px 0 0;
+    -moz-border-radius: 7px 7px 0 0;
+    -webkit-border-radius: 7px 7px 0 0;
+    display: none;
+    margin-left: -200px;
+    overflow: hidden;
+    padding: 10px 30px 15px;
+    white-space: nowrap;
+}
+div.files_progress_box .headerBaseMedium
+{
+    overflow: hidden;
+    text-align: center;
+}
+div.files_progress_box div.progress_wrapper
+{
+    background-color: #6a6a6a;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    height: 20px;
+    margin: 5px 0px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+div.files_progress_box div.progress
+{
+    background: url("images/back-progress-big.png") repeat-x;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color:White;
+    height: inherit;
+    text-align: center;
+}
+div.files_progress_box span.percent
+{
+    position: relative;
+    top: -17px;
+    color: White;
+}
+/*******************************************************************************
+    Tree
+*******************************************************************************/
+
+div.treeViewPanel
+{
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    max-height: 520px;
+    max-width: 850px;
+    padding: 10px 15px 15px;
+    position: absolute;
+    z-index: 301;
+    
+    -moz-box-shadow: 0 0 8px #D1D1D1;
+    -webkit-box-shadow: 0 0 8px #D1D1D1;
+    box-shadow: 0 0 8px #D1D1D1;
+}
+div.treeViewPanel a
+{
+    color: #323232;
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    line-height: 16px;
+    margin: 1px 0;
+    padding: 3px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+div.treeViewPanel a:focus
+{
+    outline: none;
+}
+div.treeViewPanel a:hover
+{
+    background-color: #DDEAF4;
+}
+div.treeViewPanel a.selected
+{
+    background-color: #DDEAF4;
+}
+#files_treeViewPanelSelector li.access_read
+{
+    display:none !important;
+}
+.treeViewPanel .jstree-open > ul
+{
+    display: block;
+}
+.treeViewPanel .jstree-closed > ul
+{
+    display: none;
+}
+.treeViewPanel .jstree-icon
+{
+    background-color: transparent;
+    background-image: url("images/tree_action.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 12px;
+}
+.treeViewPanel .jstree-empty > .jstree-icon.expander
+{
+    visibility: hidden;
+}
+.treeViewPanel .jstree-open > .jstree-icon.expander
+{
+    background-position: -20px 0;
+}
+.treeViewPanel .jstree-closed > .jstree-icon.expander
+{
+    background-position: -2px 0;
+}
+.treeViewPanel .jstree-closed > .jstree-icon.expander.jstreeLoadNode
+{
+    background-image: url("images/loader_12.gif");
+    background-position: center;
+}
+.treeViewPanel a .jstree-icon
+{
+    background-position: -33px 0;
+    margin-right: 3px;
+    height: 16px;
+    width: 16px;
+}
+.treeViewPanel a .jstree-icon.myFiles
+{
+    background-image: url("images/myfiles.png");
+    background-position: center;
+}
+.treeViewPanel a .jstree-icon.corporateFiles
+{
+    background-image: url("images/corporatefiles.png");
+    background-position: center;
+}
+.treeViewPanel a .jstree-icon.shareformeFiles
+{
+    background-image: url("images/sharedforme.png");
+    background-position: center;
+}
+.treeViewPanel a .jstree-icon.projectFiles
+{
+    background-image: url("images/projectfiles.png");
+    background-position: center;
+}
+.treeViewPanel a .jstree-icon.trashFiles
+{
+    background-image: url("images/trash_container.png");
+    background-position: center;
+}
+.jstree
+{
+    max-height: 510px;
+    max-width: 800px;
+    overflow: auto;
+    padding: 5px 20px 5px 5px;
+}
+.jstree ul,
+.jstree li
+{
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.jstree li
+{
+    line-height: 18px;
+    margin-left: 18px;
+    min-height: 18px;
+    white-space: nowrap;
+}
+.jstree > ul > li
+{
+    margin-left: 0px;
+}
+
+/*******************************************************************************
+    Mobile
+*******************************************************************************/
+body.mobile #confirmRemoveList,
+body.mobile #files_overwrite_list
+{
+    max-height: none !important;
+}
+body.mobile div.treeViewPanel,
+body.mobile div.jstree
+{
+    max-height: none !important;
+    max-width: none !important;
+}
+body.mobile div.blockUI.blockOverlay
+{
+    min-width: 1000px;
+    width: 100%;
+}

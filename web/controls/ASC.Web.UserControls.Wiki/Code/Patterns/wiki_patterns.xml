@@ -1,0 +1,46 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <pattern id="1" name="new wiki page" contentType="html">
+        <subject resource="|subject_1|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_1|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+      </pattern>
+      <!--New Wiki Page Added-->
+      <pattern id="1_jabber" name="new wiki page" contentType="html">
+        <subject resource="|subject_1|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$PagePreview
+
+$URL</body>
+      </pattern>
+      <pattern id="2" name="edit wiki page" contentType="html">
+        <subject resource="|subject_2|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_2|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+      </pattern>
+      <!--Wiki Page Edited-->
+      <pattern id="2_jabber" name="edit wiki page" contentType="html">
+        <subject resource="|subject_2|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$PagePreview
+
+$URL</body>
+      </pattern>
+      <pattern id="3" name="new wiki page comment" contentType="html">
+        <subject resource="|subject_3|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_3|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+      </pattern>
+      <!--New Comment to Wiki Page-->
+      <pattern id="3_jabber" name="new wiki page comment" contentType="html">
+        <subject resource="|subject_3|ASC.Web.UserControls.Wiki.Code.Patterns.WikiPatternResource,ASC.Web.UserControls.Wiki" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$CommentBody
+
+$URL</body>
+      </pattern>
+    </patterns>
+  </block>
+</pt:catalog>

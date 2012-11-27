@@ -1,0 +1,144 @@
+﻿#wizard_users
+{
+}
+
+#wizard_users #userList
+{
+    
+}
+
+#wizard_users #userList .userItem .logo
+{
+    background: url(images/profile.gif) center left no-repeat;
+    width:15px;
+    padding:0 15px 0 0;
+}
+
+#wizard_users #userList tr.remove
+{
+    display:none;
+}
+
+#wizard_users #userList td
+{
+    height:25px;
+    
+}
+#wizard_users #userList .userItem .name
+{
+    padding:0 5px 0px 0;
+    width: 386px;
+}
+
+#wizard_users #userList .userItem .name .firstname, 
+#wizard_users #userList .userItem .name .lastname
+{
+    float:left;
+    width: 174px;
+    vertical-align:top;
+    overflow:hidden;
+    margin-right:8px;
+    position: relative;
+}
+#wizard_users #userList .userItem .name .lastname
+{
+    width: 196px;
+}
+
+#wizard_users #userList .userItem .name .firstname .data,
+#wizard_users #userList .userItem .name .lastname .data
+{
+    display: inline-block;white-space: nowrap;overflow: hidden
+}
+
+#wizard_users #userList .userItem .name .firstname .fade,
+#wizard_users #userList .userItem .name .lastname .fade
+{
+height: 20px;
+width: 25px;
+position: absolute;
+right: 0px;
+background-image: url('images/fade.png');
+}
+
+#wizard_users #userList .userItem .email
+{
+    padding:0 15px 0 0;
+    width:100px;
+}
+
+#wizard_users #userList .userItem td.remove
+{
+    width:18px;
+}
+
+#wizard_users #userList tr.userItem td.remove div
+{
+  width:100%;
+  height:100%;
+  background: url(images/trash_fu.png) center left no-repeat;
+  cursor:pointer;
+}
+
+#wizard_users #userList tr td.remove div
+{
+    display:none;
+}
+
+#wizard_users #userList tr td.mob div
+{
+    display:block;
+}
+
+#wizard_users #userList tr:hover td.remove div
+{
+    display:block;
+}
+
+#wizard_users #userList .userItem .incorrectValue
+{
+    color:Red;
+}
+
+#wizard_users .nameBox,#wizard_users .lastnameBox, #wizard_users .emailBox
+{
+    float: left;
+    margin-right:12px;
+    font-weight:bold;
+}
+
+#wizard_users #addUserBlock
+{
+    margin-top:6px;
+     border:none;
+}
+
+#wizard_users #addUserBlock .btn
+{
+    float:left;margin-top:16px;
+}
+
+#wizard_users #addUserBlock.bordered
+{
+    
+}
+
+#wizard_users .addUserBlock 
+{
+    margin:10px 0 0 0;    
+}
+
+#wizard_users .incorrectEmailBox
+{
+    border:1px solid red;
+}
+
+#wizard_users .addUserBlock .btn
+{
+    float:left;
+}
+
+#wizard_users .addUserBlock .info
+{
+    float:right;
+}

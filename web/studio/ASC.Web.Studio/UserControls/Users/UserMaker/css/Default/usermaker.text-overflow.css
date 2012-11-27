@@ -1,0 +1,8 @@
+﻿
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title,
+div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option {
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  -webkit-text-overflow:ellipsis;
+  -moz-binding:url(usermaker.text-overflow.xml#ellipsis);
+}

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+	<action actionID="new bookmark created" defaultPatternID="BookmarkCreatedID">
+		<sender senderName="messanger.sender" patternID="BookmarkCreatedID_jabber" />
+	</action>
+	<action actionID="new bookmark comment created" defaultPatternID="BookmarkCommentCreatedID">
+		<sender senderName="messanger.sender" patternID="BookmarkCommentCreatedID_jabber" />
+	</action>
+	<!--<action actionID="new bookmark for current tag created" defaultPatternID="TagBookmarkCreatedID"></action>-->
+</act:accordings>

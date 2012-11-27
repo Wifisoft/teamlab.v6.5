@@ -1,0 +1,148 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <BuildTargets  Condition=" '$(BuildTargets)' == ''  ">Build</BuildTargets>
+    <ASCDir>..\..\</ASCDir>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <!-- Core -->
+    <ProjectToBuild Include="$(ASCDir)common\ASC.Common\ASC.Common.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)common\ASC.Core.Common\ASC.Core.Common.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)common\ASC.Licensing\ASC.Licensing\ASC.Licensing.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)common\ASC.Data.Storage\ASC.Data.Storage.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)common\ASC.Data.Backup\ASC.Data.Backup.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)common\ASC.Data.Backup.Restore\ASC.Data.Backup.Restore.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)common\ASC.Notify.Textile\ASC.Notify.Textile.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\host\ASC.Web.Host\ASC.Web.Host.csproj "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.TeamLabSvc\ASC.TeamLabSvc\ASC.TeamLabSvc.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Feed\ASC.Feed.csproj"/>
+
+    <!-- Jabber -->
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Jabber\ASC.Xmpp.Core\ASC.Xmpp.Core.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Jabber\ASC.Xmpp.Common\ASC.Xmpp.Common.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Jabber\ASC.Xmpp.Server\ASC.Xmpp.Server.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Jabber\ASC.Xmpp.Host\ASC.Xmpp.Host.csproj"/>
+
+    <!-- Full Text Index -->
+    <ProjectToBuild Include="$(ASCDir)module\ASC.FullTextIndex\ASC.FullTextIndex\ASC.FullTextIndex.csproj"/>
+
+    <!-- Notify -->
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Notify\ASC.Notify\ASC.Notify.csproj"/>
+
+    <!-- Web -->
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Thrdparty\DotNetOpenAuth.ApplicationBlock\DotNetOpenAuth.ApplicationBlock-vs2008.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Thrdparty\ASC.Thrdparty\ASC.Thrdparty.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Thrdparty\ASC.FederatedLogin\ASC.FederatedLogin.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api\ASC.Api.Core.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)web\core\ASC.Web.Core\ASC.Web.Core.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\controls\ASC.Web.Controls\ASC.Web.Controls.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)dev_tools\TMResourceManager\Data\TMResourceData.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\ASC.Web.Studio.csproj"/>
+
+    <!-- Community -->
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Community\ASC.Web.Community.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\Blogs\ASC.Blogs.Core\ASC.Blogs.Core.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Community\Modules\Blogs\ASC.Web.Community.Blogs.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\Forum\ASC.Forum\ASC.Forum.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\controls\ASC.Web.UserControls.Forum\ASC.Web.UserControls.Forum.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Community\Modules\Forum\ASC.Web.Community.Forum.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\PhotoManager\ASC.PhotoManager.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Community\Modules\PhotoManager\ASC.Web.Community.PhotoManager.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Bookmarking\ASC.Bookmarking.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\controls\ASC.Web.UserControls.Bookmarking\ASC.Web.UserControls.Bookmarking.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Community\Modules\Bookmarking\ASC.Web.Community.Bookmarking.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Community\Modules\News\ASC.Web.Community.News.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\controls\ASC.Web.UserControls.Wiki\ASC.Web.UserControls.Wiki.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Community\Modules\Wiki\ASC.Web.Community.Wiki.csproj"/>
+
+    <!-- Files -->
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Files\ASC.Web.Files.csproj"/>
+
+    <!-- PM -->
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Projects\ASC.Projects.Core\ASC.Projects.Core.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Projects\ASC.Projects.Data\ASC.Projects.Data.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Projects\ASC.Projects.Engine\ASC.Projects.Engine.csproj"/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Projects\ASC.Web.Projects.csproj"/>
+
+    <!-- SocialMedia -->
+    <ProjectToBuild Include="$(ASCDir)web\controls\ASC.Web.UserControls.SocialMedia\ASC.Web.UserControls.SocialMedia.csproj"/>
+
+    <!-- Exists condition for open source build -->
+
+    <!-- CRM -->
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\CRM\ASC.Web.CRM.csproj" Condition=" Exists( '$(ASCDir)web\studio\ASC.Web.Studio\Products\CRM\' ) "/>
+
+    <!-- Tools -->
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Tools\ASC.Web.Tools.csproj" Condition=" Exists( '$(ASCDir)web\studio\ASC.Web.Studio\Products\Tools\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\Products\Tools\Modules\FoodManagement\ASC.Web.Tools.FoodManagement.csproj" Condition=" Exists( '$(ASCDir)web\studio\ASC.Web.Studio\Products\Tools\' ) "/>
+
+    <!-- Api -->
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Specific\ASC.Specific.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Employee\ASC.Api.Employee.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Blogs\ASC.Api.Blogs.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Photo\ASC.Api.Photo.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Bookmarks\ASC.Api.Bookmarks.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Events\ASC.Api.Events.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Forums\ASC.Api.Forums.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Documents\ASC.Api.Documents.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Projects\ASC.Api.Projects.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Settings\ASC.Api.Settings.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Calendar\ASC.Api.Calendar.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.CRM\ASC.Api.CRM.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Feed\ASC.Api.Feed.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Api\ASC.Api.Wiki\ASC.Api.Wiki.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Api\' ) "/>
+
+    <!-- Talk -->
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\addons\talk\ASC.Web.Talk.csproj" Condition=" Exists( '$(ASCDir)web\studio\ASC.Web.Studio\addons\talk\ASC.Web.Talk.csproj' ) "/>
+
+    <!-- Mail -->
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Mail\ASC.Mail.Core\Net\ASC.Mail.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Mail\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Mail.Aggregator\ASC.Mail.Aggregator\ASC.Mail.Aggregator.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Mail\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Mail.Aggregator\ASC.Mail.Aggregator.CollectionService\ASC.Mail.Aggregator.CollectionService.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Mail\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)module\ASC.Mail.Aggregator\ASC.Mail.Service\ASC.Mail.Service.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Mail\' ) "/>
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\addons\mail\ASC.Web.Mail.csproj" Condition=" Exists( '$(ASCDir)module\ASC.Mail\' ) "/>
+    
+    <!-- Calendar -->
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Studio\addons\calendar\ASC.Web.Calendar.csproj" Condition=" Exists( '$(ASCDir)web\studio\ASC.Web.Studio\addons\calendar\ASC.Web.Calendar.csproj' ) "/>
+
+    <!-- Mobile -->
+    <ProjectToBuild Include="$(ASCDir)web\studio\ASC.Web.Mobile\ASC.Web.Mobile.csproj" Condition=" Exists( '$(ASCDir)web\studio\ASC.Web.Mobile\ASC.Web.Mobile.csproj' ) "/>
+    
+    <!-- Thumbnail service -->
+    <ProjectToBuild Include="$(ASCDir)web\services\ASC.Thumbnail\ASC.Thumbnail.csproj" Condition=" Exists( '$(ASCDir)web\services\ASC.Thumbnail\ASC.Thumbnail.csproj' ) "/>
+    
+    <!-- Single Sign On service -->
+    <ProjectToBuild Include="$(ASCDir)web\services\ASC.Web.Login\Asc.Web.Login.csproj" Condition=" Exists( '$(ASCDir)web\services\ASC.Web.Login\Asc.Web.Login.csproj' ) "/>
+  </ItemGroup>
+
+  <Target Name="Build">
+    <Message Text="$(BuildTargets) projects:"/>
+    <Message Text="-  %(ProjectToBuild.Filename)%(ProjectToBuild.Extension)"/>
+    <Message Text="  "/>
+
+    <CreateItem Include="$(ASCDir)\_ci\msbuild\">
+      <Output ItemName="AlToolPath" TaskParameter="Include"/>
+    </CreateItem>
+
+    <Exec Command="taskkill /F /IM aspnet_wp.exe" IgnoreExitCode="true" ContinueOnError="true"/>
+    <Exec Command="taskkill /F /IM w3wp.exe" IgnoreExitCode="true" ContinueOnError="true" />
+
+    <MSBuild
+        Projects="@(ProjectToBuild)"
+        Targets="$(BuildTargets)"
+        Properties="Configuration=$(Configuration);AlToolPath=%(AlToolPath.FullPath);KillAsp=0"
+        RebaseOutputs="true"
+        StopOnFirstFailure="true"/>
+
+    <CreateItem Include="$(ASCDir)redistributable\asc\ASC.Api.*.dll;$(ASCDir)redistributable\asc\ASC.Specific.dll;$(ASCDir)redistributable\asc\ASC.Feed.dll">
+      <Output ItemName="ApiFiles" TaskParameter="Include"/>
+    </CreateItem>
+    <Copy
+      SourceFiles="@(ApiFiles)"
+      DestinationFolder="$(ASCDir)web\studio\ASC.Web.Studio\bin"/>
+  </Target>
+
+</Project>

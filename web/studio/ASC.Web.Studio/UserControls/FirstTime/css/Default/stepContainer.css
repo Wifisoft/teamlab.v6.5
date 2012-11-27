@@ -1,0 +1,135 @@
+﻿.studioLeftContent
+{
+    width:100%;
+}
+
+#steps
+{
+    margin:20px 0 0 0;
+}
+
+#steps .header
+{
+    background-color:#3187B0;
+    vertical-align:middle;
+    height:45px;
+    line-height: 45px;
+    padding: 0px 25px 0px 25px;
+}
+
+#steps .header
+{
+ text-shadow: #256787 0px 2px 2px
+}
+#steps .header .titleNumber
+{
+    float:left;
+    text-align: center;
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    padding-right:5px;
+    margin-left: 20px;
+}
+
+#steps .header .title
+{
+    float:left;
+    font-size:18px;
+    font-weight:normal;
+    color:#fff;
+}
+
+#steps .header .skip
+{
+    float:right;
+}
+
+#steps .stepBody
+{
+    margin:20px 25px 0px 45px;
+    
+}
+#steps .step0 .stepBody
+{
+    margin-top:0px;
+    padding-top:88px;
+}
+
+#steps .stepBody .title
+{
+    color:#666666;
+    font-size:20px;
+}
+
+#steps .step
+{
+    margin:20px 0 0 0;
+    border:1px solid #C9C9C9;
+}
+#steps .step .stepData
+{
+    background-color:#ffffff;
+    border-top:1px solid #C9C9C9;
+}
+
+#steps .step0 .stepData
+{
+    border-top:none;
+    background: url('images/clouds.png') top center no-repeat #ffffff;
+}
+
+#steps .footer
+{
+    padding: 35px 15px 22px 45px;
+}
+
+#steps .footer .btnBox
+{
+    margin-right:10px;
+    height:20px;
+    float:left;
+}
+
+#steps .footer .btnBox .baseLinkButton
+{
+    padding-right:50px;
+    padding-left:50px;
+}
+
+#steps .step2 .footer .btnBox .baseLinkButton
+{
+    padding-right:20px;
+    padding-left:20px;
+}
+
+#steps .skip a
+{
+    color:#fff;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+.okBox,.errorBox
+{
+    margin:10px 10px 0 10px;
+}
+
+#steps #wizard_OperationInfo0 .okBox,.errorBox
+{
+    margin:10px 10px 0 10px;
+}
+#steps #wizard_OperationInfo0
+{
+    padding:10px;
+}
+.stepBody .headertitle
+{
+    padding-top:10px;
+}
+
+.wizardButton
+{
+    margin-top:40px;
+    text-align:center;
+}

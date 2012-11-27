@@ -1,0 +1,35 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <!--New bookmark comment-->
+      <pattern id="BookmarkCommentCreatedID" name="new bookmark comment created" contentType="html">
+        <subject resource="|subject_BookmarkCommentCreatedID|ASC.Bookmarking.Patterns.BookmarkingPatternResource,ASC.Bookmarking" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_BookmarkCommentCreatedID|ASC.Bookmarking.Patterns.BookmarkingPatternResource,ASC.Bookmarking" />
+      </pattern>
+      <!--New bookmark comment-->
+      <pattern id="BookmarkCommentCreatedID_jabber" name="new bookmark comment created" contentType="html">
+        <subject resource="|subject_BookmarkCommentCreatedID|ASC.Bookmarking.Patterns.BookmarkingPatternResource,ASC.Bookmarking" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$CommentBody
+
+$BookmarkUrl</body>
+      </pattern>
+      <!--New bookmark-->
+      <pattern id="BookmarkCreatedID" name="new bookmark created" contentType="html">
+        <subject resource="|subject_BookmarkCreatedID|ASC.Bookmarking.Patterns.BookmarkingPatternResource,ASC.Bookmarking" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_BookmarkCreatedID|ASC.Bookmarking.Patterns.BookmarkingPatternResource,ASC.Bookmarking" />
+      </pattern>
+      <!--New bookmark-->
+      <pattern id="BookmarkCreatedID_jabber" name="new bookmark created" contentType="html">
+        <subject resource="|subject_BookmarkCreatedID|ASC.Bookmarking.Patterns.BookmarkingPatternResource,ASC.Bookmarking" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$BookmarkDescription
+
+$BookmarkUrl</body>
+      </pattern>
+    </patterns>
+  </block>
+</pt:catalog>

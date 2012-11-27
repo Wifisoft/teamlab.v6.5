@@ -1,0 +1,279 @@
+﻿.mainContainerClass > .containerHeaderBlock table td > div:last-child
+{
+	display: none;
+}
+
+#pageHeader
+{
+	margin-top: -12px;
+	margin-bottom: 23px;
+	overflow: auto;
+}
+
+#pageHeader .pageTitle
+{
+	float: left;
+    font-size: 24px;
+    color: #111111;
+}
+
+#pageHeader #TemplatesComboboxContainer
+{
+	float: right;
+	padding-top: 4px;
+	margin-right: 5px;
+}
+
+#pageHeader #TemplatesComboboxContainer .viewSwitcherItem
+{
+	padding: 0px;
+	margin-right: 4px;
+}
+
+#infoPanel
+{
+	display: none;
+	margin-top: -13px;
+	margin-bottom: 25px;
+}
+
+#infoPanel div
+{
+	background-color: #EEF6FD;
+    background-image: url("../images/info_16.gif");
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 10px 0 10px 35px;
+}
+
+.dottedHeader .headerPanel
+{
+	display: inline-block;
+	border-bottom: 1px dotted #3C4046;
+	cursor: pointer;
+}
+
+.dottedHeader .dottedHeaderContent
+{
+	display: none;
+}
+
+#projectTitleContainer
+{
+	margin-bottom: 17px;
+}
+
+#projectTitleContainer .inputTitleContainer
+{
+	float: left;
+	width: 730px;
+}
+
+#projectTitleContainer .followingCheckboxContainer
+{
+	padding-top: 2px;
+	margin-left: 755px;
+}
+
+#projectTitleContainer #followingProjectCheckbox
+{
+	float: left;
+	margin: 1px 0 0;
+    padding: 0;
+}
+
+#projectTitleContainer label
+{
+	padding-left: 5px;
+}
+
+#projectDescriptionContainer
+{
+	margin-bottom: 7px;
+}
+
+#projectDescriptionContainer textarea
+{
+	margin-bottom: 10px;
+	resize: vertical;
+}
+
+#projectManagerContainer
+{
+	margin-bottom: 14px;
+}
+
+#projectManagerSelector
+{
+	float: left;
+	margin-right: 15px;
+}
+
+#projectManagerContainer .notifyManagerContainer
+{
+	padding-top: 3px;
+}
+
+#notifyManagerCheckbox
+{
+	margin: 1px 0px 0px;
+	padding: 0px;
+	float: left;
+}
+
+#projectManagerContainer label
+{
+	padding-left: 5px;
+}
+
+#projectStatusContainer
+{
+	margin-top: 28px;
+	margin-bottom: 24px;
+}
+
+#projectStatusContainer .headerPanel
+{
+	margin-bottom: 7px;
+}
+
+#projectTeamContainer
+{
+	margin-bottom: 2px;
+}
+
+#projectParticipantsContainer
+{
+	display: none;
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+#projectParticipantsContainer table
+{
+	width: 925px;
+	border-collapse: collapse;
+	color: #9C9C9C;
+}
+
+#projectParticipantsContainer table.canedit tr:hover
+{
+	background-color: #ECECEC;
+}
+
+#projectParticipantsContainer table td
+{
+	padding: 5px 5px 5px 0px;
+}
+
+#projectParticipantsContainer table td.name
+{	
+	width: 295px;
+	padding-left: 20px;
+}
+
+#projectParticipantsContainer table td.name span
+{
+	color: #9C9C9C;
+	font-size: 12px;
+	display: inline-block;
+	max-width: 273px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#projectParticipantsContainer table td.department
+{
+	width: 340px;
+}
+
+#projectParticipantsContainer table td.department span
+{
+	display: inline-block;
+	max-width: 335px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#projectParticipantsContainer table td.title
+{
+	width: 225px;
+}
+
+#projectParticipantsContainer table td.title span
+{
+	display: inline-block;
+	max-width: 220px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#projectParticipantsContainer table td.delMember
+{
+	width: 20px;
+	padding: 5px 0px 5px 5px;
+}
+
+#projectParticipantsContainer table.canedit tr:hover td.delMember span
+{
+	display: block;
+}
+
+#projectParticipantsContainer table td.delMember span
+{
+	background: url("../images/trash_fu.png") no-repeat;
+	cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+	width: 12px;
+	height: 12px;
+	display: none;
+}
+
+#projectTagsContainer .textBigDescribe
+{
+	margin-bottom: 12px;
+}
+
+#projectVisibilityContainer
+{
+	margin-bottom: 53px;
+}
+
+#projectVisibilityContainer .headerPanel
+{
+	margin-bottom: 8px;
+}
+
+#projectPrivacyCkeckbox
+{
+	margin: 1px 0px 0px;
+	padding: 0px;
+	float: left;
+}
+
+#projectVisibilityContainer label
+{
+	padding-left: 5px;
+}
+
+#projectActionsContainer
+{
+	margin-bottom: 30px;
+}
+
+#projectActionsContainer a
+{
+	margin-right: 10px;
+}
+
+#projectActionsContainer #projectDeleteButton
+{
+	margin-right: 0px;
+	float: right;
+}
+
+#projectActionsInfoContainer
+{
+	display: none;
+}

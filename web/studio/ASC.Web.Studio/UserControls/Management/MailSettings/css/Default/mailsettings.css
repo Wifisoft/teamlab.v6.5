@@ -1,0 +1,13 @@
+﻿#studio_smtpSettingsBox .smtpModeBox label
+{
+    float: left; 
+    margin-left: 9px;
+    margin-top: 2px;
+    margin-left:5px;
+}
+
+#studio_corporateSMTPButton,
+#studio_personalSMTPButton
+{
+    float:left;
+}

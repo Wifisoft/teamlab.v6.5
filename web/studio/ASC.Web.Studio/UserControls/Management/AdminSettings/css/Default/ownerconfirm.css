@@ -1,0 +1,15 @@
+﻿
+.confirmTitle
+{
+    border-right:none; 
+    border-left:none; 
+    border-bottom:none; 
+    margin:20px 0px; 
+    width: 600px; 
+    text-align:center;
+}
+
+.confirmTitle .headerBase
+{
+    padding:10px 0px;
+}

@@ -1,0 +1,92 @@
+﻿
+.blockDialog{background:#FFF; left:50%; border:1px solid #afb2b7; -moz-border-radius:2px; -webkit-border-radius:2px; color:#333333;}
+div#studio_um_dialogContent { position: relative;}
+div#studio_um_dialogContent div.requiredField { margin-bottom: 10px;}
+div#studio_um_dialogContent div.headerPanel { font-weight: normal; font-size: 12px; margin-bottom: 4px;}
+div#studio_um_dialogContent div input{display:block; width:99%; height:18px; line-height:18px;}
+div#studio_um_dialogContent div.value select{display:block; width:99%;}
+div#studio_um_dialogContent div.value textarea{display:block; width:99%; height:50px;}
+div#studio_um_dialogContent div input.textCalendar{width:75px; float:left; margin:0 3px 0 0;}
+
+div#studio_um_dialogContent ul.tabsContainer{list-style:none; margin:0 0 20px 3px; padding:0 0 0 5px; border-bottom:1px solid #DDD; height:27px !important;}
+div#studio_um_dialogContent div.tabsContainer div.viewSwitcherAreaWithBottomBorder{margin:0 0 16px; padding:0 0 0 10px;}
+div#studio_um_dialogContent ul.tabsContainer li.tabTitle{padding:3px 0; float:left; cursor:pointer; border:1px solid #DDD; border-left:0; background-color:#F0F0F0;}
+div#studio_um_dialogContent ul.tabsContainer li.tabTitle.first{border-left:1px solid #DDD;}
+div#studio_um_dialogContent ul.tabsContainer li.tabTitle div.leftSide{padding:0 0 0 15px;}
+div#studio_um_dialogContent ul.tabsContainer li.tabTitle div.rightSide{padding:0 15px 0 0;}
+div#studio_um_dialogContent ul.tabsContainer li.tabTitle div.name{height:20px; line-height:20px; margin:0; padding:0; white-space:nowrap; color:#333333;}
+
+div#studio_um_dialogContent ul.tabsContainer li.tabTitle.active{border-bottom:1px solid #FFF; background-color:#FFF; cursor:default;}
+div#studio_um_dialogContent ul.tabsContainer li.tabTitle.active div.name{color:#666;}
+
+div#studio_um_dialogContent div.propertiesContainer{}
+div#studio_um_dialogContent div.propertiesContainer div.properties{display:none;}
+div#studio_um_dialogContent div.propertiesContainer div.properties.active{display:block;}
+div#studio_um_dialogContent div.propertiesContainer div.properties div.property{margin:0 0 10px 0;}
+div#studio_um_dialogContent div.propertiesContainer div.properties div.property.contacts{margin:20px 0;}
+
+div#studio_um_dialogContent div.propertiesContainer div.properties div.property div.customSelect div.selector, div.comboBoxHiddenBorder div.selector, div.comboBox.customSelect div.selector{background:url(./images/collapce_butt2.gif) left top no-repeat;}
+
+div#studio_um_dialogContent div#contactsContainer ul{list-style:none; margin:0; padding:0;}
+div#studio_um_dialogContent div#contactsContainer ul li.contact{position:relative; margin:0 0 5px 0;}
+div#studio_um_dialogContent div#contactsContainer ul li.contact.default{display:none;}
+div#studio_um_dialogContent div#contactsContainer ul .type{display:block; width:130px; margin:0; padding:0; position:absolute; left:0; top:0;}
+div#studio_um_dialogContent div#contactsContainer ul div.link{margin:0 25px 0 137px; position:relative;}
+div#studio_um_dialogContent div#contactsContainer ul div.link .describeText{font-family:Tahoma, Arial, sans-serif;}
+div#studio_um_dialogContent div#contactsContainer ul div.link input{display:block; position:relative; width:99%; height:16px; line-height:16px; margin:0; padding:1px 2px; border:1px solid #C7C7C7;}
+div#studio_um_dialogContent div#contactsContainer ul div.link input.invalid{border:0px solid #F00;}
+div#studio_um_dialogContent div#contactsContainer ul div.remove{width:20px; height:20px; position:absolute; right:0; top:0; background:url(./images/trash.png) center center no-repeat; cursor:pointer;}
+div#studio_um_dialogContent div#contactsContainer div.add{color:#1A6DB3; text-decoration:underline; display:inline; cursor:pointer;}
+
+div#studio_um_dialogContent div#contactsContainer ul div.type{height:18px;}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title{background:none 2px center no-repeat; width:88px; line-height:18px; padding:0 0 0 22px; overflow:hidden; white-space:nowrap;}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.selector{background:url(./images/collapce_butt2.gif) left top no-repeat;}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.selector.open{background-position:left bottom;}
+div#studio_um_dialogContent div#contactsContainer ul div.type ul.options{padding:2px 0;}
+div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option{background:#FFF none 2px center no-repeat; width:104px; padding:0 0 0 22px; overflow:hidden; white-space:nowrap;}
+
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.mail, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.mail{background-image:url(./images/sc_mail.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.facebook, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.facebook{background-image:url(./images/sc_facebook.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.livejournal, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.livejournal{background-image:url(./images/sc_livejournal.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.myspace, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.myspace{background-image:url(./images/sc_myspace.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.yahoo, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.yahoo{background-image:url(./images/sc_yahoo.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.jabber, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.jabber{background-image:url(./images/sc_jabber.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.skype, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.skype{background-image:url(./images/sc_skype.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.twitter, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.twitter{background-image:url(./images/sc_twitter.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.blogger, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.blogger{background-image:url(./images/sc_blogger.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.msn, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.msn{background-image:url(./images/sc_msn.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.icq, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.icq{background-image:url(./images/sc_icq.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.aim, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.aim{background-image:url(./images/sc_aim.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.gmail, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.gmail{background-image:url(./images/sc_gmail.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.gtalk, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.gtalk{background-image:url(./images/sc_gtalk.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.gbuzz, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.gbuzz{background-image:url(./images/sc_gbuzz.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.phone, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.phone{background-image:url(./images/sc_phone.png);}
+div#studio_um_dialogContent div#contactsContainer ul div.type div.title.mobphone, div#studio_um_dialogContent div#contactsContainer ul div.type ul.options li.option.mobphone{background-image:url(./images/sc_mobile.png);}
+
+/* >= ie7 */
+*:first-child+html div#studio_um_dialogContent div#contactsContainer ul div.link input{top:-1px;}
+
+div#studio_um_dialogContent.addUser div.tabsContainer{display:none;}
+div#studio_um_dialogContent.addUser div.password{display:block;}
+div#studio_um_dialogContent.addUser div.majorProperties{display:block !important;}
+div#studio_um_dialogContent.addUser div.socialProperties{display:none !important;}
+
+div#studio_um_dialogContent div.tabsContainer{display:block;}
+div#studio_um_dialogContent div.password{display:none;}
+
+div#studio_um_dialogContent .tl-combobox{max-width:60%;}
+div#studio_um_dialogContent div.socialProperties .tl-combobox .combobox-container{width:100px;}
+
+/*----------------custome select------------------------*/
+div.customSelect{width:99%; height:20px;}
+div.customSelect div.selector{width:20px;}
+div.customSelect div.title{line-height:20px; padding:0 0 0 2px; background:#FFF;}
+div.customSelect div.wrapper{right:-1px;}
+div.customSelect ul.options{margin:0; padding:2px 0; list-style:none; border:1px solid #C7C7C7; border-top:0; background:#FFF; left:-1px;}
+div.customSelect ul.options li.option{margin:0 2px; padding:0 0 0 2px; list-style:none; height:20px; line-height:20px;white-space:nowrap;}
+div.customSelect ul.options li.option.hover, div.customSelect ul.options li.option:hover{background-color:#E8E9E9 !important;}
+
+div.comboBoxHiddenBorder.customSelect div.title {padding-right: 20px; background-color: inherit; cursor: default;}
+div.comboBoxHiddenBorder.customSelect ul.options li.option { cursor: default;}
+
+.tl-combobox .combobox-title{min-height:15px;}

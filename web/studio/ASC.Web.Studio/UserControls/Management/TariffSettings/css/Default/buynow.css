@@ -1,0 +1,42 @@
+﻿.buyNowBox .bold{color:#e85d11;}
+.buyNowBox .description
+{    
+}
+.buyNowBox .subscription
+{
+    margin-top:5px;
+}
+.buyNowBox .subscription .yearlySubscription,
+.buyNowBox .subscription .monthlySubscription
+{
+    float:left;
+    margin-right:30px;
+    background-repeat:no-repeat;
+    padding-left:50px;
+    height:30px;
+    padding-top:5px;
+    
+}
+.buyNowBox .subscription .yearlySubscription
+{
+    background-image: url('img/hdd01.png');
+    background-position:0,0;
+    
+}
+.buyNowBox .subscription .monthlySubscription
+{
+    background-image: url('img/hdd02.png');
+    
+}
+.buyNowBox .extentPeriodText
+{
+    color:gray;
+    margin-top:10px;
+}
+
+/*base link button*/
+.buyNowBox a.buyButton
+{
+    float:left;
+    margin-top:5px;
+}

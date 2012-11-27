@@ -1,0 +1,359 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <!--Discussion Edited-->
+      <pattern id="EditMessage" name="edit message" contentType="html">
+        <subject resource="|subject_EditMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_EditMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="EditMessage_jabber" name="edit message" contentType="html">
+        <subject resource="|subject_EditMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData.get_item("MessagePreview")
+
+${__VirtualRootPath}/products/projects/messages.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--New Discussion-->
+      <pattern id="NewMessage" name="new message" contentType="html">
+        <subject resource="|subject_NewMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_NewMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="NewMessage_jabber" name="new message" contentType="html">
+        <subject resource="|subject_NewMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData.get_item("MessagePreview")
+
+${__VirtualRootPath}/products/projects/messages.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--New Comment to Milestone-->
+      <pattern id="NewCommentForMilestone" name="new comment for milestone" contentType="html">
+        <subject resource="|subject_NewCommentForMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_NewCommentForMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="NewCommentForMilestone_jabber" name="new comment for milestone" contentType="html">
+        <subject resource="|subject_NewCommentForMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData
+
+${__VirtualRootPath}/products/projects/milestones.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--New Comment to Discussion-->
+      <pattern id="NewCommentForMessage" name="new comment for message" contentType="html">
+        <subject resource="|subject_NewCommentForMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_NewCommentForMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="NewCommentForMessage_jabber" name="new comment for message" contentType="html">
+        <subject resource="|subject_NewCommentForMessage|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData
+
+${__VirtualRootPath}/products/projects/messages.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--New Comment to Task-->
+      <pattern id="NewCommentForTask" name="new comment for task" contentType="html">
+        <subject resource="|subject_NewCommentForTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_NewCommentForTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="NewCommentForTask_jabber" name="new comment for task" contentType="html">
+        <subject resource="|subject_NewCommentForTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--Milestone Closed-->
+      <pattern id="MilestoneClosed" name="milestone closed" contentType="html">
+        <subject resource="|subject_MilestoneClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_MilestoneClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="MilestoneClosed_jabber" name="milestone closed" contentType="html">
+        <subject resource="|subject_MilestoneClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+$AdditionalData
+
+${__VirtualRootPath}/products/projects/milestones.aspx?prjID=$ProjectID#status=closed
+      </body>
+      </pattern>
+      <!--Task Closed-->
+      <pattern id="TaskClosed" name="task closed" contentType="html">
+        <subject resource="|subject_TaskClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_TaskClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="TaskClosed_jabber" name="task closed" contentType="html">
+        <subject resource="|subject_TaskClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--SubTask Closed-->
+      <pattern id="SubTaskClosed" name="subtask closed" contentType="html">
+        <subject resource="|subject_SubTaskClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_SubTaskClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="SubTaskClosed_jabber" name="subtask closed" contentType="html">
+        <subject resource="|subject_SubTaskClosed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--Milestone Created-->
+      <pattern id="MilestoneCreated" name="milestone created" contentType="html">
+        <subject resource="|subject_MilestoneCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_MilestoneCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="MilestoneCreated_jabber" name="milestone created" contentType="html">
+        <subject resource="|subject_MilestoneCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+$AdditionalData.get_item("MilestoneDescription")
+
+${__VirtualRootPath}/products/projects/milestones.aspx?prjID=$ProjectID
+        </body>
+      </pattern>
+      <!--Task Created-->
+      <pattern id="TaskCreated" name="task created" contentType="html">
+        <subject resource="|subject_TaskCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_TaskCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="TaskCreated_jabber" name="task created" contentType="html">
+        <subject resource="|subject_TaskCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData.get_item("TaskDescription")
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--Milestone Edited-->
+      <pattern id="MilestoneEdited" name="milestone edited" contentType="html">
+        <subject resource="|subject_MilestoneEdited|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_MilestoneEdited|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="MilestoneEdited_jabber" name="milestone edited" contentType="html">
+        <subject resource="|subject_MilestoneEdited|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+${__VirtualRootPath}/products/projects/milestones.aspx?prjID=$ProjectID
+        </body>
+      </pattern>
+      <!--Task Edited-->
+      <pattern id="TaskEdited" name="task edited" contentType="html">
+        <subject resource="|subject_TaskEdited|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_TaskEdited|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="TaskEdited_jabber" name="task edited" contentType="html">
+        <subject resource="|subject_TaskEdited|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID
+        </body>
+      </pattern>
+      <!--Task Deleted-->
+      <pattern id="TaskDeleted" name="task deleted" contentType="html">
+        <subject resource="|subject_TaskDeleted|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_TaskDeleted|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="TaskDeleted_jabber" name="task deleted" contentType="html">
+        <subject resource="|subject_TaskDeleted|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+$AdditionalData
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID
+        </body>
+      </pattern>
+      <!--Task Resumed-->
+      <pattern id="TaskResumed" name="task resumed" contentType="html">
+        <subject resource="|subject_TaskResumed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_TaskResumed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="TaskResumed_jabber" name="task resumed" contentType="html">
+        <subject resource="|subject_TaskResumed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID
+        </body>
+      </pattern>
+      <!--SubTask Created-->
+      <pattern id="SubTaskCreated" name="subtask created" contentType="html">
+        <subject resource="|subject_SubTaskCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_SubTaskCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="SubTaskCreated_jabber" name="subtask created" contentType="html">
+        <subject resource="|subject_SubTaskCreated|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--SubTask Deleted-->
+      <pattern id="SubTaskDeleted" name="subtask deleted" contentType="html">
+        <subject resource="|subject_SubTaskDeleted|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_SubTaskDeleted|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="SubTaskDeleted_jabber" name="subtask deleted" contentType="html">
+        <subject resource="|subject_SubTaskDeleted|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID
+        </body>
+      </pattern>
+      <!--SubTask Resumed-->
+      <pattern id="SubTaskResumed" name="subtask resumed" contentType="html">
+        <subject resource="|subject_SubTaskResumed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_SubTaskResumed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="SubTaskResumed_jabber" name="subtask resumed" contentType="html">
+        <subject resource="|subject_SubTaskResumed|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$__AuthorName
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID
+        </body>
+      </pattern>
+      <!--Milestone Due Date Notification-->
+      <pattern id="MilestoneDeadline" name="milestone deadline" contentType="html">
+        <subject resource="|subject_MilestoneDeadline|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_MilestoneDeadline|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="MilestoneDeadline_jabber" name="milestone deadline" contentType="html">
+        <subject resource="|subject_MilestoneDeadline|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+${__VirtualRootPath}/products/projects/milestones.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--Overdue Milestone Notification-->
+      <pattern id="LateMilestone" name="late milestone" contentType="html">
+        <subject resource="|subject_LateMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_LateMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="LateMilestone_jabber" name="late milestone" contentType="html">
+        <subject resource="|subject_LateMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+${__VirtualRootPath}/products/projects/milestones.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--You Were Appointed as Project Manager-->
+      <pattern id="ResponsibleForProject" name="responsible for project" contentType="html">
+        <subject resource="|subject_ResponsibleForProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ResponsibleForProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="ResponsibleForProject_jabber" name="responsible for project" contentType="html">
+        <subject resource="|subject_ResponsibleForProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData
+
+${__VirtualRootPath}/products/projects/projects.aspx?prjID=$ProjectID</body>
+      </pattern>
+      <!--Task Assigned to You-->
+      <pattern id="ResponsibleForTask" name="responsible for task" contentType="html">
+        <subject resource="|subject_ResponsibleForTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ResponsibleForTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="ResponsibleForTask_jabber" name="responsible for task" contentType="html">
+        <subject resource="|subject_ResponsibleForTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler, ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData.get_item("TaskDescription")
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--Milestone Assigned to You-->
+      <pattern id="ResponsibleForMilestone" name="responsible for milestone" contentType="html">
+        <subject resource="|subject_ResponsibleForMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ResponsibleForMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="ResponsibleForMilestone_jabber" name="responsible for milestone" contentType="html">
+        <subject resource="|subject_ResponsibleForMilestone|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler, ASC.Notify.Textile">
+$__AuthorName
+
+$AdditionalData.get_item("MilestoneDescription")
+
+${__VirtualRootPath}/products/projects/milestones.aspx?prjID=$ProjectID
+        </body>
+      </pattern>
+      <!--SubTask Assigned to You-->
+      <pattern id="ResponsibleForSubTask" name="responsible for subtask" contentType="html">
+        <subject resource="|subject_ResponsibleForSubTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ResponsibleForSubTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="ResponsibleForSubTask_jabber" name="responsible for subtask" contentType="html">
+        <subject resource="|subject_ResponsibleForSubTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler, ASC.Notify.Textile">
+$__AuthorName
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--Reminder About Task-->
+      <pattern id="ReminderAboutTask" name="reminder about task" contentType="html">
+        <subject resource="|subject_ReminderAboutTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ReminderAboutTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="ReminderAboutTask_jabber" name="reminder about task" contentType="html">
+        <subject resource="|subject_ReminderAboutTask|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$AdditionalData.get_item("TaskDescription")
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--Reminder About Task Deadline-->
+      <pattern id="ReminderAboutTaskDeadline" name="reminder about task deadline" contentType="html">
+        <subject resource="|subject_ReminderAboutTaskDeadline|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ReminderAboutTaskDeadline|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="ReminderAboutTaskDeadline_jabber" name="reminder about task deadline" contentType="html">
+        <subject resource="|subject_ReminderAboutTaskDeadline|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$AdditionalData.get_item("TaskDescription")
+
+${__VirtualRootPath}/products/projects/tasks.aspx?prjID=$ProjectID&amp;ID=$EntityID</body>
+      </pattern>
+      <!--You Have Been Added to the Project Team-->
+      <pattern id="InviteToProject" name="invite to project" contentType="html">
+        <subject resource="|subject_InviteToProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_InviteToProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="InviteToProject_jabber" name="invite to project" contentType="html">
+        <subject resource="|subject_InviteToProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+${__VirtualRootPath}/products/projects/projects.aspx?prjID=$ProjectID</body>
+      </pattern>
+      <!--RemoveFromProject-->
+      <pattern id="RemoveFromProject" name="remove from project" contentType="html">
+        <subject resource="|subject_RemoveFromProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_RemoveFromProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="RemoveFromProject_jabber" name="remove from project" contentType="html">
+        <subject resource="|subject_RemoveFromProject|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+${__VirtualRootPath}/products/projects/projects.aspx?prjID=$ProjectID</body>
+      </pattern>
+      <!--ImportData-->
+      <pattern id="ImportData" name="import data" contentType="html">
+        <subject resource="|subject_ImportData|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ImportData|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+      <pattern id="ImportData_jabber" name="import data" contentType="html">
+        <subject />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile" resource="|pattern_ImportData|ASC.Projects.Core.Services.NotifyService.PatternResource,ASC.Projects.Core" />
+      </pattern>
+    </patterns>
+  </block>
+</pt:catalog>

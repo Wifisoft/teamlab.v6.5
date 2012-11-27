@@ -1,0 +1,780 @@
+.studioTopNavigationPanel
+{
+	  background-color:#214752;
+	  border-bottom:solid 5px #257E91;	
+    width: 100%;
+    min-width: 1000px;
+}
+
+.studioTopNavigationPanel .hoverTint
+{
+	background-color:#E8E9E9;
+}
+
+/*-------------------systemSection---------------------*/
+.studioTopNavigationPanel .studio-top-panel
+{
+	height: 43px;
+  padding-top: 4px;
+	font-size:12px;
+	color:#C5C5C5;
+}
+.studioTopNavigationPanel .systemSection ul
+{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0 0 1em;
+	padding:0px;
+	
+}
+.studioTopNavigationPanel .systemSection ul li
+{
+	padding:5px 0px;
+}
+
+.studioTopNavigationPanel .systemSection a,
+.studioTopNavigationPanel .systemSection a:visited
+{
+	font-size:11px;
+	color:#C5C5C5;
+	text-decoration:underline;
+}
+.studioTopNavigationPanel .systemSection a:hover
+{
+	text-decoration:none;
+}
+.studioTopNavigationPanel .systemSection a:active
+{
+	font-size:11px;
+	color:#C5C5C5;
+	text-decoration:underline;
+}
+
+.studioTopNavigationPanel .systemSection .spacer
+{
+	padding:0px 10px;
+}
+.studioTopNavigationPanel .systemSection .userProfileBox
+{
+	margin-left:8px;
+}
+
+.studioTopNavigationPanel .systemSection .userProfileBox a,
+.studioTopNavigationPanel .systemSection .userProfileBox a:visited,
+.studioTopNavigationPanel .systemSection .userProfileBox a:hover,
+.studioTopNavigationPanel .systemSection .userProfileBox a:active
+{
+	color:#ffffff;
+	font-size:12px;
+}
+
+.studioTopNavigationPanel .systemSection .itemBox a,
+.studioTopNavigationPanel .systemSection .itemBox span.link
+{
+  background:none left center no-repeat;
+  display:inline-block;
+  height:16px;
+  line-height:16px;
+  padding-left:20px;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.studioTopNavigationPanel .systemSection .itemBox .mail-count-container {
+  display:none; 
+  white-space:nowrap;
+  text-decoration:none;  
+} 
+
+.studioTopNavigationPanel .systemSection .itemBox a,
+.studioTopNavigationPanel .systemSection .itemBox a:visited,
+.studioTopNavigationPanel .systemSection .itemBox a:hover,
+.studioTopNavigationPanel .systemSection .itemBox a:active,
+.studioTopNavigationPanel .systemSection .itemBox span.link,
+.studioTopNavigationPanel .systemSection .itemBox span.link:visited,
+.studioTopNavigationPanel .systemSection .itemBox span.link:hover,
+.studioTopNavigationPanel .systemSection .itemBox span.link:active
+{
+	color:#ffffff;
+	font-size:12px;
+}
+
+.studioTopNavigationPanel .systemSection .itemBox a span,
+.studioTopNavigationPanel .systemSection .itemBox span.link span
+{
+  text-decoration:underline;
+}
+
+.studioTopNavigationPanel .systemSection .itemBox a:hover span,
+.studioTopNavigationPanel .systemSection .itemBox span.link:hover span
+{
+  text-decoration:none;
+}
+
+.studioTopNavigationPanel .systemSection .myStaffBox,
+.studioTopNavigationPanel .systemSection .myStaffActiveBox
+{	
+	padding:5px 25px 5px 10px;	
+	z-index:100;
+	float:right;	
+	text-align:center;	
+	border:solid 1px #214752;	
+	cursor:pointer;
+	background-image: url('img/down_arrow_bg.gif');
+	background-position: right 5px;
+	background-repeat: no-repeat;
+}
+
+.studioTopNavigationPanel .systemSection .myStaffActiveBox
+{
+	
+	position:relative;
+	background-image: url('img/up_arrow_bg.png');
+	background-color:#ffffff;	
+	border:solid 1px #8E908F;
+	border-bottom:solid 1px #ffffff;	
+	z-index:110;
+}
+
+.studioTopNavigationPanel .systemSection .myStaffBox .myStaff
+{	
+	font-size:11px;
+	color:#C5C5C5;
+	margin:0 5px 0 7px;
+	border-bottom-color:#8E908F;
+}
+.studioTopNavigationPanel .systemSection .myStaffActiveBox .myStaff
+{
+	font-size:11px;
+	color:#444A50;
+	margin:0 5px 0 7px;
+	border-bottom-color:#8E908F;
+}
+
+/*----------------contentSection-----------------------*/
+.studioTopNavigationPanel .contentSection
+{
+	border-top:solid 1px #87888C;
+	background-color:#31363B;
+}
+
+/*-------------------info-------------*/
+.studioTopNavigationPanel .contentSection .infoBox
+{
+	padding:12px 0px;
+	background-image: url('img/topheader_bg.gif');
+	background-position: top;
+	background-repeat: repeat-x;	
+	background-color:#44646b;
+	height:33px;
+}
+.studioTopNavigationPanel .contentSection .infoBox .titleBox
+{
+	float:left;
+	text-decoration:none !important;
+	outline: none;
+}
+.studioTopNavigationPanel .contentSection .infoBox .titleBox img
+{
+	margin-right:10px;
+	border:none;
+}
+.studioTopNavigationPanel .contentSection .infoBox .titleBox .title
+{
+	color:#ffffff;
+	font-size:28px;	
+}
+
+
+/*--------------------------search-------------*/
+.studioTopNavigationPanel .contentSection .infoBox .searchBox
+{
+	padding-top:6px;
+}
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .leftSearchPanel
+{	
+	background-color:#ffffff;
+	border:solid 1px #87888c;	
+	border-right:none;
+	background-image:url('img/topsearch_switch_bg.png');
+	background-position:right 3px;
+	background-repeat: no-repeat;	
+	height:20px;
+	width:35px;
+	padding:0px;
+	cursor:pointer;
+	float:left;
+}
+
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .singleLeftSearchPanel
+{	
+	background-color:#ffffff;
+	border:solid 1px #87888c;	
+	border-right:none;		
+	height:20px;
+	width:25px;
+	padding:0px;	
+	float:left;
+}
+
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .mainSearchPanel
+{	
+	background-color:#ffffff;
+    margin:0px;
+    padding:0px;	
+	border:solid 1px #87888c;
+	border-left:none;
+	height:20px;
+	float:left;
+}
+
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .textEditMainSearch
+{    
+	border:solid 0px #8E908F;
+    font-family:Tahoma, Arial, sans-serif;
+    font-size:12px;
+    line-height:12px;
+    padding:2px 5px 1px 2px;   
+    margin:0px;
+	background: #ffffff;	
+}
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .textEditDefaultSearch
+{    
+	border:solid 0px #8E908F;
+    font-family:Tahoma, Arial, sans-serif;
+    color:#9f9f9f;
+    font-size:12px;
+    line-height:12px;
+    padding:2px 5px 1px 2px;   
+    margin:0px;
+	background: #ffffff;	
+}
+
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .mainSearchButton
+{   
+	vertical-align:top;     
+    padding:0px;
+    margin-left:2px;  
+    width:29px;
+    height:22px;
+    background-image:url('img/topsearch_button_bg.png');
+	background-position:right top;
+	background-repeat: no-repeat;
+	cursor:pointer;
+	float:left;
+}
+
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .searchHandlerItem
+{
+	color:#333333;
+	font-weight:normal;
+	font-size:11px;
+	padding:2px;
+	margin-top:4px;
+	cursor:pointer;
+}
+
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .searchHandlerActiveItem
+{
+	color:#333333;
+	font-size:11px;
+	font-weight:bolder;
+	padding:2px;
+	margin-top:4px;
+	cursor:pointer;
+}
+
+
+.studioTopNavigationPanel .contentSection .infoBox .searchBox .switchBox
+{
+	padding:0px 8px 8px 8px;
+	border:solid 1px #8E908F;
+	background-color:#ffffff;
+}
+
+/*--------------------navigation section-----------------*/
+.studioTopNavigationPanel .contentSection .navigationBox
+{
+	background-color:#31363B;
+	padding-top:7px;	
+}
+.studioTopNavigationPanel .contentSection .navigationBox a.tab,
+.studioTopNavigationPanel .contentSection .navigationBox a.tab:visited,
+.studioTopNavigationPanel .contentSection .navigationBox a.tab:hover,
+.studioTopNavigationPanel .contentSection .navigationBox a.tab:active
+{
+	color: #ffffff;
+	font-size:14px;
+	text-decoration: none;
+	cursor: pointer;
+	margin-right: 3px;
+	display:block;
+	padding:5px 12px;
+	float: left;
+	background-image: url('img/tab_bg.png');
+	background-position: top;
+	background-repeat: repeat-x;	
+	background-color:#116577;
+}
+
+.studioTopNavigationPanel .contentSection .navigationBox a.selectedTab,
+.studioTopNavigationPanel .contentSection .navigationBox a.selectedTab:visited,
+.studioTopNavigationPanel .contentSection .navigationBox a.selectedTab:hover,
+.studioTopNavigationPanel .contentSection .navigationBox a.selectedTab:active
+{
+	color: #ffffff;
+	font-size:14px;
+	text-decoration: none;
+	cursor: pointer;
+	margin-right: 3px;
+	display:block;
+	padding:5px 12px;
+	float: left;
+	background-image: url('img/tab_selected_bg.png');
+	background-position: top;
+	background-repeat: repeat-x;
+	background-color:#257e91;
+}
+
+.menuItemWithSubMenuItems
+{
+	background-image: url('img/below_nav_bg.png');
+	background-position: right 5px;
+	background-repeat: no-repeat;
+	padding-right:15px;
+	float: right;
+}
+
+.subMenuItemsPopupBox
+{	
+	background-color:#0d4e6c;
+	border:solid 1px #3186af;
+	z-index:110;
+	display:none;
+	position:absolute;
+}
+
+.subMenuItemsPopupBox .subMenuItemsPopupBoxItem, .subMenuItemsPopupBoxItem:visited, .subMenuItemsPopupBoxItem:hover, .subMenuItemsPopupBoxItem:active
+{
+	display:block;
+	font-size:12px;
+	color: White;
+	padding:2px 7px 2px 7px;
+	cursor:pointer;	
+	text-decoration:none;
+	margin: 5px;
+}
+
+.subMenuItemsPopupBox .subMenuItemsPopupBoxItem:hover
+{
+	background-color: #1f6485;
+}
+
+.belowNavigationPanelClass
+{	
+	background-color:#227586;
+	margin: -5px 0 -6px 0;
+	height: 45px;
+}
+
+.belowNavigationPanelText
+{
+	padding-top: 11px;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 18px;
+	color: #f0ffdd;
+}
+/* --- Full search ---*/
+
+.fullSearchHolder
+{
+    background-color: #E9E9E9;
+    border-bottom: 1px solid #D1D1D1;
+    height: 40px;
+    min-width: 1000px;
+    padding-top: 17px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.fullSearchHolder .searchBox {
+    text-align: center;
+    height:22px;
+    display:inline-block;
+}
+
+.fullSearchHolder .searchBox .mainSearchPanel
+{	
+	background-color:#ffffff;
+    margin:0px;
+    padding:0px;	
+	border:solid 1px #87888c;
+	border-left:none;
+	height:20px;
+	float:left;
+}
+
+.fullSearchHolder .searchBox .mainSearchButton
+{   
+	vertical-align:top;     
+    padding:0px;
+    margin-left:2px;  
+    width:29px;
+    height:22px;
+    background-image:url('img/topsearch_button_bg.png');
+	background-position:right top;
+	background-repeat: no-repeat;
+	cursor:pointer;
+	float:left;
+}
+
+.fullSearchHolder .searchBox .dv input 
+{
+    width: 650px;height:19px;border:1px solid #D1D1D1;margin:0;padding:1px;
+     font-size:12px;
+     font-family:Tahoma, Arial, sans-serif;
+}
+.fullSearchHolder .searchBox .dv .textEditMainSearch
+{
+	background: #ffffff;	
+}
+
+.fullSearchHolder .searchBox .dv .textEditDefaultSearch
+{
+    color:#9f9f9f;
+}
+/* ------------------ */
+/*-------------------studio-top-panel---------------------*/
+
+.studio-top-panel > ul {
+    list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.studio-top-panel > ul > li {
+    float: left;
+}
+
+.studio-top-panel .studio-top-logo {
+    margin: 7px 24px 0 0;
+}
+/*-------top logo----------*/
+.top-logo {
+    display: block;
+}
+a.top-logo,
+a.top-logo:link,
+a.top-logo:visited,
+a.top-logo:hover,
+a.top-logo:active {
+    text-decoration: none;
+}
+/*---------product-menu--------------*/
+.studio-top-panel .product-menu {
+    cursor: pointer;
+    margin: 7px 24px 0 0;
+    max-width: 100px;
+    /*overflow: hidden;*/
+    padding: 4px 0 5px;
+    /*text-overflow: ellipsis;*/
+}
+.studio-top-panel .product-menu span.active-icon 
+{
+    background: url(img/dropdown-menu-icons.png) no-repeat 0 15px transparent;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    margin-right: 1px;
+    vertical-align: middle;
+}
+.studio-top-panel .product-menu span.active-icon.projects {
+    background-position: 0px -27px;
+}
+.studio-top-panel .product-menu span.active-icon.crm {
+    background-position: 0px -79px;
+}
+.studio-top-panel .product-menu span.active-icon.documents {
+    background-position: 0px -131px;
+}
+.studio-top-panel .product-menu span.active-icon.community {
+    background-position: 0px -183px;
+}
+.studio-top-panel .product-menu span.active-icon.people {
+    background-position: 0px -235px;
+}
+.studio-top-panel .product-menu span.active-icon.tools {
+    background-position: 0px -287px;
+}
+.studio-top-panel .product-menu span.active-icon.mail {
+    background-position: 0px -339px;
+}
+.studio-top-panel .product-menu span.active-icon.calendar {
+    background-position: 0px -391px;
+}
+.studio-top-panel .product-menu span.active-icon.feed {
+    background-position: 0px -444px;
+}
+.studio-top-panel .product-menu.with-subitem {
+    background: url(img/down_arrow_bg.png) right 10px no-repeat;
+    padding-right: 12px;
+}
+.studio-top-panel .product-menu .product-cur-link {
+    color: #c5c5c5;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    white-space: nowrap;
+}
+
+.studio-top-panel .studio-action-panel .dropdown-content {
+    line-height: 28px;
+}
+.studio-top-panel .studio-action-panel .dropdown-content .dropdown-item {
+    line-height: 28px;
+}
+.studio-top-panel .studio-action-panel .dropdown-content .dropdown-item-seporator
+{
+    border-top: 1px dotted #838383;
+    margin: 5px 0 2px;
+    width:100%;
+}
+.studio-top-panel .studio-action-panel {
+    padding: 6px 20px 11px 15px;
+}
+.studio-top-panel .menu-helper {
+    bottom: 2px;
+    cursor: default;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+.studio-top-panel .menu-helper .menu-container {
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    text-align: left;
+}
+.studio-top-panel .menu-helper .top-border {
+    background:url(img/arrow-bg-ffffff.png) 0 0 no-repeat;
+    height: 6px;
+    position:absolute;
+    left: 16px;
+    top: -6px;
+    width: 12px;
+}
+.studio-top-panel .menu-helper .menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 15px 19px 19px;
+}
+.studio-top-panel .menu-helper .menu-list .menu-item {
+    color: #333;
+    cursor: pointer;
+    display: block;
+    line-height: 24px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.studio-top-panel .menu-helper .menu-list .menu-item:hover .inner-text {
+    text-decoration: underline;
+}
+
+/*--------trial period-------*/
+.studio-top-trial-period {
+    margin: 13px 20px 0 0;
+    max-width: 320px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.studio-top-trial-period a {
+    color: #e5ae1a;
+    font-size: 14px;
+    outline: none;
+}
+
+/*-------staff box-----------*/
+.studio-top-panel .staff-profile-box,
+.studio-top-panel .user-profile-box {
+	float: right;	
+    margin: 7px 0 0 3px;
+    overflow: hidden;
+    padding: 5px 10px;
+	z-index: 100;
+}
+.studio-top-panel .staff-profile-box .usr-prof
+{
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.studio-top-panel .staff-profile-box {
+    background: url(img/down_arrow_bg.png) no-repeat right 10px transparent;
+	cursor: pointer;
+    padding-right: 13px;
+}
+.studio-top-panel .staff-profile-box .userLink {
+    background: none;
+    padding: 0;
+}
+/*--------studio_myStaffPopupPanel---------*/
+
+#studio_myStaffPopupPanel .sign-out-link-seporator {
+    border-top: 1px dotted #838383;
+    margin: 5px 0 2px;
+}
+
+/*------Addon Item Box------*/
+.studio-top-panel .top-item-box {
+    float: right;
+    padding: 4px;
+}
+.studio-top-panel .top-item-box .inner-text {
+    background: url(img/top-studio-menu.png) no-repeat 0 0 transparent;
+    cursor: pointer;
+    display: block !important;
+    height: 32px;
+    outline: none;
+    position: relative;
+    width: 32px;
+}
+.studio-top-panel .top-item-box.calendar .inner-text {
+    background-position: -32px 0;
+}
+.studio-top-panel .top-item-box.calendar .inner-text:hover {
+    background-position: -32px -32px;
+}
+.studio-top-panel .top-item-box.talk .inner-text {
+    background-position: -64px 0;
+}
+.studio-top-panel .top-item-box.talk .inner-text:hover {
+    background-position: -64px -32px;
+}
+.studio-top-panel .top-item-box.mail .inner-text {
+    background-position: -96px 0;
+}
+.studio-top-panel .top-item-box.mail .inner-text:hover {
+    background-position: -96px -32px;
+}
+.studio-top-panel .top-item-box.feed .inner-text {
+    background-position: -128px 0;
+}
+.studio-top-panel .top-item-box.feed .inner-text:hover {
+    background-position: -128px -32px;
+}
+.studio-top-panel .top-item-box.search .inner-text {
+    background-position: -160px 0;
+}
+.studio-top-panel .top-item-box.search .inner-text:hover {
+    background-position: -160px -32px;
+}
+.studio-top-panel .top-item-box.settings .inner-text {
+    background-position: -192px 0;
+}
+.studio-top-panel .top-item-box.settings .inner-text:hover {
+    background-position: -192px -32px;
+}
+
+.studio-top-panel .top-item-box .inner-label {
+    display: none;
+}
+.studio-top-panel .top-item-box.has-led .inner-label,
+.studio-top-panel .top-item-box .inner-text.has-led .inner-label {
+    border: 1px solid #42A1CC;
+    bottom: 2px;
+    color: #FFF;
+    display: block;
+    font-size: 8px;
+    height: 8px;
+    line-height: 8px;
+    padding: 0 2px;
+    position: absolute;
+    right: 2px;
+}
+
+
+/*------TODO: check------*/
+.borderFooterNavPanel {
+    border-bottom: solid 1px #D1D1D1;
+}
+
+/*---------studio-action-panel----------*/
+.studio-action-panel {
+    display: none;
+    position: absolute;
+    padding: 10px 20px 15px 15px;
+    z-index: 1999;
+    background: #FFF;
+    border: 1px solid #D1D1D1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+.studio-action-panel .corner-top {
+    background: url("img/dropdown-corner-top.gif") no-repeat;
+    width: 7px;
+    height: 6px;
+    position: absolute;
+    top: -5px;
+}
+.studio-action-panel .corner-top.left {
+    left: 16px;
+}
+.studio-action-panel .corner-top.right {
+    right: 16px;
+}
+.studio-action-panel .dropdown-content {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    line-height: 21px;
+}
+
+.studio-action-panel .dropdown-content .dropdown-item,
+.studio-action-panel .dropdown-content .dropdown-item a {
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 21px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Arial;
+    color: #333;
+    cursor: pointer;
+}
+.studio-top-panel .top-item-box.has-led .inner-label,
+.studio-top-panel .top-item-box .inner-text.has-led .inner-label {
+     border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #3A93C4;
+    background: linear-gradient(top, #52A9D9, #3A93C4 50%, #328CBD 51%, #228AB5);
+    background: -o-linear-gradient(top, #52A9D9,#3A93C4 50%,  #328CBD 51%,#228AB5);
+    background: -moz-linear-gradient(top, #52A9D9, #3A93C4 50%, #328CBD 51%, #228AB5);
+    background: -webkit-linear-gradient(top,#52A9D9, #3A93C4 50%,  #328CBD 51%, #228AB5);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#52A9D9', EndColorStr=#228AB5')";
+}
+
+.dropdown-item-seporator {
+    border-top: 1px dotted #D1D1D1;
+    margin: 8px 0;
+    width: 100%;
+}
+.studio-action-panel .dropdown-content .dropdown-item:hover,
+.studio-action-panel .dropdown-content .dropdown-item:hover a {
+    text-decoration: underline;
+}
+.create-new-link-list {
+    list-style: none outside none;
+    padding: 0px 10px 10px;
+}
+.create-new-list-header {
+    text-transform: uppercase;
+}

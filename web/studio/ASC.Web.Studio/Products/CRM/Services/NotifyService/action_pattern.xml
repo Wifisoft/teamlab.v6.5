@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+  <action actionID="ResponsibleForTask" defaultPatternID="ResponsibleForTask">
+    <sender senderName="messanger.sender" patternID="ResponsibleForTask_jabber" />
+  </action>
+  <action actionID="TaskDeadLine" defaultPatternID="TaskDeadLine">
+    <sender senderName="messanger.sender" patternID="TaskDeadLine_jabber" />
+  </action>
+  <action actionID="AddRelationshipEvent" defaultPatternID="RelationshipEvent">
+    <sender senderName="messanger.sender" patternID="RelationshipEvent_jabber" />
+  </action>
+  <action actionID="SetAccess" defaultPatternID="SetAccess">
+    <sender senderName="messanger.sender" patternID="SetAccess_jabber" />
+  </action>
+  <action actionID="CreateNewContact" defaultPatternID="CreateNewContact">
+    <sender senderName="messanger.sender" patternID="CreateNewContact_jabber" />
+  </action>
+  <action actionID="ExportCompleted" defaultPatternID="ExportCompleted">
+    <sender senderName="messanger.sender" patternID="ExportCompleted_jabber" />
+  </action> 
+</act:accordings>

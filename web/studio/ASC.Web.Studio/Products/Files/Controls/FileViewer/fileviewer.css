@@ -1,0 +1,172 @@
+/*******************************************************************************
+    Image Viewer
+*******************************************************************************/
+
+#imageViewer
+{
+    cursor: move;
+}
+#imageViewerToolbox
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2001;
+}
+#imageViewerToolbox div.imageInfo
+{
+    border-bottom: 1px solid #1A1A1A;
+    color: #D7D8D8;
+    cursor: default;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-top:10px;
+    white-space: nowrap;
+}
+#imageViewerToolbox div.toolboxWrapper ul
+{
+    padding: 0px;
+    width: 410px;
+    margin: 0px auto;
+    display: block;
+}
+#imageViewerToolbox div.toolboxWrapper ul li
+{
+    float: left;
+    list-style: none;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-top: 13px;
+}
+
+#imageViewerToolbox div.toolboxWrapper
+{
+    background-color: #303030;
+    height: 50px;
+    border-top: 1px solid #4C4C4C;
+}
+
+#imageViewerInfo
+{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #303030;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    padding: 4px 10px;
+}
+#imageViewerContainer
+{
+    position: absolute;
+    cursor: move !important;
+    z-index: 2000;
+}
+
+#imageViewerClose
+{
+    position: absolute;
+    top: 0;
+}
+
+.loading_container_wrapper
+{
+    background-color: #4C4C4C;
+    opacity: 1;
+}
+
+#imageViewerClose, #imageViewerInfo
+{
+    z-index: 2011 !important;
+    cursor: pointer;
+}
+
+.scroll_fix
+{
+    overflow: hidden !important;
+}
+
+
+#other_actions
+{
+    position: absolute;
+    z-index: 2002;
+    border: 1px solid #4C4C4C;
+}
+
+#other_actions, #other_actions ul
+{
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+#other_actions ul
+{
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #1A1A1A;
+    background-color: #303030;
+}
+#other_actions ul li
+{
+    list-style: none;
+}
+#other_actions ul span
+{
+    color: #dfdfdf;
+    cursor: pointer;
+}
+#other_actions ul li a
+{
+    background-attachment: scroll;
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #DFDFDF;
+    display: block;
+    line-height: 24px;
+    margin: 10px;
+    padding: 0 15px 0 30px;
+    text-decoration: none;
+}
+
+#other_actions ul li a:hover
+{
+    background-color: #424343;
+}
+
+#other_actions ul li a.action_download
+{
+    background-image: url("images/iv_download.png");
+}
+#other_actions ul li a.action_delete
+{
+    background-image: url("images/iv_delete.png");
+}
+#other_actions ul li a.action_download:hover
+{
+    background-image: url("images/iv_download_hover.png");
+}
+#other_actions ul li a.action_delete:hover
+{
+    background-image: url("images/iv_delete_hover.png");
+}
+
+/*******************************************************************************
+    Mobile
+*******************************************************************************/
+body.mobile #imageViewerContainer
+{
+    /*top: 0 !important;*/
+    left: 0 !important;
+}
+body.mobile #imageViewerToolbox
+{
+    width: auto;
+    min-width: 1000px;
+}

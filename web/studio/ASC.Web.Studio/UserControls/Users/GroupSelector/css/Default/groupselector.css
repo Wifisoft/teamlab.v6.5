@@ -1,0 +1,45 @@
+﻿.groupSelectorContainer
+{
+    display:none;
+    position:absolute;
+    z-index:99;
+    width:300px;
+    height:230px;
+    padding: 10px;
+}
+.groupSelectorContainer.groupSelectorContainerMobile
+{
+    height: auto;
+    width: auto;
+}
+.groupSelectorContainer .filterBox
+{
+    padding:2px;
+}
+
+.groupSelectorContainer .filterBox input
+{
+    float:left;
+    width:170px;
+    margin-right:10px;
+}
+
+.groupSelectorContainer .grpselector_groupList
+{
+    display: block;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin:10px 0px;
+}
+
+.groupSelectorContainer .grpselector_groupList .group
+{
+    padding:4px;
+    cursor:pointer;
+}
+
+.groupSelectorContainer .grpselector_groupList .group:hover
+{
+    background-color:#f2f2f2;
+}

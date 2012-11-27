@@ -1,0 +1,507 @@
+#AdvansedFilter
+{
+	visibility: hidden;
+}
+
+#newMilestoneButton
+{
+	display: inline-block;
+	background: url("../images/plus.png") no-repeat scroll left center transparent;
+	height: 18px;
+	margin-top: -4px;
+	margin-bottom: 12px;
+	padding-left: 21px;
+}
+
+#newMilestoneButton span:hover
+{
+	color: #000;
+	border-bottom: #000 1px dotted;
+}
+
+.presetContainer
+{
+	visibility: hidden;
+}
+
+#milestonesListContainer
+{
+	min-height: 400px;
+	height: auto;
+	margin: 5px 0 20px;
+}
+
+#milestonesListContainer .noMilestone
+{
+	display: none;
+	color: #ccc;
+	font-size: 20px;
+	padding-left: 15px;
+}
+
+#showNextMilestonesButton
+{
+	display: none;
+	color: rgb(156,160,164);
+	text-decoration: underline;
+	font-weight: bold;
+	margin: 0 0 0 31px;
+	cursor: pointer;
+}
+
+#showNextMilestonesButton:hover
+{
+	color: #1A6DB3;
+}
+
+#showNextMilestonesProcess
+{
+	display: none;
+	height: 25px;
+	padding-left: 25px;
+	margin-left: 25px;
+	background: url('../images/loader16.gif') no-repeat 2px 7px;
+}
+
+#milestonesList
+{
+	display: none;
+	margin-top: 21px;
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 12px;
+	color: #333333;
+}
+
+#milestonesList th
+{
+	font-weight: normal;
+	padding: 0px 0px 8px;
+	color: #82878D;
+}
+
+#milestonesList th.title
+{
+	padding-left: 3px;
+	text-align: left;
+}
+
+#milestonesList th.tasksCount
+{
+	text-align: center;
+}
+
+#milestonesList th.deadline
+{
+	text-align: center;
+}
+
+#milestonesList th.responsible
+{
+	padding-left: 20px;
+	text-align: left;
+}
+
+#milestonesList tbody tr:hover
+{
+	background-color: #F2F2F2;
+}
+
+#milestonesList td
+{
+	border-top: 1px solid #D1D1D1;
+	height: 40px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#milestonesList td.status
+{
+	width: 60px;
+}
+
+#milestonesList td.status .changeStatusCombobox
+{
+	width: 38px;
+	height: 22px;
+	margin: 3px 0px 3px 10px;
+	text-align: center;  
+}
+
+#milestonesList td.status .changeStatusCombobox.canEdit
+{
+	background: white url('../images/tr_off.png') no-repeat 24px 9px;
+	border: 1px solid  #d1d1d1;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer;
+}
+
+#milestonesList tr:hover .changeStatusCombobox.canEdit, #milestonesList td.status .changeStatusCombobox.canEdit.selected
+{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#cecece');
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -moz-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -ms-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+    background: url('../images/tr_on.png') no-repeat 24px 9px, -webkit-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -webkit-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -o-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	border-color: #a8a8a8;
+}
+
+#milestonesList td.status .changeStatusCombobox.noEdit
+{
+	background-image: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+
+#milestonesList td.status .changeStatusCombobox span
+{
+	display: block;
+	margin: 3px 0px 3px 4px;
+	width: 16px;
+	height: 16px;
+}
+
+#milestonesList td.status .changeStatusCombobox .active, #milestonesList td.status .changeStatusCombobox .overdue
+{
+	background-image: url('../images/status_open_active_new.png');
+}
+
+#milestonesList td.status .changeStatusCombobox .closed 
+{
+	background-image: url('../images/status_closed_new.png');
+}
+
+#statusListContainer
+{
+	display: none;
+	min-width: 115px;
+	position: absolute;
+	z-index: 20;
+}
+
+#statusListContainer .containerTop
+{
+	display: block;
+	background: url('../images/popup-corner.png') no-repeat;
+	width: 9px;
+	height: 5px;
+	left: 20px;
+	top: 6px;
+	position: absolute;
+	z-index: 20;
+}
+
+#statusListContainer ul
+ {
+	list-style-type: none;
+	border: 1px solid #8E908F;
+	margin-top: 10px;
+	background-color: #fff;
+	padding: 10px 10px 10px 10px;
+	z-index: 1000;
+}
+
+#statusListContainer li
+{
+	display: block;
+	padding: 6px 5px 5px 24px;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+	cursor: pointer;
+}
+
+#statusListContainer li:hover
+{
+	background-color: #DDEAF4;
+}
+
+#statusListContainer li.selected
+{
+	/*background-color: #EDFBED;*/
+}
+
+#statusListContainer li.open
+{
+	background-image: url('../images/status_open_active_new.png');
+}
+
+#statusListContainer li.closed
+{
+	background-image: url('../images/status_closed_new.png');
+}
+
+#milestonesList td.title
+{
+	width: 555px;
+}
+
+#milestonesList td.title div
+{
+	width: 552px;
+	margin-left: 3px;
+}
+
+#milestonesList td.title a
+{ 
+	font-weight: bold;
+    overflow: hidden;
+	display: inline-block;
+	color: #333333;
+	max-width: 545px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-decoration: none;
+	cursor: default;
+}
+
+#milestonesList tr.closed td.title a
+{
+	color: #83888D;
+}
+
+#milestonesList td.title img
+{
+	float: left;
+	margin-right: 5px;
+	display: block;
+}
+
+#milestonesList td.activeTasksCount
+{
+	width: 32px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: right;
+}
+
+#milestonesList td.closedTasksCount
+{
+	width: 32px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: left;
+}
+
+#milestonesList td.closedTasksCount a, #milestonesList tr.closed td.closedTasksCount a,
+#milestonesList tr.closed td.activeTasksCount a,
+#milestonesList tr.closed td.slash
+{
+	color: #83888D;
+}
+
+#milestonesList td.activeTasksCount a
+{
+	color: #333333;
+}
+
+#milestonesList td.closedTasksCount a, #milestonesList td.activeTasksCount a
+{
+	text-decoration: none;
+}
+
+#milestonesList tr:hover td.activeTasksCount, 
+#milestonesList td.activeTasksCount a:hover
+{
+	text-decoration: underline;
+}
+
+#milestonesList tr:hover td.closedTasksCount,
+#milestonesList tr.closed:hover td.activeTasksCount a,
+#milestonesList td.closedTasksCount a:hover {
+	color: #83888D;
+	text-decoration: underline;
+}
+
+#milestonesList td.slash
+{
+	width: 6px;
+	text-align: center;
+}
+
+#milestonesList td.responsible
+{
+	width: 115px;
+	padding-left: 20px;
+}
+
+#milestonesList td.responsible div
+{
+	width: 115px;
+}
+
+#milestonesList td.responsible span
+{
+	display: inline-block;
+	max-width: 115px;
+	overflow: hidden;
+	white-space: nowrap;
+	height: 16px;
+	border-bottom: 1px dotted transparent;
+}
+#milestonesList tr:hover td.responsible span,
+#milestonesList td.responsible span:hover
+{
+	border-bottom: 1px dotted #000000;
+	cursor: pointer;
+}
+
+#milestonesList tr.closed td.responsible span
+{
+	color: #83888D;
+	border-bottom-color: #83888D;
+}
+
+#milestonesList td.deadline
+{
+	width: 65px;
+	text-align: center;
+}
+
+#milestonesList tr.closed td.deadline
+{
+	color: #83888D;
+    font-size: 11px;
+}
+
+#milestonesList td.deadline .overdue
+{
+	color: #E34603;
+}
+
+#milestonesList td.actions
+{
+	width: 45px;
+}
+
+#milestonesList td.actions .milestoneActionsLink
+{	
+	background: url('../images/action.png') no-repeat;
+	width: 24px;
+	height: 24px;
+	margin: 0px 10px 0px 14px;
+    cursor: pointer;
+}
+
+#milestonesList tr .milestoneActionsLink.selected, #milestonesList tr:hover .milestoneActionsLink
+{	
+	background: url('../images/action_hover.png') no-repeat;
+    display: block;
+}
+#milestonesList tr .milestoneActionsLink.selected {
+	background: url('../images/action_click.png') no-repeat;
+    display: block;
+}
+#milestoneActionContainer
+{
+    background-color: #FFFFFF;
+    border: 1px solid #8E908F;
+    display: none;
+    min-width: 140px;
+    padding: 7px 10px;    
+    position: absolute;
+}
+
+#milestoneActionContainer .containerTop
+{
+	background: url('../images/popup-corner.png') no-repeat;
+	width: 9px;
+	height: 5px;
+	margin-top: -12px;
+	position: absolute;
+	right: 10px;
+}
+
+#milestoneActionContainer span
+{
+	white-space: nowrap;
+	max-width: 200px;
+	overflow: hidden;  
+	display: list-item;
+	height: 21px;
+	line-height: 21px;
+	list-style: none;	
+	padding-left: 12px;
+	cursor: pointer;
+}
+
+#milestoneActionContainer span:hover
+{
+	background-color: #edf6fd;
+	color: #14648b;
+}
+
+#milestonesList td.process
+{
+	height: 37px;
+	background: url('../images/loader16.gif') no-repeat 10px 10px;
+}
+
+/*------description panel-----*/
+
+#descriptionPanel 
+{
+	left: 70px;
+	font-size: 12px;
+	color: #333333;
+	min-width: 300px;
+	max-width: 420px;
+	line-height: 20px;
+	z-index: 10;
+}
+
+#descriptionPanel div.popup-corner
+{
+	left: 10px;
+}
+
+#descriptionPanel .param
+{
+	float: left;
+	padding-right: 12px;  
+	color: #9ca0a4;
+}
+
+#descriptionPanel .param div
+{
+	height: 20px;
+}
+
+#descriptionPanel .value
+{
+	display: block;
+	overflow: hidden;
+}
+
+#descriptionPanel .value .project 
+{
+	cursor: pointer;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+#descriptionPanel .value .createdby
+{
+	text-decoration: none;
+	margin-right: 15px;
+	white-space: nowrap;
+}
+
+#descriptionPanel .value .project a
+{
+	color: #333333;
+	text-decoration: none;
+	border-bottom: 1px dotted #333333;
+}
+
+#descriptionPanel .value .date
+{
+	height: 20px;
+}
+
+.noContentBlock, #EmptyListForFilter, #EmptyListMilestone
+{
+    display: none;
+}

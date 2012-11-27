@@ -1,0 +1,168 @@
+﻿#AdvansedFilter
+{
+	visibility: hidden;
+}
+
+#newDiscussionButton
+{
+	display: inline-block;
+	visibility: hidden;
+	background: url("../images/plus.png") no-repeat scroll left center transparent;
+	padding-left: 21px;
+	height: 18px;
+	margin-top: -4px;
+    margin-bottom: 22px;
+}
+
+#newDiscussionButton span:hover
+{
+	color: #000;
+	border-bottom: #000 1px dotted;
+}
+
+.presetContainer
+{
+	visibility: hidden;
+}
+
+
+.noContentBlock, #EmptyListForFilter, #EmptyListDiscussion
+{
+    display: none;
+}
+
+#EmptyListDiscussion .baseLinkAction {
+	border: none;
+	text-decoration: underline !important;
+}
+
+#discussionsList
+{
+	display: none;
+	margin-top: 24px;
+}
+
+.discussionContainer
+{
+	padding: 10px;
+	min-height: 82px;
+	border-top: 1px solid #C5C5C5;
+}
+
+.discussionContainer.odd
+{
+	background-color: #EFF0F0;
+}
+
+.discussionAuthorAvatar
+{
+	width: 110px;
+	float: left;
+	text-align: center;
+}
+
+.discussionAuthorAvatar img
+{
+	font-weight: bold;
+	color: blue;
+	width: 64px;
+	height: 64px;
+}
+
+.discussionCreatedDate
+{
+	color: #7C7D7E;
+	float: left;
+}
+
+.discussionProjectTitle
+{
+	color: #7C7D7E !important;
+	float: right;
+}
+
+.discussionProjectTitle:hover
+{
+	color: #7C7D7E;
+	text-decoration: none;
+}
+
+.discussionDescriptionContainer
+{
+	margin-left: 110px;
+}
+
+.discussionTitle
+{
+	margin-bottom: 15px;
+}
+
+.discussionTitle a
+{
+	font-size: 16px;
+	font-weight: bold;
+	color: #1A6DB3;
+	max-width: 800px;
+	overflow: hidden;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.discussionAuthor
+{
+	margin-bottom: 5px;
+	overflow: auto;
+}
+
+.discussionAuthor a
+{
+    font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	max-width: 800px;
+	overflow: hidden;
+	display: block;
+	text-decoration: none;
+	float: left;
+	margin-right: 5px;
+}
+
+.discussionAuthor .discussionAuthorTitle
+{
+	display: block;
+	color: #7C7D7E;
+	line-height: 20px;
+}
+
+.discussionText
+{
+	margin-bottom: 25px;
+	overflow: hidden;	
+}
+
+.discussionComments
+{
+	text-align: right;
+	margin-bottom: 10px;
+	clear: both;
+}
+
+.discussionComments a
+{
+	display: inline-block;
+}
+
+#showNextDiscussionsButton
+{
+	color: #9CA0A4;
+    cursor: pointer;
+    display: none;
+    font-weight: bold;
+    margin: 0 0 0 31px;
+    text-decoration: underline;
+}
+
+#showNextDiscussionsButton:hover
+{
+	color: #1A6DB3;
+}

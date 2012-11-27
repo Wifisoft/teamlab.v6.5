@@ -1,0 +1,176 @@
+﻿.containerClass
+{
+	border: solid 1px #C9C9C9;
+	background-color: White;
+}
+
+
+.containerClass .containerHeaderBlock
+{
+	
+	/*height: 24px;
+	overflow: hidden;*/
+	padding: 16px 0px 0px 24px;
+	color: #111;
+	font-size:24px;
+	font-family:Areal;
+	vertical-align: middle;
+}
+
+
+
+
+
+/**+html .containerClass .containerHeaderBlock
+{
+	/*height: 24px;
+	overflow: hidden;* /
+	padding: 24px 0 0 24px;
+	color: #333;
+	font-size:16px;
+	vertical-align: middle;
+	width: expression(this.parentNode.clientWidth - 2);
+}
+
+
+
+*html .containerClass .containerHeaderBlock
+{
+	
+	/*height: 24px;
+	overflow: hidden;
+	color: #FFFFFF;* /
+	padding: 24px 0 0 24px;
+	color: #333;
+	vertical-align: middle;
+	display:block;
+	position:relative;
+	font-style:16px;
+	float:left;
+	width:expression(this.parentNode.clientWidth - 2);	
+}*/
+
+
+
+/*
+.popupContainerClass .infoPanel, .mainContainerClass .popupContainerClass .infoPanel
+{
+	margin:10px 20px 0;
+	vertical-align:middle;
+	background-color:#EEF6FD;
+	background-image:url('ImagesCSS/info_16.gif');
+	background-repeat:no-repeat;
+	background-position: 10px 10px;
+	color:#666668 !important;
+	font-size:13px;
+	font-weight:normal;
+	height:35px;
+}
+
+
+.popupContainerClass .infoPanel div, .mainContainerClass .popupContainerClass .infoPanel div
+{
+	padding: 10px 0px 0px 35px;
+}*/
+
+
+.containerClass .infoPanel
+{
+	margin:10px 20px 0;
+	vertical-align:middle;
+	color:#666668 !important;
+	font-size:13px;
+	font-weight:normal;
+	height:35px;
+}
+
+.containerClass .infoPanel div
+{
+	background-color:#EEF6FD;
+	background-image:url('ImagesCSS/info_16.gif');
+	background-repeat:no-repeat;
+	background-position: 10px 10px;
+	padding: 10px 0px 10px 35px;
+}
+
+.containerClass .warn div
+{
+	background-color:#FBFAD5;
+	background-image:url('ImagesCSS/warning_16.png');
+
+}
+
+.containerClass .alert div
+{
+	background-color:#FFECE3;
+	background-image:url('ImagesCSS/alert_16.png');
+
+}
+
+.containerClass .containerBodyBlock
+{
+	background-color: #FFFFFF;
+	padding: 7px 24px 48px 24px;
+	color:#000;
+	font-family:Arial,sans-serif;
+	font-size:12px;
+	font-weight: normal;
+	text-decoration: none;
+	border: none;
+}
+
+
+
+
+/*html .containerClass .containerBodyBlock , *+html .containerClass .containerBodyBlock
+{
+	background-color: #FFFFFF;
+	color: #646464;
+	padding: 24px 0 0 24px; 
+	font-family: Arial,Tahoma,sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	width: expression(this.parentNode.clientWidth - 2);
+	border: none;
+	display: block;
+	overflow: hidden;
+}*/
+
+
+.containerClass .containerBreadCrumbLink
+{
+	font-size: 13px; 
+	color: #666668 !important;
+}
+
+.containerClass a.containerBreadCrumbLink, .containerClass a.containerBreadCrumbLink:visited
+{
+	text-decoration:underline;
+}
+
+.containerClass a.containerBreadCrumbLink:hover
+{
+	text-decoration:none;
+}
+
+.containerClass .containerBreadCrumbSpiter
+{
+	font-size: 11px; 
+    color: #111111; 
+}
+
+.containerClass .popupCancel
+{
+	float:right;
+	padding-right:20px;
+}
+
+.containerClass .cancelButton
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.cancelButton.png") %>');
+	width:16px;
+	height:16px;
+	cursor:pointer;
+	border:none;
+}

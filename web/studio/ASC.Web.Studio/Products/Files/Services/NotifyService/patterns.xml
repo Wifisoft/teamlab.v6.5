@@ -1,0 +1,31 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <pattern id="ShareDocument" name="share document" contentType="html">
+        <subject resource="|subject_ShareDocument|ASC.Web.Files.Services.NotifyService.FilesPatternResource,ASC.Web.Files" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ShareDocument|ASC.Web.Files.Services.NotifyService.FilesPatternResource,ASC.Web.Files" />
+      </pattern>
+      <pattern id="ShareDocument_jabber" name="share document jabber" contentType="text">
+        <subject resource="|subject_ShareDocument|ASC.Web.Files.Services.NotifyService.FilesPatternResource,ASC.Web.Files" />
+        <body styler="ASC.Notify.Textile.JabberStyler, ASC.Notify.Textile">$__AuthorName
+
+$AccessRights
+
+$Message
+
+$DocumentURL</body>
+      </pattern>
+      <pattern id="UpdateDocument" name="update document" contentType="html">
+        <subject resource="|subject_UpdateDocument|ASC.Web.Files.Services.NotifyService.FilesPatternResource,ASC.Web.Files" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_UpdateDocument|ASC.Web.Files.Services.NotifyService.FilesPatternResource,ASC.Web.Files" />
+      </pattern>
+      <pattern id="UpdateDocument_jabber" name="update document jabber" contentType="text">
+        <subject resource="|subject_UpdateDocument|ASC.Web.Files.Services.NotifyService.FilesPatternResource,ASC.Web.Files" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$__AuthorName
+
+$DocumentURL</body>
+      </pattern>
+    </patterns>
+  </block>
+</pt:catalog>

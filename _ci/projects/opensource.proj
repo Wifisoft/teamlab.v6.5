@@ -1,0 +1,134 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <UsingTask AssemblyFile="..\msbuild\MSBuild.ExtensionPack.dll" TaskName="MSBuild.ExtensionPack.Xml.XmlFile" />
+  <UsingTask AssemblyFile="..\msbuild\MSBuild.Community.Tasks.dll" TaskName="MSBuild.Community.Tasks.XmlUpdate" />
+  <UsingTask AssemblyFile="..\msbuild\MSBuild.Community.Tasks.dll" TaskName="MSBuild.Community.Tasks.Xml.XmlMassUpdate" />
+
+  <PropertyGroup>
+    <To Condition=" '$(To)' == '' ">..\Deploy\OpenSource\</To>
+
+    <ToWeb>$(To)web\studio\ASC.Web.Studio\</ToWeb>
+    <SQLite3>$(To)redistributable\third-party\db\sqlite\sqlite3</SQLite3>
+
+    <From>..\..\</From>
+    <ExcludeFile>ExcludeCommon.txt</ExcludeFile>
+    <ExcludeWebFile>ExcludeWeb.txt</ExcludeWebFile>
+    <ExcludeRed3>ExcludeRed3.txt</ExcludeRed3>
+  </PropertyGroup>
+  
+
+  <Target Name="Build">
+    <CallTarget Targets="CopyFiles"/>
+    <CallTarget Targets="ModifyFiles"/>
+    <CallTarget Targets="CreateDatabases"/>
+  </Target>
+
+  
+  <Target Name="CopyFiles">
+    <RemoveDir Directories="$(To)" ContinueOnError="true"/>
+
+    <Exec Command="xcopy    $(From)_ci\additionals\*.config                               $(To)_ci\additionals\                         /EXCLUDE:$(ExcludeFile) /Y"/>
+    <Exec Command="xcopy    $(From)_ci\msbuild\*.*                                        $(To)_ci\msbuild\                             /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)_ci\projects\*.*                                       $(To)_ci\projects\                            /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+
+    <Exec Command="xcopy    $(From)common\ASC.Common\*.*                                  $(To)common\ASC.Common\                       /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)common\ASC.Core.Common\*.*                             $(To)common\ASC.Core.Common\                  /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)common\ASC.Licensing\ASC.Licensing\*.*                 $(To)common\ASC.Licensing\ASC.Licensing\      /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)common\ASC.Notify.Textile\*.*                          $(To)common\ASC.Notify.Textile\               /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)common\ASC.Data.Backup\*.*                             $(To)common\ASC.Data.Backup\                  /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)common\ASC.Data.Backup.Restore\*.*                     $(To)common\ASC.Data.Backup.Restore\          /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)common\ASC.Data.Storage\*.*                            $(To)common\ASC.Data.Storage\                 /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)dev_tools\TMResourceManager\Data\*.*                   $(To)dev_tools\TMResourceManager\Data\        /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+	<Exec Command="xcopy    $(From)dev_tools\SQLiteDbMigration\*.*                        $(To)dev_tools\SQLiteDbMigration\             /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+
+    <Exec Command="xcopy    $(From)License\*.*                                            $(To)License\                                 /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+
+    <Exec Command="xcopy    $(From)module\ASC.Api\*.*                                     $(To)module\ASC.Api\                           /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.TeamLabSvc\ASC.TeamLabSvc\*.*               $(To)module\ASC.TeamLabSvc\ASC.TeamLabSvc\     /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.Bookmarking\*.*                             $(To)module\ASC.Bookmarking\                   /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\Blogs\ASC.Blogs.Core\*.*                        $(To)module\Blogs\ASC.Blogs.Core\              /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\Forum\ASC.Forum\*.*                             $(To)module\Forum\ASC.Forum\                   /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.Feed\*.*                                    $(To)module\ASC.Feed\                          /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\PhotoManager\*.*                                $(To)module\PhotoManager\                      /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.Projects\*.*                                $(To)module\ASC.Projects\                      /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.Jabber\*.*                                  $(To)module\ASC.Jabber\                        /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.FullTextIndex\ASC.FullTextIndex\*.*         $(To)module\ASC.FullTextIndex\ASC.FullTextIndex\            /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.Notify\ASC.Notify\*.*                       $(To)module\ASC.Notify\ASC.Notify\             /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.Thrdparty\ASC.Thrdparty\*.*                 $(To)module\ASC.Thrdparty\ASC.Thrdparty\       /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.Thrdparty\ASC.FederatedLogin\*.*            $(To)module\ASC.Thrdparty\ASC.FederatedLogin\  /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)module\ASC.Thrdparty\DotNetOpenAuth.ApplicationBlock\*.* $(To)module\ASC.Thrdparty\DotNetOpenAuth.ApplicationBlock\ /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+
+    <Exec Command="xcopy    $(From)web\core\ASC.Web.Core\*.*                              $(To)web\core\ASC.Web.Core\                    /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)web\host\ASC.Web.Host\*.*                              $(To)web\host\ASC.Web.Host\                    /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)web\controls\*.*                                       $(To)web\controls\                             /EXCLUDE:$(ExcludeFile) /Y /E /S"/>
+    <Exec Command="xcopy    $(From)web\studio\ASC.Web.Studio\*.*                          $(ToWeb)                                       /EXCLUDE:$(ExcludeFile)+$(ExcludeWebFile) /Y /E /S"/>
+
+    <Exec Command="xcopy    $(From)redistributable\asc\*.bat                              $(To)redistributable\asc\                      /Y"/>
+    <Exec Command="xcopy    $(From)redistributable\third-party\*.*                        $(To)redistributable\third-party\              /EXCLUDE:$(ExcludeFile)+$(ExcludeRed3) /Y /E /S"/>
+
+    <Exec Command="xcopy    $(From)SQL_Scripts\*.*          $(To)SQL_Scripts\ /Y /S"/>
+  </Target>
+
+  <Target Name="ModifyFiles">
+    <!-- Modify configuration files -->
+    <CreateItem Include="$(ToWeb)*.config">
+      <Output ItemName="ConfigurationFiles" TaskParameter="Include"/>
+    </CreateItem>
+    <CreateItem Include="@(ConfigurationFiles)" Condition="Exists('..\additionals\private\%(FileName).config.substitutions.xml')">
+      <Output ItemName="ConfigFilesWithSubstitutions" TaskParameter="Include"/>
+    </CreateItem>
+    <XmlMassUpdate
+      ContentFile="%(ConfigFilesWithSubstitutions.FullPath)"
+      SubstitutionsFile="..\additionals\private\%(ConfigFilesWithSubstitutions.FileName).config.substitutions.xml"
+      ContentRoot="/"
+      SubstitutionsRoot="/configuration/substitutions/OPEN-SOURCE"/>
+    <XmlMassUpdate
+      ContentFile="$(To)_ci\additionals\TeamLabSvc.exe.Config"
+      SubstitutionsFile="..\additionals\private\TeamLabSvc.exe.Config.Substitutions.xml"
+      ContentRoot="/"
+      SubstitutionsRoot="/configuration/substitutions/OPEN-SOURCE"/>
+
+    <!-- Modify build.proj -->
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:Community"   Value="1"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:PM"          Value="1"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:Files"       Value="1"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:CRM"         Value="1"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:Tools"       Value="0"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:Mobile"      Value="0"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:Api"         Value="0"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:Talk"        Value="1"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:Mail"        Value="0"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+    <XmlUpdate XmlFileName="$(To)_ci\projects\deploy.proj" XPath="//n:PropertyGroup/n:Calendar"    Value="1"     Namespace="http://schemas.microsoft.com/developer/msbuild/2003" Prefix="n"/>
+
+    <!-- Modify project files to build without Microsoft Visual Studio -->
+    <CreateItem Include="$(To)web\**\*.csproj">
+      <Output TaskParameter="Include" ItemName="WebProjects"/>
+    </CreateItem>
+    <XmlFile
+      File="$(To)web\%(WebProjects.RecursiveDir)%(WebProjects.Filename)%(WebProjects.Extension)"
+      Namespace="http://schemas.microsoft.com/developer/msbuild/2003"
+      Prefix="n"
+      TaskAction="AddAttribute"
+      Element="/n:Project/n:Import[@Project='%24(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets']"
+      Key="Condition"
+      Value="Exists('%24(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets')"/>
+  </Target>
+
+  <Target Name="CreateDatabases">
+    <MakeDir Directories="$(To)web\studio\Data\Db\" ContinueOnError="true"/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Core.db3                &lt;    $(To)SQL_Scripts\SQLite\Core.sql        "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Core.db3                &lt;    $(To)SQL_Scripts\SQLite\Core.Data.sql   "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\WebStudio.db3           &lt;    $(To)SQL_Scripts\SQLite\WebStudio.sql   "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\WebStudio.db3           &lt;    $(To)SQL_Scripts\SQLite\WebStudio.Data.sql   "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Resources.db3           &lt;    $(To)SQL_Scripts\SQLite\Resource.sql    "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Resources.db3           &lt;    $(To)SQL_Scripts\res_cultures.sql    "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Resources.db3           &lt;    $(To)SQL_Scripts\res_files.sql    "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Resources.db3           &lt;    $(To)SQL_Scripts\res_data.sql    "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Files.db3               &lt;    $(To)SQL_Scripts\SQLite\Files.sql   "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Projects.db3            &lt;    $(To)SQL_Scripts\SQLite\Projects.sql   "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Crm.db3                 &lt;    $(To)SQL_Scripts\SQLite\Crm.sql   "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Community.db3           &lt;    $(To)SQL_Scripts\SQLite\Community.sql   "/>
+    <Exec Command="   $(SQLite3)       $(To)web\studio\Data\Db\Calendar.db3            &lt;    $(To)SQL_Scripts\SQLite\Calendar.sql   "/>
+  </Target>
+
+</Project>

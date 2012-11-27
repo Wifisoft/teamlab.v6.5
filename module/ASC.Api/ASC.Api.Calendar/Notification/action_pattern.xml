@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+  <action actionID="calendar_sharing" defaultPatternID="CalendarSharingPattern">
+	  <sender senderName="messanger.sender" patternID="CalendarSharingPattern_jabber" />
+  </action>
+  <action actionID="event_alert" defaultPatternID="EventAlertPattern">
+        <sender senderName="messanger.sender" patternID="EventAlertPattern_jabber" />
+  </action>
+</act:accordings>
+

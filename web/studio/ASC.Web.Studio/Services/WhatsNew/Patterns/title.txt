@@ -1,0 +1,12 @@
+﻿#if ( $activity.ProductID == '1e044602-43b5-4d79-82f3-fd6208a11960')
+#set( $tokenIndex = $additionalData.LastIndexOf("|"))
+#if ($tokenIndex >0 )
+#set( $tokenEnd = $tokenIndex + 1 )
+#if ($tokenEnd < $additionalData.Length)
+[$additionalData.Substring($tokenEnd)]:
+#end
+#end
+#else
+[${moduleName}]:
+#end
+$activity.Title

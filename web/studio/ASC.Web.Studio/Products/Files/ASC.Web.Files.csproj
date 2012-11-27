@@ -1,0 +1,518 @@
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="CompressorTask" AssemblyFile="..\..\..\..\..\redistributable\third-party\YUICompressor\Yahoo.Yui.Compressor.dll" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C534AF7-5696-4E68-9FF4-FFC311893C10}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASC.Web.Files</RootNamespace>
+    <AssemblyName>ASC.Web.Files</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TrunkDir>..\..\..\..\..\</TrunkDir>
+    <RedDir Condition=" '$(RedDir)' == '' ">$(TrunkDir)redistributable\asc\</RedDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AppLimit.CloudComputing.SharpBox, Version=1.1.0.440, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\third-party\ShrapBox\compiled\AppLimit.CloudComputing.SharpBox.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\asc\ASC.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\asc\ASC.Core.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Data.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\asc\ASC.Data.Storage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.FullTextIndex, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\asc\ASC.FullTextIndex.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Thrdparty, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\asc\ASC.Thrdparty.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\asc\ASC.Web.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Web.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\asc\ASC.Web.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Web.Studio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\ASC.Web.Studio.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth, Version=4.0.0.11165, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\third-party\DotNetOpenAuth\4\DotNetOpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.ApplicationBlock, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\asc\DotNetOpenAuth.ApplicationBlock.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\third-party\SharpZipLib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\third-party\log4net\log4net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\third-party\Microsoft\unity\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceModel.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\third-party\Microsoft\Microsoft.ServiceModel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.6.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\redistributable\third-party\NUnit 2.4.6\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer.aspx.cs">
+      <DependentUpon>Viewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewer.aspx.designer.cs">
+      <DependentUpon>Viewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\DocServiceParams.cs" />
+    <Compile Include="Classes\FilesSettings.cs" />
+    <Compile Include="Classes\DocumentUtils.cs" />
+    <Compile Include="Classes\ResultsView.cs" />
+    <Compile Include="Classes\StatisticProvider.cs" />
+    <Compile Include="Classes\UserActivityControlLoader.cs" />
+    <Compile Include="Classes\FilesActivityPublisher.cs" />
+    <Compile Include="Classes\FilesIntegration.cs" />
+    <Compile Include="Classes\FilesSpaceUsageStatManager.cs" />
+    <Compile Include="Classes\FilesUploader.cs" />
+    <Compile Include="Classes\Global.cs" />
+    <Compile Include="Classes\PathProvider.cs" />
+    <Compile Include="Classes\ProductEntryPoint.cs" />
+    <Compile Include="Classes\SearchHandler.cs" />
+    <Compile Include="Classes\SubscriptionManager.cs" />
+    <Compile Include="Classes\UrlConstant.cs" />
+    <Compile Include="Controls\AccessRights\AccessRights.ascx.cs">
+      <DependentUpon>AccessRights.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AccessRights\AccessRights.ascx.designer.cs">
+      <DependentUpon>AccessRights.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ThirdParty\ThirdParty.ascx.cs">
+      <DependentUpon>ThirdParty.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ThirdParty\ThirdParty.ascx.designer.cs">
+      <DependentUpon>ThirdParty.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmptyFolder\EmptyFolder.ascx.cs">
+      <DependentUpon>EmptyFolder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EmptyFolder\EmptyFolder.ascx.designer.cs">
+      <DependentUpon>EmptyFolder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImportControl\ImportControl.ascx.cs">
+      <DependentUpon>ImportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ImportControl\ImportControl.ascx.designer.cs">
+      <DependentUpon>ImportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FileViewer\FileViewer.ascx.cs">
+      <DependentUpon>FileViewer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FileViewer\FileViewer.ascx.designer.cs">
+      <DependentUpon>FileViewer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainMenu\MainMenu.ascx.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MainMenu\MainMenu.ascx.designer.cs">
+      <DependentUpon>MainMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainContent\MainContent.ascx.cs">
+      <DependentUpon>MainContent.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MainContent\MainContent.ascx.designer.cs">
+      <DependentUpon>MainContent.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.aspx.cs">
+      <DependentUpon>Editor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editor.aspx.designer.cs">
+      <DependentUpon>Editor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\FileLocker.cs" />
+    <Compile Include="Core\Data\DbDaoSelector.cs" />
+    <Compile Include="Core\ProviderDao\IDaoSelector.cs" />
+    <Compile Include="Core\ProviderDao\ProviderDaoBase.cs" />
+    <Compile Include="Core\ProviderDao\ProviderFileDao.cs" />
+    <Compile Include="Core\ProviderDao\ProviderFolderDao.cs" />
+    <Compile Include="Core\ProviderDao\RegexDaoSelectorBase.cs" />
+    <Compile Include="Core\IProviderInfo.cs" />
+    <Compile Include="Core\IProviderDao.cs" />
+    <Compile Include="Core\ThirdPartyDao\Sharpbox\SharpBoxProviderInfo.cs" />
+    <Compile Include="Core\ThirdPartyDao\Sharpbox\SharpBoxAccountDao.cs" />
+    <Compile Include="Core\ThirdPartyDao\Sharpbox\SharpBoxDaoBase.cs" />
+    <Compile Include="Core\ThirdPartyDao\Sharpbox\SharpBoxDaoSelector.cs" />
+    <Compile Include="Core\ThirdPartyDao\Sharpbox\SharpBoxFileDao.cs" />
+    <Compile Include="Core\ThirdPartyDao\Sharpbox\SharpBoxFolderDao.cs" />
+    <Compile Include="DocEditor.aspx.cs">
+      <DependentUpon>DocEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocEditor.aspx.designer.cs">
+      <DependentUpon>DocEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Security\IFileSecurityProvider.cs" />
+    <Compile Include="Core\File.cs" />
+    <Compile Include="Core\FileConstant.cs" />
+    <Compile Include="Core\FileEntry.cs" />
+    <Compile Include="Core\FileEntryType.cs" />
+    <Compile Include="Core\FilterType.cs" />
+    <Compile Include="Core\Folder.cs" />
+    <Compile Include="Core\IDaoFactory.cs" />
+    <Compile Include="Core\IFileDao.cs" />
+    <Compile Include="Core\IFolderDao.cs" />
+    <Compile Include="Core\ITagDao.cs" />
+    <Compile Include="Core\OrderBy.cs" />
+    <Compile Include="Core\Tag.cs" />
+    <Compile Include="Core\Data\AbstractDao.cs" />
+    <Compile Include="Core\Data\DaoFactory.cs" />
+    <Compile Include="Core\Data\FileDao.cs" />
+    <Compile Include="Core\Data\FolderDao.cs" />
+    <Compile Include="Core\Data\SecurityDao.cs" />
+    <Compile Include="Core\Data\TagDao.cs" />
+    <Compile Include="Core\Security\FileSecurity.cs" />
+    <Compile Include="Core\Security\FileShare.cs" />
+    <Compile Include="Core\Security\FileShareRecord.cs" />
+    <Compile Include="Core\Security\IFileSecurity.cs" />
+    <Compile Include="Core\Security\ISecurityDao.cs" />
+    <Compile Include="DocViewer.aspx.cs">
+      <DependentUpon>DocViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocViewer.aspx.designer.cs">
+      <DependentUpon>DocViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileHandler.ashx.cs">
+      <DependentUpon>FileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Core\AuthData.cs" />
+    <Compile Include="Import\Boxnet\BoxLogin.aspx.cs">
+      <DependentUpon>BoxLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Import\Boxnet\BoxLogin.aspx.designer.cs">
+      <DependentUpon>BoxLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Import\Boxnet\BoxDocumentProvider.cs" />
+    <Compile Include="Import\DropBox\Dropbox.aspx.cs">
+      <DependentUpon>Dropbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Import\DropBox\Dropbox.aspx.designer.cs">
+      <DependentUpon>Dropbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Import\Google\GoogleDocumentProvider.cs" />
+    <Compile Include="Import\IDocumentProvider.cs" />
+    <Compile Include="Import\Google\OAuth.aspx.cs">
+      <DependentUpon>OAuth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Import\Google\OAuth.aspx.designer.cs">
+      <DependentUpon>OAuth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Import\ImportConfiguration.cs" />
+    <Compile Include="Import\OAuthBase.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Import\Utils.cs" />
+    <Compile Include="Import\Zoho\ZohoDocumentProvider.cs" />
+    <Compile Include="Masters\BasicTemplate.Master.cs">
+      <DependentUpon>BasicTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\BasicTemplate.Master.designer.cs">
+      <DependentUpon>BasicTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\FilesCommonResource.Designer.cs">
+      <DependentUpon>FilesCommonResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Resources\FilesJSResource.Designer.cs">
+      <DependentUpon>FilesJSResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Resources\FilesUCResource.Designer.cs">
+      <DependentUpon>FilesUCResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Import\Document.cs" />
+    <Compile Include="Services\NotifyService\FilesPatternResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FilesPatternResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\NotifyService\NotifyClient.cs" />
+    <Compile Include="Services\NotifyService\NotifyConstants.cs" />
+    <Compile Include="Services\NotifyService\NotifySource.cs" />
+    <Compile Include="Services\WCFService\AceWrapper.cs" />
+    <Compile Include="Services\WCFService\BaseTypeWrapper.cs" />
+    <Compile Include="Services\WCFService\ServiceErrorLoggingBehavior.cs" />
+    <Compile Include="Services\WCFService\ServiceFactory.cs" />
+    <Compile Include="Services\WCFService\FileImportOperation.cs" />
+    <Compile Include="Services\WCFService\FileOperationType.cs" />
+    <Compile Include="Services\WCFService\FileOperationResult.cs" />
+    <Compile Include="Services\WCFService\FileDownloadOperation.cs" />
+    <Compile Include="Services\WCFService\FileConflictResolveType.cs" />
+    <Compile Include="Services\WCFService\FileDeleteOperation.cs" />
+    <Compile Include="Services\WCFService\DataWrapper.cs" />
+    <Compile Include="Services\WCFService\FileMoveCopyOperation.cs" />
+    <Compile Include="Services\WCFService\FileOperation.cs" />
+    <Compile Include="Services\WCFService\IFileStorageService.cs" />
+    <Compile Include="Services\WCFService\DataToImport.cs" />
+    <Compile Include="Services\WCFService\MultipartParser.cs" />
+    <Compile Include="Services\WCFService\ThirdPartyParams.cs" />
+    <Compile Include="Services\WCFService\UriTemplates.cs" />
+    <Compile Include="Services\WCFService\Service.svc.cs">
+      <DependentUpon>Service.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Masters\BasicTemplate.Master" />
+    <Content Include="Services\WCFService\Service.svc" />
+    <Content Include="Templates\getfilehistory.xsl" />
+    <Content Include="Templates\getfolderitem.xsl" />
+    <Content Include="Templates\getfolderinfo.xsl" />
+    <Content Include="Templates\getfolderitems.xsl" />
+    <Content Include="Templates\getfolderstree.xsl" />
+    <Content Include="Templates\getimportdata.xsl" />
+    <Content Include="Templates\gettooltip.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FilesCommonResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FilesCommonResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FilesJSResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FilesJSResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FilesUCResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FilesUCResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\NotifyService\action_pattern.xml" />
+    <EmbeddedResource Include="Services\NotifyService\FilesPatternResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FilesPatternResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\common.css" />
+    <Content Include="App_Themes\Default\Images\back-progress-big.png" />
+    <Content Include="App_Themes\Default\Images\corporatefiles.png" />
+    <Content Include="App_Themes\Default\Images\corporatefiles_big.png" />
+    <Content Include="App_Themes\Default\Images\product_disabled_logo.png" />
+    <Content Include="App_Themes\Default\Images\loader_12.gif" />
+    <Content Include="App_Themes\Default\Images\myfiles.png" />
+    <Content Include="App_Themes\Default\Images\new_file.png" />
+    <Content Include="App_Themes\Default\Images\popup-corner.png" />
+    <Content Include="App_Themes\Default\Images\product_logo.png" />
+    <Content Include="App_Themes\Default\Images\product_logolarge.png" />
+    <Content Include="App_Themes\Default\Images\projectfiles.png" />
+    <Content Include="App_Themes\Default\Images\sharedforme.png" />
+    <Content Include="App_Themes\Default\Images\throbber.gif" />
+    <Content Include="App_Themes\Default\Images\trash_big.png" />
+    <Content Include="App_Themes\Default\Images\trash_container.png" />
+    <Content Include="App_Themes\Default\Images\tree.png" />
+    <Content Include="App_Themes\Default\Images\updatefile.png" />
+    <Content Include="App_Themes\Default\Images\upload.png" />
+    <Content Include="Controls\AccessRights\AccessRights.ascx" />
+    <Content Include="Controls\AccessRights\accessrights.js" />
+    <Content Include="Controls\AccessRights\accessrights.css" />
+    <Content Include="Controls\ThirdParty\ThirdParty.ascx" />
+    <Content Include="Controls\ThirdParty\thirdparty.css" />
+    <Content Include="Controls\ThirdParty\thirdparty.js" />
+    <Content Include="Controls\EmptyFolder\EmptyFolder.ascx" />
+    <Content Include="Controls\EmptyFolder\emptyfolder.css" />
+    <Content Include="Controls\EmptyFolder\emptyfolder.js" />
+    <Content Include="Controls\ImportControl\ImportControl.ascx" />
+    <Content Include="Controls\ImportControl\importcontrol.css" />
+    <Content Include="Controls\ImportControl\importcontrol.js" />
+    <Content Include="Controls\FileViewer\FileViewer.ascx" />
+    <Content Include="Controls\FileViewer\fileviewer.css" />
+    <Content Include="Controls\FileViewer\fileviewer.js" />
+    <Content Include="Controls\MainContent\MainContent.ascx" />
+    <Content Include="Controls\MainContent\maincontent.css" />
+    <Content Include="Controls\MainMenu\MainMenu.ascx" />
+    <Content Include="Controls\MainMenu\mainmenu.css" />
+    <Content Include="Controls\MainMenu\mainmenu.js" />
+    <Content Include="Controls\MainMenu\uploadmanager.js" />
+    <Content Include="Viewer.aspx" />
+    <Content Include="Editor.aspx" />
+    <Content Include="Import\Boxnet\BoxLogin.aspx" />
+    <Content Include="Import\DropBox\Dropbox.aspx" />
+    <Content Include="Import\Google\OAuth.aspx" />
+    <Content Include="js\actionmanager.js" />
+    <Content Include="js\common.js" />
+    <Content Include="js\auth.js" />
+    <Content Include="js\editor.js" />
+    <Content Include="js\filter.js" />
+    <Content Include="js\dragdrop.js" />
+    <Content Include="js\eventhandler.js" />
+    <Content Include="js\foldermanager.js" />
+    <Content Include="js\servicemanager.js" />
+    <Content Include="js\templatemanager.js" />
+    <Content Include="js\tree.js" />
+    <Content Include="js\ui.js" />
+    <Content Include="js\zeroclipboard.js" />
+    <Content Include="DocEditor.aspx" />
+    <Content Include="DocViewer.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="FileHandler.ashx" />
+    <EmbeddedResource Include="Services\NotifyService\patterns.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets')" />
+  <Target Name="BeforeBuild">
+    <Exec Command="taskkill /F /IM aspnet_wp.exe" IgnoreExitCode="true" ContinueOnError="true" Condition=" '$(KillAsp)' == '' " />
+    <Exec Command="taskkill /F /IM w3wp.exe" IgnoreExitCode="true" ContinueOnError="true" Condition=" '$(KillAsp)' == '' " />
+    <CreateItem Include="$(ProjectDir)Controls\**\Images\*.*">
+      <Output TaskParameter="Include" ItemName="ImageFromControls" />
+    </CreateItem>
+    <Copy SourceFiles="@(ImageFromControls)" DestinationFolder="$(ProjectDir)App_Themes\Default\Images" />
+    <CreateItem Include="$(ProjectDir)**\*.css" Exclude="$(ProjectDir)App_Themes\Default\files-min.css">
+      <Output TaskParameter="Include" ItemName="CssFiles" />
+    </CreateItem>
+    <CreateItem Include="$(ProjectDir)**\*.js" Exclude="$(ProjectDir)js\files-min.js">
+      <Output TaskParameter="Include" ItemName="JavaScriptFiles" />
+    </CreateItem>
+    <CompressorTask CssFiles="@(CssFiles)" DeleteCssFiles="false" CssOutputFile="$(ProjectDir)App_Themes\Default\files-min.css" CssCompressionType="YuiStockCompression" JavaScriptFiles="@(JavaScriptFiles)" ObfuscateJavaScript="True" PreserveAllSemicolons="False" DisableOptimizations="Nope" EncodingType="Default" DeleteJavaScriptFiles="false" LineBreakPosition="-1" JavaScriptOutputFile="$(ProjectDir)js\files-min.js" LoggingType="ALittleBit" ThreadCulture="en-au" IsEvalIgnored="false" />
+  </Target>
+  <Target Name="AfterBuild">
+    <Message Importance="High" Text="Copy assemblies to redistributable: $(MSBuildProjectName) -&gt; @(MainAssembly-&gt;'$(RedDir)%(FileName)%(Extension)') @(FinalDocFile-&gt;'$(RedDir)%(FileName)%(Extension)') @(IntermediateSatelliteAssembliesWithTargetPath-&gt;'$(RedDir)%(Culture)\$(TargetName).resources.dll')" />
+    <!-- Copy the build product (.dll or .exe). -->
+    <Copy SourceFiles="@(IntermediateAssembly)" DestinationFolder="$(RedDir)" SkipUnchangedFiles="true" />
+    <!-- Copy the resulting XML documentation file, if any. -->
+    <Copy SourceFiles="@(DocFileItem)" DestinationFiles="@(FinalDocFile-&gt;'$(RedDir)%(FileName)%(Extension)')" SkipUnchangedFiles="true" Condition="'$(_DocumentationFileProduced)'=='true'" />
+    <!-- Copy satellite assemblies. -->
+    <Copy SourceFiles="@(IntermediateSatelliteAssembliesWithTargetPath)" DestinationFiles="@(IntermediateSatelliteAssembliesWithTargetPath-&gt;'$(RedDir)%(Culture)\$(TargetName).resources.dll')" SkipUnchangedFiles="true" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52776</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ASC.Web.Files</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

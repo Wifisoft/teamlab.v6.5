@@ -1,0 +1,146 @@
+﻿#milestoneActionPanel
+{
+	display: none;
+}
+
+#milestoneActionPanel .containerBodyBlock
+{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#notifyResponsibleCheckbox, #milestoneKeyCheckBox, #milestoneNotifyManagerCheckBox
+{
+	margin: 0;
+	float: left;
+}
+
+#milestoneActionPanel label
+{
+	padding-left: 6px;
+}
+
+#milestoneActionPanel .requiredFieldError input
+{
+    border: 1px solid #CC0000;
+}
+
+#milestoneProjectContainer
+{
+	margin-bottom: 15px;
+}
+
+#milestoneDeadlineContainer
+{
+	margin-bottom: 50px;
+}
+
+#milestoneResponsibleContainer
+{
+	display: none;
+	margin-bottom: 12px;
+}
+
+#milestoneProjectContainer .headerPanelSmall, #milestoneDeadlineContainer .headerPanelSmall, #milestoneResponsibleContainer .headerPanelSmall
+{
+	float: left;
+	font-weight: bold;
+	margin-right: 7px;
+	text-align: right;
+	width: 140px;
+}
+
+#milestoneProjectContainer span.full-width, #milestoneResponsibleContainer span.full-width
+{
+	padding-top: 3px;
+}
+
+#milestoneResponsibleContainer .addresponsible
+{
+    background: url("../images/add_user.png") no-repeat scroll left center;
+    display: inline-block;
+    height: 16px;
+    width: 20px;
+}
+
+#milestoneResponsibleContainer .notifyResponsibleContainer
+{
+	display: none;
+	float: right;
+	padding-top: 3px;
+}
+
+#milestoneResponsibleContainer .tl-combobox .combobox-title .inner-text
+{
+	max-width: 240px;
+}
+
+#milestoneDeadlineSelectorContainer input
+{
+	margin-right: 13px;
+	margin-left: 3px;
+	cursor: pointer;
+}
+
+#milestoneDeadlineSelectorContainer span
+{
+	display: inline-block;
+	margin-right: 15px;
+	line-height: 15px;
+}
+
+#milestoneTitleContainer
+{
+	margin-bottom: 10px;
+}
+
+#milestoneDescriptionContainer
+{
+	margin-bottom: 16px;
+}
+
+#milestoneTitleContainer .headerPanelSmall, #milestoneDescriptionContainer .headerPanelSmall
+{
+	font-weight: bold;
+}
+
+#milestoneTitleInputBox
+{
+	width: 100%;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+#milestoneDescriptionInputBox
+{
+	width: 100%;
+	min-height: 93px;
+	max-height: 400px;
+	margin: 0px;
+}
+
+#milestoneKeyContainer
+{
+	margin-bottom: 8px;
+}
+
+div.pm-h-line
+{
+	margin-top: 32px;
+	margin-bottom: 19px;
+}
+
+#milestoneActionButtonsContainer
+{
+	margin-bottom: 5px;
+}
+
+#milestoneActionButton
+{
+	margin-right: 5px;
+}
+
+#milestoneActionProcessContainer
+{
+	display: none;
+}

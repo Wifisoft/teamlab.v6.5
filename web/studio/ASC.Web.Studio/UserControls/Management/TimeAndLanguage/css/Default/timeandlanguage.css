@@ -1,0 +1,39 @@
+﻿#timeandlang .headertitle
+{
+    width: 110px; 
+        padding-right: 10px;
+        height:22px;
+        line-height:22px;
+        vertical-align:middle;
+}
+
+
+#studio_lngTimeSettingsBox #timeandlang
+{
+    margin-top:10px;
+}
+
+.stepBody #timeandlang 
+{
+    /*float:left;*/
+}
+.stepBody #timeandlang .headertitle
+{
+    text-align: left;
+   /* margin-top:7px;*/
+}
+
+#studio_lngTimeSettingsBox #timeandlang .headertitle
+{
+    float:left;
+    text-align: right;
+}
+#studio_lngTimeSettingsBox .lang
+{
+    padding-top: 10px;
+}
+
+.stepBody #timeandlang .comboBox
+{
+    width:400px;
+}

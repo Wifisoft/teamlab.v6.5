@@ -1,0 +1,131 @@
+﻿
+.pm-projectTeam-projectLeaderCard
+{
+	padding: 10px;
+	width: 360px;
+	border: solid 1px #D1D1D1;
+	background-color: #F5FAFF;
+}
+
+.pm-projectTeam-h-line
+{
+	background-color:#D1D1D1;
+    height:1px;
+    line-height:1px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.pm-projectTeam-userContainer
+{
+    padding: 20px 0px;
+}
+.pm-projectTeam-userInfoContainer
+{
+    width: 33%;
+    float: left;
+    overflow: hidden;
+}
+.pm-projectTeam-userPhotoContainer
+{
+    padding-right: 10px;
+    vertical-align: top;
+}
+.pm-projectTeam-userAppointmentContainer
+{
+    margin-top: 3px
+}
+.pm-projectTeam-modulePermissionOn, .pm-projectTeam-modulePermissionOn-disable
+{
+	background-color: #f5f9e0;
+    background-image: url("../images/green_checkbox.png");
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    padding: 5px 0 5px 20px;
+    cursor:pointer;
+    border: 1px solid #e4ebcc;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+
+}
+.pm-projectTeam-modulePermissionOn-disable
+{
+    cursor: default;
+	background-color: #fff;
+	border-color: #fff;
+}
+.pm-projectTeam-modulePermissionOn span
+{
+	border-bottom: 1px dotted #000;
+	color: #000;
+	margin-right: 10px;
+}
+.pm-projectTeam-modulePermissionOff
+{
+	background-image: url("../images/cross.png");
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    background-color: #f5f9e0;
+    padding: 5px 0 5px 20px;
+    cursor:pointer;
+    border: 1px solid #e4ebcc;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    
+}
+.pm-projectTeam-modulePermissionOff span
+{
+    border-bottom: 1px dotted #000;
+	color: #000;
+	margin-right: 10px;
+}
+
+.pm-projectTeam-modulePermissionOn-disable span
+{
+	color: #000;
+	margin-right: 10px;
+}
+.pm-projectTeam-modulePermissionOff-disable
+{
+    padding: 5px 0 5px 20px;
+    border: 1px solid #FFF;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    cursor: default;
+}
+.pm-projectTeam-modulePermissionOff-disable span
+{
+	color: #000;
+	margin-right: 10px;
+}
+.pm-projectTeam-linkActions, .pm-projectTeam-linkActions:hover
+{
+    color: #000;
+    cursor: pointer;
+    padding-right: 15px;
+    text-decoration: none;
+}
+.pm-projectTeam-participantContainer
+{
+	padding: 5px 0;
+}
+.pm-projectTeam-actionPanel
+{
+    padding: 10px;
+}
+.pm-projectTeam-actionPanel div.popupZub {
+    background: url("../images/zub-top.png") no-repeat scroll 0 0 transparent;
+    height: 5px;
+    margin-top: -15px;
+    position: absolute;
+    width: 9px;
+}
+.pm-projectTeam-infoText
+{
+    background-image: url("../images/green_checkbox.png");
+    background-position: 0 7px;
+    background-repeat: no-repeat;
+    padding: 5px 0 5px 20px;
+}

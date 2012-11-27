@@ -1,0 +1,2 @@
+﻿<%@ Register Namespace="ASC.Web.Controls" TagPrefix="ascwc"  Assembly="ASC.Web.Controls" %>
+<ascwc:TagCloud BoxCSSClass="tagCloudBox" CaptionCSSClass="headerPanel" LinkCSSClass="tagCloudItem" LowLinkColor="#646464" HighLinkColor="#272727" runat="server"/>

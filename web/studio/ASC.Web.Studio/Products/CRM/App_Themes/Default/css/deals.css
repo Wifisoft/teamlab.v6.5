@@ -1,0 +1,312 @@
+﻿/*******************************************************************************
+DealListView
+*******************************************************************************/
+#aspnetForm
+{
+    position: relative;
+    z-index: 0;
+}
+#selector_contactSelectorForFilter{
+    display: inline-block;
+    margin: 1px 0 0 0;
+}
+#selector_contactSelectorForFilter > div{
+    margin: 0 !important;
+}
+#selectorContent_contactSelectorForFilter_0
+{
+    margin: 0 !important;
+    width: 250px;
+}
+#selectorContent_contactSelectorForFilter_0 table td{
+    border: 0 none;
+}
+#infoContent_contactSelectorForFilter_0 > table{
+    line-height: 12px;
+}
+#infoContent_contactSelectorForFilter_0 > table .splitter{
+    display: inline-block;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#infoContent_contactSelectorForFilter_0 > table .crm-editLink{
+    position: relative;
+    top: -4px;
+}
+#selectorContent_contactSelectorForFilter_0 .textEdit{
+    height:14px;
+    font-size: 12px;
+}
+#searchImg_contactSelectorForFilter_0, #loaderImg_contactSelectorForFilter_0, #selectorContent_contactSelectorForFilter_0 > table .crossButton
+{
+    height: 14px;
+}
+
+#dealsAdvansedFilter div.advansed-filter-container div.advansed-filter-filters div.filter-item-custom-contact span.selector-wrapper
+{
+    max-width: 260px;
+}
+
+#dealList tfoot td:first-child
+{
+    vertical-align: top;
+}
+#dealList tfoot td
+{
+    padding-bottom: 0px;
+}
+#dealList td > span, #dealList td.dealBidValue > div > span, #dealList td.dealTitle > div > a
+{
+    line-height: 14px;
+}
+#dealList td.dealTitle > div
+{
+    margin: 0 0 0 8px;
+    padding: 0px;
+    width: 550px;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+#dealList td.dealResponsible > div, #dealList td.dealBidValue > div
+{
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#dealList td.dealBidValue > div
+{
+    text-align: right;
+}
+#dealListTotal dt
+{
+    float: left;
+}
+
+#dealList td span.arrowRight
+{
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid;
+    border-top: 7px solid transparent;
+    position: relative;
+    height: 0;
+    width: 0;
+    display: inline-block;
+}
+#dealFilterContainer, #emptyContentForDealsFilter
+{
+    display:none;
+}
+#dealButtonsPanel
+{
+    display: none;
+    margin-bottom: 15px;
+}
+#totalOnPage
+{
+    display: inline-block;
+    float: right;
+    width: 100%;
+}
+#dealList .showTotalAmount
+{
+    display: none;
+}
+#dealList .showTotalAmount, #dealList .showTotalAmount:hover, #dealList .showTotalAmount:active
+{
+    color: #666666;
+}
+#showMoreDealsButtons
+{
+    display:inline-block;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+#divForDealPager
+{
+    display: inline-block;
+    clear: right;
+}
+#totalDealsOnPage
+{
+    margin-right: 20px;
+}
+#simpleDealPageNavigator
+{
+    display: block;
+    float: right;
+    height: 21px;
+    margin-top: -23px;
+}
+#simpleDealPageNavigator a
+{
+   font-size: 11px;
+}
+#simpleDealPageNavigator a.pagerPrevButtonCSSClass
+{
+    margin-right: 0;
+}
+#simpleDealPageNavigator a.pagerNextButtonCSSClass
+{
+    margin-left: 0;
+}
+/*******************************************************************************
+Deal Form
+*******************************************************************************/
+
+#dealForm dl{
+    margin-top:10px;
+    margin-left:15px;
+}
+
+#dealForm dl dt
+{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+#dealForm dl dt:first-child
+{
+    margin-top: 0px;
+}
+
+
+/*******************************************************************************
+Deal Info
+*******************************************************************************/
+#dealInfo{
+    margin-left:18px;
+}
+
+#dealInfo dd.underHeaderBase {
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+#dealInfo dt.headerExpand, #dealInfo dt.headerCollapse {
+    float: none;
+    text-align: left;
+    width: 100%;
+}
+#dealInfo dt
+{
+    float: left;
+    text-align: right;
+    width: 200px;
+    clear: left;
+}
+#dealInfo dd, #dealInfo dt
+{
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#dealInfo dd > div
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#dealInfo dd
+{
+    margin-left: 210px;
+    text-align: left;
+}
+#dealMilestoneSwitcher
+{
+    display: inline-block;
+    border-bottom-color:#8E908F;
+}
+#dealMainInfo div:first-child p span small
+{
+    margin-left: 3px;
+}
+#dealMainInfo div
+{
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px;
+    padding: 0px;
+    width: 23%;
+}
+#dealMainInfo p
+{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+}
+#dealMilestoneDropDown .dropDownContent
+{
+    max-width: 250px;
+    max-height: 300px;
+    overflow: auto;
+}
+#dealMilestoneDropDown .dropDownCornerLeft
+{
+    margin-left: 60px;
+}
+#membersDealSelectorsContainer{
+    width: 98%;
+}
+#membersDealSelectorsContainer > div{
+    margin-bottom: 4px;
+    position: relative;
+}
+#membersDealSelectorsContainer .delete_member {
+    background: url("../images/delete_small.png") no-repeat scroll left center transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    margin: 2px;
+    position: absolute;
+    right: -25px;
+    top: 0;
+    width: 16px;
+}
+#membersDealSelectorsContainer .add_new_member{
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 2px;
+}
+
+#selector_dealClientSelector .contactSelector-item.hasMembers .crm-addNewLink
+{
+    display: none;
+}
+#addDealParticipantButton
+{
+    display: none;
+    height: 50px;
+}
+#emptyDealParticipantPanel{
+    display: none;
+}
+#dealParticipantPanel
+{
+    display: none;
+    margin-bottom: 14px;
+    margin-top: -5px;
+    width: 400px;
+}
+/*******************************************************************************
+ExchangeRateView
+*******************************************************************************/
+#ratesTable
+{
+   table-layout:fixed;
+}
+#ratesTable td
+{
+    text-align: right;
+}
+
+/*******************************************************************************
+*******************************************************************************/
+
+
+/* <filter: my-contact> */
+
+div.advansed-filter-container div.advansed-filter-filters div.filter-item.filter-item-custom-contact .daterange-selector{display:inline-block;}
+
+/* </filter: custom-contact> */

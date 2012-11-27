@@ -1,0 +1,14 @@
+﻿
+div#containerToUpload .swfupload{width:256px;}
+
+div#containerToMoreUpload .swfupload{width:127px;}
+
+div.navigationPanel div.navigationBlock a.item{width:125px !important;}
+
+div.wikiPageSearchBody input.textEdit{width:110px !important;}
+
+div.poll_variantDiv input.textEdit{width:79% !important;}
+
+.ui-datepicker {
+    min-width: 20em;
+}

@@ -1,0 +1,254 @@
+﻿#privateProjectMark
+{
+	margin: 4px 5px 4px 0px;
+	height: 20px;
+	width: 20px;
+	float: left;
+	
+	background: #DEDEDE url("../images/lock.png") 2px no-repeat;
+	border: 1px solid #ABABAB;
+	border-radius: 4px;
+}
+
+#statusProjectMark
+{
+	margin: 4px 10px 4px 0px;
+	height: 20px;
+	width: 20px;
+	float: left;
+	
+	border: 1px solid #ABABAB;
+	border-radius: 4px;
+}
+
+#statusProjectMark.open
+{
+	background: #DEDEDE url("../images/status_open_active_new.png") 2px no-repeat;
+}
+
+#statusProjectMark.paused
+{
+	background: #DEDEDE url("../images/status_paused.png") 2px no-repeat;
+}
+
+#statusProjectMark.closed
+{
+	background: #DEDEDE url("../images/status_closed_new.png") 2px no-repeat;
+}
+
+#headerBlockContainer
+{
+	margin-top: -10px;
+	margin-bottom: 8px;
+}
+
+#projectTitleContainer
+{
+	margin-bottom: 15px;	
+}
+
+#projectTitleContainer .headerProjectTitle
+{
+	color: #111;
+	font-family: Arial;
+	font-size: 24px;
+	float: left;
+	line-height: 30px;
+	max-width: 891px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#projectActionsContainer
+{
+	overflow: auto;
+	margin-bottom: 37px;
+	height: 16px;
+}
+
+#projectActionsContainer div
+{
+	float: left;
+	margin-right: 30px;
+}
+
+#projectActionsContainer #updateProject
+{
+	background: url("../images/14_pencil.png") no-repeat left;
+	padding-left: 20px;
+}
+
+#projectActionsContainer #deleteProject
+{
+	background: url("../images/16x16-remove.png") no-repeat left;
+	padding-left: 20px;
+}
+
+#projectActionsContainer #seeHistoryButton
+{
+	background: url("../images/history.png") no-repeat left;
+	padding-left: 20px;
+}
+
+#projectActionsContainer #followProjectButton
+{
+	background: url("../images/new_subs.png") no-repeat left;
+	padding-left: 20px;
+}
+
+#projectTeamContainer
+{
+    float: left;
+	margin-right: 40px;
+	margin-bottom: 100px;
+}
+
+#projectTeamContainer a
+{
+	color: #333333 !important;
+}
+
+#projectTeamContainer .linkHeaderLight
+{
+	text-decoration: none;
+	color: #333333 !important;
+}
+
+#projectTeamContainer .linkHeaderLight:hover {
+	text-decoration: underline;
+}
+
+#projectTeamContainer .headerBase
+{
+	margin-bottom: 20px;
+}
+
+#projectTeamContainer .headerProjectManager
+{
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #787878;
+}
+
+#projectTeamContainer #projectManagerContainer
+{
+	width: 422px;
+	padding: 10px;
+	/*background-color: #F5FAFF;*/
+	border: 1px solid #D1D1D1;
+}
+
+#projectTeamContainer #projectTeamLinksContainer
+{
+	margin-top: 10px;
+	color: #787878;
+}
+
+#projectTeamContainer #projectTeamLinksContainer
+{
+	margin-top: 28px;
+}
+
+#projectTeamContainer #projectTeamLinksContainer .headerBase
+{
+	float: left;
+}
+
+#projectTeamContainer #projectTeamLinksContainer .links
+{
+	line-height: 22px;
+	text-align: right;
+}
+
+#projectTeamContainer #projectTeamLinksContainer a
+{
+	margin-left: 5px;
+}
+
+#projectTeamContainer #projectTeamLinksContainer #manageTeamButton
+{
+	margin-left: 30px;
+}
+
+#projectStatisticContainer
+{	
+	margin-left: 484px;
+	margin-bottom: 30px;
+	width: 465px;
+}
+
+#projectStatisticContainer .headerBase
+{
+	margin-bottom: 20px;
+}
+
+#statisticList
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#statisticList td
+{
+	padding: 10px 0px;
+	border-top: 1px solid #D1D1D1;
+	border-bottom: 1px solid #D1D1D1;
+}
+
+#statisticList td a
+{
+	font-size: 13px;
+}
+
+#statisticList td.title
+{
+	width: 150px;
+	padding-left: 15px;
+	font-size: 14px;
+	color: #666668;
+}
+
+#statisticList td.count
+{
+	width: 50px;	
+}
+
+#statisticList td.count a
+{
+	color: #666668;
+}
+
+#statisticList td.activeCount
+{
+	width: 90px;
+}
+
+#statisticList td.activeCount a
+{
+	color: #333333;
+}
+
+#statisticList td.overdueCount
+{
+	width: 90px;	
+}
+
+#statisticList td.overdueCount a
+{
+	color: #E34603
+}
+
+#projectDescriptionContainer
+{
+	margin-bottom: 40px;
+}
+
+#projectDescriptionContainer .headerBase
+{
+	margin-bottom: 10px;
+}
+#projectDescriptionContainer .textBase
+{
+	overflow: hidden;
+}
+

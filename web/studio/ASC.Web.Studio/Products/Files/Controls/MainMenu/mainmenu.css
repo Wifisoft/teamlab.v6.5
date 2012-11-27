@@ -1,0 +1,224 @@
+﻿
+/*******************************************************************************
+    Main Menu Holder
+*******************************************************************************/
+ul#mainMenuHolder
+{
+    background-color: #EDF6FD;
+    border-bottom: 1px solid #D1D1D1;
+    height: 39px;
+    list-style: none;
+    margin: 0 -24px 0;
+    padding: 7px 24px 0;
+}
+ul#mainMenuHolder li
+{
+    float: left;
+    max-width: 33%;
+    text-align: center;
+    padding: 0 20px;
+}
+*:first-child+html ul#mainMenuHolder li
+{
+    max-width: 32%;
+}
+ul#mainMenuHolder li span
+{
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding: 8px 0;
+    display: inline-block;
+}
+ul#mainMenuHolder li span.topAddThirdPartyBeta {
+    padding-top: 5px;
+}
+ul#mainMenuHolder li a
+{
+    color: #333;
+    display: inline-block;
+    height: 15px;
+    margin: 0 0 8px 40px;
+}
+* html ul#mainMenuHolder li a
+{
+    height: 57px;
+}
+#topNewFile
+{
+    background-image: url("images/new_file.png");
+}
+#topUpload
+{
+    background-image: url("images/upload.png");
+}
+#topNewFolder
+{
+    background-image: url("images/createfolder.png");
+}
+#topImport
+{
+    background-image: url("images/import.png");
+}
+#topAddThirdParty
+{
+    background-image: url("images/thirdparty.png");
+}
+#topNewFile img,
+#topImport img,
+#topAddThirdParty img
+{
+    cursor: pointer;
+}
+/*******************************************************************************
+    Create action panel
+*******************************************************************************/
+
+#files_newDocumentPanel a 
+{
+    background-image: url("images/newdoc_icons.png");
+    background-position: 30px 30px;
+}
+#files_create_document a
+{
+    background-position: 4px 4px;
+}
+#files_create_spreadsheet a
+{
+    background-position: 4px -74px;
+}
+#files_create_presentation a
+{
+    background-position: 4px -48px; 
+}
+#files_create_image a
+{
+    background-position: 4px -22px;
+}
+
+/*******************************************************************************
+    Uploader
+*******************************************************************************/
+#uploadDialogContainerHeader
+{
+    overflow: hidden;
+    width: 530px;
+    word-wrap: break-word;
+}
+.studioFileUploaderFileName
+{
+    max-height: 30px;
+    max-width: 290px;
+    overflow: hidden;
+}
+.files_uploadIcon
+{
+    background: url("images/upload.png") no-repeat;
+    height: 32px;
+    width: 32px;
+}
+#files_upload_select
+{
+    padding-top: 15px;
+}
+#files_uploadDialog div.header
+{
+    color: #333333;
+    font-family: Arial;
+    font-size: 18px;
+}
+#files_uploadDialog div.panelContent
+{
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+}
+#files_uploadDialog div.panelButtons
+{
+    padding-top: 16px;
+}
+#files_uploadDialog div.describeUpload
+{
+    color: #787878;
+}
+#files_uploadDialog #files_upload_fileList
+{
+    margin: 10px 0 0 0;
+    max-height: 150px;
+    width: 100%;
+    overflow: auto;
+}
+* + html #files_uploadDialog #files_upload_fileList table
+{
+    width: 507px !important;
+    z-index: 290;
+}
+a.files_upload_btn
+{
+    float: left;
+    width: 100px;
+    cursor: pointer;
+    position: absolute !important;
+}
+*html a.files_upload_btn
+{
+    margin-left: 0px !important;
+}
+* + html a.files_upload_btn
+{
+    margin-left: 0px !important;
+}
+#asc_fileuploaderSWFContainer
+{
+    position: static !important;
+}
+.swfupload
+{
+    width: 130px !important;
+    height: 20px !important;
+    position: absolute !important;
+}
+.files_overAllProcessBarCssClass
+{
+    height: 8px;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    margin-top: 10px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+.files_overAllProcessBarCssClass div
+{
+    height: 8px;
+    background: url("images/back-progress.png") repeat-x !important;
+}
+.files_deleteLinkCSSClass
+{
+    display: inline-block;
+    margin-top: 2px;
+    background: url("images/trash.png") no-repeat scroll center center transparent;
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    text-decoration: none !important;
+}
+.files_loadingCSSClass
+{
+    background: url("images/loader_small.gif") no-repeat scroll center center transparent;
+    cursor: default;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: -5px;
+    text-decoration: none !important;
+}
+.files_completeCSSClass
+{
+    background: url("images/complete.png") no-repeat scroll center center transparent;
+    cursor: default;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    margin-top: 2px;
+    text-decoration: none !important;
+}

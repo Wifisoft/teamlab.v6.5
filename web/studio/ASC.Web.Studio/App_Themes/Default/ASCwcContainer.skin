@@ -1,0 +1,6 @@
+﻿<%@ Register Namespace="ASC.Web.Controls" TagPrefix="ascwc"  Assembly="ASC.Web.Controls" %>
+<ascwc:Container runat="server">
+    <Options ContainerCssClass="mainContainerClass" PopupContainerCssClass="popupContainerClass"
+     OnCancelButtonClick = "PopupKeyUpActionProvider.CloseDialog();"
+     ShowLastLevel="true" BreadCrumbSpiter=">"/>
+</ascwc:Container>

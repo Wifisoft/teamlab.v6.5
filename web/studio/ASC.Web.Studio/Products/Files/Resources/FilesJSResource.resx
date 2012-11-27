@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ConfirmRemoveFile" xml:space="preserve">
+    <value>Are you sure you want to delete the document?</value>
+  </data>
+  <data name="ConfirmRemoveFolder" xml:space="preserve">
+    <value>Are you sure you want to delete the folder?</value>
+  </data>
+  <data name="ConfirmRemoveList" xml:space="preserve">
+    <value>Are you sure you want to delete these elements?</value>
+  </data>
+  <data name="ConfirmDeleteThirdParty" xml:space="preserve">
+    <value>Are you sure you want to delete third party {0} from {1}?</value>
+  </data>
+  <data name="CorporateFiles" xml:space="preserve">
+    <value>Shared Documents</value>
+  </data>
+  <data name="CreateGroup" xml:space="preserve">
+    <value>Create Group</value>
+  </data>
+  <data name="EditGroup" xml:space="preserve">
+    <value>Edit Group</value>
+  </data>
+  <data name="EmptyListSelectedForDownload" xml:space="preserve">
+    <value>Select at least one folder/document to download</value>
+  </data>
+  <data name="EmptyListUpload" xml:space="preserve">
+    <value>Click the 'Select document' button to upload your files</value>
+  </data>
+  <data name="InfoCommingSoon" xml:space="preserve">
+    <value>Coming soon</value>
+  </data>
+  <data name="InfoCrateFolder" xml:space="preserve">
+    <value>New folder '{0}' is created</value>
+  </data>
+  <data name="InfoSaveThirdParty" xml:space="preserve">
+    <value>'{0}' added to '{1}'</value>
+  </data>
+  <data name="InfoChangeThirdParty" xml:space="preserve">
+    <value>'{0}' changed</value>
+  </data>
+  <data name="InfoRemoveFile" xml:space="preserve">
+    <value>The document '{0}' is deleted</value>
+  </data>
+  <data name="InfoRemoveFolder" xml:space="preserve">
+    <value>The folder '{0}' is deleted</value>
+  </data>
+  <data name="InfoRemoveThirdParty" xml:space="preserve">
+    <value>Third Party '{0}' is deleted</value>
+  </data>
+  <data name="InfoRenameFile" xml:space="preserve">
+    <value>The document '{0}' is renamed to '{1}'</value>
+  </data>
+  <data name="InfoRenameFolder" xml:space="preserve">
+    <value>The folder '{0}' is renamed to '{1}'</value>
+  </data>
+  <data name="InfoSelectCount" xml:space="preserve">
+    <value>Elements: {0}</value>
+  </data>
+  <data name="InfoSelectingDescribe" xml:space="preserve">
+    <value>{0}Drag the element(s) with the mouse to add to the folder</value>
+  </data>
+  <data name="MyFiles" xml:space="preserve">
+    <value>My Documents</value>
+  </data>
+  <data name="TitleNewFolder" xml:space="preserve">
+    <value>New Folder</value>
+  </data>
+  <data name="UploadFileTo" xml:space="preserve">
+    <value>Upload document to</value>
+  </data>
+  <data name="Uploading" xml:space="preserve">
+    <value>Uploading</value>
+  </data>
+  <data name="AceStatusEnum_Owner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="InfoUploadedSuccess" xml:space="preserve">
+    <value>{0} documents are successfully uploaded</value>
+  </data>
+  <data name="InfoFolderMoveError" xml:space="preserve">
+    <value>You cannot move the folder to its subfolder</value>
+  </data>
+  <data name="FileVersionRecovery" xml:space="preserve">
+    <value>The version of the file {0} was successfully restored</value>
+  </data>
+  <data name="FileAlreadyExist" xml:space="preserve">
+    <value>The file with the name {0} already exists in the folder {1}.</value>
+  </data>
+  <data name="InfoOrderByAuthor" xml:space="preserve">
+    <value>Sorted by Author</value>
+  </data>
+  <data name="FileUploading" xml:space="preserve">
+    <value>Uploading file </value>
+  </data>
+  <data name="TitleNewFilePresentation" xml:space="preserve">
+    <value>New Presentation</value>
+  </data>
+  <data name="TitleNewFileSpreadsheet" xml:space="preserve">
+    <value>New Spreadsheet</value>
+  </data>
+  <data name="TitleNewFileText" xml:space="preserve">
+    <value>New File</value>
+  </data>
+  <data name="InfoCrateFile" xml:space="preserve">
+    <value>New file '{0}' is created</value>
+  </data>
+  <data name="ImportFromGoogle" xml:space="preserve">
+    <value>Import from Google Docs</value>
+  </data>
+  <data name="ImportFromZoho" xml:space="preserve">
+    <value>Import from Zoho</value>
+  </data>
+  <data name="InfoRemoveGroup" xml:space="preserve">
+    <value>It was successfully deleted {0} from {1}</value>
+  </data>
+  <data name="EmptyListSelectedForImport" xml:space="preserve">
+    <value>Select at least one document to import</value>
+  </data>
+  <data name="ImportFromBoxNet" xml:space="preserve">
+    <value>Import from Box.Net</value>
+  </data>
+  <data name="ErrorMassage_AuthentificatedFalse" xml:space="preserve">
+    <value>Invalid login or password</value>
+  </data>
+  <data name="ErrorMassage_FieldsIsEmpty" xml:space="preserve">
+    <value>All fields are required to be filled in</value>
+  </data>
+  <data name="ErrorMassage_SecondDownload" xml:space="preserve">
+    <value>Please wait for the previous download to complete or cancel it</value>
+  </data>
+  <data name="ButtonShowMoreLoad" xml:space="preserve">
+    <value>Uploading...</value>
+  </data>
+  <data name="InfoFinishImport" xml:space="preserve">
+    <value>The import is completed</value>
+  </data>
+  <data name="InfoCancelImport" xml:space="preserve">
+    <value>The import is canceled</value>
+  </data>
+  <data name="InfoImprotNotFinish" xml:space="preserve">
+    <value>Please wait for the previous import to complete</value>
+  </data>
+  <data name="EmptyDataToImport" xml:space="preserve">
+    <value>No data to import</value>
+  </data>
+  <data name="DescriptCreate" xml:space="preserve">
+    <value>Creation</value>
+  </data>
+  <data name="DescriptMove" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="DescriptRemove" xml:space="preserve">
+    <value>Deleting...</value>
+  </data>
+  <data name="DescriptRename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="DescriptSetVersion" xml:space="preserve">
+    <value>Updating version</value>
+  </data>
+  <data name="InfoActionInTrash" xml:space="preserve">
+    <value>Restore it from the Trash to perform the operation</value>
+  </data>
+  <data name="DescriptCopy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="ProcessUploadCountFiles" xml:space="preserve">
+    <value>uploaded {0} from {1}</value>
+  </data>
+  <data name="UploadProcess" xml:space="preserve">
+    <value>File uploading process...</value>
+  </data>
+  <data name="ProjectFiles" xml:space="preserve">
+    <value>Project documents</value>
+  </data>
+  <data name="OrDragDrop" xml:space="preserve">
+    <value>or drag and drop them to this window</value>
+  </data>
+  <data name="OverallProgress" xml:space="preserve">
+    <value>Overall Progress</value>
+  </data>
+  <data name="SelectedFiles" xml:space="preserve">
+    <value>{0} files selected</value>
+  </data>
+  <data name="SelectFilesToUpload" xml:space="preserve">
+    <value>Select files to upload</value>
+  </data>
+  <data name="UploadedOf" xml:space="preserve">
+    <value>{0} / {1} uploaded files</value>
+  </data>
+  <data name="ButtonAddFiles" xml:space="preserve">
+    <value>Add Files</value>
+  </data>
+  <data name="ButtonSelectFiles" xml:space="preserve">
+    <value>Select Files</value>
+  </data>
+  <data name="TitleCancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="TitleCreate" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="TitleRename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="InfoFolderCopyError" xml:space="preserve">
+    <value>You cannot copy the folder to its subfolder</value>
+  </data>
+  <data name="InfoCopyGroup" xml:space="preserve">
+    <value>{0} copied elements</value>
+  </data>
+  <data name="InfoCopyItem" xml:space="preserve">
+    <value>'{0}' copied</value>
+  </data>
+  <data name="InfoMoveGroup" xml:space="preserve">
+    <value>{0} moved elements</value>
+  </data>
+  <data name="InfoMoveItem" xml:space="preserve">
+    <value>'{0}' moved</value>
+  </data>
+  <data name="TasksOperationCopy" xml:space="preserve">
+    <value>Copying</value>
+  </data>
+  <data name="TasksOperationDelete" xml:space="preserve">
+    <value>Deleting</value>
+  </data>
+  <data name="TasksOperationMixed" xml:space="preserve">
+    <value>{0} operations</value>
+  </data>
+  <data name="TasksOperationMove" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="FilesAlreadyExist" xml:space="preserve">
+    <value>{0} documents with the same name already exist in the folder '{1}'. Overwrite the files?</value>
+  </data>
+  <data name="ButtonShowMore" xml:space="preserve">
+    <value>Show more {0}</value>
+  </data>
+  <data name="ButtonShowMoreOf" xml:space="preserve">
+    <value>Show more {0} of {1}</value>
+  </data>
+  <data name="ConfirmEmptyTrash" xml:space="preserve">
+    <value>Are you sure you want to empty the trash?</value>
+  </data>
+  <data name="DescriptLoadVersion" xml:space="preserve">
+    <value>Loading versions...</value>
+  </data>
+  <data name="ErrorMassage_EmptyFile" xml:space="preserve">
+    <value>Empty file</value>
+  </data>
+  <data name="ErrorMassage_DnDError" xml:space="preserve">
+    <value>Cannot upload file</value>
+  </data>
+  <data name="TasksOperationBulkdownload" xml:space="preserve">
+    <value>Data Archiving</value>
+  </data>
+  <data name="DescriptBulkdownload" xml:space="preserve">
+    <value>Data Archiving</value>
+  </data>
+  <data name="NewInShare" xml:space="preserve">
+    <value>(+{0})</value>
+  </data>
+  <data name="AceStatusEnum_Read" xml:space="preserve">
+    <value>Read Only</value>
+  </data>
+  <data name="AceStatusEnum_ReadWrite" xml:space="preserve">
+    <value>Full Access</value>
+  </data>
+  <data name="AceStatusEnum_Restrict" xml:space="preserve">
+    <value>Deny Access</value>
+  </data>
+  <data name="InfoSelectForShare" xml:space="preserve">
+    <value>Select one element to set access rights</value>
+  </data>
+  <data name="ErrorMassage_SecurityException" xml:space="preserve">
+    <value>You don't have enough permission to perform the operation</value>
+  </data>
+  <data name="ErrorMassage_SpecCharacter" xml:space="preserve">
+    <value>Title can't contain any of the following characters: {0}</value>
+  </data>
+  <data name="WarningMessage_DocumentChanged" xml:space="preserve">
+    <value>You have unsaved changes in this document. Click 'Stay on this Page' now, then 'Save' to save them. Click 'Leave this Page' now to discard them.</value>
+  </data>
+  <data name="TitleNewFileImage" xml:space="preserve">
+    <value>New Drawing</value>
+  </data>
+  <data name="TitleVersions" xml:space="preserve">
+    <value>Previous versions:</value>
+  </data>
+  <data name="ShareLinkGroupTitle" xml:space="preserve">
+    <value>Те, кто знают ссылку</value>
+  </data>
+  <data name="TitleEditingFile" xml:space="preserve">
+    <value>It is currently being edited</value>
+  </data>
+  <data name="TitleEditingFileBy" xml:space="preserve">
+    <value>It is currently being edited by: {0}</value>
+  </data>
+  <data name="ShowShareLink" xml:space="preserve">
+    <value>Показать</value>
+  </data>
+  <data name="HideShareLink" xml:space="preserve">
+    <value>Скрыть</value>
+  </data>
+  <data name="ErrorMassage_MobileDownload" xml:space="preserve">
+    <value>Not allowed to download on mobile device</value>
+  </data>
+  <data name="FolderTitleBoxNet" xml:space="preserve">
+    <value>BoxNet directory</value>
+  </data>
+  <data name="TypeTitleBoxNet" xml:space="preserve">
+    <value>Box.net</value>
+  </data>
+  <data name="FolderTitleDropBox" xml:space="preserve">
+    <value>DropBox directory</value>
+  </data>
+  <data name="TypeTitleDropBox" xml:space="preserve">
+    <value>Dropbox</value>
+  </data>
+  <data name="FolderTitleGoogle" xml:space="preserve">
+    <value>Google directory</value>
+  </data>
+  <data name="TypeTitleGoogle" xml:space="preserve">
+    <value>Google</value>
+  </data>
+  <data name="ThirdPartyEditorCaption" xml:space="preserve">
+    <value>Изменения подключения {0}</value>
+  </data>
+  <data name="ThirdPartyGetToken" xml:space="preserve">
+    <value>Login ({0})</value>
+  </data>
+  <data name="ThirdPartyEditorCaptionAppend" xml:space="preserve">
+    <value>Добавить {0}</value>
+  </data>
+  <data name="DescriptChangeInfo" xml:space="preserve">
+    <value>Change data</value>
+  </data>
+</root>

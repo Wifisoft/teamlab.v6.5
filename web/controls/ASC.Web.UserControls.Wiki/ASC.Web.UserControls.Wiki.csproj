@@ -1,0 +1,348 @@
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F89C7F62-57E2-4AFA-8347-85AB4C0F55E2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASC.Web.UserControls.Wiki</RootNamespace>
+    <AssemblyName>ASC.Web.UserControls.Wiki</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>false</SignAssembly>
+    <TrunkDir>..\..\..\</TrunkDir>
+    <AssemblyOriginatorKeyFile>$(TrunkDir)ASC.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+    <RedDir Condition=" '$(RedDir)' == '' ">..\..\..\redistributable\asc\</RedDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2, Version=9.2.17.1, Culture=neutral, PublicKeyToken=4735ae9824c7d3ec, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\third-party\Web\AjaxPro.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Core.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Data.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Data.Storage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.FullTextIndex, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.FullTextIndex.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Web.Community, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Web.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Web.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ASC.Web.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.29869, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\third-party\Web\FredCK.FCKeditorV2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.3.9.1, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\third-party\HtmlAgilityPack\HtmlAgilityPack.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.60.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\third-party\db\sqlite\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\ActionHelper.cs" />
+    <Compile Include="Code\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code\Constants.cs" />
+    <Compile Include="Code\Diff.cs" />
+    <Compile Include="Code\HtmlWikiUtil.cs" />
+    <Compile Include="Code\HtmlWikiUtil_Wiki2Html.cs.cs" />
+    <Compile Include="Code\PageNameUtil.cs" />
+    <Compile Include="Code\Patterns\WikiPatternResource.Designer.cs">
+      <DependentUpon>WikiPatternResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Code\Patterns\WikiPatternsResource.Designer.cs">
+      <DependentUpon>WikiPatternsResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Code\WikiActivityPublisher.cs" />
+    <Compile Include="Code\WikiEngine.cs" />
+    <Compile Include="Code\WikiManager.cs" />
+    <Compile Include="Code\WikiNotifySource.cs" />
+    <Compile Include="Code\WikiStrExtentions.cs" />
+    <Compile Include="Code\WikiSubscriptionManager.cs" />
+    <Compile Include="Data\IVersioned.cs" />
+    <Compile Include="Data\Category.cs" />
+    <Compile Include="Data\BaseDao.cs" />
+    <Compile Include="Data\CommentDao.cs" />
+    <Compile Include="Data\FileDAO.cs" />
+    <Compile Include="Data\File.cs" />
+    <Compile Include="Code\IWikiObjectOwner.cs" />
+    <Compile Include="Data\Page.cs" />
+    <Compile Include="Data\Comment.cs" />
+    <Compile Include="Data\PageDAO.cs" />
+    <Compile Include="Data\CategoryDao.cs" />
+    <Compile Include="Handlers\WikiFileHandler.cs">
+    </Compile>
+    <Compile Include="Handlers\WikiSection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\WikiResource.Designer.cs">
+      <DependentUpon>WikiResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\WikiUCResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WikiUCResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\EditFile.ascx.cs">
+      <DependentUpon>EditFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\EditFile.ascx.designer.cs">
+      <DependentUpon>EditFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\EditPage.ascx.cs">
+      <DependentUpon>EditPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\EditPage.ascx.designer.cs">
+      <DependentUpon>EditPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\FileUploader.aspx.cs">
+      <DependentUpon>FileUploader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\FileUploader.aspx.designer.cs">
+      <DependentUpon>FileUploader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ListFiles.ascx.cs">
+      <DependentUpon>ListFiles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ListFiles.ascx.designer.cs">
+      <DependentUpon>ListFiles.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ListPages.ascx.cs">
+      <DependentUpon>ListPages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ListPages.ascx.designer.cs">
+      <DependentUpon>ListPages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\MiniToolbar.ascx.cs">
+      <DependentUpon>MiniToolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\MiniToolbar.ascx.designer.cs">
+      <DependentUpon>MiniToolbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ViewFile.ascx.cs">
+      <DependentUpon>ViewFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ViewFile.ascx.designer.cs">
+      <DependentUpon>ViewFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ViewPage.ascx.cs">
+      <DependentUpon>ViewPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UC\ViewPage.ascx.designer.cs">
+      <DependentUpon>ViewPage.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Code\Patterns\WikiPatternResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WikiPatternResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\Patterns\WikiPatternsResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WikiPatternsResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Css\img\external.png" />
+    <EmbeddedResource Include="Css\img\file_icon.gif" />
+    <EmbeddedResource Include="Css\img\lock_icon.gif" />
+    <EmbeddedResource Include="Css\img\mail_icon.gif" />
+    <EmbeddedResource Include="Css\img\news_icon.png" />
+    <EmbeddedResource Include="Css\main.css" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Anchor.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Bold.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Box.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\BR.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Code.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Comment.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Escape.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\File.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\H1.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\H2.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\H3.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\H4.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\HR.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Image.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Italic.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Link.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\NoBr.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\NoWiki.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\PageLink.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Pre.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\SpecialTags.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Striked.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Subscript.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Superscript.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Symbol.png" />
+    <EmbeddedResource Include="Css\img\miniToolBar\Underlined.png" />
+    <EmbeddedResource Include="Resources\WikiResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WikiResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WikiUCResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WikiUCResource.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Js\EditPage.js" />
+    <EmbeddedResource Include="Css\img\enlarge.png" />
+    <EmbeddedResource Include="Code\Patterns\accordings.xml" />
+    <EmbeddedResource Include="Code\Patterns\wiki_patterns.xml" />
+    <Content Include="UC\EditFile.ascx" />
+    <Content Include="UC\EditPage.ascx" />
+    <Content Include="UC\fck_wysiwyg\fckplugin.js" />
+    <Content Include="UC\fck_wysiwyg\lang\en.js" />
+    <Content Include="UC\fck_wysiwyg\lang\ru.js" />
+    <Content Include="UC\FileUploader.aspx" />
+    <Content Include="UC\ListFiles.ascx" />
+    <Content Include="UC\ListPages.ascx" />
+    <Content Include="UC\MiniToolbar.ascx" />
+    <Content Include="UC\ViewFile.ascx" />
+    <Content Include="UC\ViewPage.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="BeforeBuild">
+    <Exec Command="taskkill /F /IM aspnet_wp.exe" IgnoreExitCode="true" ContinueOnError="true" Condition=" '$(KillAsp)' == '' " />
+    <Exec Command="taskkill /F /IM w3wp.exe" IgnoreExitCode="true" ContinueOnError="true" Condition=" '$(KillAsp)' == '' " />
+  </Target>
+  <Target Name="AfterBuild">
+    <Message Importance="High" Text="Copy assemblies to redistributable: $(MSBuildProjectName) -&gt; @(MainAssembly-&gt;'$(RedDir)%(FileName)%(Extension)') @(FinalDocFile-&gt;'$(RedDir)%(FileName)%(Extension)') @(IntermediateSatelliteAssembliesWithTargetPath-&gt;'$(RedDir)%(Culture)\$(TargetName).resources.dll')" />
+    <!-- Copy the build product (.dll or .exe). -->
+    <Copy SourceFiles="@(IntermediateAssembly)" DestinationFolder="$(RedDir)" SkipUnchangedFiles="true" />
+    <!-- Copy the resulting XML documentation file, if any. -->
+    <Copy SourceFiles="@(DocFileItem)" DestinationFiles="@(FinalDocFile-&gt;'$(RedDir)%(FileName)%(Extension)')" SkipUnchangedFiles="true" Condition="'$(_DocumentationFileProduced)'=='true'" />
+    <!-- Copy satellite assemblies. -->
+    <Copy SourceFiles="@(IntermediateSatelliteAssembliesWithTargetPath)" DestinationFiles="@(IntermediateSatelliteAssembliesWithTargetPath-&gt;'$(RedDir)%(Culture)\$(TargetName).resources.dll')" SkipUnchangedFiles="true" />
+    <CreateItem Include="$(ProjectDir)UC\*.ascx;$(ProjectDir)UC\*.aspx">
+      <Output ItemName="AscFiles" TaskParameter="Include" />
+    </CreateItem>
+    <Copy SourceFiles="@(AscFiles)" DestinationFolder="$(TrunkDir)web\studio\ASC.Web.Studio\Products\Community\Modules\Wiki\WikiUC\" />
+    <CreateItem Include="$(ProjectDir)UC\fck_wysiwyg\*.html;$(ProjectDir)UC\fck_wysiwyg\*.png;$(ProjectDir)UC\fck_wysiwyg\*.js">
+      <Output ItemName="FckFiles" TaskParameter="Include" />
+    </CreateItem>
+    <Copy SourceFiles="@(FckFiles)" DestinationFolder="$(TrunkDir)web\studio\ASC.Web.Studio\Products\Community\Modules\Wiki\WikiUC\fck_wysiwyg\" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4659</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

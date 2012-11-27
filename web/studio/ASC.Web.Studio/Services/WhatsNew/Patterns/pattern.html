@@ -1,0 +1,13 @@
+﻿<h2>
+$activity.Title
+</h2>
+$activity.ActionText 
+
+
+#if ("$activity.HtmlPreview"!="" && ($activity.HtmlPreview))
+<p>
+$activity.HtmlPreview
+</p>
+#end
+<a href="${url}">${url}</a>
+<p><i><a href="${userLink}">$displayName</a></i></p>

@@ -1,0 +1,679 @@
+/************* tasks **************/
+#SubTasksBody {
+  min-height:400px;
+}
+.actionPanel {
+	width: 175px;
+}
+.addTask {
+  background: url("../images/plus.png") no-repeat scroll left center transparent;
+  display: inline-block;
+  padding-left: 21px;
+  height:18px;
+  margin-bottom:25px;
+}
+.addTask span:hover {
+  color:#000;
+  border-bottom: #000 1px dotted;
+}
+.containerBodyBlock #AdvansedFilter 
+{
+	margin: 10px 0px
+}
+#SubTasksBody .dottedLink {
+  display:table;
+  
+}
+#SubTasksBody .dottedLink:hover {
+  color: #000;
+  border-bottom: #000 1px dotted;
+} 
+#SubTasksBody .dottedNumSubtask {
+    color: #333333;
+    font-family: Arial;
+    font-size: 11px;    
+    border-bottom: #000 1px dotted;
+}
+#SubTasksBody .quickAddTaskLink {
+  margin-top:12px;
+  height:25px;  
+  border: #fff 1px solid;
+}
+#SubTasksBody .quickAddTaskLink span {
+  margin:4px 0 0 29px;
+}
+#SubTasksBody .quickAddTaskField {
+  margin-top:12px;
+  display:none;
+  height:25px;
+  border: #d1d1d1 1px solid;
+}
+
+#SubTasksBody .chooseWrap.alltasks {
+  width:451px;
+  overflow:hidden;    
+}
+#SubTasksBody .chooseWrap.alltasks div {
+  float:left;
+}
+#SubTasksBody .chooseWrap.alltasks div.project {
+  width:208px;
+  margin-right:30px;
+  overflow:hidden;
+  white-space:nowrap;  
+}
+#SubTasksBody .chooseWrap.alltasks div.project span {float:right;}
+#SubTasksBody .chooseWrap.alltasks div.responsible {
+  width:210px;
+  margin-left: 20px;
+}
+#SubTasksBody .quickAddTaskField .choose {  
+  margin-top:3px;
+  float:left;
+}
+#SubTasksBody .quickAddTaskField .choose.responsible {
+  display:none;
+}
+#SubTasksBody .quickAddTaskField .choose.project, 
+#SubTasksBody .quickAddTaskField .choose.responsible,
+{
+  white-space:nowrap;
+  padding-right:16px;
+  display: inline-block;
+  background: url("../images/min_expand.gif") no-repeat scroll right center;  
+}
+#SubTasksBody .quickAddTaskField input {
+  width:450px;
+  height:21px;
+  border:none;
+  margin: 0 auto;    
+}
+
+#SubTasksBody .taskListHeaders {
+  height:15px;  
+  margin-top:20px;
+}
+#SubTasksBody .taskListHeaders div {
+  float:left;
+  line-height:15px;
+  color:#82878D;  
+}
+#SubTasksBody .taskListHeaders .check {
+  width:43px;  
+}
+#SubTasksBody .taskListHeaders .taskTitle {
+  margin-left: 9px;
+  width: 624px;  
+}
+#SubTasksBody .taskListHeaders .taskDeadline {
+  width: 92px;
+  white-space:nowrap;
+  text-align: center; 
+}
+#SubTasksBody .taskListHeaders .taskResponsible 
+{    
+  padding-left: 20px;
+  width: 116px;  
+}
+
+#SubTasksBody .taskList {
+  margin:5px 0 20px 0;  
+}
+#SubTasksBody .taskList .task {
+  border-top: #d1d1d1 1px solid;
+  height:30px;
+}
+#SubTasksBody .taskList .task.borderbott {
+  border-bottom: #d1d1d1 1px solid;
+}
+#SubTasksBody .taskList .task:hover {
+  background: #f2f2f2;
+}
+#SubTasksBody .taskList .task .check {
+  float:left;
+  width:38px;
+  height:30px;
+  margin-left: 5px;
+}
+#SubTasksBody .taskList .task .changeStatusCombobox {  
+  width:38px;
+  height:22px;
+  margin-top:3px;
+  text-align: center;  
+}
+#SubTasksBody .taskList .check .taskProcess {
+    margin-left: 1px;
+    margin-top: -4px;
+}
+#SubTasksBody .taskList .task .check.priority0 {
+  background:#f4f4f4;
+}
+#SubTasksBody .taskList .task .check.priority-1 {
+  background:#c3c3c3;
+}
+#SubTasksBody .taskList .task .check.priority1 {
+  background:#E46850;
+}
+#SubTasksBody .taskList .task .check input {
+  display: inline-block;
+  margin: 8px auto; 
+}
+#SubTasksBody .taskList .task .taskPlace {  
+  float:left;
+  width:618px;
+  height:30px;
+  margin-left: 12px;
+}
+#SubTasksBody .taskList .task .taskName {
+  float:left;
+  max-width: 528px;
+  overflow:hidden;
+  white-space:nowrap;
+  height:30px;
+  line-height:30px;
+}
+#SubTasksBody .taskList .task .taskName a {
+ font-weight:bold;
+ line-height:30px; 
+ font-size: 12px;
+ font-family: Arial;
+ overflow:hidden;
+ color: #333333;
+ text-decoration:none;
+}
+#SubTasksBody .taskList .task:hover .taskName a,
+#SubTasksBody .taskList .task .taskName a:hover {text-decoration:underline;}
+#SubTasksBody .taskList .task .high_priority {
+  background: url("../images/high_priority.png") no-repeat scroll 0 7px;
+  display: inline-block;
+  height: 30px;
+  margin-right: 4px;
+  width: 16px;
+  float: left;
+}
+#SubTasksBody .taskList .task span.timeLeft {
+ color:#333333;
+ font-size:12px;
+ font-family: Arial;
+ line-height:30px;
+ cursor: default;
+}
+#SubTasksBody .taskList .task span.timeLeft.red {color:#cc3300;}
+
+#SubTasksBody .taskList .task .deadline {
+  float: left;
+  width: 92px;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 30px;
+  text-align: center;
+}
+.deadline_late {
+  text-align: left;
+}
+#SubTasksBody .taskList .task .deadline_late {
+  float: left;
+  width: 92px;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 30px;
+  text-align: center;
+}
+#SubTasksBody .taskList .task .deadline_active {
+  float: left;
+  width: 92px;
+  xoverflow: hidden;
+  white-space: nowrap;
+  height: 30px;
+}
+#SubTasksBody .taskList .task .subtasksCount {
+  float: left;
+  width: 72px;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 30px;
+  margin-left: 15px
+}
+#SubTasksBody .taskList .task .subtasksCount span.expand, 
+#SubTasksBody .taskList .task .subtasksCount span.collaps,
+#SubTasksBody .taskList .task .subtasksCount span.add {
+  color: #333333;
+  font-size:11px;
+  line-height:30px;  
+  cursor: pointer;
+  margin-top:10px; 
+  text-align: center;  
+}
+#SubTasksBody .taskList .task .subtasksCount span.expand span, 
+#SubTasksBody .taskList .task .subtasksCount span.collaps span {
+  display:inline;
+}
+#SubTasksBody .taskList .task .subtasksCount span.expand {
+  background: no-repeat scroll right center transparent;
+}
+#SubTasksBody .taskList .task .subtasksCount span.collaps {
+  background: no-repeat scroll right center transparent;
+}
+#SubTasksBody .taskList .task .subtasksCount span.add {padding:0px;border-bottom: 1px dotted #333;}
+#SubTasksBody .taskList .task .subtasksCount span.add {  
+  display:none;
+}
+#SubTasksBody .taskList .task:hover .subtasksCount span.add {
+  display:inline;
+}
+#SubTasksBody .taskList .task.closed:hover .subtasksCount span.add, 
+#SubTasksBody .taskList .task.closed .subtasksCount span.expand, 
+#SubTasksBody .taskList .task.closed .subtasksCount span.collaps { 
+  display:none;
+}
+#SubTasksBody .taskList .task .not{}
+#SubTasksBody .taskList .task .user{
+  white-space:nowrap;
+  float:right; 
+  font-family: Arial;
+  font-size: 12px;
+  color: #333333;
+  width: 116px; 
+  overflow:hidden;
+  line-height:30px;
+  cursor:pointer;
+  display: inline-block;
+}
+#SubTasksBody .taskList .task:hover .user span,
+#SubTasksBody .taskList .task .user span:hover {border-bottom: 1px dotted #000000;}
+#SubTasksBody .taskList .task .user span b {color: #666;}
+.actionPanel .user {
+  white-space:nowrap;
+  line-height:23px;
+  xbackground: url("../images/profile.gif") no-repeat left center;
+  xpadding: 0 0 0 17px;
+  overflow: hidden;
+  width: 250px;
+}
+#othersListPopup .user,  #othersListPopup .user span{
+	width: 170px;
+}
+#SubTasksBody .taskList .task .other {
+  font-size: 12px;
+  font-family: Arial;
+  font-size: 12px;
+  color: #333333;
+  overflow:hidden;
+  padding-top: 6px;
+  display: inline-block;
+  cursor:pointer;
+}
+#SubTasksBody .taskList .task:hover .other,
+#SubTasksBody .taskList .task .other:hover{
+  border-bottom: #000 1px dotted;
+}
+
+#SubTasksBody .taskList .otherMargin {
+  float:right;
+  width:116px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;	
+}
+#SubTasksBody .taskList .task .others {
+  display:none;
+}
+#SubTasksBody .taskList .task .menupoint{
+	background: url('../images/action_16.png') no-repeat;
+	width:16px;
+	height:16px;
+	float:right;
+	right: 0px;	
+	cursor:pointer;
+}
+#SubTasksBody .taskList .task:hover .menupoint
+{
+  background: url('../images/action_16_hover.png') no-repeat;
+  display: block;
+}
+#SubTasksBody .taskList .task .menupoint.show {
+  background: url('../images/action_16_click.png') no-repeat;
+  display: block;
+}
+.taskList .nomenupoint {
+	width:16px;
+	height:16px;
+	float:right;
+  margin: 0 15px 0 15px;	
+}
+#SubTasksBody .taskList .task.closed:hover .menupoint {
+  xdisplay:none;
+}
+#SubTasksBody .taskList .task .menupoint {
+    float: right;
+    line-height: 30px;
+    margin-top: 7px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#SubTasksBody .taskSaving {
+  display:none;
+  height:25px;
+  line-height:25px;
+  padding-left:25px;
+  margin-top:12px;
+  background: url('../images/loader16.gif') no-repeat 0 3px;
+}
+#SubTasksBody .taskProcess {
+  height:25px;
+  padding-left:25px;
+  background: url('../images/loader16.gif') no-repeat 2px 7px;
+}
+#showNextTaskProcess {display:none;}
+
+#SubTasksBody .taskList .task.closed .taskName a {
+  color:#83888d;
+  font-weight:bold; 
+}
+#SubTasksBody .taskList .task.closed .user,
+#SubTasksBody .taskList .task.closed .user b,
+#SubTasksBody .taskList .task.closed .other{
+  color:#83888d;
+}
+#SubTasksBody .taskList .task.closed:hover .other,
+#SubTasksBody .taskList .task.closed:hover .user span {
+	border-bottom-color: #83888d;
+}
+#SubTasksBody .taskList .task.closed span.timeLeft {
+  color:#83888d;
+}
+
+/***********Describe panel***************/
+div#taskDescrPanel {
+  min-width:300px;
+  max-width:420px;
+  line-height: 20px;
+  xoverflow:hidden;
+}
+div#taskDescrPanel div.popup-corner {
+  left:10px;
+}
+div#taskDescrPanel .param {
+  float:left;
+  height:20px;
+  padding-right:12px;  
+  color:#83888d;
+  width:100px;
+  white-space: nowrap;
+}
+div#taskDescrPanel .param div {height:20px;}
+div#taskDescrPanel .value {
+  height:20px;
+  display: table;
+  color:#333333;
+}
+div#taskDescrPanel .value .responsible, div#taskDescrPanel .value .date {height:20px;}
+div#taskDescrPanel .value .responsible {
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 20px;
+}
+div#taskDescrPanel .value .responsible div, div#subTaskDescrPanel .value .createdby div, div#taskDescrPanel .createdby .value {
+  display: inline-block;
+  margin-right:15px;
+  white-space: nowrap;
+  line-height: 20px;
+}
+div#taskDescrPanel .createdby {
+  display: inline-block;
+}
+div#taskDescrPanel .value .descrValue {
+  max-height: 60px;
+  max-width:185px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  
+}
+div#taskDescrPanel .value a.readMore{
+    color: #83888d;
+    text-decoration: underline;
+    display: none;
+}
+div#taskDescrPanel .value a.readMore:hover {
+    text-decoration: none;
+}
+div#taskDescrPanel .value .descr_milestone {
+  margin-top: 3px;
+  padding-left: 0px;
+  display: block;
+  max-width: 170px;
+  overflow: hidden;
+  line-height: 14px;
+  cursor:pointer;
+  text-decoration: none;
+  border-bottom: 1px dotted #333333;
+  white-space: nowrap;
+}
+div#taskDescrPanel .value .descr_milestone:hover {
+	background-color:#fff;
+	color: #333333;
+}
+
+.milestonesButtons {
+  border-top: 1px solid #D1D1D1;border-bottom: 1px solid #D1D1D1; padding: 5px;
+}
+#moveTaskPanel .milestonesList {overflow-x: hidden;overflow-y: auto;height:200px;}
+.borderBase.ms {padding:20px 30px 30px 20px;margin-bottom:20px;}
+.taskTitls.ms {padding:10px 0px;overflow-x: hidden;}
+.textBigDescribe.ms {padding-bottom:10px;}
+.tintMedium.ms, .tintLight.ms {border-top: 1px solid #D1D1D1; padding: 5px;}
+
+.addLogPanel-infoPanel {
+    background-image: url("../images/clock_active.png") !important;
+    margin: 0 0 25px !important;
+}
+.tasksTooltip {
+  background:rgb(255,244,199);
+  border:1px solid #707070;
+  color: #707070;
+  line-height:18px;
+  padding:0 8px 0 8px;
+  position:absolute;
+  z-index:999;
+  left:-9999px;  
+}
+.tasksTooltip div {
+  width:7px;
+  height:5px;
+  background-image: url("../images/hint.gif");
+  position:absolute;
+  top:18px;
+}
+.st_separater {
+  width:100%;
+  height:0px;
+}
+.filterSeparater {
+  width:100%;
+  height:10px;
+}
+#showNextTasks {
+  color:rgb(156,160,164);
+  text-decoration:underline;
+  font-weight: bold;
+  margin:0 0 0 31px;
+  cursor: pointer;
+  display: none;  
+}
+#showNextTasks:hover {
+  color: #1A6DB3;
+}
+
+*+html .tl-combobox .combobox-container {
+    position: relative;
+}
+*+html .tl-combobox .combobox-wrapper {
+    position: static;
+}
+.taskLoader {
+  position:absolute;
+  width:16px;
+  height:16px;
+  background: url("../images/loader16.gif") no-repeat scroll left center transparent;
+  margin-top: -23px;
+}
+#project_dropdown {
+  max-width:200px;
+  height:200px;
+  overflow: scroll;
+}
+.requiredErrorText.project {
+  right:21px;
+  margin-top: -4px;  
+}
+.popupContainerClass .infoPanel {
+  margin:0px;
+}
+.popupActionPanel {
+  background: #fff;
+  border: 1px solid #8E908F;
+  display: none;
+  min-width: 140px;
+  padding: 7px 10px;
+  position: absolute;
+  z-index:1000;
+}
+#cacheTLElements {
+  display:none;
+}
+
+.quickAddSubTaskField {
+  position:relative;
+}
+.loader32 {
+  height:50px;
+  background: url("../images/loader_32.gif") no-repeat scroll center center transparent;
+}
+
+#projectSelector_switcher span {
+	max-width: 188px;
+	display:inline-block;
+  overflow: hidden;
+}
+
+.actionPanel .teamListPopup {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 150px;
+}
+.noContentBlock
+{
+    display:none;
+}
+
+.taskList .changeStatusCombobox
+{
+	display: block;
+	width: 35px;
+	border: 1px solid transparent;
+}
+
+.taskList .changeStatusCombobox.canEdit
+{
+	background: white url('../images/tr_off.png') no-repeat 24px 9px;
+	border: 1px solid  #d1d1d1;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer;
+}
+
+.taskList div.task:hover .changeStatusCombobox.canEdit, .taskList .changeStatusCombobox.canEdit.selected
+{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#cecece');
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -moz-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -ms-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+    background: url('../images/tr_on.png') no-repeat 24px 9px, -webkit-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -webkit-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	background: url('../images/tr_on.png') no-repeat 24px 9px, -o-linear-gradient(bottom, #cecece, #f6f6f6) repeat scroll 0 0 transparent;
+	border-color: #a8a8a8;
+}
+
+.taskList .changeStatusCombobox.noEdit
+{
+	background-image: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+}
+
+.taskList .changeStatusCombobox span
+{
+	display: block;
+	margin: 3px 0px 3px 4px;
+	width: 16px;
+	height: 16px;
+}
+
+.taskList .changeStatusCombobox .open, .taskList .changeStatusCombobox .overdue
+{
+	background-image: url('../images/status_open_active_new.png');
+}
+
+.taskList .changeStatusCombobox .closed 
+{
+	background-image: url('../images/status_closed_new.png');
+}
+#statusListContainer
+{
+	display: none;
+	min-width: 115px;
+	position: absolute;
+	z-index: 101;
+}
+
+#statusListContainer .containerTop
+{
+	display: block;
+	background: url('../images/popup-corner.png') no-repeat;
+	width: 9px;
+	height: 5px;
+	left: 20px;
+	top: 6px;
+	position: absolute;
+	z-index: 1;
+}
+
+#statusListContainer ul
+ {
+	list-style-type: none;
+	border: 1px solid #8E908F;
+	margin-top: 10px;
+	background-color: #fff;
+	padding: 10px 10px 10px 10px;
+}
+
+#statusListContainer li
+{
+	display: block;
+	padding: 6px 5px 5px 24px;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+	cursor: pointer;
+}
+
+#statusListContainer li:hover
+{
+	background-color: #DDEAF4;
+}
+
+#statusListContainer li.selected
+{
+	/*background-color: #EDFBED;*/
+}
+
+#statusListContainer li.open
+{
+	background-image: url('../images/status_open_active_new.png');
+}
+
+#statusListContainer li.closed
+{
+	background-image: url('../images/status_closed_new.png');
+}

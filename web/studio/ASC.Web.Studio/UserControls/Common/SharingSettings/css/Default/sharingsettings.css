@@ -1,0 +1,145 @@
+﻿#studio_sharingSettingsDialog
+{
+    display:none; 
+}
+
+#studio_sharingSettingsDialog .header
+{
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    padding-bottom:10px;
+}
+
+#studio_sharingSettingsDialog #sharingSettingsItems
+{
+    padding:0px 5px;
+    min-height:320px;
+    height:320px;
+    overflow:auto;
+}
+body.mobile #studio_sharingSettingsDialog #sharingSettingsItems
+{
+    height: auto !important;
+    overflow: visible !important;
+}
+
+#studio_sharingSettingsDialog .btnBox
+{    
+    margin-top:20px;
+}
+
+
+#sharingSettingsSaveButton,
+#sharingSettingsCancelButton
+{
+    float:left;
+}
+#sharingSettingsCancelButton
+{
+    margin-left:8px;
+}
+
+
+#studio_sharingSettingsDialog .removeItem
+{
+    cursor:pointer;
+}
+
+#studio_sharingSettingsDialog .sharingItem
+{
+    padding:10px 20px 7px 20px;
+    border-top:none;
+    border-right:none;
+    border-left:none;
+}
+
+#studio_sharingSettingsDialog .sharingItem .name
+{
+    float:left;
+    overflow: hidden;
+    width:320px;
+}
+
+#studio_sharingSettingsDialog .sharingItem .action
+{
+    float:right;
+    text-align: right;
+    width:140px;
+}
+
+#studio_sharingSettingsDialog .sharingItem .remove
+{
+    float:right;
+    width:16px;
+    margin-left: 10px;
+}
+
+#studio_sharingSettingsDialog .addToSharingLinks
+{
+    padding:20px 10px 10px;
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    
+}
+
+#studio_sharingSettingsDialog .addUserLink
+{
+    float:left;
+}
+
+#studio_sharingSettingsDialog #shareUserSelector
+{
+    float: left;
+}
+
+#studio_sharingSettingsDialog .addGroupLink
+{
+    float:right;
+}
+
+/*----------------custome select------------------------*/
+#studio_sharingSettingsDialog div.action div.title 
+{
+    border-bottom: 1px dotted;
+    color: #1A6DB3;
+    cursor: pointer;
+    float: right;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#studio_sharingSettingsDialog div.action ul.options
+{
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    list-style: none;
+    margin: -7px -5px;
+    padding: 0;
+    right: -2px;
+    width: auto !important;
+}
+#studio_sharingSettingsDialog div.action li.option
+{
+    height: 20px;
+    margin: 2px;
+    overflow: hidden;
+    padding: 3px 4px 0;
+    white-space: nowrap;
+}
+
+#studio_sharingSettingsDialog div.action li.option:hover 
+{
+    background-color:#E8E9E9 !important;
+}
+#studio_sharingSettingsDialog div.action li.option.selected
+{
+    font-weight: bold;
+}
+
+#sharingSettingsItems .tl-combobox .combobox-container
+{
+    max-width: 220px;
+    min-width: 120px;
+    width: auto;
+}

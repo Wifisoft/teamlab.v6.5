@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--unique skin id-->
+  <ID>default</ID>
+  <!--skin name-->
+  <Name>ASC.Web.Studio.PublicResources.SkinNameResource,ASC.Web.Studio;DefaultSkin</Name>
+  <!--main css file-->
+  <BaseCSSFileName>common_style.css</BaseCSSFileName>
+  <ASPTheme>Default</ASPTheme>
+  <SortOrder>0</SortOrder>
+</root>

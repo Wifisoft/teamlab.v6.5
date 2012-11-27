@@ -1,0 +1,4 @@
+﻿<%@ Register Namespace="ASC.Web.Controls" TagPrefix="ascwc"  Assembly="ASC.Web.Controls" %>
+<ascwc:PollForm  VoteCountTextCSSClass = "pollSmallDescribe" VariantTextCSSClass = "VariantTextCSSClass"
+                 LiderStatisticBarCSSClass="statisticBar liaderBar"  StatisticBarCSSClass="statisticBar" 
+                 ButtonCSSClass="baseLinkButton" runat="server"/>

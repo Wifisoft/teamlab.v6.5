@@ -1,0 +1,113 @@
+﻿.viewSwitcher ul, .viewSwitcher li 
+{
+    padding: 0;
+    margin: 0;
+}
+.viewSwitcher
+{
+    margin-bottom: 20px;
+}
+.viewSwitcherDropdownWithoutScroll, .viewSwitcherDropdownWithScroll
+{
+	border: 1px solid #8E908F;
+	background-color: #FFFFFF;
+	z-index: 10001;
+	white-space: nowrap;
+	padding-top: 5px;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.viewSwitcherDropdownWithScroll
+{
+	overflow-y: auto;
+	height: 260px;
+	padding-right: 8px;
+}
+
+a.viewSwitcherDropdownItem, a.viewSwitcherDropdownItem:active, a.viewSwitcherDropdownItem:visited, a.viewSwitcherDropdownItem:hover
+{
+	color: #000000;
+	cursor: pointer;
+	display: block;
+	font-size: 11px;
+	padding: 2px;
+	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	margin-top: 0px;
+	text-align: left;
+}
+
+a.viewSwitcherDropdownItem:hover
+{
+	background-color:#E8E9E9;
+}
+
+.viewSwitcherCombobox
+{
+	border-bottom-color:#8E908F;
+	color: #272727;
+	display: inline;
+	margin-left: 5px;
+}
+
+.viewSwitcherItem, .viewSwithcerSelectedItem
+{
+    height: 15px;
+    padding: 13px 9px 1px 9px;
+}
+
+.viewSwithcerSelectedItem
+{
+	font-weight: bold;	
+}
+
+.viewSwitcher .viewSwitcherTab, .viewSwitcher .viewSwitcherTabSelected
+{
+	text-decoration: none;
+	list-style: none;
+	cursor: pointer;
+	display: block;
+	float: left;
+	border: solid 1px #D1D1D1;
+	padding: 7px 16px;
+	height: 20px;
+	position:relative;
+	bottom:-1px;
+	margin-left:3px;
+	font-size: 16px;	
+}
+.viewSwitcher .viewSwitcherTab
+{
+    background-color: #F3F3F3;
+}
+.viewSwitcher .viewSwitcherTabSelected
+{
+    background-color: #FFFFFF;
+	font-weight: bold;
+	border-bottom: 1px solid White;
+}
+
+.viewSwitcher .viewSwitcherTabWithLeftBorder
+{
+	border-left: solid 1px #D1D1D1;
+	height: 30px;
+	width: 0px;
+	float: left;
+}
+
+.viewSwitcher .viewSwitcherAreaWithBottomBorder
+{
+	border-bottom: solid 1px #D1D1D1;
+	margin-bottom: -1px;
+	padding-left: 10px;
+}
+
+.viewSwitcherComboItem
+{
+	max-width: 500px;
+    overflow: hidden;
+}

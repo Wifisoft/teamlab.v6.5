@@ -1,0 +1,2 @@
+﻿<%@ Register Namespace="ASC.Web.Controls" TagPrefix="ascwc"  Assembly="ASC.Web.Controls" %>
+<ascwc:PollFormMaster  VariantPanelCSSClass = "" VariantLabelCSSClass="" HeaderCSSClass="headerPanel" TextEditCSSClass="textEdit" runat="server"/>

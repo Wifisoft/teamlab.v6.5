@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6EAA6FAE-A85F-473D-A638-063BF18494A3}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppLimit.CloudComputing.SharpBox.WP7</RootNamespace>
+    <AssemblyName>AppLimit.CloudComputing.SharpBox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug\sl3-wp\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release\sl3-wp\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Silverlight">
+      <HintPath>..\Libraries\JSON.NET\Newtonsoft.Json.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Servicemodel" />
+    <Reference Include="System.Servicemodel.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="CloudStorage.cs" />
+    <Compile Include="CloudStorageAsyncFunctions.cs" />
+    <Compile Include="CloudStorageComfortFunctions.cs" />
+    <Compile Include="CloudStorageLimits.cs" />
+    <Compile Include="Common\AsyncObjectRequest.cs" />
+    <Compile Include="Common\AsyncResultEx.cs" />
+    <Compile Include="Common\Diagnostics\StopWatch.cs" />
+    <Compile Include="Common\IO\PathHelper.cs" />
+    <Compile Include="Common\IO\StreamHelper.cs" />
+    <Compile Include="Common\Net\HttpException.cs" />
+    <Compile Include="Common\Net\HttpUtilityEx.cs" />
+    <Compile Include="Common\Net\Json\JsonDateTimeConverter.cs" />
+    <Compile Include="Common\Net\Json\JsonHelper.cs" />
+    <Compile Include="Common\Net\oAuth\Context\OAuthConsumerContext.cs" />
+    <Compile Include="Common\Net\oAuth\Context\OAuthServiceContext.cs" />
+    <Compile Include="Common\Net\oAuth\Impl\OAuthBase.cs" />
+    <Compile Include="Common\Net\oAuth\Impl\OAuthStreamParser.cs" />
+    <Compile Include="Common\Net\oAuth\Impl\OAuthUrlGenerator.cs" />
+    <Compile Include="Common\Net\oAuth\OAuthService.cs" />
+    <Compile Include="Common\Net\oAuth\Token\OAuthToken.cs" />
+    <Compile Include="Common\Net\Web\Dav\DavService.cs" />
+    <Compile Include="Common\Net\Web\Http\HttpService.cs" />
+    <Compile Include="Common\Net\Web\WebRequestExecutedEventArgs.cs" />
+    <Compile Include="Common\Net\Web\WebRequestExecutingEventArgs.cs" />
+    <Compile Include="Common\Net\Web\WebRequestManager.cs" />
+    <Compile Include="Common\Net\Web\WebRequestMethods.cs" />
+    <Compile Include="Common\Net\Web\WebRequestMultipartFormDataSupport.cs" />
+    <Compile Include="Common\Net\Web\WebRequestService.cs" />
+    <Compile Include="Common\Net\Web\WebRequestStream.cs" />
+    <Compile Include="Common\Net\Web\WebRequestStreamHelper.cs" />
+    <Compile Include="Common\Net\Web\WebResponseStream.cs" />
+    <Compile Include="Exceptions\ErrorMessages.Designer.cs" />
+    <Compile Include="Exceptions\SharpBoxErrorCodes.cs" />
+    <Compile Include="Exceptions\SharpBoxException.cs" />
+    <Compile Include="Common\ICloneable.cs" />
+    <Compile Include="ICloudDirectoryEntry.cs" />
+    <Compile Include="ICloudFileDataTransfer.cs" />
+    <Compile Include="ICloudFileSystemEntry.cs" />
+    <Compile Include="ICloudStorageAccessToken.cs" />
+    <Compile Include="ICloudStorageAsyncInterface.cs" />
+    <Compile Include="ICloudStorageConfiguration.cs" />
+    <Compile Include="ICloudStorageProvider.cs" />
+    <Compile Include="ICloudStoragePublicAPI.cs" />
+    <Compile Include="StorageProvider\API\GenericHelper.cs" />
+    <Compile Include="StorageProvider\API\GenericStorageProviderFactory.cs" />
+    <Compile Include="StorageProvider\API\IStorageProviderService.cs" />
+    <Compile Include="StorageProvider\API\IStorageProviderSession.cs" />
+    <Compile Include="StorageProvider\BaseObjects\BaseDirectoryEntry.cs" />
+    <Compile Include="StorageProvider\BaseObjects\BaseFileEntry.cs" />
+    <Compile Include="StorageProvider\BaseObjects\BaseFileEntryDataTransfer.cs" />
+    <Compile Include="StorageProvider\BaseObjects\BaseFileEntryDownloadStream.cs" />
+    <Compile Include="StorageProvider\BoxNet\BoxNetConfiguration.cs" />
+    <Compile Include="StorageProvider\BoxNet\BoxNetStorageProvider.cs" />
+    <Compile Include="StorageProvider\BoxNet\Logic\BoxNetStorageProviderService.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxAccountInfo.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxBaseTokenInformation.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxConfiguration.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxQuotaInfo.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxRequestToken.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxStorageProvider.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxStorageProviderTools.cs" />
+    <Compile Include="StorageProvider\DropBox\DropBoxToken.cs" />
+    <Compile Include="StorageProvider\DropBox\Logic\DropBoxRequestParser.cs" />
+    <Compile Include="StorageProvider\DropBox\Logic\DropBoxStorageProviderService.cs" />
+    <Compile Include="StorageProvider\DropBox\Logic\DropBoxStorageProviderSession.cs" />
+    <Compile Include="StorageProvider\GenericCurrentCredentials.cs" />
+    <Compile Include="StorageProvider\GenericNetworkCredentials.cs" />
+    <Compile Include="StorageProvider\GenericStorageProvider.cs" />
+    <Compile Include="StorageProvider\GenericStorageProviderService.cs" />
+    <Compile Include="StorageProvider\WebDav\Logic\WebDavRequestParser.cs" />
+    <Compile Include="StorageProvider\WebDav\Logic\WebDavStorageProviderService.cs" />
+    <Compile Include="StorageProvider\WebDav\Logic\WebDavStorageProviderSession.cs" />
+    <Compile Include="StorageProvider\WebDav\WebDavConfiguration.cs" />
+    <Compile Include="StorageProvider\WebDav\WebDavStorageProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Exceptions\ErrorMessages.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir $(SolutionDir)\Nuget\lib
+mkdir $(SolutionDir)\Nuget\lib\sl3-wp
+mkdir $(SolutionDir)\Nuget\content
+mkdir $(SolutionDir)\Nuget\tools
+copy $(TargetPath) $(SolutionDir)\Nuget\lib\sl3-wp
+copy $(ProjectDir)\$(Outdir)\Newtonsoft.Json.Silverlight.dll $(SolutionDir)\Nuget\lib\sl3-wp</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

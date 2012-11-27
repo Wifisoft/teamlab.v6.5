@@ -1,0 +1,39 @@
+﻿<%@ Assembly Name="ASC.Web.Studio" %>
+<%@ Assembly Name="ASC.Web.Files" %>
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Masters/BaseTemplate.master"
+    CodeBehind="BasicTemplate.master.cs" Inherits="ASC.Web.Files.Masters.BasicTemplate" %>
+<%@ Register Assembly="ASC.Web.Controls" Namespace="ASC.Web.Controls" TagPrefix="ascwc" %>
+
+
+<asp:Content ID="HeaderContent" ContentPlaceHolderID="HeaderContent" runat="server"> 
+    <asp:ContentPlaceHolder runat="server" ID="BTHeaderContent">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="TopContent" runat="server" ID="TopContent">
+    <asp:PlaceHolder runat="server" ID="_topNavigationPanelPlaceHolder"></asp:PlaceHolder>
+</asp:Content>
+<asp:Content ID="TitleContent" ContentPlaceHolderID="TitleContent" runat="server">
+    <div style="height: 20px;"></div>
+</asp:Content>
+
+<asp:Content ID="PageContent" ContentPlaceHolderID="PageContent" runat="server">
+    <asp:PlaceHolder ID="_contentHolder" runat="server"></asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="BTPageContentWithoutCommonContainer" runat="server">
+    </asp:ContentPlaceHolder>
+    <ascwc:Container ID="_commonContainer"  runat="server">
+        <header>      
+        </header>
+        <body>
+            <asp:ContentPlaceHolder ID="BTPageContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </body>
+    </ascwc:Container>
+    <asp:PlaceHolder runat="server" ID="phOnlineUsers" />
+</asp:Content>
+<asp:Content ID="SidePanel" ContentPlaceHolderID="SidePanel" runat="server">
+    <asp:ContentPlaceHolder ID="BTSidePanel" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="FooterContent" ContentPlaceHolderID="FooterContent" runat="server">
+    <asp:PlaceHolder runat="server" ID="_bottomNavigatorPlaceHolder"></asp:PlaceHolder>
+</asp:Content>

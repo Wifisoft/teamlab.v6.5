@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+  <action actionID="new post in topic" defaultPatternID="PostInTopicEmailPattern">
+	  <sender senderName="messanger.sender" patternID="PostInTopicEmailPattern_jabber" />
+  </action>
+  <action actionID="new post by tag" defaultPatternID="PostInTopicEmailPattern">
+	  <sender senderName="messanger.sender" patternID="PostInTopicEmailPattern_jabber" />
+  </action>
+  <action actionID="new post in thread" defaultPatternID="PostInTopicEmailPattern">
+	  <sender senderName="messanger.sender" patternID="PostInTopicEmailPattern_jabber" />
+  </action>
+  <action actionID="new topic in forum" defaultPatternID="TopicInForumEmailPattern">
+	  <sender senderName="messanger.sender" patternID="TopicInForumEmailPattern_jabber" />
+  </action>
+</act:accordings>
+

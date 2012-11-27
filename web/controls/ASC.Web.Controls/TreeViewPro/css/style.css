@@ -1,0 +1,12 @@
+﻿.treeviewpro_nodeSelect
+{
+	background-color:#c2dcef;
+	color: #000000;
+	font-weight:bolder;
+	cursor:pointer;
+}
+.treeviewpro_node
+{
+	color: #000000;
+	cursor:pointer;
+}

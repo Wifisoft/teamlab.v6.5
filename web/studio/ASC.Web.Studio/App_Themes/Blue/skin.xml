@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--unique skin id-->
+  <ID>blue</ID>
+  <!--skin name-->  
+  <Name>ASC.Web.Studio.PublicResources.SkinNameResource,ASC.Web.Studio;BlueSkin</Name>
+  <!--main css file-->
+  <!--main css file-->
+  <BaseCSSFileName>common_style.css</BaseCSSFileName>
+  <CSSFileName>override.css</CSSFileName>
+  <ASPTheme>Default</ASPTheme>
+  <SortOrder>2</SortOrder>
+</root>

@@ -1,0 +1,56 @@
+﻿<%@ Assembly Name="ASC.Web.Studio" %>
+<%@ Assembly Name="ASC.Web.CRM" %>
+
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Masters/BaseTemplate.master"
+    CodeBehind="BasicTemplate.master.cs" Inherits="ASC.Web.CRM.BasicTemplate" %>
+
+<%@ Import Namespace="ASC.Web.CRM" %>
+<%@ Import Namespace="ASC.Web.CRM.Classes" %>
+<%@ Register Assembly="ASC.Web.Studio" Namespace="ASC.Web.Studio.Controls.Common"
+    TagPrefix="ascwc" %>
+<%@ Register Assembly="ASC.Web.Studio" Namespace="ASC.Web.Studio.UserControls.Common"
+    TagPrefix="ascwc" %>
+<%@ Register Assembly="ASC.Web.Controls" Namespace="ASC.Web.Controls" TagPrefix="ascwc" %>
+<asp:Content ID="HeaderContent" ContentPlaceHolderID="HeaderContent" runat="server">
+    
+<% if (Global.DebugVersion) { %>
+<link href="<%= PathProvider.GetFileStaticRelativePath("common.css") %>" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="<%= PathProvider.GetFileStaticRelativePath("common.js") %>"></script>
+<% } else { %>
+<link href="<%= PathProvider.GetFileStaticRelativePath("crm-min.css") %>" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="<%= PathProvider.GetFileStaticRelativePath("crm-min.js") %>"></script>
+<% } %>
+
+
+    <asp:ContentPlaceHolder runat="server" ID="BTHeaderContent">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="TopContent" runat="server" ID="TopContent">
+    <asp:PlaceHolder runat="server" ID="_topNavigationPanelPlaceHolder"></asp:PlaceHolder>
+</asp:Content>
+<asp:Content ID="TitleContent" ContentPlaceHolderID="TitleContent" runat="server">
+    <div style="height: 20px;">
+    </div>
+</asp:Content>
+<asp:Content ID="PageContent" ContentPlaceHolderID="PageContent" runat="server">
+    <asp:PlaceHolder ID="_contentHolder" runat="server"></asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="BTPageContentWithoutCommonContainer" runat="server">
+    </asp:ContentPlaceHolder>
+    <ascwc:Container ID="_commonContainer" runat="server">
+        <Header>
+        </Header>
+        <Body>
+            <asp:ContentPlaceHolder ID="BTPageContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </Body>
+    </ascwc:Container>
+    <asp:PlaceHolder runat="server" ID="phOnlineUsers" />
+    <asp:PlaceHolder runat="server" ID="phVisitedUsers" />
+</asp:Content>
+<asp:Content ID="SidePanel" ContentPlaceHolderID="SidePanel" runat="server">
+    <asp:ContentPlaceHolder ID="BTSidePanel" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="FooterContent" ContentPlaceHolderID="FooterContent" runat="server">
+    <asp:PlaceHolder runat="server" ID="_bottomNavigatorPlaceHolder"></asp:PlaceHolder>
+</asp:Content>

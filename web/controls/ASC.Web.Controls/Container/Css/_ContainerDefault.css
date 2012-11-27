@@ -1,0 +1,234 @@
+﻿.baseClass
+{
+	/*-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;*/
+		border-radius:3px;	 -webkit-border-radius:3px;	 -moz-border-radius:3px;	 }
+
+*html .baseClass
+{
+	position: static;
+}
+
+.baseClass table#shadowTable
+{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+*html .baseClass table#shadowTable
+{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+
+
+
+.baseClass table#shadowTable td#shadowTopLeft
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.shadowCorners.png") %>');
+	-background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images._shadowCorners.png") %>');
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+.baseClass table#shadowTable td#shadowLeft
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.shadowHorizontalLine.png") %>');
+	-background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images._shadowHorizontalLine.png") %>');
+	background-repeat: repeat-y;
+	background-position: -7px 0px;
+	width: 14px;
+}
+
+.baseClass table#shadowTable td#shadowBottomLeft
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.shadowCorners.png") %>');
+	-background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images._shadowCorners.png") %>');
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-position: 0px -14px;
+}
+
+
+
+.baseClass table#shadowTable td#shadowTopRight
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.shadowCorners.png") %>');
+	-background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images._shadowCorners.png") %>');
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-position: 0px -28px;
+}
+
+.baseClass table#shadowTable td#shadowRight
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.shadowHorizontalLine.png") %>');
+	-background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images._shadowHorizontalLine.png") %>');
+	background-repeat: repeat-y;
+	background-position: 7px 0px;
+	width:14px;
+}
+
+.baseClass table#shadowTable td#shadowBottomRight
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.shadowCorners.png") %>');
+	-background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images._shadowCorners.png") %>');
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-position: 0px -42px;
+}
+
+.baseClass table#shadowTable td#shadowTop
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.shadowVerticalLine.png") %>');
+	-background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images._shadowVerticalLine.png") %>');
+	height: 14px;
+	background-repeat: repeat-x;
+	background-position: 0px -7px;
+	
+}
+
+.baseClass table#shadowTable td#shadowBottom
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.shadowVerticalLine.png") %>');
+	-background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images._shadowVerticalLine.png") %>');
+	height: 14px;
+	background-repeat: repeat-x;
+	background-position: 0px 7px;
+}
+
+
+
+*html .popup
+{
+	background: none !important;
+}
+
+
+.containerClass
+{
+	/*background-color: #878889;*/
+	margin: -7px;
+	}
+
+*html .containerClass
+{
+	position:relative;
+	margin: -7px;
+	float:left;
+}
+
+*+html .containerClass
+{
+	position:relative;
+	margin: -7px;
+	float:left;
+}
+
+.containerHeaderBlock
+{
+	
+	/*-moz-border-radius-topleft: 3px;	-moz-border-radius-topright: 3px;	border-top-left-radius:3px;	 -webkit-border-top-left-radius:3px;	 border-top-right-radius:3px;	 -webkit-border-top-right-radius:3px;*/	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.head.png") %>');
+	height: 24px;
+	overflow: hidden;
+	color: #FFFFFF;
+	/*font-size: 10px;*/	vertical-align: middle;
+}
+
+*+html .containerHeaderBlock
+{
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.head.png") %>');
+	height: 24px;
+	overflow: hidden;
+	color: #FFFFFF;
+	/*font-size: 10px;*/	vertical-align: middle;
+	width: expression(this.parentNode.clientWidth - 6);
+}
+
+
+
+*html .containerHeaderBlock
+{
+	
+	/*-moz-border-radius-topleft: 3px;	-moz-border-radius-topright: 3px;	border-top-left-radius:3px;	 -webkit-border-top-left-radius:3px;	 border-top-right-radius:3px;	 -webkit-border-top-right-radius:3px;*/	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.head.png") %>');
+	height: 24px;
+	overflow: hidden;
+	color: #FFFFFF;
+	/*font-size: 10px;*/	vertical-align: middle;
+	display:block;
+	position:relative;
+	float:left;
+	width:expression(this.parentNode.clientWidth - 6);	
+}
+
+
+
+
+.containerClass div#headLeft, .containerClass div#headRight
+{
+	height: 24px;
+	width: 3px;
+	background-image: url('<%=WebResource("ASC.Web.Controls.Container.Css.Images.headCorners.png") %>');
+}
+
+.containerClass div#headLeft
+{
+	float: left;
+	background-position: 0px 0px;
+}
+
+.containerClass div#headRight
+{
+	float: right;
+	background-position: -3px 0px;
+}
+
+.containerBodyBlock
+{
+	background-color: #FFFFFF;
+	color: #646464;
+	/*padding: 0px 5px 5px;*/	font-family: Arial,Tahoma,sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-left-radius:3px;
+	 -webkit-border-bottom-left-radius:3px;
+	 border-bottom-right-radius:3px;
+	 -webkit-border-bottom-right-radius:3px;
+		border: solid 1px #c4c4c4;
+	border-top: none;
+}
+
+
+
+
+*html .containerBodyBlock , *+html .containerBodyBlock
+{
+	background-color: #FFFFFF;
+	color: #646464; /*padding: 0px 5px 5px;*/
+	font-family: Arial,Tahoma,sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	width: expression(this.parentNode.clientWidth - 2);
+	display: block;
+	overflow: hidden;
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+  <action actionID="new photo uploaded" defaultPatternID="1">
+	  <sender senderName="messanger.sender" patternID="1_jabber" />
+  </action>
+  <action actionID="new event comment" defaultPatternID="2">
+	  <sender senderName="messanger.sender" patternID="2_jabber" />
+  </action>  
+</act:accordings>

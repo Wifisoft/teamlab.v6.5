@@ -1,0 +1,69 @@
+﻿<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+       <!--Export is completed-->
+      <pattern id="ExportCompleted" name="export is completed" contentType="html">
+        <subject resource="|subject_ExportCompleted|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ExportCompleted|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+      </pattern>
+      <!--Export is completed jabber-->
+      <pattern id="ExportCompleted_jabber" name="export is completed" contentType="html">
+        <subject resource="|subject_ExportCompleted|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+          ${EntityRelativeURL}
+        </body>
+      </pattern>
+      <!--Responsible for task-->
+      <pattern id="ResponsibleForTask" name="responsible for task" contentType="html">
+        <subject resource="|subject_ResponsibleForTask|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_ResponsibleForTask|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+      </pattern>
+      <!-- Responsible for task jabber -->
+      <pattern id="ResponsibleForTask_jabber" name="task assigned jabber" contentType="html">
+        <subject resource="|subject_ResponsibleForTask|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$AdditionalData.get_item("TaskDescription")
+
+${__VirtualRootPath}/products/crm/tasks.aspx?ID=$EntityID</body>
+      </pattern>  
+      <!-- Add relationship event -->
+      <pattern id="RelationshipEvent" name="relationship event" contentType="html">
+        <subject resource="|subject_AddRelationshipEvent|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_AddRelationshipEvent|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+      </pattern>
+      <!-- Add relationship event jabber-->
+      <pattern id="RelationshipEvent_jabber" name="relationship event jabber" contentType="html">
+        <subject resource="|subject_AddRelationshipEvent|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$EntityTitle</body>
+      </pattern>
+      <!-- Set access event -->
+      <pattern id="SetAccess" name="set access" contentType="html">
+        <subject resource="|subject_SetAccess|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_SetAccess|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+      </pattern>
+      <!-- Set access event for jabber-->
+      <pattern id="SetAccess_jabber" name="set access jabber" contentType="html">
+        <subject resource="|subject_SetAccess|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+$EntityTitle</body>
+      </pattern>
+
+      <!-- Create new contact from web form -->
+      <pattern id="CreateNewContact" name="Create new contact from web form" contentType="html">
+        <subject resource="|subject_CreateNewContact|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_CreateNewContact|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+      </pattern>
+      <!-- Create new contact from web form for jabber-->
+      <pattern id="CreateNewContact_jabber" name="Create new contact from web form jabber" contentType="html">
+        <subject resource="|subject_CreateNewContact|ASC.Web.CRM.Services.NotifyService.CRMPatternResource,ASC.Web.CRM" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">
+          $EntityTitle
+        </body>
+      </pattern>
+      
+      
+    </patterns>
+  </block>
+</pt:catalog>

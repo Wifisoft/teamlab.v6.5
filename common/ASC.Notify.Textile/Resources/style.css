@@ -1,0 +1,70 @@
+﻿h1   
+{
+    font-weight: normal;
+    border-bottom: dashed 1px #cccccc;
+    color: #000;
+    font-size: 26px;
+    padding: 0px 0px 15px 0px;
+    margin-bottom: 20px;
+}
+
+h2
+{
+	font-size: 18px;
+	color: #7E7E7E;
+}
+
+p
+{
+    margin-top: 20px;
+}
+
+a
+{
+    color: #1A6DB3;
+}
+
+strong
+{
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.footer
+{
+    margin-top: 40px;
+    color: #a3a3a3;
+    font-size: 11px;
+}
+
+td
+{
+	padding: 6px;
+	margin: 0;
+}
+
+.edit_request
+{
+	border-collapse: collapse; 
+	width: 100%;
+}
+
+.edit_request_column
+{
+	color: rgb(130, 135, 141); 
+	font-size: 12px;
+	text-align: left;
+}
+
+.edit_request_title
+{
+	text-align: right; 
+	font-weight: bold;
+}
+
+.edit_request_data
+{
+	border: 1px solid #D1D1D1;
+}
+

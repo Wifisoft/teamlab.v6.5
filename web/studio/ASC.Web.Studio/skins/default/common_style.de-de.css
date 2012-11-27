@@ -1,0 +1,14 @@
+﻿
+div#containerToUpload .swfupload{width:257px;}
+
+div#containerToMoreUpload .swfupload{width:144px;}
+
+div#historyFilters dd select, div#additionalOptions dd select{width:220px !important;}
+
+div.wikiPageSearchBody input.textEdit{width:115px !important;}
+
+div.poll_variantDiv input.textEdit{width:83% !important;}
+
+#reportDescription{margin-left:480px;}
+
+td.PhotoManager_FirstColumn div.textMediumDescribe a, td.PhotoManager_FirstColumn table span div a{text-transform:capitalize !important;}

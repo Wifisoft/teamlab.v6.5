@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+  <action actionID="new wiki page" defaultPatternID="1">
+	  <sender senderName="messanger.sender" patternID="1_jabber" />
+  </action>
+  <action actionID="edit wiki page" defaultPatternID="2">
+	  <sender senderName="messanger.sender" patternID="2_jabber" />
+  </action>
+  <action actionID="new wiki page comment" defaultPatternID="3">
+    <sender senderName="messanger.sender" patternID="3_jabber" />
+  </action>
+</act:accordings>

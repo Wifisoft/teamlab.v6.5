@@ -1,0 +1,431 @@
+/*******************************************************************************
+  Misc
+*******************************************************************************/
+#group_manager_popup dt
+{
+    width: 100px;
+}
+
+#group_manager_popup ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    max-height:150px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+#group_manager_popup ul li
+{
+    padding-bottom: 5px;
+}
+
+#group_manager_popup dd
+{
+    margin-left: 110px;
+}
+dl.pm-taskStatus dt
+{
+    width: 0px;
+}
+
+dl.pm-taskStatus
+{
+    padding: 6px;
+    margin: 0px;
+    background-color: #FFFFFF;
+}
+
+dl.pm-taskStatus dd
+{
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20px;
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+dl.pm-taskStatus
+{
+    border: 1px solid #D1D1D1;
+    
+}
+
+div.pm-milestoneWithTasksBlock
+{
+    padding-bottom: 30px;
+}
+
+a.grayButton{
+    background-image: url("../images/button_gray_bg.gif");
+    background-repeat: repeat;
+    border: 1px solid #B1B1B1;
+    color: #000000;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 11px; 
+    padding: 4px 14px 2px;
+    text-decoration: none;
+    cursor:pointer;
+}
+ a.grayButton:hover {
+    background-image: url("../images/button_gray_bg_hover.gif");
+    background-repeat: repeat;
+    border: 1px solid #B1B1B1;
+    color: #000000;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 11px; 
+    padding: 4px 14px 2px;
+    text-decoration: none;
+    cursor:pointer;
+}
+a.grayButton div {
+    background: url("../images/button_gray_plus.png") no-repeat scroll 0 bottom transparent;
+    height: 18px;
+    margin: -2px 5px 0 0;
+    width: 18px;
+    float: left;
+}
+a.grayButton:hover div {
+    background: url("../images/button_gray_plus_hover.png") no-repeat scroll 0 bottom transparent;
+    height: 18px;
+    margin: -2px 5px 0 0;
+    width: 18px;
+    float: left;
+}
+
+
+/*******************************************************************************
+   TaskDescriptionView
+*******************************************************************************/
+h2.pageHeader {
+	overflow: auto;
+	margin-bottom: 5px;
+}
+
+h2.pageHeader #title {
+	display: block;
+	width: 70%;
+	overflow: hidden;
+}
+
+h2.pageHeader span {
+	display: block;
+	font-weight: normal;
+	float: left;
+	color: #111;
+	font-family: Arial;
+	font-size: 24px
+}
+.pageHeader .tasklabel 
+{
+	margin-top: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 1px 10px;
+	color: #fff;
+	background-color: #88B601;
+	margin-right: 12px;
+}
+
+#topTaskActionContainer {
+	height: 30px;
+	display: none;
+}
+.commonInfoTaskDescription {
+	padding-top: 16px;
+}
+.taskAction
+{
+	background-repeat: no-repeat;
+	background-position: left bottom;
+    display: block;
+	float: left;
+	padding: 10px 30px 2px 20px;
+}
+#editTaskAction {background-image: url("../images/new_edit_pancil.png");}
+#removeTask{background-image: url("../images/16x16-remove.png");}
+#addTaskTime {background-image: url("../images/enter-time.png");}
+#followTaskActionTop {background-image: url("../images/new_subs.png");}
+#addNewTask {background-image: url("../images/plus.png");}
+
+#followTaskAction
+{    
+	background-image: url("../images/new_subs.png");
+	float: right;
+    padding: 5px 0 2px 20px;
+}
+
+#statusTaskMark
+{
+	margin-top: 4px;
+	height: 20px;
+	width: 20px;
+	float: left;
+}
+
+#statusTaskMark.open
+{
+	background: url("../images/status_open_active_new.png") 0 5px no-repeat;
+}
+
+#statusTaskMark.closed
+{
+	background: url("../images/status_closed_new.png") 0 5px no-repeat;
+}
+#taskTitleContainer{ margin-bottom: 4px;}
+#taskTitleContainer .headerTaskTitle
+{
+	color: #111;
+	font-family: Arial;
+	font-size: 24px;
+	float: left;
+	line-height: 30px;
+	max-width: 930px;
+    overflow: hidden;
+	text-overflow: ellipsis;
+}
+.deadlineLate
+{
+	color: #CC3300;
+}
+/*------common info-----*/
+
+
+.commonInfoTaskDescription .buttonContainer {
+	padding-top: 20px;
+}
+.colorPriority 
+{
+	float: left;
+	height: 16px;
+	width: 16px;
+	margin-right: 2px;
+}
+
+.commonInfoTaskDescription .high {
+	background: url("../images/high_priority.png") no-repeat;
+	background-position: 0 -1px;
+}
+
+.commonInfoTaskDescription .buttonContainer dt {
+	height: 20px;
+}
+.commonInfoTaskDescription .buttonContainer dd .baseLinkButton {
+	margin-right: 15px;
+}
+.commonInfoTaskDescription dl {
+	display: block;
+	clear: both;
+}
+.commonInfoTaskDescription dl dt,
+.commonInfoTaskDescription dl dd {
+	float: left;
+	padding-bottom: 16px;
+}
+.commonInfoTaskDescription dl dd .userLink {
+	margin-right: 15px;
+}
+.commonInfoTaskDescription dl dt {
+	margin-right: 15px;
+	color: #83888D;
+	width: 15%;
+	text-align: right;
+}
+.commonInfoTaskDescription dl dd {
+	margin-right: 30px;
+	width: 80%;
+}
+.commonInfoTaskDescription dl.timeSpend {
+	display: none;
+}
+.commonInfoTaskDescription dl.timeInfo dt,
+.commonInfoTaskDescription dl.timeInfo dd {
+	width: auto;
+}
+.commonInfoTaskDescription dl.timeInfo dt:first-child {
+	width: 15%;
+}
+/*-----time traking------*/
+#timeSpent a {
+	display: block;
+	float: left;
+}
+.timeTrakingLink,  .startTimer{
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	margin-right: 3px;
+	cursor: pointer;
+}
+.noactiveClock {
+	background-image: url(../images/clock_noactive.png);
+}
+.activeClock{
+	background-image: url(../images/clock_active.png);
+}
+.startTimer {
+	background-image: url(../images/start-track.png);
+}
+.toPageTimeTraking:link, .toPageTimeTraking:hover,
+.toPageTimeTraking:active, .toPageTimeTraking:visited  {
+	text-decoration: underline;
+	color: #000;
+}
+.toPageTimeTraking:hover {
+	text-decoration: none;
+}
+/*--------tabs-------*/
+.taskTabs {
+	margin-top: 50px;
+	list-style-type: none;
+	position: relative;
+	display:none;	
+}
+.taskTabs li,
+.taskTabs .current {
+	background-color: #F3F3F3;
+	text-decoration: none;
+	cursor: pointer;
+	display: block;
+	float: left;
+	border: solid 1px #D1D1D1;
+	bottom: -1px;
+	padding: 7px 16px;
+	height: 20px;
+	position: relative;
+	margin-left: 3px;
+	font-size: 16px;
+}
+.taskTabs .current {
+	background-color: #fff;
+	font-weight: bold;
+	border-bottom-color: #fff;
+}
+
+#tabsContent
+{
+	padding-top: 20px;
+	width: 100%;
+	border-top: 1px solid #D1D1D1;
+	min-height: 370px;
+	clear: left;
+	display: none;
+}
+#tabsContent > div{
+	display: none;
+}
+#tabsContent > div.visible {
+	display: block;
+}
+
+/*-------Comments & subtasks------*/
+
+#tabsContent #commentContainer #commentsTitle,
+#tabsContent #commentContainer #add_comment_btn {
+	display: none;
+}
+
+.emptyScrBttnPnl {
+	background: url("../images/btn_create.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	padding-left: 20px;
+}
+.subtasksEmpty, .commentsEmpty {
+	font-family: Arial;
+	color: #1A6DB3;
+}
+/*------*/
+
+#addTaskPanel .notify label {
+  cursor:pointer;
+  padding-left:5px;
+}
+#addTaskPanel .infoPanel {display:none;}
+#addTaskPanel .requiredFieldError input {border: 1px solid #cc0000;}
+.taskLoader {
+  position:absolute;
+  width:16px;
+  height:16px;
+  background: url("../images/loader16.gif") no-repeat scroll left center transparent;
+  margin-top: -23px;
+}
+#project_dropdown {
+  max-width:200px;
+  height:200px;
+  overflow: scroll;
+}
+.requiredErrorText.project {
+  right:21px;
+  margin-top: -4px;  
+}
+.popupContainerClass .infoPanel {
+  margin:0px;
+}
+.popupActionPanel {
+  background: #fff;
+  border: 1px solid #8E908F;
+  display: none;
+  min-width: 140px;
+  padding: 7px 10px;
+  position: absolute;
+  z-index:1000;
+}
+#cacheTLElements {
+  display:none;
+}
+
+/************ popup **************/
+div.actionPanel {
+    z-index: 1000;
+}
+div.actionPanel div.popup-corner
+{
+	background: url('../images/popup-corner.png') no-repeat;
+	width:9px;
+	height:5px;
+	margin-top:-12px;
+	position:absolute;
+	right:10px;
+}
+div.actionPanel {
+    background-color: #FFFFFF;
+    border: 1px solid #8E908F;
+    display: none;
+    min-width: 140px;
+    padding: 7px 10px;    
+    position: absolute;
+}
+.actionPanel span, .popupActionPanel span {
+  white-space: nowrap;
+  max-width: 200px;
+  overflow:hidden;  
+  color:#333333;
+	font-size: 12px;
+	display:list-item;
+	height:21px;
+	line-height:21px;
+	list-style:none;	
+	padding-left:12px;
+	cursor: pointer;
+}
+.actionPanel span:hover, .popupActionPanel span:hover
+{
+	background-color:#edf6fd;
+	color:#14648b;
+}
+.actionPanel .teamListPopup{
+	max-height: 250px;
+	overflow: auto;
+}
+#fullFormUserList {
+  display:none;
+  margin-bottom:5px;
+  overflow:hidden;
+  width: 370px;
+}

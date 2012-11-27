@@ -1,0 +1,77 @@
+﻿.studioUserSelector
+{
+	
+}
+.studioUserSelector .leftBox,
+.studioUserSelector .rightBox
+{
+	float:left;
+	width:320px;
+}
+
+.studioUserSelector .leftBox .title,
+.studioUserSelector .rightBox .title
+{
+	color:#1E7497;
+	font-size:16px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+
+.studioUserSelector .leftBox .content,
+.studioUserSelector .rightBox .content
+{
+	height:350px;
+	overflow:auto;
+	padding:10px;
+}
+.studioUserSelector .rightBox .title span#clear_usrdialog_rightBox {
+	display: block;
+	float: right;
+	padding: 0 2px;
+	color: #B7B7B7;
+	font-size: 13px;
+	margin-right: 10px;
+}
+*:first-child+html .studioUserSelector .rightBox .title
+{
+	position: relative;
+}
+*:first-child+html .studioUserSelector .rightBox .title span#clear_usrdialog_rightBox 
+{
+	position: absolute;
+	top:0;
+	right: 0;
+}
+
+.studioUserSelector .centerBox
+{
+	padding:10px;
+	padding-top:100px;
+	float:left;
+}
+.studioUserSelector .depBox
+{
+	padding:5px;
+	font-size:16px;
+	font-weight:bold;
+	float:left;
+	cursor:pointer;
+	width:240px;
+}
+
+.studioUserSelector .depBoxContent
+{
+	padding-left:40px;
+}
+
+.studioUserSelector .usrBox
+{
+	margin-bottom:5px;
+}
+.studioUserSelector .usrBox label
+{
+	padding-left:5px;
+}
+
+

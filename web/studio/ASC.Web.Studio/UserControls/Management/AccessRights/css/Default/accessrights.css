@@ -1,0 +1,103 @@
+﻿.accessRights-infoText {
+    background-image: url("images/green_checkbox.png");
+    background-position: 0 7px;
+    background-repeat: no-repeat;
+    padding: 4px 0 4px 20px;
+}
+.accessRights-alertText {
+    background-image: url("images/alert_16.png");
+    background-position: 0 4px;
+    background-repeat: no-repeat;
+    padding: 4px 0 4px 20px;
+}
+.accessRights-ownerCard {
+    background-color: #F5FAFF;
+    border: 1px solid #D1D1D1;
+    padding: 10px;
+    width: 360px;
+}
+.accessRights-headerPanel {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 5px;
+    margin-left: 20px;
+}
+.accessRights-collapseRight {
+    background-image: url("images/collapse_right_dark.png");
+    background-position: 0px 2px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin-left: -21px;
+    width: 16px;
+}
+.accessRights-collapseDown {
+    background-image: url("images/collapse_down_dark.png");
+    background-position: 0px 2px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin-left: -21px;
+    width: 16px;
+}
+.accessRights-switcher
+{
+	cursor: pointer;
+}
+.accessRights-content
+{
+	padding: 0 20px;
+}
+.accessRights-content input[type="radio"]
+{
+	margin: 0 3px;
+}
+#adminTable
+{
+	margin-bottom: 15px;
+}
+#adminTable td.cbxCell
+{
+	text-align: center;
+}
+#adminTable th.cbxHeader
+{
+	text-align: center;
+    white-space: nowrap;
+    width: 80px;
+    padding-bottom: 10px;
+}
+.accessRights-selectorContent>div:first-child
+{
+	float:left;
+}
+.accessRights-selectorContent>div:last-child
+{
+	margin-left:200px;
+}
+.accessRights-selectedItem
+{
+    float: left;
+    padding: 0 10px 7px 0;
+    white-space: nowrap;
+}
+.accessRights-selectedItem img
+{
+    margin: 0px 4px -2px 0px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+.accessRights-selectedItem>img:first-child
+{
+    display: inline;
+}
+.accessRights-selectedItem>img:last-child
+{
+    display: none;
+}
+.accessRights-disabledText
+{
+	color: #717171;
+}

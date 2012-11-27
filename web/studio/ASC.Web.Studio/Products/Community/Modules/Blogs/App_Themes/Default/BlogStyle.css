@@ -1,0 +1,238 @@
+﻿
+.Blogs_CommentButton
+{
+	cursor:pointer;
+	margin-bottom:-2px;
+	padding-left:2px;
+}
+.Blogs_TagButton
+{	
+	cursor:pointer;
+	margin-bottom:-2px;
+	padding-left:3px;
+}
+
+.Blogs_MainMenu
+{
+	
+}
+.Blogs_MainMenu td
+{
+	padding-left: 40px;
+	padding-right: 40px;
+	text-align: center;
+}
+
+.Blogs_TopListBlogsComments
+{
+	color: Red;
+}
+
+.Blogs_ListBlogsContent
+{
+	padding-left: 30px;
+	padding-top: 20px;
+	
+}
+.Blogs_TagNamesList
+{
+	padding: 10px;
+}
+.Blogs_ReadMoreLink
+{
+	font-size: 11px;
+	margin-top: 10px;
+}
+.Blogs_FirstColumn
+{
+	padding-left: 0px;
+	width: 70%;
+	vertical-align: top;
+}
+
+.Blogs_OneColumn
+{
+	padding-left: 30px;
+	width: 100%;
+	vertical-align: top;
+}
+.Blogs_SecondColumn
+{
+	padding-left: 30px;
+	width: 30%;
+	vertical-align: top;
+}
+.Blogs_RTE_Border
+{
+	border: solid 1px #808080;
+	width: 99%;
+}
+.Blogs_RTE_Content
+{
+	width: 100%;
+	height: 400px;
+}
+.Blogs_Paragraph
+{
+	padding: 10px;
+}
+.Blogs_TopParagraph
+{
+	padding-top: 15px;
+}
+.Blogs_SmallTopParagraph
+{
+	padding-top: 5px;
+}
+
+.Blogs_BlogInfoTbl
+{
+	margin-top: 15px;
+	margin-bottom: 5px;
+	width: 300px;
+	padding: 5px;
+}
+.Blogs_BlogInfoTbl tr
+{
+	vertical-align: middle;
+}
+.Blogs_BlogInfoTbl .left
+{
+	padding-left: 10px;
+}
+.Blogs_BlogInfoTbl .right
+{
+	padding-right: 10px;
+}
+.Blogs_GroupMenu
+{
+	padding:5px;
+}
+.Blogs_TopListMenu
+{
+	padding: 10px;
+}
+.BlogsTagListTbl
+{
+	height: 24px;
+}
+.BlogsTagListTbl tr
+{
+	vertical-align: middle;
+}
+.BlogsTagListTbl .paragraph
+{
+	padding-left: 10px;
+}
+.BlogsTagListTbl .mini_paragraph
+{
+	padding-left: 5px;
+}
+
+.Blogs_CommentContent
+{
+	padding-top:10px;
+}
+.Blogs_CommentBox
+{
+	width: 615px;
+	padding-top: 15px;
+}
+.Blogs_CommentChildBox
+{
+	width: 615px;
+	padding-left: 25px;
+	padding-top: 15px;
+}
+
+table.BlogsTable td div.MainInfoBlock
+{
+    margin-left:15px; 
+    width:590px;
+    overflow:hidden;
+    }
+table.BlogsTable td div.MainInfoBlock .BlockCreater
+{
+    padding-bottom:2px;
+    padding-top: 15px;
+    }   
+    
+table.BlogsTable td .ContentBlock 
+{
+    margin-top: 22px; 
+    margin-left:15px; 
+    width:590px; 
+    overflow-y:hidden;
+    }
+    
+table.BlogsTable td .CommentsBlock
+{
+    margin-top: 17px;  
+    margin-left:15px; 
+    width: 590px;
+    }
+    
+table.BlogsTable td  .TagsBlock
+{
+     float:left; 
+     width:70%; 
+     word-wrap: break-word;
+    }
+table.BlogsTable td  .TagsBlock img.TagsImgBlock    
+{
+    margin-bottom:-2px;
+    margin-right:2px;
+    }
+    
+table.BlogsTable td div.CommentsLinkBlock 
+{
+    float:right; 
+    width:29%; 
+    text-align:right;
+    }
+    
+table.MainBlogsTable td .InfoMainBlog    
+{
+    margin-left:15px;
+    width:590px; 
+    overflow: hidden;
+    }
+    
+table.MainBlogsTable td  .CreaterMainBlog 
+{
+    padding-bottom:2px;
+    padding-top: 3px;
+    }
+    
+table.MainBlogsTable td  .ContentMainBlog   
+{
+    margin-top: 22px; 
+    margin-left:15px; 
+    width:590px;
+    }  
+    
+table.MainBlogsTable td .CommentsMainBlog
+{
+    margin-top: 27px; 
+    margin-left:15px; 
+    width:590px;
+    }
+    
+table.MainBlogsTable td .CommentsMainBlog .TagsMainBlog
+{
+    float:left; 
+    width:70%; 
+    word-wrap: break-word;
+    }
+table.MainBlogsTable td .CommentsMainBlog .TagsImgMainBlog
+{
+    margin-bottom:-2px;
+    margin-right:2px;
+}
+
+table.MainBlogsTable td .CommentsMainBlog .FunctionsMainBlog 
+{
+    float:right; 
+    text-align:right; 
+    width:29%;
+    }

@@ -1,0 +1,550 @@
+﻿.frame
+{
+    float: left; width: 575px; height: 50px;position:relative;z-index:1000;border:0;
+}
+
+.framePad
+{
+    width:768px;
+}
+
+.importAreaBlock *
+{
+}
+
+#importUsers
+{
+   
+}
+
+#importUsers .userEditableInput
+{
+   
+}
+
+/*User importer classes*/
+#importUsers .userEditableInput, 
+#importUsers .userEditableInput:hover, 
+#importUsers .userEditableInput:focus
+{
+    background: none;
+}
+
+#importUsers .userEditableInput
+{
+    border-width: 0px;
+}
+
+#importUsers .userEditableInput:hover, #importUsers .userEditableInputHover
+{
+    border: 1px solid #D1D1D1;
+}
+
+#importUsers .userEditableInput:focus, .studioEditableInputFocus
+{
+    border: 1px solid #3186AF !important;
+    padding: 0px;
+    margin: 0px;
+}
+
+#importUsers #upload
+{
+    position:absolute;
+    top:40%;
+    left:50%;
+    text-align:center;
+    margin-left:-50px;
+    display:none;
+}
+
+#importUsers .desc
+{
+    margin:10px 0 10px 0;
+}
+
+#importUsers .smallDesc
+{
+    margin:10px 0 10px 0;
+    font-size:11px;
+}
+
+#wizard_users
+{
+    width:744px;
+    height:298px;
+    border:1px solid #d7d7d7;
+    padding:2px 0 0 12px;
+    background-color:#ffffff;
+    display:block;
+}
+
+#wizard_users #addUserBlock .error
+{
+    text-align:right;
+    font-weight:normal;
+    color:Red;
+    visibility:hidden;
+    font-size: 10px;
+    height: 19px;
+    vertical-align: bottom;
+    line-height: 19px;
+    margin-bottom:-3px;
+}
+#wizard_users #addUserBlock .btn 
+{
+   margin-top: 0px !important;
+}
+
+#wizard_users #addUserBlock .btn .btnBox
+{
+    margin-top:16px;
+}
+#wizard_users #addUserBlock .btn a
+{
+    width:60px;
+}
+
+#wizard_users .restr
+{
+    height:260px;display: block;
+    overflow:hidden; /* !!!changed!!! check */
+    overflow-y: auto;
+    overflow-x: none;
+}
+
+#wizard_users input[type="text"]
+{
+    width:190px;
+}
+
+#wizard_users input:hover
+{
+    background-color:#ffffff;
+}
+
+#wizard_users .mob input[type="text"]
+{
+    width:180px;
+}
+
+#wizard_users .mob #userList input[type="text"]
+{
+     width:180px;
+     height:16px;
+}
+
+#importUsers .buttons
+{
+    margin:20px 0 0 0;
+}
+
+#wizard_users #userList 
+{
+    width:732px;
+    margin-top:10px;
+    max-height: 250px;
+    display: block;
+}
+
+
+#wizard_users #userList .userItem .logo
+{
+    background: url(images/profile.gif) center left no-repeat;
+    width:15px;
+    padding:0 15px 0 0;
+}
+
+#wizard_users #userList tr.remove
+{
+    display:none;
+}
+
+#wizard_users #userList td
+{
+    height:25px;
+}
+#wizard_users #userList tr
+{
+    margin-bottom:0;
+    padding:0;
+}
+#wizard_users #userList .userItem .name
+{
+    padding:0 15px 0px 0;
+    width:130px;
+}
+
+#wizard_users #userList .userItem .name .firstname, #wizard_users #userList .userItem .name .lastname
+{
+    float:left;
+    padding-right:12px;
+    vertical-align:top;
+}
+
+#wizard_users #userList .userItem td.remove,
+#wizard_users #userList tr.error1 td.removeError,
+#wizard_users #userList tr.error2 td.removeError,
+#wizard_users #userList tr.error3 td.removeError
+{
+    width:18px;
+    padding-left: 12px;
+}
+
+#wizard_users #userList tr td.removeError div
+{
+    display:none;
+}
+
+#wizard_users #userList tr td.mob div
+{
+    display:block;
+}
+
+#wizard_users #userList tr.userItem td.remove div
+{
+  width:100%;
+  height:92%;
+  background: url(../images/trash_fu.png) center left no-repeat;
+  cursor:pointer;
+}
+
+#importUsers #wizard_users #userList tr.userItem td.remove div
+{
+    display:none;
+}
+
+#importUsers #wizard_users #userList tr.userItem td.mob div
+{
+    display:block;
+}
+
+#wizard_users #userList tr.error1 td.removeError div,
+#wizard_users #userList tr.error2 td.removeError div,
+#wizard_users #userList tr.error3 td.removeError div
+{
+  width:100%;
+  height:100%;
+  background: url(../images/remove_red.png) center left no-repeat;
+  cursor:pointer;
+}
+
+#importUsers #wizard_users #userList tr.userItem
+{
+    background-color:#ffffff;
+}
+
+#importUsers #wizard_users #userList tr.userItem:hover
+{
+    background-color:#F9F9F9;
+}
+#importUsers #wizard_users #userList tr.userItem:hover td.remove div
+{
+    display:block;
+}
+
+#wizard_users #userList .userItem .incorrectValue
+{
+    color:Red;
+}
+
+#wizard_users .checkall
+{
+    float: left;
+    text-align:left;
+    margin: 15px 4px 0 0;
+    padding:0;
+    border: 1px solid #d7d7d7;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background:url('../images/bg_check_all.png') center center no-repeat;
+}
+
+#wizard_users .checkall input[type="checkbox"]
+{
+    margin:3px;
+}
+#wizard_users .nameBox,#wizard_users .lastnameBox, #wizard_users .emailBox
+{
+    float: left;
+    margin-right:13px;
+    font-weight:bold;
+}
+
+#wizard_users #addUserBlock
+{
+     border:none;
+}
+
+#wizard_users #addUserBlock .btn
+{
+    float:left;margin-top:16px;
+}
+
+#wizard_users #addUserBlock.bordered
+{
+    
+}
+
+#wizard_users .addUserBlock 
+{
+    margin:10px 0 0 0;    
+}
+
+#wizard_users .incorrectEmailBox
+{
+    border:1px solid red;
+}
+
+#wizard_users .addUserBlock .btn
+{
+    float:left;
+}
+
+#wizard_users .addUserBlock .info
+{
+    float:right;
+}
+
+.importAreaBlock
+{
+    width:810px;
+    filter: alpha(opacity=100); 
+    opacity:1;
+}
+
+.importUsers div.file
+{
+    background: #ffffff url('../images/from_file.png') no-repeat 10px center;
+    width: 131px;
+    height: 30px;
+    vertical-align: middle;
+    padding: 7px 0 0 50px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    position:relative;
+    float:left;
+    border: 1px solid #d7d7d7;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor:pointer;
+    filter: alpha(opacity=100);
+}
+
+.importUsers div.file *
+{
+       filter: alpha(opacity=100);
+}
+
+.importUsers div.file .innerBox
+{
+    background: url('../images/collapse.png') no-repeat 10px center;
+    width:35px;
+    height:22px;
+    border-left:1px solid #d7d7d7;
+    border:none;
+}
+
+.importUsers div.file .fileSelector
+{
+    position:absolute;top:40px;left:0px;display:none;
+    width:179px;
+    height:50px;
+    border:1px solid #d7d7d7;
+    background-color:#ffffff;
+    cursor:default;
+    font-size:12px;
+}
+
+.importUsers div.file .fileSelector ul
+{
+    list-style:none;
+    padding:0;
+    margin:5px;
+}
+.importUsers div.file .fileSelector ul li
+{
+    vertical-align:middle;
+    line-height:20px;
+    height:20px;
+    padding-left:10px;
+    position:relative;
+}
+.importUsers div.file .fileSelector ul li a
+{
+    text-decoration:none;
+    color:#333333;
+}
+
+#wizard_users #userList .error1 .errors,
+#wizard_users #userList .error2 .errors,
+#wizard_users #userList .error3 .errors
+{
+    background: url('../images/error_info.png') no-repeat 85% center !important;
+} 
+
+#wizard_users #userList
+{
+    border-spacing:0px;
+}
+
+#wizard_users #userList .userItem .check input
+{
+    margin-right:3px;
+}
+#wizard_users .mob #userList .userItem .check input
+{
+    margin-right:8px;
+}
+
+#wizard_users #userList .userItem .errors
+{
+  width: 68px;
+text-align: right;
+}
+#wizard_users #userList .userItem .name {
+    padding: 0 0 0 3px;
+    width: 408px;
+}
+
+#wizard_users .mob #userList .userItem .name {
+   
+    width: 410px;
+}
+#wizard_users #userList .userItem .name td.firstname, 
+#wizard_users #userList .userItem .name td.lastname
+{
+    width:190px;
+    margin-right: 14px;
+    padding-right: 0px;
+}
+#wizard_users #userList .userItem td.email
+{
+       width:192px;
+       margin-right: 10px;
+       padding-left: 2px;
+}
+
+
+#wizard_users .textEditMain
+{
+    color:#333333;
+}
+
+#wizard_users .textEditDefault
+{
+   color:#9f9f9f;
+}
+
+#importAreaBlock .popupContainerClass 
+{
+    height:544px;
+    filter: alpha(opacity=100); 
+}
+
+#importAreaBlock #importUsers
+{
+    margin-left:5px;
+}
+
+#importAreaBlock #okWin .popupContainerClass 
+{
+    height:150px;
+}
+
+ .messagePopup 
+{
+    height: 150px;
+border: solid 1px #575757;
+border-top: 0;
+background-color: white;
+}
+
+#importAreaBlock .blockUpload
+{
+position: absolute;
+height: 100%;
+width: 100%;
+background-color: #D7D7D7;
+opacity: 0.5;
+ filter: alpha(opacity=50); 
+top: 0;
+left: 0;
+z-index:1001;
+}
+
+#importAreaBlock #okWin
+{
+  
+}
+
+#importAreaBlock .okcss
+{
+    display:none;
+    left:50%;top:40%;z-index:1005;
+    width:300px;margin-left:-150px;
+    opacity: 1;
+     filter: alpha(opacity=100); 
+    position: absolute;
+}
+#importAreaBlock .okcss .containerBodyBlock
+{
+     height:100px; 
+     border:1px solid #575757;
+}
+
+.fistable
+{
+   height: 240px !important;
+background: url('../images/icon_add_users.png') 15% center no-repeat;
+padding: 0 15% 0 20%;
+}
+
+
+#wizard_users #userList tr td.mob div
+{
+    display:block;
+}
+
+#wizard_users #userList tr:hover td.removeError div
+{
+    display:block;
+}
+
+#successImportedArea
+{
+    position:absolute;
+    z-index:1000;
+    left:50%;
+    width:700px;
+    margin-left:-350px;
+    height:100px;
+    display:none;
+}
+
+#successImportedArea .popupContainerClass 
+{
+   
+}
+#successImportedArea .popupContainerClass .containerHeaderBlock
+{
+    text-align: left;
+}
+
+#successImportedArea .popupContainerClass .containerBodyBlock
+{
+ height: 60px;
+line-height: 60px;
+text-align: center;
+}
+
+#wizard_users #userList .error1,
+#wizard_users #userList .error2,
+#wizard_users #userList .error3,
+#wizard_users #userList .error2 .email input,
+#wizard_users #userList .error3 .email input
+{
+    color:Red;
+}

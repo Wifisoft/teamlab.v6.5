@@ -1,0 +1,59 @@
+﻿/*******************************************************************************
+   crm-dashboard
+*******************************************************************************/
+.crm-dashboard-leftIndent
+{
+	padding-left: 5px;
+}
+.studioWidgetContent
+{
+	white-space:nowrap;
+	overflow:hidden;
+	position:relative;
+	line-height: 14pt;
+}
+
+
+/* 
+.studioWidgetContent:after
+{
+    background: url('../images/fade.png');
+    content: "";
+    color: #FFFFFF;
+    display: block;
+    height:100%;
+	width:25px;
+	position:absolute;
+	right:0;
+	top:0;
+}
+*/
+
+
+.crm-dashboard-fade
+{
+    background: url("../images/fade.png") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    display: block;
+    height:100%;
+	width:25px;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+
+.studioWidgetContent dl dt
+{
+    float: left;
+    clear: left;
+    max-width: 80px;
+}
+.studioWidgetContent dl dd
+{
+    margin: 0 0 10px 80px;
+}
+.studioWidgetContent dl dt, .studioWidgetContent dl dd
+{
+    height: 55px;
+}

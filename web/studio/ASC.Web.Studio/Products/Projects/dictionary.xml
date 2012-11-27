@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parser>
+  <!--months-->
+  <lex value="1" kind="Month" name="jan">
+    <regexp>январ(ь|я|е)</regexp>
+  </lex>
+  <lex value="2" kind="Month" name="feb">
+    <regexp>феврал(ь|я|е)</regexp>
+  </lex>
+  <lex value="3" kind="Month" name="mar">
+    <regexp>март(е|а)</regexp>
+  </lex>
+  <lex value="4" kind="Month" name="apr">
+    <regexp>апрел(я|ь|е)</regexp>
+  </lex>
+  <lex value="5" kind="Month" name="may">
+    <regexp>ма(я|е|й)</regexp>
+  </lex>
+  <lex value="6" kind="Month" name="jun">
+    <regexp>июн(я|ь)</regexp>
+  </lex>
+  <lex value="7" kind="Month" name="jul">
+    <regexp>июл(я|ь)</regexp>
+  </lex>
+  <lex value="8" kind="Month" name="avg">
+    <regexp>август(а|е)</regexp>
+  </lex>
+  <lex value="9" kind="Month" name="sep">
+    <regexp>сентябр(я|ь|е)</regexp>
+  </lex>
+  <lex value="10" kind="Month" name="oct">
+    <regexp>октябр(я|ь|е)</regexp>
+  </lex>
+  <lex value="11" kind="Month" name="nov">
+    <regexp>ноябр(я|ь|е)</regexp>
+  </lex>
+  <lex value="12" kind="Month" name="dec">
+    <regexp>декабр(я|ь|е)</regexp>
+  </lex>
+
+  <!--days-->
+  <lex value="0" kind="Day" name="today">
+    <strict>сегодня</strict>
+  </lex>
+  <lex value="1" kind="Day" name="tomorow">
+    <strict>завтра</strict>
+  </lex>
+  <lex value="2" kind="Day" name="aftertomorow">
+    <strict>послезавтра</strict>
+  </lex>
+
+  <!--Day of weeks-->
+  <lex value="1" kind="DayOfWeek" name="mon">
+    <regexp>понедельник</regexp>
+  </lex>
+  <lex value="2" kind="DayOfWeek" name="tue">
+    <regexp>вторник</regexp>
+  </lex>
+  <lex value="3" kind="DayOfWeek" name="wen">
+    <regexp>сред(а|у)</regexp>
+  </lex>
+  <lex value="4" kind="DayOfWeek" name="thu">
+    <regexp>четверг</regexp>
+  </lex>
+  <lex value="5" kind="DayOfWeek" name="fri">
+    <regexp>пятниц(а|у)</regexp>
+  </lex>
+  <lex value="6" kind="DayOfWeek" name="sat">
+    <regexp>суббот(а|у)</regexp>
+  </lex>
+  <lex value="7" kind="DayOfWeek" name="sun">
+    <regexp>воскресень(е|я)</regexp>
+  </lex>
+
+  <!--ranges-->
+  <range pattern="(?'both'.+)\s+с\s+(?'from'.+)\s+до\s+(?'to'.+)"/>
+  <range pattern="с\s+(?'from'.+)\s+до\s+(?'to'.+)"/>
+  <range pattern="(?'from'.+)"/>
+
+  <!--shorthand-->
+  <lex value="1" kind="Hour" name="shorthand">
+    <regexp>через\s+час</regexp>
+  </lex>
+
+
+  <!--evalutors-->
+  <eval patternref="jan,feb,mar,apr,may,jun,jul,avg,sep,oct,nov,dec">
+    op.SetMonth(ctx[0].Value);
+  </eval>
+
+  <eval patternref="tomorow,aftertomorow,today">
+    op.AddDays(ctx[0].Value);
+  </eval>
+
+  <eval patternref="mon,tue,wen,thu,fri,sat,sun">
+    op.SetDayOfWeek(ctx[0].Value);
+  </eval>
+
+  <eval pattern="в\s+(\d{2})\:(\d{2})" >
+    op.SetHour(ctx[0].Value);
+    op.SetMinute(ctx[1].Value);
+  </eval>
+
+  <eval pattern="в\s+(\d{2})" >
+    op.SetHour(ctx[0].Value);
+    op.SetMinute(0);
+  </eval>
+  <eval pattern="в\s+(\d{2})\s+час(ов|a)" >
+    op.SetHour(ctx[0].Value);
+    op.SetMinute(0);
+  </eval>
+  <eval pattern="в\s+(\d{2})\s+час(а|ов)\s+(\d{2})\s+(м|минут)" >
+    op.SetHour(ctx[0].Value);
+    op.SetMinute(ctx[1].Value);
+  </eval>
+  <eval pattern="через\s+(\d{2})\s+час(а|ов)" >
+    op.AddHours(ctx[0].Value);
+  </eval>
+  <eval pattern="через\s+(\d{2})\s+(м|минут)" >
+    op.AddMinutes(ctx[0].Value);
+  </eval>
+  <eval pattern="через\s+(\d{2})\s+час(а|ов)\s+(\d{2})\s+(м|минут)" >
+    op.AddHours(ctx[0].Value);
+    op.AddMinutes(ctx[1].Value);
+  </eval>
+  <eval patternref="shorthand" >
+    op.AddHours(ctx[0].Value);
+  </eval>
+
+
+  <eval pattern="(\d{2})\:(\d{2})" >
+    op.SetHour(ctx[0].Value);
+    op.SetMinute(ctx[1].Value);
+  </eval>
+
+
+</parser>

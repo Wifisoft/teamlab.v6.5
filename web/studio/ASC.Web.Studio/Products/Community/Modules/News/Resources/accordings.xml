@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+  <action actionID="new feed" defaultPatternID="new_text" >
+	  <sender senderName="messanger.sender" patternID="new_text_jabber" />
+  </action>
+	<action actionID="new feed comment" defaultPatternID="new_text_comment" >
+		<sender senderName="messanger.sender" patternID="new_text_comment_jabber" />
+	</action>
+</act:accordings>

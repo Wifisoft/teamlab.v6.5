@@ -1,0 +1,1588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="icon" href="http://nct.teamlab.com/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/atom+xml" title="Teamlab Portal" href="http://nct.teamlab.com/services/whatsnew/feed.ashx?c=Teamlab+Portal&t=3" />
+
+	<script type="text/javascript" src="locale.aspx?lng=ru-RU"></script>
+
+	<script language="javascript" type="text/javascript">
+		var fckEditorOncompleteArr = new Array();
+
+		function addFckEditor_OnComplete(func, arg) {
+			fckEditorOncompleteArr.push({ f: func, a: arg });
+		}
+
+		function FCKeditor_OnComplete(editorInstance) {
+			try {
+				var fck_editing_area = editorInstance.EditingArea.TargetElement;
+				fck_editing_area.style.height = '100.1%';
+				setTimeout(function() { fck_editing_area.style.height = '100%'; }, 100);
+				if (typeof (Page_FCKeditor_OnComplete) == 'function') {
+					Page_FCKeditor_OnComplete(editorInstance);
+				}
+				for (var i = 0; i < fckEditorOncompleteArr.length; i++) {
+					if (typeof (fckEditorOncompleteArr[i].f) == 'function') {
+						fckEditorOncompleteArr[i].f(editorInstance, fckEditorOncompleteArr[i].a);
+					}
+				}
+			}
+			catch (e) {
+			}
+		}
+	</script>
+
+	<script language="javascript" type="text/javascript">		var SkinManager = new function() {
+			this.images = new Array();
+			this.images[""] = "/skins/default/images";
+			this.images["9ec81384-7909-44b1-b8f6-afc912bc19ed"] = "/skins/default/images";
+			this.images["ea942538-e68e-4907-9394-035336ee0ba8"] = "/products/community/app_themes/default/images";
+			this.images["6a598c74-91ae-437d-a5f4-ad339bd11bb2"] = "/products/community/modules/blogs/app_themes/default/blogsimages";
+			this.images["28b10049-dd20-4f54-b986-873bc14ccfc7"] = "/products/community/modules/bookmarking/app_themes/default/images";
+			this.images["853b6eb9-73ee-438d-9b09-8ffeedf36234"] = "/products/community/modules/forum/app_themes/default/forumimages";
+			this.images["3cfd481b-46f2-4a4a-b55c-b8c0c9def02c"] = "/products/community/modules/news/app_themes/default/newsimages";
+			this.images["9d51954f-db9b-4aed-94e3-ed70b914e101"] = "/products/community/modules/photomanager/app_themes/default/photomanagerimages";
+			this.images["742cf945-cbbc-4a57-82d6-1600a12cf8ca"] = "/products/community/modules/wiki/app_themes/default/wikiimages";
+			this.images["e67be73d-f9ae-4ce1-8fec-1880cb518cb4"] = "/products/files/app_themes/default/images";
+			this.images["1e044602-43b5-4d79-82f3-fd6208a11960"] = "/products/projects/app_themes/default/images";
+			this.images["52f1574d-8656-4bf1-b494-f5cbe64ef327"] = "/skins/default/images";
+			this.images["af4afd50-5553-47f3-8f91-651057bc930b"] = "/skins/default/images";
+			this.images["04339423-70e6-4b81-a2df-3c31c723bd90"] = "/skins/default/images";
+			this.images["9ff0fade-6cfa-44ee-901f-6185593e4594"] = "/skins/default/images";
+			this.images["57e87da0-d59b-443d-99d1-d9abcab31084"] = "/skins/default/images";
+			this.images["977cbeeb-b166-4a80-8be2-0133ccf2276f"] = "/skins/default/images";
+			this.images["85e7ce26-46f6-4c3c-b25d-4bde833c9742"] = "/skins/default/images";
+			this.images["c42f993e-5d22-497e-ac26-1e9592515898"] = "/skins/default/images";
+			this.images["81402440-557d-401d-9ee1-d570748f426d"] = "/skins/default/images";
+			this.images["b353b023-aa32-4b26-a586-04df54ac0204"] = "/products/tools/app_themes/default/images";
+			this.images["482c0535-9133-4d42-8891-f10c6a4da5a5"] = "/skins/default/images";
+			this.images["16f14f87-c9f4-49dd-947e-9ee555555a2f"] = "/products/tools/modules/foodmanagement/app_themes/default/foodmanagementimages";
+			this.images["2a923037-8b2d-487b-9a22-5ac0918acf3f"] = "/addons/mail/app_themes/default/images";
+			this.images["3d871449-f7d1-4170-9484-daa4623000c7"] = "/addons/organizer/app_themes/default/images";
+			this.images["6e777913-0512-4804-b2bd-79ae285c21d6"] = "/addons/quicklinks/app_themes/default/images";
+			this.images["bf88953e-3c43-4850-a3fb-b1e43ad53a3e"] = "/addons/talk/app_themes/default/images";
+			this.images["12301733-9627-469b-b3af-dbb5bf3f17d8"] = "/addons/todo/app_themes/default/images";
+			this.GetImage = function(imageName, moduleID) {
+				var module = "";
+				if (moduleID != 'undefined' && moduleID != undefined && moduleID != null && moduleID) {
+					module = moduleID.toLowerCase();
+				}
+				return this.images[module] + '/' + imageName;
+			};
+		};</script>
+
+	<script type='text/javascript' language='javascript' src='./jquery/jquery-1.6.1.js'></script>
+	<!--script language="javascript" src="http://nct.teamlab.com/js/auto/jquery_full.js" type="text/javascript"></script>
+
+	<script language="javascript" src="http://nct.teamlab.com/js/auto/jquery.cookies.js" type="text/javascript"></script>
+
+	<script language="javascript" src="http://nct.teamlab.com/js/auto/fancyzoom.min.js" type="text/javascript"></script-->
+
+	<script language="javascript" type="text/javascript">		var jq = jQuery.noConflict(); </script>
+
+	<!--script language="javascript" src="http://nct.teamlab.com/js/auto/common.js" type="text/javascript"></script>
+
+	<script language="javascript" src="http://nct.teamlab.com/js/auto/profile_info_tooltip.js" type="text/javascript"></script>
+
+	<script language="javascript" src="http://nct.teamlab.com/js/auto/management.js" type="text/javascript"></script>
+
+	<script language="javascript" src="http://nct.teamlab.com/js/auto/asc.anchorcontroller.js" type="text/javascript"></script>
+
+	<script language="javascript" src="http://nct.teamlab.com/js/auto/asc.xsltmanager.js" type="text/javascript"></script>
+
+	<script language="javascript" type="text/javascript">		StudioManager.UploadingMessage = "Загрузка..."; StudioManager.UploadedMessage = "Загружено"; StudioManager.RemoveMessage = "Удалить"; StudioManager.ErrorFileSizeLimit = "Превышен максимальный размер загружаемого файла"; StudioManager.ErrorFileEmpty = "Пустой документ"; CommonSubscriptionManager.ConfirmMessage = "Хотите продолжить?"; AuthManager.ConfirmMessage = "Хотите продолжить?"; var StudioUserProfileInfo = new PopupBox('pb_StudioUserProfileInfo', 320, 140, 'tintMedium', 'borderBase', 'WebStudio.GetUserInfo'); </script>
+
+	<script language="javascript" type="text/javascript">
+		function GetMaxImageWidth() {
+			return 700;
+		}
+
+		jq(document).ready(function() {
+			jq('a.fancyzoom').fancyZoom({ scaleImg: true, closeOnClick: true, directory: '/skins/default/fancyzoom_img' });
+		});
+
+	</script>
+
+	<link href="http://nct.teamlab.com/App_Themes/Blue/Css/CalendarToolcss.css" rel="stylesheet" type="text/css" />
+
+	<script src="http://nct.teamlab.com/js/common.js" type="text/javascript"></script>
+
+	<script src="http://nct.teamlab.com/js/jquery-jtemplates.js" type="text/javascript"></script-->
+
+	<!--[if IE 6]>
+    <style type="text/css">
+        *html img{
+        azimuth: expression(
+        this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+        this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+        this.src = "/skins/default/images/blank.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+        this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+        this.runtimeStyle.backgroundImage = "none")),this.pngSet=true
+        );}
+    </style>
+    <![endif]-->
+	<link type="text/css" rel="stylesheet" href="http://nct.teamlab.com/skins/default/common_style.css" />
+	<link type="text/css" rel="stylesheet" href="http://nct.teamlab.com/skins/default/filetype_style.css" />
+	<link type="text/css" rel="stylesheet" href="http://nct.teamlab.com/skins/blue/override.css" />
+	<link type="text/css" rel="stylesheet" href="http://nct.teamlab.com/skins/default/common_style.ru-ru.css" />
+	<link rel="stylesheet" text="text/css" href="http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW--xC11EG8YwqM6EJs4RUwD1RUYDh-K5ynXh9TO30WSFfA2&t=634411370520000000" />
+	<link rel="stylesheet" text="text/css" href="http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-_pxblCB0yAy3yrraUV6bVgA1ePA9ZGXbjM_ZNQFDdWBa9M_3PJCzb3HJY2wmbDmDI1&t=634411370520000000" />
+	<link rel="stylesheet" text="text/css" href="http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-_pxblCB0yAy3yrraUV6bVgA1ePA9ZGXbjM_ZNQFDdWBa9M_3PJCzb3HJY2wmbDmDI1&t=634411370520000000" />
+	<link rel="stylesheet" text="text/css" href="http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-_pxblCB0yAy3yrraUV6bVgA1ePA9ZGXbjM_ZNQFDdWBa9M_3PJCzb3HJY2wmbDmDI1&t=634411370520000000" />
+
+
+
+	<script type="text/javascript" src="./jquery/jquery-ui-1.8.13.js"></script>
+	<script type="text/javascript" src="./jquery/jquery.cookie.js"></script>
+
+	<!--link rel="stylesheet" type="text/css" href="./flexbox/css/jquery.flexbox.css"/>
+	<script type="text/javascript" src="./flexbox/jquery.flexbox.min.js"></script-->
+
+	<link rel="stylesheet" type="text/css" href="./jscrollpane/css/jquery.jscrollpane.css"/>
+	<script type="text/javascript" src="./jscrollpane/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="./jscrollpane/jquery.jscrollpane.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./popup/css/popup.css"/>
+	<script type="text/javascript" src="./popup/popup.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./fullcalendar/css/asc-dialog/jquery-ui-1.8.14.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="./fullcalendar/css/asc-datepicker/jquery-ui-1.8.14.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="./fullcalendar/css/fullcalendar.css"/>
+	<!--link rel="stylesheet" type="text/css" href="./fullcalendar/css/fullcalendar.print.css" media="print"/-->
+	<script type="text/javascript" src="./fullcalendar/fullcalendar.js"></script>
+	<script type="text/javascript">
+		jq(document).ready(function() {
+
+			var date = new Date();
+			var d = date.getDate();
+			var m = date.getMonth();
+			var y = date.getFullYear();
+
+			var g_objectId = 100;
+
+			var sourcesArr = [
+					{
+						objectId: 0,
+						owner: {name: "Joe Black", objectId: 123},
+
+						title: 'Проект',
+						textColor: '#000',
+						backgroundColor: '#f9ca9f',
+						borderColor: '#ac6b2b',
+						isHidden: true,
+						isShared: false,
+						defaultAlert: {type:0},
+						todos: [
+							{
+								title: 'Подготовить Release Notes',
+								completed: true,
+								priority: 2,
+								description: ''
+							},
+							{
+								title: 'Опубликовать в новостях',
+								completed: false,
+								priority: 2,
+								description: '123'
+							}
+						],
+						permissions: {
+							users: [
+								{objectId:0, name:"John Smith"},
+								{objectId:1, name:"Jack Smith"},
+								{objectId:2, name:"Andrew Holls"},
+								{objectId:3, name:"Antony Johns"},
+								{objectId:4, name:"Sully Prudhomme"},
+								{objectId:5, name:"Theodor Mommsen"},
+								{objectId:6, name:"Bjørnstjerne Bjørnson"},
+								{objectId:7, name:"Frédéric Mistral"},
+								{objectId:8, name:"Henryk Sienkiewicz"},
+								{objectId:9, name:"Giosuè Carducci"},
+								{objectId:10, name:"Rudyard Kipling"},
+								{objectId:11, name:"Rabindranath Tagore"}
+							]
+						},
+						timeZone: {name: "UTC:01", id: "UTC01", offset: 60}
+					},
+					{
+						objectId: 1,
+						owner: {name: "Joe Black", objectId: 123},
+
+						title: 'Сообщения от Администрации бизнес-центра "Ока"',
+						textColor: '#000',
+						backgroundColor: '#fa9191',
+						borderColor: '#d84242',
+						isHidden: false,
+						isShared: true,
+						defaultAlert: {type:0},
+						isSubscription: true,
+						isEditable: true,
+						timeZone: {name: "UTC:01", id: "UTC01", offset: 60},
+						canEditTimeZone: true
+					},
+					{
+						objectId: 2,
+						owner: {name: "Joe Black", objectId: 123},
+
+						title: 'Дела',
+						textColor: '#000',
+						backgroundColor: '#a6e550',
+						borderColor: '#82a94c',
+						isHidden: false,
+						isShared: true,
+						defaultAlert: {type:0},
+						todos: [
+							{
+								title: 'Обновить антивирус',
+								completed: false
+							},
+							{
+								title: 'Проверить почту',
+								completed: false
+							}
+						],
+						timeZone: {name: "UTC:01", id: "UTC01", offset: 60}
+					},
+					{
+						objectId: 3,
+						owner: {name: "", objectId: -1},
+
+						title: 'Дни рождения сотрудников',
+						textColor: '#000',
+						backgroundColor: 'rgb(250, 208, 83)',
+						borderColor: 'rgb(250, 208, 83)',
+						isHidden: false,
+						isShared: true,
+						defaultAlert: {type:6},
+						isSubscription: true,
+						isEditable: false,
+						permissions: {
+							users: [
+								{objectId:0, name:"All users"},
+							]
+						},
+						canAlertModify: false,
+						timeZone: {name: "UTC:01", id: "UTC01", offset: 60},
+						canEditTimeZone: false
+					}
+			];
+
+			var eventsArr = [
+					{
+						objectId: 0,
+
+						title: 'Проект',
+						events: [
+							{
+								objectId: 50,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Выпуск api.teamlab',
+								allDay: true,
+								start: new Date(y, m, d),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'beta 1'
+							},
+							{
+								objectId: 51,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Заканчивается веха',
+								allDay: true,
+								start: new Date(y, m, d+9),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'Подготовить отчет'
+							}
+						]
+					},
+					{
+						objectId: 1,
+
+						title: 'Сообщения от Администрации бизнес-центра "Ока"',
+						events: [
+							{
+								objectId: 52,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Рабочий день',
+								allDay: true,
+								start: new Date(y, m, d-3),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'Перенесено для удлинения праздников',
+								isEditable: true,
+								canUnsubscribe: true
+							},
+							{
+								objectId: 53,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Праздничные дни',
+								allDay: true,
+								start: new Date(y, m, d-2),
+								end: new Date(y, m, d-1),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'Никто не будет работать'
+							},
+							{
+								objectId: 54,
+								owner: {name: "Joe Black", objectId: 123},
+								id: 999,
+								title: 'Еженедельное собрание',
+								allDay: false,
+								start: new Date(y, m, d+7, 12, 0),
+								repeat: {type:3},
+								alert:  {type:1}
+							},
+							{
+								objectId: 54,
+								owner: {name: "Joe Black", objectId: 123},
+								id: 999,
+								title: 'Еженедельное собрание',
+								allDay: false,
+								start: new Date(y, m, d+14, 12, 0),
+								repeat: {type:3},
+								alert:  {type:1}
+							},
+							{
+								objectId: 55,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Отключение электричества',
+								allDay: false,
+								start: new Date(y, m, d+9, 19, 30),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'Не забудте выключить эл.приборы'
+							},
+							{
+								objectId: 66,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Профилактика оборудования',
+								allDay: true,
+								start: new Date(y, m, d+9),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'Вынужденый выходной'
+							}
+						]
+					},
+					{
+						objectId: 2,
+
+						title: 'Дела',
+						events: [
+							{
+								objectId: 56,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Lunch',
+								allDay: false,
+								start: new Date(y, m, d, 14, 0),
+								end: new Date(y, m, d, 15, 0),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'Lunch with mr.Smily'
+							},
+							{
+								objectId: 57,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Lunch',
+								allDay: false,
+								start: new Date(y, m, d+9, 14, 0),
+								end: new Date(y, m, d+9, 15, 0),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'Lunch with mr.Smily'
+							},
+							{
+								objectId: 58,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Birthday Party',
+								allDay: false,
+								start: new Date(y, m, d+9, 19, 0),
+								end: new Date(y, m, d+9, 22, 30),
+								isShared: true,
+								permissions: {
+									users: [
+										{objectId:0, name:"Abraham Lincoln"},
+										{objectId:1, name:"Thomas Jefferson"},
+									]
+								},
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'mr.Smily invites all to participate in party'
+							},
+							{
+								objectId: 59,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Позвонить в ООО',
+								allDay: false,
+								start: new Date(y, m, d+9, 10, 0),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'Не прислали новый договор, узнать почему'
+							},
+							{
+								objectId: 60,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Проверить на вирусы компьютер',
+								allDay: false,
+								start: new Date(y, m, d+9, 12, 0),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: ''
+							},
+							{
+								objectId: 61,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Click for Google',
+								allDay: true,
+								start: new Date(y, m, 28),
+								end: new Date(y, m, 29),
+								repeat: {type:0},
+								alert:  {type:0},
+								url: 'http://google.com/'
+							}
+						]
+					},
+					{
+						objectId: 3,
+
+						title: 'Дни рождения сотрудников',
+						events: [
+							{
+								objectId: 90,
+								owner: {name: "", objectId: -1},
+								title: 'Вася',
+								allDay: true,
+								start: new Date(y, m, d),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'ДР'
+							},
+							{
+								objectId: 91,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Петя',
+								allDay: true,
+								start: new Date(y, m, d+9),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'ДР',
+								isEditable: true
+							},
+							{
+								objectId: 92,
+								owner: {name: "Joe Black", objectId: 123},
+								title: 'Коля',
+								allDay: true,
+								start: new Date(y, m, d+9),
+								repeat: {type:0},
+								alert:  {type:0},
+								description: 'ДР',
+								isEditable: false
+							}
+						]
+					}
+			];
+
+			var testPermissions =
+					{
+						users: [
+							{objectId:0, name:"John Smith"},
+							{objectId:1, name:"Jack Smith"},
+							{objectId:2, name:"Andrew Holls"},
+							{objectId:3, name:"Antony Johns"},
+							{objectId:4, name:"Sully Prudhomme"},
+							{objectId:5, name:"Theodor Mommsen"},
+							{objectId:6, name:"Bjørnstjerne Bjørnson"},
+							{objectId:7, name:"Frédéric Mistral"},
+							{objectId:8, name:"Henryk Sienkiewicz"},
+							{objectId:9, name:"Giosuè Carducci"},
+							{objectId:10, name:"Rudyard Kipling"},
+							{objectId:11, name:"Rudolf Eucken"},
+							{objectId:12, name:"Selma Lagerlöf"},
+							{objectId:13, name:"Paul Heyse"},
+							{objectId:14, name:"Maurice Maeterlinck "},
+							{objectId:15, name:"Gerhart Hauptmann"},
+							{objectId:16, name:"Rabindranath Tagore"}
+						]
+					}
+
+			var subscrArr = [
+					{
+						objectId: 1,
+						group: "Administration",
+
+						title: 'Администрация',
+						description: 'very important events',
+						textColor: '#000',
+						backgroundColor: '#fa9191',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: false,
+						isSubscribed: true
+					},
+					{
+						objectId: 10,
+						group: "Administration",
+
+						title: 'Holidays',
+						description: 'holidays',
+						textColor: '#000',
+						backgroundColor: '#ffe',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: true,
+						isSubscribed: false
+					},
+					{
+						objectId: 20,
+						group: "Projects",
+
+						title: 'CRM Project',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#f00',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: true,
+						isNew: true,
+						isSubscribed: false
+					},
+					{
+						objectId: 21,
+						group: "Projects",
+
+						title: 'Milestones',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: false,
+						isSubscribed: true
+					},
+					{
+						objectId: 22,
+						group: "Projects",
+
+						title: 'Milestones 1',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: false,
+						isSubscribed: true
+					},
+					{
+						objectId: 23,
+						group: "Projects",
+
+						title: 'Milestones 3',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: false,
+						isSubscribed: true
+					},
+					{
+						objectId: 241,
+						group: "Projects",
+
+						title: 'Milestones 4',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: false,
+						isSubscribed: true
+					},
+					{
+						objectId: 25,
+						group: "Projects",
+
+						title: 'Milestones 5',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: false,
+						isSubscribed: true
+					},
+					{
+						objectId: 26,
+						group: "Projects",
+
+						title: 'Milestones 6',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: false,
+						isSubscribed: true
+					},
+					{
+						objectId: 27,
+						group: "Projects",
+
+						title: 'Milestones 7',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: false,
+						isSubscribed: true
+					},
+					{
+						objectId: 28,
+						group: "Projects",
+
+						title: 'Milestones 8',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: true,
+						isSubscribed: false
+					}
+					,
+					{
+						objectId: 281,
+						group: "Projects",
+
+						title: 'Milestones 8',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: true,
+						isSubscribed: false
+					},
+					{
+						objectId: 282,
+						group: "Projects",
+
+						title: 'Milestones 8',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: true,
+						isSubscribed: false
+					},
+					{
+						objectId: 283,
+						group: "Projects",
+
+						title: 'Milestones 8',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: true,
+						isSubscribed: false
+					},
+					{
+						objectId: 284,
+						group: "Projects",
+
+						title: 'Milestones 8',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: true,
+						isSubscribed: false
+					},
+					{
+						objectId: 285,
+						group: "Projects",
+
+						title: 'Milestones 8',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: true,
+						isSubscribed: false
+					},
+					{
+						objectId: 286,
+						group: "Projects",
+
+						title: 'Milestones 8',
+						description: '',
+						textColor: '#000',
+						backgroundColor: '#0ff',
+
+						isHidden: false,
+						isSubscription: true,
+						isShared: true,
+						isEditable: false,
+						isNew: true,
+						isSubscribed: false
+					}
+			];
+
+
+			function findEventPos(ev) {
+				var i,j;
+				for (i = 0; i < eventsArr.length; ++i) {
+					for (j = 0; j < eventsArr[i].events.length; ++j) {
+						if (eventsArr[i].events[j].objectId != ev.objectId) {continue;}
+						return {sourceIndex: i, eventIndex: j};
+					}
+				}
+				return null;
+			}
+
+
+			// Получение календарей и подписок
+			function loadEventSources(start, end, callback) {
+				setTimeout(function() {callback({result:true, eventSources:sourcesArr});}, 100);
+			}
+
+
+			// Получение событий для календаря/подписки
+			function loadEvents(source, startDate, endDate, callback) {
+				if (source.objectId == undefined) {
+					// для каждого source - один вызов callback
+					callback({result:false,events:[]});
+					return true;/*всегда возвращать true*/
+				}
+
+				function dateInRange(date, start, end) {
+					if (!(date instanceof Date)) {return false;}
+					var d = new Date(date.getTime());
+					var s = new Date(start.getTime());
+					var e = new Date(end.getTime());
+					d.setHours(0, 0, 0, 0);
+					s.setHours(0, 0, 0, 0);
+					e.setHours(0, 0, 0, 0);
+					return s <= d && d < e;
+				}
+
+				for (var i = 0; i < eventsArr.length; ++i) {
+					if (eventsArr[i].objectId == source.objectId) {
+						var events = [];
+						for (var j = 0; j < eventsArr[i].events.length; ++j) {
+							var ev = eventsArr[i].events[j];
+							if (dateInRange(ev.start, startDate, endDate) ||
+							    dateInRange(ev.end, startDate, endDate)) {
+								events.push(ev);
+							}
+						}
+						// для каждого source - один вызов callback
+						setTimeout(function() {callback({result:true,events:events});}, 200);
+						return true;/*всегда возвращать true*/
+					}
+				}
+
+				// для каждого source - один вызов callback
+				callback({result:false,events:[]});
+				return true;/*всегда возвращать true*/
+			};
+
+
+			// Добавление/редактирование/удаление календарей
+			function editCalendar(param, callback) {
+				var i;
+
+				if (param.action == 1/*add*/) {
+
+					sourcesArr.push(param);
+					param.objectId = ++g_objectId;
+					callback({result: true, source: param});
+
+				} else if (param.action == 2/*change*/) {
+
+					for (i = 0; i < sourcesArr.length; ++i) {
+						if (sourcesArr[i].objectId == param.objectId) {
+							sourcesArr[i].title = param.title;
+							sourcesArr[i].textColor = param.textColor;
+							sourcesArr[i].backgroundColor = param.backgroundColor;
+							sourcesArr[i].borderColor = param.borderColor;
+							sourcesArr[i].isHidden = param.isHidden;
+							sourcesArr[i].isShared = param.isShared;
+							sourcesArr[i].todos = param.todos;
+							sourcesArr[i].permissions = param.permissions;
+							callback({result: true, source: param});
+							return;
+						}
+					}
+					callback({result: false, source: undefined});
+
+				} else if (param.action == 3/*delete*/) {
+
+					for (i = 0; i < sourcesArr.length; ++i) {
+						if (sourcesArr[i].objectId == param.objectId) {
+							sourcesArr.splice(i, 1);
+							callback({result: true, source: undefined});
+							return;
+						}
+					}
+					callback({result: false, source: param});
+
+				} else if (param.action == 4/*hide*/) {
+
+					for (i = 0; i < sourcesArr.length; ++i) {
+						if (sourcesArr[i].objectId == param.objectId) {
+							sourcesArr[i].isHidden = param.isHidden;
+							callback({result: true, source: param});
+							return;
+						}
+					}
+					callback({result: false, source: undefined});
+
+				}
+			}
+
+
+			// Изменение разрешений
+			function editPermissions(param, callback) {
+				var i;
+
+				if (param.objectId == undefined) {
+					// вызвано для еще не добавленного объекта
+					alert("Save new " + (param.type == 1 ? "calendar" : "event") + " before sharing.");
+					callback({result:false});
+					return;
+				}
+
+				if (param.type == 1/*calendar*/) {
+
+					for (i = 0; i < sourcesArr.length; ++i) {
+						if (sourcesArr[i].objectId == param.objectId) {
+							if (sourcesArr[i].permissions == undefined) {
+								sourcesArr[i].permissions = {users:[]};
+							}
+							jq.extend(true, sourcesArr[i].permissions, testPermissions);
+
+							callback({result:true, permissions:sourcesArr[i].permissions});
+							return;
+						}
+					}
+					callback({result:false});
+
+				} else if (param.type == 2/*event*/) {
+
+					var p = findEventPos(param);
+					if (p) {
+						if (eventsArr[p.sourceIndex].events[p.eventIndex].permissions == undefined) {
+							eventsArr[p.sourceIndex].events[p.eventIndex].permissions = {users:[]};
+						}
+						jq.extend(true, eventsArr[p.sourceIndex].events[p.eventIndex].permissions, testPermissions);
+
+						callback({result:true, permissions:eventsArr[p.sourceIndex].events[p.eventIndex].permissions});
+					}
+					callback({result:false});
+
+				}
+			}
+
+
+			// Удаление разрешений
+			function removePermissions(param, callback) {
+				var i,j;
+
+				if (param.type == 1/*calendar*/) {
+
+					for (i = 0; i < sourcesArr.length; ++i) {
+						if (sourcesArr[i].objectId == param.objectId) {
+							if (sourcesArr[i].permissions == undefined) {
+								sourcesArr[i].permissions = {users:[]};
+							}
+							var p = sourcesArr[i].permissions;
+							for (j = 0; j < p.users.length; ++j) {
+								if (p.users[j].objectId == param.userId) {
+									sourcesArr[i].permissions.users.splice(j, 1);
+								}
+							}
+							callback({result:true, permissions:sourcesArr[i].permissions});
+							return;
+						}
+					}
+					callback({result:false, permissions:undefined});
+
+				} else if (param.type == 2/*event*/) {
+
+					var p = findEventPos(param);
+					if (p) {
+						if (eventsArr[p.sourceIndex].events[p.eventIndex].permissions == undefined) {
+							eventsArr[p.sourceIndex].events[p.eventIndex].permissions = {users:[]};
+						}
+						var x = eventsArr[p.sourceIndex].events[p.eventIndex].permissions;
+						for (j = 0; j < x.users.length; ++j) {
+							if (x.users[j].objectId == param.userId) {
+								eventsArr[p.sourceIndex].events[p.eventIndex].permissions.users.splice(j, 1);
+							}
+						}
+						callback({result:true, permissions:eventsArr[p.sourceIndex].events[p.eventIndex].permissions});
+						return;
+					}
+					callback({result:false, permissions:undefined});
+
+				}
+			}
+
+
+			// Добавление/редактирование/удаление событий
+			function editEvent(param, callback) {
+				var i,j;
+
+				if (param.action == 1/*add*/) {
+
+					for (i = 0; i < eventsArr.length; ++i) {
+						if (eventsArr[i].objectId == param.newSourceId) {
+							param.sourceId = param.newSourceId;
+							param.objectId = ++g_objectId;
+							delete param.action;
+							delete param.newSourceId;
+							eventsArr[i].events.push(param);
+							callback({result: true, event: [param]});
+							return;
+						}
+					}
+					callback({result: false, event: [param]});
+
+				} else if (param.action == 2/*change*/) {
+
+					for (i = 0; i < eventsArr.length; ++i) {
+						if (eventsArr[i].objectId != param.sourceId) {continue;}
+						for (j = 0; j < eventsArr[i].events.length; ++j) {
+							if (eventsArr[i].events[j].objectId != param.objectId) {continue;}
+
+							var doSwap = false;
+							var found = false;
+							if (param.sourceId != param.newSourceId) {
+								doSwap = true;
+								for (var i2 = 0; i2 < eventsArr.length; ++i2) {
+									if (eventsArr[i2].objectId != param.newSourceId) {continue;}
+									found = true;
+									break;
+								}
+							}
+
+							if (!doSwap || doSwap && found) {
+								eventsArr[i].events[j].title = param.title;
+								eventsArr[i].events[j].description = param.description;
+								eventsArr[i].events[j].allDay = param.allDay;
+								eventsArr[i].events[j].start = param.start;
+								eventsArr[i].events[j].end = param.end;
+								eventsArr[i].events[j].repeat = param.repeat;
+								eventsArr[i].events[j].alert = param.alert;
+								eventsArr[i].events[j].isShared = param.isShared;
+								eventsArr[i].events[j].permissions = param.permissions;
+								if (doSwap) {
+									eventsArr[i].events[j].sourceId = eventsArr[i2].objectId;
+									eventsArr[i2].events.push(eventsArr[i].events[j]);
+									eventsArr[i].events.splice(j, 1);
+								}
+								callback({result: true, event: [param]});
+								return;
+							}
+						}
+					}
+					callback({result: false, event: [param]});
+
+				} else if (param.action == 3/*delete*/) {
+
+					for (i = 0; i < eventsArr.length; ++i) {
+						if (eventsArr[i].objectId == param.sourceId) {
+							for (j = 0; j < eventsArr[i].events.length; ++j) {
+								if (eventsArr[i].events[j].objectId == param.objectId) {
+									eventsArr[i].events.splice(j, 1);
+									callback({result: true, event: undefined});
+									return;
+								}
+							}
+						}
+					}
+					callback({result: false, event: [param]});
+
+				}
+			}
+
+
+			// Получение списка подписок
+			function loadSubscriptions(callback) {
+				callback({result: true, subscriptions: subscrArr});
+			}
+
+			// Управление подписками
+			function manageSubscriptions(param, callback) {
+				for (var i = 0; i < param.length; ++i) {
+					for (var j = 0; j < subscrArr.length; ++j) {
+						if (subscrArr[j].objectId != param[i].objectId) {continue;}
+						subscrArr[j].isSubscribed = param[i].action == 1;
+						subscrArr[j].isNew = param[i].isNew;
+					}
+				}
+				callback({result:true});
+			}
+
+			//
+			function editSubscription(param, callback) {
+				if (param.action == 2/*change*/) {
+
+					for (i = 0; i < sourcesArr.length; ++i) {
+						if (sourcesArr[i].objectId == param.objectId) {
+							if (sourcesArr[i].isEditable) {
+								sourcesArr[i].title = param.title;
+							}
+							sourcesArr[i].textColor = param.textColor;
+							sourcesArr[i].backgroundColor = param.backgroundColor;
+							sourcesArr[i].borderColor = param.borderColor;
+							sourcesArr[i].isHidden = param.isHidden;
+							if (sourcesArr[i].isEditable) {
+								sourcesArr[i].defaultAlert = param.defaultAlert;
+							}
+							callback({result: true, source: param});
+							return;
+						}
+					}
+					callback({result: false, source: undefined});
+
+				}
+			}
+
+
+			// Вычисление высоты календаря
+			var padding = 30;
+			var calHeight = jq(window).height() - padding -
+					jq("#studioPageContent .studioTopNavigationPanel").outerHeight(true) -
+					jq("#studioFooter").outerHeight(true);
+
+			// Создание календаря
+			jq("#asc_calendar").fullCalendar({
+
+				timeZones: [
+					{name: "UTC:00", id: "UTC", offset: 0},
+					{name: "UTC:01", id: "UTC01", offset: 60},
+					{name: "UTC:02", id: "UTC02", offset: 120}
+				],
+				// Вычисление высоты календаря
+				padding: padding,
+				height: calHeight,
+				onHeightChange: function() {
+					var h = jq(window).height();
+					this.height = h - this.padding -
+							jq("#studioPageContent .studioTopNavigationPanel").outerHeight(true) -
+							jq("#studioFooter").outerHeight(true);
+				},
+
+				// Получение календарей и подписок
+				loadEventSources: loadEventSources,
+
+				// Получение событий для календаря/подписки
+				loadEvents: loadEvents,
+
+				// Добавление/редактирование/удаление календарей
+				editCalendar: editCalendar,
+
+				// Изменение разрешений
+				editPermissions: editPermissions,
+
+				// Удаление разрешений
+				removePermissions: removePermissions,
+
+				// Добавление/редактирование/удаление событий
+				editEvent: editEvent,
+
+				loadSubscriptions: loadSubscriptions,
+
+				manageSubscriptions: manageSubscriptions,
+
+				editSubscription: editSubscription
+			});
+
+		});
+	</script>
+
+	<title>Календарь - Tools </title>
+</head>
+<body>
+	<form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm" style="margin: 0px; height: 100%; padding: 0px;" enctype="multipart/form-data">
+	<div>
+		<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+		<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+		<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2MTIwNDk1NzAPZBYCZg9kFgJmD2QWAmYPZBYEZg9kFgICAw8WAh4EVGV4dAXoJzxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiICB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPnZhciBTa2luTWFuYWdlciA9IG5ldyBmdW5jdGlvbigpIHsNCiAgICB0aGlzLmltYWdlcyA9IG5ldyBBcnJheSgpOw0KICAgIHRoaXMuaW1hZ2VzWyIiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI5ZWM4MTM4NC03OTA5LTQ0YjEtYjhmNi1hZmM5MTJiYzE5ZWQiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyJlYTk0MjUzOC1lNjhlLTQ5MDctOTM5NC0wMzUzMzZlZTBiYTgiXSA9ICIvcHJvZHVjdHMvY29tbXVuaXR5L2FwcF90aGVtZXMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI2YTU5OGM3NC05MWFlLTQzN2QtYTVmNC1hZDMzOWJkMTFiYjIiXSA9ICIvcHJvZHVjdHMvY29tbXVuaXR5L21vZHVsZXMvYmxvZ3MvYXBwX3RoZW1lcy9kZWZhdWx0L2Jsb2dzaW1hZ2VzIjsNCiAgICB0aGlzLmltYWdlc1siMjhiMTAwNDktZGQyMC00ZjU0LWI5ODYtODczYmMxNGNjZmM3Il0gPSAiL3Byb2R1Y3RzL2NvbW11bml0eS9tb2R1bGVzL2Jvb2ttYXJraW5nL2FwcF90aGVtZXMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI4NTNiNmViOS03M2VlLTQzOGQtOWIwOS04ZmZlZWRmMzYyMzQiXSA9ICIvcHJvZHVjdHMvY29tbXVuaXR5L21vZHVsZXMvZm9ydW0vYXBwX3RoZW1lcy9kZWZhdWx0L2ZvcnVtaW1hZ2VzIjsNCiAgICB0aGlzLmltYWdlc1siM2NmZDQ4MWItNDZmMi00YTRhLWI1NWMtYjhjMGM5ZGVmMDJjIl0gPSAiL3Byb2R1Y3RzL2NvbW11bml0eS9tb2R1bGVzL25ld3MvYXBwX3RoZW1lcy9kZWZhdWx0L25ld3NpbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI5ZDUxOTU0Zi1kYjliLTRhZWQtOTRlMy1lZDcwYjkxNGUxMDEiXSA9ICIvcHJvZHVjdHMvY29tbXVuaXR5L21vZHVsZXMvcGhvdG9tYW5hZ2VyL2FwcF90aGVtZXMvZGVmYXVsdC9waG90b21hbmFnZXJpbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI3NDJjZjk0NS1jYmJjLTRhNTctODJkNi0xNjAwYTEyY2Y4Y2EiXSA9ICIvcHJvZHVjdHMvY29tbXVuaXR5L21vZHVsZXMvd2lraS9hcHBfdGhlbWVzL2RlZmF1bHQvd2lraWltYWdlcyI7DQogICAgdGhpcy5pbWFnZXNbImU2N2JlNzNkLWY5YWUtNGNlMS04ZmVjLTE4ODBjYjUxOGNiNCJdID0gIi9wcm9kdWN0cy9maWxlcy9hcHBfdGhlbWVzL2RlZmF1bHQvaW1hZ2VzIjsNCiAgICB0aGlzLmltYWdlc1siMWUwNDQ2MDItNDNiNS00ZDc5LTgyZjMtZmQ2MjA4YTExOTYwIl0gPSAiL3Byb2R1Y3RzL3Byb2plY3RzL2FwcF90aGVtZXMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI1MmYxNTc0ZC04NjU2LTRiZjEtYjQ5NC1mNWNiZTY0ZWYzMjciXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyJhZjRhZmQ1MC01NTUzLTQ3ZjMtOGY5MS02NTEwNTdiYzkzMGIiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyIwNDMzOTQyMy03MGU2LTRiODEtYTJkZi0zYzMxYzcyM2JkOTAiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI5ZmYwZmFkZS02Y2ZhLTQ0ZWUtOTAxZi02MTg1NTkzZTQ1OTQiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI1N2U4N2RhMC1kNTliLTQ0M2QtOTlkMS1kOWFiY2FiMzEwODQiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI5NzdjYmVlYi1iMTY2LTRhODAtOGJlMi0wMTMzY2NmMjI3NmYiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI4NWU3Y2UyNi00NmY2LTRjM2MtYjI1ZC00YmRlODMzYzk3NDIiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyJjNDJmOTkzZS01ZDIyLTQ5N2UtYWMyNi0xZTk1OTI1MTU4OTgiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyI4MTQwMjQ0MC01NTdkLTQwMWQtOWVlMS1kNTcwNzQ4ZjQyNmQiXSA9ICIvc2tpbnMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyJiMzUzYjAyMy1hYTMyLTRiMjYtYTU4Ni0wNGRmNTRhYzAyMDQiXSA9ICIvcHJvZHVjdHMvdG9vbHMvYXBwX3RoZW1lcy9kZWZhdWx0L2ltYWdlcyI7DQogICAgdGhpcy5pbWFnZXNbIjQ4MmMwNTM1LTkxMzMtNGQ0Mi04ODkxLWYxMGM2YTRkYTVhNSJdID0gIi9za2lucy9kZWZhdWx0L2ltYWdlcyI7DQogICAgdGhpcy5pbWFnZXNbIjE2ZjE0Zjg3LWM5ZjQtNDlkZC05NDdlLTllZTU1NTU1NWEyZiJdID0gIi9wcm9kdWN0cy90b29scy9tb2R1bGVzL2Zvb2RtYW5hZ2VtZW50L2FwcF90aGVtZXMvZGVmYXVsdC9mb29kbWFuYWdlbWVudGltYWdlcyI7DQogICAgdGhpcy5pbWFnZXNbIjJhOTIzMDM3LThiMmQtNDg3Yi05YTIyLTVhYzA5MThhY2YzZiJdID0gIi9hZGRvbnMvbWFpbC9hcHBfdGhlbWVzL2RlZmF1bHQvaW1hZ2VzIjsNCiAgICB0aGlzLmltYWdlc1siM2Q4NzE0NDktZjdkMS00MTcwLTk0ODQtZGFhNDYyMzAwMGM3Il0gPSAiL2FkZG9ucy9vcmdhbml6ZXIvYXBwX3RoZW1lcy9kZWZhdWx0L2ltYWdlcyI7DQogICAgdGhpcy5pbWFnZXNbIjZlNzc3OTEzLTA1MTItNDgwNC1iMmJkLTc5YWUyODVjMjFkNiJdID0gIi9hZGRvbnMvcXVpY2tsaW5rcy9hcHBfdGhlbWVzL2RlZmF1bHQvaW1hZ2VzIjsNCiAgICB0aGlzLmltYWdlc1siYmY4ODk1M2UtM2M0My00ODUwLWEzZmItYjFlNDNhZDUzYTNlIl0gPSAiL2FkZG9ucy90YWxrL2FwcF90aGVtZXMvZGVmYXVsdC9pbWFnZXMiOw0KICAgIHRoaXMuaW1hZ2VzWyIxMjMwMTczMy05NjI3LTQ2OWItYjNhZi1kYmI1YmYzZjE3ZDgiXSA9ICIvYWRkb25zL3RvZG8vYXBwX3RoZW1lcy9kZWZhdWx0L2ltYWdlcyI7DQogICAgdGhpcy5HZXRJbWFnZSA9IGZ1bmN0aW9uKGltYWdlTmFtZSwgbW9kdWxlSUQpIHsNCiAgICAgICAgdmFyIG1vZHVsZSA9ICIiOw0KICAgICAgICBpZiAobW9kdWxlSUQgIT0gJ3VuZGVmaW5lZCcgJiYgbW9kdWxlSUQgIT0gdW5kZWZpbmVkICYmIG1vZHVsZUlEICE9IG51bGwgJiYgbW9kdWxlSUQpIHsNCiAgICAgICAgICAgIG1vZHVsZSA9IG1vZHVsZUlELnRvTG93ZXJDYXNlKCk7DQogICAgICAgIH0NCiAgICAgICAgcmV0dXJuIHRoaXMuaW1hZ2VzW21vZHVsZV0rJy8nICsgaW1hZ2VOYW1lOw0KICAgIH07DQp9Ozwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHNyYz0iL2pzL2F1dG8vanF1ZXJ5X2Z1bGwuanMiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+PC9zY3JpcHQ+PHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCIgc3JjPSIvanMvYXV0by9qcXVlcnkuY29va2llcy5qcyIgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij48L3NjcmlwdD48c2NyaXB0IGxhbmd1YWdlPSJqYXZhc2NyaXB0IiBzcmM9Ii9qcy9hdXRvL2ZhbmN5em9vbS5taW4uanMiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+PC9zY3JpcHQ+PHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCIgIHR5cGU9InRleHQvamF2YXNjcmlwdCI+IHZhciBqcSA9IGpRdWVyeS5ub0NvbmZsaWN0KCk7IDwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHNyYz0iL2pzL2F1dG8vY29tbW9uLmpzIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHNyYz0iL2pzL2F1dG8vcHJvZmlsZV9pbmZvX3Rvb2x0aXAuanMiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+PC9zY3JpcHQ+PHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCIgc3JjPSIvanMvYXV0by9tYW5hZ2VtZW50LmpzIiB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPjwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHNyYz0iL2pzL2F1dG8vYXNjLmFuY2hvcmNvbnRyb2xsZXIuanMiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+PC9zY3JpcHQ+PHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCIgc3JjPSIvanMvYXV0by9hc2MueHNsdG1hbmFnZXIuanMiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+PC9zY3JpcHQ+PHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCIgIHR5cGU9InRleHQvamF2YXNjcmlwdCI+IFN0dWRpb01hbmFnZXIuVXBsb2FkaW5nTWVzc2FnZT0i0JfQsNCz0YDRg9C30LrQsC4uLiI7ICBTdHVkaW9NYW5hZ2VyLlVwbG9hZGVkTWVzc2FnZT0i0JfQsNCz0YDRg9C20LXQvdC+IjsgIFN0dWRpb01hbmFnZXIuUmVtb3ZlTWVzc2FnZT0i0KPQtNCw0LvQuNGC0YwiOyAgU3R1ZGlvTWFuYWdlci5FcnJvckZpbGVTaXplTGltaXQ9ItCf0YDQtdCy0YvRiNC10L0g0LzQsNC60YHQuNC80LDQu9GM0L3Ri9C5INGA0LDQt9C80LXRgCDQt9Cw0LPRgNGD0LbQsNC10LzQvtCz0L4g0YTQsNC50LvQsCI7ICBTdHVkaW9NYW5hZ2VyLkVycm9yRmlsZUVtcHR5PSLQn9GD0YHRgtC+0Lkg0LTQvtC60YPQvNC10L3RgiI7ICBDb21tb25TdWJzY3JpcHRpb25NYW5hZ2VyLkNvbmZpcm1NZXNzYWdlPSLQpdC+0YLQuNGC0LUg0L/RgNC+0LTQvtC70LbQuNGC0Yw/IjsgIEF1dGhNYW5hZ2VyLkNvbmZpcm1NZXNzYWdlPSLQpdC+0YLQuNGC0LUg0L/RgNC+0LTQvtC70LbQuNGC0Yw/IjsgIHZhciBTdHVkaW9Vc2VyUHJvZmlsZUluZm8gPSBuZXcgUG9wdXBCb3goJ3BiX1N0dWRpb1VzZXJQcm9maWxlSW5mbycsMzIwLDE0MCwndGludE1lZGl1bScsJ2JvcmRlckJhc2UnLCAnV2ViU3R1ZGlvLkdldFVzZXJJbmZvJyk7IDwvc2NyaXB0Pg0KPHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCIgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCiAgICBmdW5jdGlvbiBHZXRNYXhJbWFnZVdpZHRoKCkgew0KICAgICAgICByZXR1cm4gNzAwOw0KICAgIH0gICANCg0KICAgIGpxKGRvY3VtZW50KS5yZWFkeShmdW5jdGlvbigpIHsNCiAgICAgICAgICAgIGpxKCdhLmZhbmN5em9vbScpLmZhbmN5Wm9vbSh7c2NhbGVJbWc6IHRydWUsIGNsb3NlT25DbGljazogdHJ1ZSwgZGlyZWN0b3J5IDogJy9za2lucy9kZWZhdWx0L2ZhbmN5em9vbV9pbWcnfSk7ICANCiAgICB9KTsNCg0KPC9zY3JpcHQ+ZAIBD2QWBAICD2QWAgIDD2QWAmYPZBYKZg9kFgJmDxYCHgtfIUl0ZW1Db3VudAIDFgZmD2QWAmYPFQE3PGEgaHJlZj0iL3Byb2R1Y3RzL2NvbW11bml0eS8iPtCh0L7QvtCx0YnQtdGB0YLQstC+PC9hPmQCAg9kFgJmDxUBPDxhIGhyZWY9Ii9wcm9kdWN0cy9wcm9qZWN0cy9teXRhc2tzLmFzcHgiPtCf0YDQvtC10LrRgtGLPC9hPmQCBA9kFgJmDxUBMTxhIGhyZWY9Ii9wcm9kdWN0cy9maWxlcy8iPtCU0L7QutGD0LzQtdC90YLRizwvYT5kAgIPFgIfAQIDFgZmD2QWAmYPFQIYL215LmFzcHg/dHlwZT1xdWlja2xpbmtzDNCh0YHRi9C70LrQuGQCAQ9kFgJmDxUCEi9teS5hc3B4P3R5cGU9dG9kbxPQodC/0LjRgdC60Lgg0JTQtdC7ZAICD2QWAmYPFQIXL215LmFzcHg/dHlwZT1vcmdhbml6ZXIU0J7RgNCz0LDQvdCw0LnQt9C10YBkAgMPFgIfAQIBFgJmD2QWAmYPFQFEPGEgaHJlZj0nL1Byb2R1Y3RzL1Rvb2xzL0RlZmF1bHQuYXNweCcgY2xhc3M9J215U3RhZmZJdGVtJz5Ub29sczwvYT5kAgQPZBYCZg9kFgJmDxYCHwFmZAIFD2QWAgIBDxYCHwECBBYIAgEPZBYCZg8VAXMNCjxhIGNsYXNzPSd0YWInIGhyZWY9Jy9Qcm9kdWN0cy9Ub29scy9EZWZhdWx0LmFzcHgnICA+ICAgICAgICAgICAgICAgICAgICAgICAgDQoJPHNwYW4+0JPQu9Cw0LLQvdCw0Y88L3NwYW4+DQo8L2E+ZAICD2QWAmYPFQF5DQo8YSBjbGFzcz0ndGFiJyBocmVmPScvZW1wbG95ZWUuYXNweD9wcm9kdWN0PXRvb2xzJyAgPiAgICAgICAgICAgICAgICAgICAgICAgIA0KCTxzcGFuPtCh0L7RgtGA0YPQtNC90LjQutC4PC9zcGFuPg0KPC9hPmQCAw9kFgJmDxUBlAENCjxhIGNsYXNzPSdzZWxlY3RlZFRhYicgaHJlZj0nL1Byb2R1Y3RzL1Rvb2xzL01vZHVsZXMvQ2FsZW5kYXJUb29sL0RlZmF1bHQuYXNweCcgID4gICAgICAgICAgICAgICAgICAgICAgICANCgk8c3Bhbj7QmtCw0LvQtdC90LTQsNGA0Yw8L3NwYW4+DQo8L2E+ZAIED2QWAmYPFQGGAQ0KPGEgY2xhc3M9J3RhYicgaHJlZj0nL1Byb2R1Y3RzL1Rvb2xzL01vZHVsZXMvRm9vZE1hbmFnZW1lbnQvT3JkZXJQYWdlLmFzcHgnICA+ICAgICAgICAgICAgICAgICAgICAgICAgDQoJPHNwYW4+0J7QsdC10LQ8L3NwYW4+DQo8L2E+ZAIHD2QWBAIDD2QWAgIBD2QWAgIBD2QWAmYPZBYCAgEPZBYCAgEPFgIfAAXeCzxzY3JpcHQgbGFuZ3VhZ2U9J2phdmFzY3JpcHQnPg0KZnVuY3Rpb24gY3JlYXRlTmV3RXZlbnQoKXsNCnZhciB0aXRsZSA9IGpxKCcjZXZlbnRUaXRsZScpLnZhbCgpOw0KaWYodGl0bGU9PScnKSB7IGFsZXJ0KCfQndCw0LfQstCw0L3QuNC1INC90LUg0LzQvtC20LXRgiDQsdGL0YLRjCDQv9GD0YHRgtGL0LwnKTtyZXR1cm47IH0gDQppZighQ2FsZW5kYXIuVmFsaWREYXRlKCkpIHsgYWxlcnQoJ9Cd0LXQutC+0YDRgNC10LrRgtC90LDRjyDQtNCw0YLQsCcpO3JldHVybjsgfSANCkFqYXhQcm8uQ2FsZW5kYXJUb29sLkNyZWF0ZU5ld0V2ZW50KENhbGVuZGFyLmNyZWF0ZUV2ZW50UmVxdWVzdCgpLGZ1bmN0aW9uKHJlcyl7DQppZiAocmVzLmVycm9yICE9IG51bGwpe2FsZXJ0KHJlcy5lcnJvci5NZXNzYWdlKTtyZXR1cm47fQ0KRXZlbnRzLnB1c2goZXZhbCgnKCcrcmVzLnZhbHVlKycpJykpOw0KSXNBbHJlYWR5V3JpdGUucHVzaCgwKTsNCkNhbGVuZGFyLmRyYXdNb250aCgpOw0KQ2FsZW5kYXIuY2xvc2VQb3B1cCgpOw0KfSl9DQoNCmZ1bmN0aW9uIGRlbGV0ZUV2ZW50KCl7DQpBamF4UHJvLkNhbGVuZGFyVG9vbC5EZWxldGVFdmVudChqcSgnI3NlbGVjdGVkRXZlbnQnKS52YWwoKSxmdW5jdGlvbihyZXMpew0KaWYgKHJlcy5lcnJvciAhPSBudWxsKXthbGVydChyZXMuZXJyb3IuTWVzc2FnZSk7cmV0dXJuO30NCmZvcih2YXIgaT0wO2k8RXZlbnRzLmxlbmd0aDtpKyspe2lmKEV2ZW50c1tpXS5JRD09J2V2ZW50JytqcSgnI3NlbGVjdGVkRXZlbnQnKS52YWwoKSl7RXZlbnRzLnNwbGljZShpLDEpO0lzQWxyZWFkeVdyaXRlLnNwbGljZShpLDEpO2JyZWFrO319DQpDYWxlbmRhci5kcmF3TW9udGgoKTsNCkNhbGVuZGFyLmNsb3NlUG9wdXAoKTsNCn0pO30NCmZ1bmN0aW9uIGVkaXRFdmVudCgpew0KdmFyIHRpdGxlID0ganEoJyNldmVudFRpdGxlJykudmFsKCk7DQppZih0aXRsZT09JycpIHsgYWxlcnQoJ9Cd0LDQt9Cy0LDQvdC40LUg0L3QtSDQvNC+0LbQtdGCINCx0YvRgtGMINC/0YPRgdGC0YvQvCcpO3JldHVybjsgfSANCmlmKCFDYWxlbmRhci5WYWxpZERhdGUoKSkgeyBhbGVydCgn0J3QtdC60L7RgNGA0LXQutGC0L3QsNGPINC00LDRgtCwJyk7cmV0dXJuOyB9IA0KQWpheFByby5DYWxlbmRhclRvb2wuRWRpdEV2ZW50KGpxKCcjc2VsZWN0ZWRFdmVudCcpLnZhbCgpLENhbGVuZGFyLmNyZWF0ZUV2ZW50UmVxdWVzdCgpLGZ1bmN0aW9uKHJlcyl7DQppZiAocmVzLmVycm9yICE9IG51bGwpe2FsZXJ0KHJlcy5lcnJvci5NZXNzYWdlKTtyZXR1cm47fQ0KZm9yKHZhciBpPTA7aTxFdmVudHMubGVuZ3RoO2krKyl7aWYoRXZlbnRzW2ldLklEPT0nZXZlbnQnK2pxKCcjc2VsZWN0ZWRFdmVudCcpLnZhbCgpKXtFdmVudHMuc3BsaWNlKGksMSk7YnJlYWs7fX0NCkV2ZW50cy5wdXNoKGV2YWwoJygnK3Jlcy52YWx1ZSsnKScpKTsNCkNhbGVuZGFyLmRyYXdNb250aCgpOw0KQ2FsZW5kYXIuY2xvc2VQb3B1cCgpOw0KfSl9DQoNCjwvc2NyaXB0Pg0KZAIFD2QWAmYPZBYCAgEPFgIfAQIKFhZmD2QWAgIBDxYCHwAFEdCSINGB0LXRgtC4ICgxMCk6ZAIBD2QWAgIBDxYCHwAFmgM8c3BhbiBjbGFzcz0idXNlckxpbmsiIHN0eWxlPSd3aGl0ZS1zcGFjZTpub3dyYXA7JyBpZD0nYWRhZTNiYWItN2QwYS00NmIwLTg3NDYtOTI3NTk0NTg5MGY4Jz48YSBjbGFzcz0nbGlua0Rlc2NyaWJlJyBocmVmPSIvdXNlcnByb2ZpbGUuYXNweD91c2VyPWFsZXguYmFubm92JnByb2R1Y3Q9dG9vbHMiPtCR0LDQvdC90L7QsiDQkNC70LXQutGB0LXQuTwvYT48L3NwYW4+PHNjcmlwdCBsYW5ndWFnZT0namF2YXNjcmlwdCc+IFN0dWRpb1VzZXJQcm9maWxlSW5mby5SZWdpc3RyeUVsZW1lbnQoJ2FkYWUzYmFiLTdkMGEtNDZiMC04NzQ2LTkyNzU5NDU4OTBmOCcsJyJjMzlhYTE2ZC1hNzU5LTQxMmYtOTdkZi1hMDRhMGZiOWUzNDUiLCJiMzUzYjAyMy1hYTMyLTRiMjYtYTU4Ni0wNGRmNTRhYzAyMDQiJyk7IDwvc2NyaXB0PmQCAg9kFgICAQ8WAh8ABZcDPHNwYW4gY2xhc3M9InVzZXJMaW5rIiBzdHlsZT0nd2hpdGUtc3BhY2U6bm93cmFwOycgaWQ9JzVjN2RiZmY3LTY2NGEtNGU2Yy05MDMzLWMxMWY4NDg2YzNmYSc+PGEgY2xhc3M9J2xpbmtEZXNjcmliZScgaHJlZj0iL3VzZXJwcm9maWxlLmFzcHg/dXNlcj1wYXZlbC5iYW5ub3YmcHJvZHVjdD10b29scyI+0JHQsNC90L3QvtCyINCf0LDQstC10Ls8L2E+PC9zcGFuPjxzY3JpcHQgbGFuZ3VhZ2U9J2phdmFzY3JpcHQnPiBTdHVkaW9Vc2VyUHJvZmlsZUluZm8uUmVnaXN0cnlFbGVtZW50KCc1YzdkYmZmNy02NjRhLTRlNmMtOTAzMy1jMTFmODQ4NmMzZmEnLCciOTM1ODBjNTQtMTEzMi00ZDZiLWJmMmQtZGEwYmZhYWExYTI4IiwiYjM1M2IwMjMtYWEzMi00YjI2LWE1ODYtMDRkZjU0YWMwMjA0IicpOyA8L3NjcmlwdD5kAgMPZBYCAgEPFgIfAAWbAzxzcGFuIGNsYXNzPSJ1c2VyTGluayIgc3R5bGU9J3doaXRlLXNwYWNlOm5vd3JhcDsnIGlkPSdhMTE2YjgyYi01NDg4LTQwYzEtOGJkZC04NGUyYTYyZGY5ZGUnPjxhIGNsYXNzPSdsaW5rRGVzY3JpYmUnIGhyZWY9Ii91c2VycHJvZmlsZS5hc3B4P3VzZXI9bWFyaWphLmtpcmVldmEmcHJvZHVjdD10b29scyI+0JrQuNGA0LXQtdCy0LAg0JzQsNGA0LjRjzwvYT48L3NwYW4+PHNjcmlwdCBsYW5ndWFnZT0namF2YXNjcmlwdCc+IFN0dWRpb1VzZXJQcm9maWxlSW5mby5SZWdpc3RyeUVsZW1lbnQoJ2ExMTZiODJiLTU0ODgtNDBjMS04YmRkLTg0ZTJhNjJkZjlkZScsJyIxOTJjYzRiNi01NDkwLTQ1MDQtYjQ0NC1jMzE2ZThlZGRlMjMiLCJiMzUzYjAyMy1hYTMyLTRiMjYtYTU4Ni0wNGRmNTRhYzAyMDQiJyk7IDwvc2NyaXB0PmQCBA9kFgICAQ8WAh8ABaMDPHNwYW4gY2xhc3M9InVzZXJMaW5rIiBzdHlsZT0nd2hpdGUtc3BhY2U6bm93cmFwOycgaWQ9J2RlYzFlMmMzLTMzNjMtNDBiYy1iNGZhLTEyYjlmYTEzOTY5Nyc+PGEgY2xhc3M9J2xpbmtEZXNjcmliZScgaHJlZj0iL3VzZXJwcm9maWxlLmFzcHg/dXNlcj1zZXJnZXkua29ub3ZhbG92JnByb2R1Y3Q9dG9vbHMiPtCa0L7QvdC+0LLQsNC70L7QsiDQodC10YDQs9C10Lk8L2E+PC9zcGFuPjxzY3JpcHQgbGFuZ3VhZ2U9J2phdmFzY3JpcHQnPiBTdHVkaW9Vc2VyUHJvZmlsZUluZm8uUmVnaXN0cnlFbGVtZW50KCdkZWMxZTJjMy0zMzYzLTQwYmMtYjRmYS0xMmI5ZmExMzk2OTcnLCciYjkzOWNmMDctZTkwOS00ZWRlLTg2YTctZmJlMDFjY2E2OTMyIiwiYjM1M2IwMjMtYWEzMi00YjI2LWE1ODYtMDRkZjU0YWMwMjA0IicpOyA8L3NjcmlwdD5kAgUPZBYCAgEPFgIfAAWjAzxzcGFuIGNsYXNzPSJ1c2VyTGluayIgc3R5bGU9J3doaXRlLXNwYWNlOm5vd3JhcDsnIGlkPScxNzY1MGM2YS1hNjcxLTRiMmQtOTZhMy02ODk1NDAyNTk4YWUnPjxhIGNsYXNzPSdsaW5rRGVzY3JpYmUnIGhyZWY9Ii91c2VycHJvZmlsZS5hc3B4P3VzZXI9YW5kcmV5Lmt1em1pY2hvdiZwcm9kdWN0PXRvb2xzIj7QmtGD0LfRjNC80LjRh9C10LIg0JDQvdC00YDQtdC5PC9hPjwvc3Bhbj48c2NyaXB0IGxhbmd1YWdlPSdqYXZhc2NyaXB0Jz4gU3R1ZGlvVXNlclByb2ZpbGVJbmZvLlJlZ2lzdHJ5RWxlbWVudCgnMTc2NTBjNmEtYTY3MS00YjJkLTk2YTMtNjg5NTQwMjU5OGFlJywnIjRjN2E1ZjA0LWZkNmMtNDBmYS1hODAyLWQ0ZDE1MWVkM2IxNyIsImIzNTNiMDIzLWFhMzItNGIyNi1hNTg2LTA0ZGY1NGFjMDIwNCInKTsgPC9zY3JpcHQ+ZAIGD2QWAgIBDxYCHwAFowM8c3BhbiBjbGFzcz0idXNlckxpbmsiIHN0eWxlPSd3aGl0ZS1zcGFjZTpub3dyYXA7JyBpZD0nNTc4N2IyOTgtZWMxMi00ZTAwLWIyZDMtZjU3NDdjNzZlMDlmJz48YSBjbGFzcz0nbGlua0Rlc2NyaWJlJyBocmVmPSIvdXNlcnByb2ZpbGUuYXNweD91c2VyPXN2ZXRsYW5hLm1hbGVldmEmcHJvZHVjdD10b29scyI+0JzQsNC70LXQtdCy0LAg0KHQstC10YLQu9Cw0L3QsDwvYT48L3NwYW4+PHNjcmlwdCBsYW5ndWFnZT0namF2YXNjcmlwdCc+IFN0dWRpb1VzZXJQcm9maWxlSW5mby5SZWdpc3RyeUVsZW1lbnQoJzU3ODdiMjk4LWVjMTItNGUwMC1iMmQzLWY1NzQ3Yzc2ZTA5ZicsJyIwM2U5ZDVkOS1iN2RkLTRhNzUtYTExNy0zMDk2MzE3Y2ViYTEiLCJiMzUzYjAyMy1hYTMyLTRiMjYtYTU4Ni0wNGRmNTRhYzAyMDQiJyk7IDwvc2NyaXB0PmQCBw9kFgICAQ8WAh8ABaIDPHNwYW4gY2xhc3M9InVzZXJMaW5rIiBzdHlsZT0nd2hpdGUtc3BhY2U6bm93cmFwOycgaWQ9JzZlZjNhNjc2LWIwZTgtNDkyNS1hMGJjLWIyYmZlNDBiNGVhNyc+PGEgY2xhc3M9J2xpbmtEZXNjcmliZScgaHJlZj0iL3VzZXJwcm9maWxlLmFzcHg/dXNlcj1hbGV4ZXkuc2Fmcm9ub3YmcHJvZHVjdD10b29scyI+0KHQsNGE0YDQvtC90L7QsiDQkNC70LXQutGB0LXQuTwvYT48L3NwYW4+PHNjcmlwdCBsYW5ndWFnZT0namF2YXNjcmlwdCc+IFN0dWRpb1VzZXJQcm9maWxlSW5mby5SZWdpc3RyeUVsZW1lbnQoJzZlZjNhNjc2LWIwZTgtNDkyNS1hMGJjLWIyYmZlNDBiNGVhNycsJyI2NTdkMWQwZS1jOWYzLTRjOWQtYmQ0OC0wNzUyNWU1MzlmZDYiLCJiMzUzYjAyMy1hYTMyLTRiMjYtYTU4Ni0wNGRmNTRhYzAyMDQiJyk7IDwvc2NyaXB0PmQCCA9kFgICAQ8WAh8ABZ8DPHNwYW4gY2xhc3M9InVzZXJMaW5rIiBzdHlsZT0nd2hpdGUtc3BhY2U6bm93cmFwOycgaWQ9JzA0MGVhOGUzLTdkOTktNGZmMi04NThiLTM5ZGVmOGU2MmQ0Myc+PGEgY2xhc3M9J2xpbmtEZXNjcmliZScgaHJlZj0iL3VzZXJwcm9maWxlLmFzcHg/dXNlcj1kbWl0cnkuc29rb2xvdiZwcm9kdWN0PXRvb2xzIj7QodC+0LrQvtC70L7QsiDQlNC80LjRgtGA0LjQuTwvYT48L3NwYW4+PHNjcmlwdCBsYW5ndWFnZT0namF2YXNjcmlwdCc+IFN0dWRpb1VzZXJQcm9maWxlSW5mby5SZWdpc3RyeUVsZW1lbnQoJzA0MGVhOGUzLTdkOTktNGZmMi04NThiLTM5ZGVmOGU2MmQ0MycsJyIxODlkODJkYy1hNTQ5LTRhN2EtOTk4MC0yNzQ3YjgxNTMwZWIiLCJiMzUzYjAyMy1hYTMyLTRiMjYtYTU4Ni0wNGRmNTRhYzAyMDQiJyk7IDwvc2NyaXB0PmQCCQ9kFgICAQ8WAh8ABaADPHNwYW4gY2xhc3M9InVzZXJMaW5rIiBzdHlsZT0nd2hpdGUtc3BhY2U6bm93cmFwOycgaWQ9JzQ1M2U2YWQzLTYyMjQtNGUzNS05OWI1LTg3MmMyMGJhNzc2Myc+PGEgY2xhc3M9J2xpbmtEZXNjcmliZScgaHJlZj0iL3VzZXJwcm9maWxlLmFzcHg/dXNlcj1lbGVuYS5zdWJib3RpbmEmcHJvZHVjdD10b29scyI+0KHRg9Cx0LHQvtGC0LjQvdCwINCV0LvQtdC90LA8L2E+PC9zcGFuPjxzY3JpcHQgbGFuZ3VhZ2U9J2phdmFzY3JpcHQnPiBTdHVkaW9Vc2VyUHJvZmlsZUluZm8uUmVnaXN0cnlFbGVtZW50KCc0NTNlNmFkMy02MjI0LTRlMzUtOTliNS04NzJjMjBiYTc3NjMnLCciN2M1NWI5NWUtOWVkZS00YTA3LWE4OTAtNmYzNTIzNGNhMmVkIiwiYjM1M2IwMjMtYWEzMi00YjI2LWE1ODYtMDRkZjU0YWMwMjA0IicpOyA8L3NjcmlwdD5kAgoPZBYCAgEPFgIfAAWjAzxzcGFuIGNsYXNzPSJ1c2VyTGluayIgc3R5bGU9J3doaXRlLXNwYWNlOm5vd3JhcDsnIGlkPSdmYmI3NWM0NC1kMjhlLTRlODItYmU5Yy1lYjBhZjY5YTRlY2InPjxhIGNsYXNzPSdsaW5rRGVzY3JpYmUnIGhyZWY9Ii91c2VycHJvZmlsZS5hc3B4P3VzZXI9c3ZldGxhbmEuc3VzbG92YSZwcm9kdWN0PXRvb2xzIj7QodGD0YHQu9C+0LLQsCDQodCy0LXRgtC70LDQvdCwPC9hPjwvc3Bhbj48c2NyaXB0IGxhbmd1YWdlPSdqYXZhc2NyaXB0Jz4gU3R1ZGlvVXNlclByb2ZpbGVJbmZvLlJlZ2lzdHJ5RWxlbWVudCgnZmJiNzVjNDQtZDI4ZS00ZTgyLWJlOWMtZWIwYWY2OWE0ZWNiJywnIjdjYWVmYjE3LTM2MTctNDk1OC1hYzczLWFhMTNlYTQ4MGQwNCIsImIzNTNiMDIzLWFhMzItNGIyNi1hNTg2LTA0ZGY1NGFjMDIwNCInKTsgPC9zY3JpcHQ+ZGQ=" />
+	</div>
+
+	<script type="text/javascript">
+		//<![CDATA[
+		var theForm = document.forms['aspnetForm'];
+		if (!theForm) {
+			theForm = document.aspnetForm;
+		}
+		function __doPostBack(eventTarget, eventArgument) {
+			if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+				theForm.__EVENTTARGET.value = eventTarget;
+				theForm.__EVENTARGUMENT.value = eventArgument;
+				theForm.submit();
+			}
+		}
+		//]]>
+	</script>
+
+	<script src="http://nct.teamlab.com/WebResource.axd?d=L6bQrPdz2CGMmw-Z_YT3aw2&amp;t=633750551846926384" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		//<![CDATA[
+
+		var CommonJavascriptResources = {
+			CancelConfirmMessage: 'Все введенные данные будут потеряны. Вы уверены, что хотите продолжить?'
+		}; //]]>
+	</script>
+
+	<script src="http://nct.teamlab.com/usercontrols/common/topnavigationpanel/js/topnavigator.js" type="text/javascript"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://nct.teamlab.com/usercontrols/common/topnavigationpanel/css/blue/topnavigationpanel.css">
+
+	<script type="text/javascript">
+		//<![CDATA[
+		Searcher.AddHandler(new SearchHandler('cd3ec11b-017e-48d6-a051-54efd8faf05f', 'Поиск', '/skins/default/images/common_search_icon.png', true, '/search.aspx?product=tools')); Searcher.AddHandler(new SearchHandler('4ef3de9d-15fb-43ba-97a0-c0a6ff7e1451', 'Поиск сотрудников', '/skins/default/images/people_search_icon.png', false, '/employee.aspx?empid=&depid=&product=tools')); Searcher.AddHandler(new SearchHandler('8324a903-a4a0-4951-a9cf-54a9726e1c27', 'Поиск в меню', '/products/tools/modules/foodmanagement/app_themes/default/foodmanagementimages/foodmanagementlogo16.png', false, '/Products/Tools/Modules/FoodManagement/OrderPage.aspx'));
+		jq(function() {
+			quickLinksCheckCurrentUrl();
+		});
+		//]]>
+	</script>
+
+	<script src="http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-9hG7C_NgZVNXtNr01jgvN5CNKd5riCH7yaLfstg--UjA2&amp;t=634411370520000000" type="text/javascript"></script>
+
+	<script src="http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-9ny8kJYo7Et8WbvjcnF8vlSZCpnymXu8CWY0Uqe23fag2&amp;t=634411370520000000" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		//<![CDATA[
+		daysOfWeek = [{ "title": "понедельник", "cssClass": "" }, { "title": "вторник", "cssClass": "" }, { "title": "среда", "cssClass": "" }, { "title": "четверг", "cssClass": "" }, { "title": "пятница", "cssClass": "" }, { "title": "суббота", "cssClass": "wbs_weekend" }, { "title": "воскресенье", "cssClass": "wbs_weekend"}]; firstDayOfWeekInCurrentCulture = 1; Months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]; Events = [{ "ID": "event9", "StartingDate": "\/Date(1286056800000)\/", "EndingDate": "\/Date(1286096400000)\/", "CreatedAt": "\/Date(1286097029000)\/", "Author": "58c10d97-af5f-49cd-90d6-901803beb0fb", "Title": "test IE9", "Description": "", "EventURl": "javascript:Calendar.clickOnEvent(9);", "BackgroundColor": "", "FontColor": "" }, { "ID": "event10", "StartingDate": "\/Date(1288090800000)\/", "EndingDate": "\/Date(1288094400000)\/", "CreatedAt": "\/Date(1288028795000)\/", "Author": "76ff727b-f987-4871-9834-e63d4420d6e9", "Title": "аппав", "Description": "", "EventURl": "javascript:Calendar.clickOnEvent(10);", "BackgroundColor": "", "FontColor": "" }, { "ID": "event11", "StartingDate": "\/Date(1290081600000)\/", "EndingDate": "\/Date(1290085200000)\/", "CreatedAt": "\/Date(1290068002000)\/", "Author": "45ca7bc1-4818-4b10-89a9-aa7b69f48b96", "Title": "65465", "Description": "", "EventURl": "javascript:Calendar.clickOnEvent(11);", "BackgroundColor": "", "FontColor": "" }, { "ID": "event12", "StartingDate": "\/Date(1290081600000)\/", "EndingDate": "\/Date(1290085200000)\/", "CreatedAt": "\/Date(1290068008000)\/", "Author": "45ca7bc1-4818-4b10-89a9-aa7b69f48b96", "Title": "456", "Description": "", "EventURl": "javascript:Calendar.clickOnEvent(12);", "BackgroundColor": "", "FontColor": "" }, { "ID": "event13", "StartingDate": "\/Date(1292414400000)\/", "EndingDate": "\/Date(1292418000000)\/", "CreatedAt": "\/Date(1292336665000)\/", "Author": "06dd27a8-d048-40d4-b43c-8ff873b250d6", "Title": "презентация специфики французских клиентов", "Description": "", "EventURl": "javascript:Calendar.clickOnEvent(13);", "BackgroundColor": "", "FontColor": "" }, { "ID": "event15", "StartingDate": "\/Date(1301396400000)\/", "EndingDate": "\/Date(1301399100000)\/", "CreatedAt": "\/Date(1301392776000)\/", "Author": "fca4dbe3-962c-436c-a684-e54efdc7ef1c", "Title": "Обед", "Description": "", "EventURl": "javascript:Calendar.clickOnEvent(15);", "BackgroundColor": "", "FontColor": ""}]; IsAlreadyWrite = ["0,16", "0,16", "0,16", "0,16", "0,16", "0,16"]; Images = ["url('/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW--c2WszvarD6One_32jjR8KFTBAhY9-ECCxMLW8BzzeMw2&t=634411370520000000') no-repeat", "url('/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW--c2WszvarD6One_32jjR8Kxzf3VKcCvXYiygZy_99OIg2&t=634411370520000000') no-repeat", "url('/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW--c2WszvarD6One_32jjR8KXjwjIplsGP3VBlQt8mWDRg2&t=634411370520000000') 0 0 no-repeat", "url('/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW--c2WszvarD6One_32jjR8KnWlezxyC-n27r5Py0MAWMQ2&t=634411370520000000') 0 0 no-repeat"]; //]]>
+	</script>
+
+	<script type="text/javascript" src="http://nct.teamlab.com/ajaxpro/prototype.ashx"></script>
+
+	<script type="text/javascript" src="http://nct.teamlab.com/ajaxpro/core.ashx"></script>
+
+	<script type="text/javascript" src="http://nct.teamlab.com/ajaxpro/converter.ashx"></script>
+
+	<script type="text/javascript" src="http://nct.teamlab.com/ajaxpro/ASC.Web.Tools.CalendarTool._Default,ASC.Web.Tools.CalendarTool.ashx"></script>
+
+	<script type="text/javascript" src="http://nct.teamlab.com/ajaxpro/ASP.products_tools_modules_calendartool_calendartool_master,App_Web_nkh7dxvj.ashx"></script>
+
+	<script type="text/javascript" src="http://nct.teamlab.com/ajaxpro/ASP.masters_basetemplate_master,App_Web_hfel0u4h.ashx"></script>
+
+	<script type="text/javascript" src="http://nct.teamlab.com/ajaxpro/ASC.Web.QuickLinks.UserControls.QuickLinks,ASC.Web.QuickLinks.ashx"></script>
+
+	<script src="http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-_DrcFUu6mD1CFOKa7BlZtjCvpr_MJU-dM2bhnmIey-fWkV03BPPTPmbxe8uh6IAlg1&amp;t=634411370520000000" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		//<![CDATA[
+		var __cultureInfo = '{"name":"ru-RU","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":false,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":" ","CurrencySymbol":"р.","NaNSymbol":"NaN","CurrencyNegativePattern":5,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-бесконечность","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":" ","CurrencyPositivePattern":1,"PositiveInfinitySymbol":"бесконечность","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":" ","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":false},"DateSeparator":".","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"d MMMM yyyy \u0027г.\u0027 H:mm:ss","LongDatePattern":"d MMMM yyyy \u0027г.\u0027","LongTimePattern":"H:mm:ss","MonthDayPattern":"MMMM dd","PMDesignator":"","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd.MM.yyyy","ShortTimePattern":"H:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy \u0027г.\u0027","AbbreviatedDayNames":["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],"ShortestDayNames":["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],"DayNames":["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"],"AbbreviatedMonthNames":["янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек",""],"MonthNames":["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь",""],"IsReadOnly":false,"NativeCalendarName":"григорианский календарь","AbbreviatedMonthGenitiveNames":["янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек",""],"MonthGenitiveNames":["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря",""]}}'; //]]>
+	</script>
+
+	<script src="http://nct.teamlab.com/ScriptResource.axd?d=9fmD5gbYVnA6oWRPcI83yMcEFg7Qh7-UY9WfeFf71toC2kzAeePVpyRNZKMvCiYsqEhewqqKiiVYzbZkywOC00oyqSlRi3tla1OasQd9rb01&amp;t=6b4fb9bd" type="text/javascript"></script>
+
+	<script src="http://nct.teamlab.com/ScriptResource.axd?d=9fmD5gbYVnA6oWRPcI83yMcEFg7Qh7-UY9WfeFf71toC2kzAeePVpyRNZKMvCiYs0PpnYqMvtakaAzPBm3qPS_PmhGVkuZnbBrXr1BwnPtg1&amp;t=6b4fb9bd" type="text/javascript"></script>
+
+	<script src="http://nct.teamlab.com/js/datepicklocalisation/jquery.datepick.ru.js" type="text/javascript"></script>
+
+	<input style="display: none;" name="62A52B6B-4600-4a8d-A1E0-EB8A811D9D60" />
+
+	<script language="javascript">
+		function FCKConfig_OnLoad_Main(config) {
+			config.DefaultLanguage = 'ru';
+		}
+	</script>
+
+	<script type="text/javascript">
+		//<![CDATA[
+		Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+		Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+		//]]>
+	</script>
+
+	<div id="studioContent" style="height:100%;">
+		<div id="studioPageContent" style="padding-bottom:0;">
+			<div class="studioTopNavigationPanel clearFix">
+				<div class="systemSection mainPageLayout clearFix">
+					<ul>
+						<li style="float: left;"><a href="http://nct.teamlab.com/products/community/">Сообщество</a> <span class="spacer">|</span> <a href="http://nct.teamlab.com/products/projects/mytasks.aspx">Проекты</a> <span class="spacer">|</span> <a href="http://nct.teamlab.com/products/files/">Документы</a> <span class="spacer">|</span> </li>
+						<li onclick="PopupPanelHelper.ShowPanel(jq(this), 'MoreProductsPopupPanel'); return false;" class="myStaffBox" style="float: left; width: auto; text-align: left; margin-left: -10px; -moz-user-select: none;" onselectstart="return false;" onmousedown="return false;"><span class="myStaff" style="margin-left: 7px; margin-right: 5px;">Ещё </span></li>
+						<li style="float: left;">&nbsp;</li>
+						<li style="float: right;"><span class="spacer">|</span> <a href="http://nct.teamlab.com/auth.aspx?t=logout">Выйти</a> </li>
+						<style type="text/css">
+							.studioTopNavigationPanel .systemSection .itemBox.talk span.link
+							{
+								background: url("/skins/default/images/messages_user.png") left 1px no-repeat;
+							}
+							.studioTopNavigationPanel .systemSection .itemBox.talk span.link span.count-container
+							{
+								display: none;
+							}
+							.studioTopNavigationPanel .systemSection .itemBox.talk span.link.message-blink
+							{
+								background-image: url("/skins/default/images/ico_tm-talk-incoming.gif");
+							}
+							.studioTopNavigationPanel .systemSection .itemBox.talk span.link.message-blink span.count-container
+							{
+								display: inline;
+							}
+						</style>
+
+						<!--script type="text/javascript" src="http://nct.teamlab.com/addons/talk/js/talk.navigationitem.js"></script>
+
+						<script type="text/javascript">
+							ASC.Controls.JabberClient.init('dmitry.sokolov', '/addons/talk/jabberclient.aspx', '/addons/talk/opencontact.ashx');
+							ASC.Controls.NavigationItem.init('/addons/talk/unreadmessages.ashx?u=dmitry.sokolov', '3600');
+						</script-->
+
+						<li class="itemBox talk" style="float: right;"><span id="talkMsgLabel" class="link" onclick="ASC.Controls.JabberClient.open()"><span>Чат<span class="count-container">&nbsp;(<span id="talkMsgCount">0</span>)</span></span> </span></li>
+						<li style="float: right"><span class="spacer">|</span></li><style>
+						                                                           	.studioTopNavigationPanel .systemSection .itemBox.mail a
+						                                                           	{
+						                                                           		background-image: url(/addons/mail/app_themes/default/images/mail_user.png);
+						                                                           	}
+						                                                           </style><li class="itemBox mail" style="float: right;"><a href="http://nct.teamlab.com/addons/mail/"><span>Mail</span></a></li><li style="float: right"><span class="spacer">|</span></li><li id="studio_QuickLinksBox" onclick="PopupPanelHelper.ShowPanel(jq(this), 'studio_QuickLinksPopupPanel');" class="myStaffBox" onselectstart="return false;" style="text-align: left; width: auto; max-width: 70px; margin-left: 0px; -moz-user-select: none;">
+																																				 <input type="hidden" id="CurrentQuickLinkID" />
+																																				 <span class="myStaff" style="margin-left: 7px; margin-right: 5px;">Ссылки</span> </li>
+						<li style="float: right; margin-left: 10px; margin-right: -12px; padding-top: 6px; padding-bottom: 4px; cursor: pointer;">
+							<div class="goldStarImage" id="QuickLinkGoldStar" onclick="editQuickLinkShowDialog('', ''); return false;" style="display: none;">
+								&nbsp;</div>
+							<div class="greyStarImage" id="QuickLinkGreyStar" onclick="QuickLinksHelper.ShowAddQuickLinkPanel(); return false;">
+								&nbsp;</div>
+						</li>
+						<li style="float: right"><span class="spacer">|</span></li>
+						<li id="studio_myStaffBox" onclick="PopupPanelHelper.ShowPanel(jq(this), 'studio_myStaffPopupPanel', '120px');" class="myStaffBox" onselectstart="return false;" onmousedown="return false;"><span class="myStaff">Мои вещи </span></li>
+						<li style="float: right;">Добро пожаловать <span class="userProfileBox"><span class="userLink"><a href="http://nct.teamlab.com/my.aspx ">Соколов Дмитрий</a></span> </span></li>
+					</ul>
+					<div id="studio_myStaffPopupPanel" class="myStaffPopupPanel" style="display: none; position: absolute;">
+						<a class="myStaffItem" href="http://nct.teamlab.com/my.aspx">Профиль</a> <a class="myStaffItem" href="http://nct.teamlab.com/my.aspx?type=activity">Активность</a> <a class="myStaffItem" href="http://nct.teamlab.com/my.aspx?type=subscriptions">Подписки</a> <a class="myStaffItem" href="http://nct.teamlab.com/my.aspx?type=quicklinks">Ссылки</a> <a class="myStaffItem" href="http://nct.teamlab.com/my.aspx?type=todo">Списки Дел</a> <a class="myStaffItem" href="http://nct.teamlab.com/my.aspx?type=organizer">Органайзер</a>
+					</div>
+					<div id="MoreProductsPopupPanel" class="myStaffPopupPanel" style="display: none; position: absolute;">
+						<div>
+							<a href='http://nct.teamlab.com/Products/Tools/Default.aspx' class='myStaffItem'>Tools</a>
+						</div>
+						<div style="border-bottom: solid 1px #D1D1D1">
+						</div>
+						<a class="myStaffItem" href="http://nct.teamlab.com/">Все продукты</a>
+					</div>
+
+					<script language="javascript" src="http://nct.teamlab.com/addons/quicklinks/usercontrols/quickadd/js/quicklinkshelper.js"></script>
+
+					<div id="studio_QuickLinksPopupPanel" class="myStaffPopupPanel" style="display: none; position: absolute;">
+						<div style="border-bottom: solid 1px #D1D1D1">
+						</div>
+						<a class="myStaffItem" href="http://nct.teamlab.com/my.aspx?type=quicklinks">Редактировать быстрые ссылки</a> <a class="myStaffItem" href="javascript:QuickLinksHelper.ShowAddQuickLinkPanel();">Добавить текущую страницу</a>
+					</div>
+					<div id="studio_QuickLinksAddQuickLink" style="display: none;">
+						<div class="popupContainerClass">
+							<div class="containerHeaderBlock">
+								<table cellspacing="0" cellpadding="0" border="0" style='width: 100%; height: 0px;'>
+									<tr valign="top">
+										<td>
+											Добавить быструю ссылку
+										</td>
+										<td class="popupCancel">
+											<div class="cancelButton" onclick="PopupKeyUpActionProvider.CloseDialog();">
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div style="display: none;" id="ctl00_ctl00_ctl00_TopContent_ctl00_ctl00_AddQuickLinksContainer_InfoPanel" name="ctl00$ctl00$ctl00$TopContent$ctl00$ctl00$AddQuickLinksContainer$InfoPanel" class="infoPanel">
+								<div>
+								</div>
+							</div>
+							<div class="containerBodyBlock">
+								<div class="clearFix">
+									<div style="float: left; width: 65px; margin-top: 5px;">
+										Название
+									</div>
+									<div style="float: left; width: 250px;">
+										<input type="text" id="AddQuickLinkCaptionInput" style="width: 250px; height: 20px; border: solid 1px #D1D1D1" value="" />
+									</div>
+								</div>
+								<div class="clearFix" style="margin-top: 8px; display: none;">
+									<div style="float: left; width: 65px; margin-top: 5px;">
+										Адрес
+									</div>
+									<div style="float: left; width: 250px;">
+										<input type="text" id="AddQuickLinkUrlInput" disabled="disabled" value="~/Products/Tools/Modules/CalendarTool/Default.aspx" style="width: 250px; height: 20px; border: solid 1px #D1D1D1" />
+									</div>
+								</div>
+								<div class="clearFix" style="margin-top: 16px;">
+									<div style='display: none;' id='AddQuickLinkButtonAjaxRequestPanel'>
+										<div class='textMediumDescribe'>
+											Добавление быстрой ссылки...
+										</div>
+										<img src='http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-_DrcFUu6mD1CFOKa7BlZtj9CCWPBWB_wmOWgjKpSzdmhFfWPjABHnc0RRaIXi77XQ1&t=634411370520000000' /></div>
+									<a class='baseLinkButton promoAction' id='AddQuickLinkButton' href='javascript:void(0);' onclick='actionButtonClick(this.id, false, false); QuickLinksHelper.AddQuickLink();' style='float: left;'>Добавить</a> <a class="grayLinkButton" style="float: left; margin-left: 8px;" href="javascript:jq.unblockUI();">Отмена</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="studio_QuickLinksEditQuickLink" style="display: none;">
+						<div class="popupContainerClass">
+							<div class="containerHeaderBlock">
+								<table cellspacing="0" cellpadding="0" border="0" style='width: 100%; height: 0px;'>
+									<tr valign="top">
+										<td>
+											Редактировать быструю ссылку
+										</td>
+										<td class="popupCancel">
+											<div class="cancelButton" onclick="PopupKeyUpActionProvider.CloseDialog();">
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div style="display: none;" id="ctl00_ctl00_ctl00_TopContent_ctl00_ctl00_EditQuickLinksContainer_InfoPanel" name="ctl00$ctl00$ctl00$TopContent$ctl00$ctl00$EditQuickLinksContainer$InfoPanel" class="infoPanel">
+								<div>
+								</div>
+							</div>
+							<div class="containerBodyBlock">
+								<div class="clearFix">
+									<div style="float: left; width: 65px; margin-top: 5px;">
+										Название
+									</div>
+									<div style="float: left; width: 250px;">
+										<input type="text" id="EditQuickLinkCaptionInput" style="width: 250px; height: 20px; border: solid 1px #D1D1D1" />
+									</div>
+								</div>
+								<div class="clearFix" style="margin-top: 16px;">
+									<div style='display: none;' id='EditQuickLinkButtonAjaxRequestPanel'>
+										<div class='textMediumDescribe'>
+											Обновление быстрой ссылки...
+										</div>
+										<img src='http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-_DrcFUu6mD1CFOKa7BlZtj9CCWPBWB_wmOWgjKpSzdmhFfWPjABHnc0RRaIXi77XQ1&t=634411370520000000' /></div>
+									<a class='baseLinkButton promoAction' id='EditQuickLinkButton' href='javascript:void(0);' onclick='actionButtonClick(this.id, false, false); ' style='float: left;'>Сохранить</a>
+									<div style='display: none;' id='DeleteQuickLinkButtonAjaxRequestPanel'>
+										<div class='textMediumDescribe'>
+											Удаление быстрой ссылки...
+										</div>
+										<img src='http://nct.teamlab.com/WebResource.axd?d=Tf7YoTYrOydhhFUEkvObAh0Elg2GTO67dF25gY4GW-_DrcFUu6mD1CFOKa7BlZtj9CCWPBWB_wmOWgjKpSzdmhFfWPjABHnc0RRaIXi77XQ1&t=634411370520000000' /></div>
+									<a class='baseLinkButton promoAction' id='DeleteQuickLinkButton' href='javascript:void(0);' onclick='actionButtonClick(this.id, false, false); ' style='float: left; margin-left: 8px;'>Удалить</a> <a class="grayLinkButton" style="float: left; margin-left: 8px;" href="javascript:jq.unblockUI();">Отмена</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contentSection">
+					<div class="infoBox">
+						<div class="mainPageLayout clearFix">
+							<a style="cursor: pointer;" href="http://nct.teamlab.com/Products/Tools/Default.aspx" class="titleBox clearFix">
+								<div style='float: left;'>
+									<img alt="" src="http://nct.teamlab.com/products/tools/app_themes/default/images/icon_tools.png" /></div>
+								<div style='float: left;' class="title">
+									Tools</div>
+							</a>
+							<div class="searchBox" style="float: right;">
+								<div class="leftSearchPanel" onclick="Searcher.ShowSearchPlaces();" id="studio_searchSwitchButton">
+									<img alt="" style="margin-top: 2px; margin-left: 2px;" id="studio_activeSearchHandlerLogo" align="absmiddle" src="http://nct.teamlab.com/skins/default/images/common_search_icon.png" />
+								</div>
+								<div class="mainSearchPanel">
+									<input type="text" id="studio_search" class="textEditMainSearch" value="" style="width: 130px;" />
+								</div>
+								<div class="mainSearchButton" onclick="Searcher.Search();">
+									<input type="hidden" value="" />
+								</div>
+								<div id="studio_searchSwitchBox" class="switchBox" style="display: none; z-index: 100; position: absolute;">
+									<div id='studio_shItem_cd3ec11b-017e-48d6-a051-54efd8faf05f' onclick="Searcher.SelectSearchPlace('cd3ec11b-017e-48d6-a051-54efd8faf05f');" class='searchHandlerActiveItem'>
+										<img alt='' align='absmiddle' src='http://nct.teamlab.com/skins/default/images/common_search_icon.png' style='margin-right: 5px;' />Поиск</div>
+									<div id='studio_shItem_8324a903-a4a0-4951-a9cf-54a9726e1c27' onclick="Searcher.SelectSearchPlace('8324a903-a4a0-4951-a9cf-54a9726e1c27');" class='searchHandlerItem'>
+										<img alt='' align='absmiddle' src='http://nct.teamlab.com/products/tools/modules/foodmanagement/app_themes/default/foodmanagementimages/foodmanagementlogo16.png' style='margin-right: 5px;' />Поиск в меню</div>
+									<div id='studio_shItem_4ef3de9d-15fb-43ba-97a0-c0a6ff7e1451' onclick="Searcher.SelectSearchPlace('4ef3de9d-15fb-43ba-97a0-c0a6ff7e1451');" class='searchHandlerItem'>
+										<img alt='' align='absmiddle' src='http://nct.teamlab.com/skins/default/images/people_search_icon.png' style='margin-right: 5px;' />Поиск сотрудников</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="navigationBox">
+						<div class=" mainPageLayout clearFix">
+							<a class='tab' href='http://nct.teamlab.com/Products/Tools/Default.aspx'><span>Главная</span> </a><a class='tab' href='http://nct.teamlab.com/employee.aspx?product=tools'><span>Сотрудники</span> </a><a class='selectedTab' href='http://nct.teamlab.com/Products/Tools/Modules/CalendarTool/Default.aspx'><span>Календарь</span> </a><a class='tab' href='http://nct.teamlab.com/Products/Tools/Modules/FoodManagement/OrderPage.aspx'><span>Обед</span> </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mainPageLayout" style="width:100%;">
+				<!--div style="height: 20px;background-color: #EEE;"-->
+				</div>
+				<div class="clearFix">
+					<div style="width: 100%;">
+						<div class="mainContainerClass" style="border-style:none;">
+							<div id="asc_calendar" style="padding:10px;"></div>
+						</div>
+						<div id="studio_onlineUsersBlock" style="display:none;margin: 15px 15px 5px; padding: 5px;" class="borderBase">
+							<table cellpadding="3" cellspacing="3"">
+								<tr>
+									<td style="white-space: nowrap; vertical-align: top; font-family: Arial; font-size: 18px; color: #1a6309;">
+										В сети (10):
+									</td>
+									<td style="padding-top: 8px; vertical-align: top;">
+										<div class="clearFix">
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='adae3bab-7d0a-46b0-8746-9275945890f8'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=alex.bannov&product=tools">Баннов Алексей</a></span><script language='javascript'>												                                                                                                                                                                                                                             	StudioUserProfileInfo.RegistryElement('adae3bab-7d0a-46b0-8746-9275945890f8', '"c39aa16d-a759-412f-97df-a04a0fb9e345","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='5c7dbff7-664a-4e6c-9033-c11f8486c3fa'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=pavel.bannov&product=tools">Баннов Павел</a></span><script language='javascript'>												                                                                                                                                                                                                                            	StudioUserProfileInfo.RegistryElement('5c7dbff7-664a-4e6c-9033-c11f8486c3fa', '"93580c54-1132-4d6b-bf2d-da0bfaaa1a28","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='a116b82b-5488-40c1-8bdd-84e2a62df9de'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=marija.kireeva&product=tools">Киреева Мария</a></span><script language='javascript'>												                                                                                                                                                                                                                               	StudioUserProfileInfo.RegistryElement('a116b82b-5488-40c1-8bdd-84e2a62df9de', '"192cc4b6-5490-4504-b444-c316e8edde23","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='dec1e2c3-3363-40bc-b4fa-12b9fa139697'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=sergey.konovalov&product=tools">Коновалов Сергей</a></span><script language='javascript'>												                                                                                                                                                                                                                                    	StudioUserProfileInfo.RegistryElement('dec1e2c3-3363-40bc-b4fa-12b9fa139697', '"b939cf07-e909-4ede-86a7-fbe01cca6932","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='17650c6a-a671-4b2d-96a3-6895402598ae'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=andrey.kuzmichov&product=tools">Кузьмичев Андрей</a></span><script language='javascript'>												                                                                                                                                                                                                                                    	StudioUserProfileInfo.RegistryElement('17650c6a-a671-4b2d-96a3-6895402598ae', '"4c7a5f04-fd6c-40fa-a802-d4d151ed3b17","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='5787b298-ec12-4e00-b2d3-f5747c76e09f'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=svetlana.maleeva&product=tools">Малеева Светлана</a></span><script language='javascript'>												                                                                                                                                                                                                                                    	StudioUserProfileInfo.RegistryElement('5787b298-ec12-4e00-b2d3-f5747c76e09f', '"03e9d5d9-b7dd-4a75-a117-3096317ceba1","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='6ef3a676-b0e8-4925-a0bc-b2bfe40b4ea7'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=alexey.safronov&product=tools">Сафронов Алексей</a></span><script language='javascript'>												                                                                                                                                                                                                                                   	StudioUserProfileInfo.RegistryElement('6ef3a676-b0e8-4925-a0bc-b2bfe40b4ea7', '"657d1d0e-c9f3-4c9d-bd48-07525e539fd6","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='040ea8e3-7d99-4ff2-858b-39def8e62d43'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=dmitry.sokolov&product=tools">Соколов Дмитрий</a></span><script language='javascript'>												                                                                                                                                                                                                                                 	StudioUserProfileInfo.RegistryElement('040ea8e3-7d99-4ff2-858b-39def8e62d43', '"189d82dc-a549-4a7a-9980-2747b81530eb","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='453e6ad3-6224-4e35-99b5-872c20ba7763'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=elena.subbotina&product=tools">Субботина Елена</a></span><script language='javascript'>												                                                                                                                                                                                                                                  	StudioUserProfileInfo.RegistryElement('453e6ad3-6224-4e35-99b5-872c20ba7763', '"7c55b95e-9ede-4a07-a890-6f35234ca2ed","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+											<div style="padding: 0px 10px 7px 0px; float: left;">
+												<span class="userLink" style='white-space: nowrap;' id='fbb75c44-d28e-4e82-be9c-eb0af69a4ecb'><a class='linkDescribe' href="http://nct.teamlab.com/userprofile.aspx?user=svetlana.suslova&product=tools">Суслова Светлана</a></span><script language='javascript'>												                                                                                                                                                                                                                                    	StudioUserProfileInfo.RegistryElement('fbb75c44-d28e-4e82-be9c-eb0af69a4ecb', '"7caefb17-3617-4958-ac73-aa13ea480d04","b353b023-aa32-4b26-a586-04df54ac0204"'); </script>
+
+											</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div id="studio_sidePanel" class="studioRightSidePanel" style="display: none;">
+						<div class='studioSideBox'>
+							<table cellspacing="0" cellpadding="0" style='width: 100%;'>
+								<tr>
+									<td class='studioSideBoxTopLeftCorner'>
+										&nbsp;
+									</td>
+									<td class='studioSideBoxTopMargin'>
+										&nbsp;
+									</td>
+									<td class='studioSideBoxTopRightCorner'>
+										&nbsp;
+									</td>
+							</table>
+							<div class='studioSideBoxContent'>
+								<div class='studioSideBoxActionsHeader'>
+									<img alt='' style='margin-right: 8px;' align='absmiddle' src='http://nct.teamlab.com/skins/default/images/actions.png' />Действия</div>
+								<div class='studioSideBoxNavigationBody'>
+									<div style='margin-top: 10px;'>
+									</div>
+								</div>
+							</div>
+							<table cellspacing="0" cellpadding="0" style='width: 100%;'>
+								<tr>
+									<td class='studioSideBoxBottomLeftCorner'>
+										&nbsp;
+									</td>
+									<td class='studioSideBoxBottomMargin'>
+										&nbsp;
+									</td>
+									<td class='studioSideBoxBottomRightCorner'>
+										&nbsp;
+									</td>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="container" style="display:none;position: absolute; top: 0px; left: 0px;">
+				</div>
+				<div id="fullScreen" align="center" style="display:none;margin: 0; padding: 0;">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="studioFooter">
+		<div class="mainPageLayout">
+			<a class="footerMenu" title="" href="http://nct.teamlab.com/">Все продукты</a><a class="footerMenu" href="http://nct.teamlab.com/mobile">Mobile</a><a class="footerMenu" href="mailto:support@teamlab.com">Обратная связь</a><a class="footerMenu" target="_blank" href="http://teamlab.com/ru/">Сайт TeamLab </a><a class="footerMenu" target="_blank" href="http://teamlab.com/ru/howto.aspx">Справка</a><span class="footerCopyright" target="_blank" href="http://teamlab.com/ru">Ascensio System SIA 2011</span>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		//<![CDATA[
+		Sys.Application.initialize();
+		//]]>
+	</script>
+
+	</form>
+
+	<script>		jq(function() { jq.getScript('http://bar.teamlab.info/bar/189d82dc-a549-4a7a-9980-2747b81530eb/ru-ru'); });</script>
+
+</body>
+</html>

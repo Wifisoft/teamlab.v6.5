@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="subject_change_pwd">
+    <value>[outdated]</value>
+  </data>
+  <data name="pattern_change_pwd">
+    <value>[outdated]</value>
+  </data>
+  <data name="subject_you_added">
+    <value>Welcome to Your TeamLab Portal!</value>
+  </data>
+  <data name="pattern_you_added">
+    <value>[outdated]</value>
+  </data>
+  <data name="subject_you_added_after_invite">
+    <value>Welcome to Your TeamLab Portal!</value>
+  </data>
+  <data name="pattern_you_added_after_invite">
+    <value>h1.Welcome to "${__VirtualRootPath}":"${__VirtualRootPath}" Portal!
+
+Dear $UserName,
+
+Your user profile has been successfully added to the portal at "${__VirtualRootPath}":"${__VirtualRootPath}".
+
+h3.Get started with your portal
+
+# Edit your "profile":"$MyStaffLink" to add personal and contact details.
+# Use "Community":"${__VirtualRootPath}/products/community/" to start your blogs, forums, add events, photos, and more.
+# Create "Projects":"${__VirtualRootPath}/products/projects/" and manage your workflow by adding milestones and tasks.
+# Upload, edit and organize "Documents":"${__VirtualRootPath}/products/files/".
+# Manage your customer relations using "CRM":"${__VirtualRootPath}/products/crm/" module, identify priority contacts, track communication history and sales performance.
+# Organize your work schedule with the built-in "Calendar":"${__VirtualRootPath}/addons/calendar/" tracking tasks and milestones due dates.
+# Start "Talk":"${__VirtualRootPath}/addons/talk/" to chat with your team members online.
+
+
+If you need help with your portal, we invite you to browse our "Help Center":"http://teamlab.com/help/helpcenter.aspx" .
+For any additional questions or feedback please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_profile_updated">
+    <value>Your Profile at ${__VirtualRootPath} has been Changed</value>
+  </data>
+  <data name="pattern_profile_updated">
+    <value>h1.Your Profile at "$__VirtualRootPath":"$__VirtualRootPath" has been Changed
+
+Dear $UserName,
+
+Your user profile details at "$__VirtualRootPath":"$__VirtualRootPath" have been changed by "$__AuthorName":"$__AuthorUrl".
+
+To view your profile follow the link below:
+"$UserName":"$MyStaffLink"
+
+
+^You receive this email because you are a registered user of the "${__VirtualRootPath}":"${__VirtualRootPath}" portal.^</value>
+  </data>
+  <data name="subject_pwd_reminder">
+    <value>[outdated]</value>
+  </data>
+  <data name="pattern_pwd_reminder">
+    <value>[outdated]</value>
+  </data>
+  <data name="subject_invite">
+    <value>Invitation to Join TeamLab Portal</value>
+  </data>
+  <data name="pattern_invite">
+    <value>h1.Invitation to Join TeamLab Portal
+
+Hello $UserDisplayName,
+
+$__AuthorName has invited you to join a portal at Teamlab - a corporate platform for document and project management. Join the portal and start collaborating with your colleagues right away.
+
+To accept the invitation please enter your name and password following this link:
+"$InviteLink":"$InviteLink"
+
+*Note*: this link is valid for 48 hours only. Please complete the operation within that period.
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_join">
+    <value>Invitation to Join ${__VirtualRootPath} Portal</value>
+  </data>
+  <data name="pattern_join">
+    <value>h1.Invitation to Join "${__VirtualRootPath}":"$InviteLink" Portal
+
+Hello,
+
+You have requested to join the "${__VirtualRootPath}":"$InviteLink" portal at Teamlab - a platform for document and project management. Join the portal and start collaborating with your colleagues or friends right away.
+
+To accept the invitation please enter your name and password following this link:
+"$InviteLink":"$InviteLink"
+
+*Note*: this link is valid for 48 hours only. Please complete the operation within that period.
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_self_profile_updated">
+    <value>${__VirtualRootPath} Portal Profile Change Notification</value>
+  </data>
+  <data name="pattern_self_profile_updated">
+    <value>h1."${__VirtualRootPath}":"${__VirtualRootPath}" Portal Profile Change Notification
+
+"$__AuthorName":"$__AuthorUrl" has changed his/her profile details at the "${__VirtualRootPath}":"${__VirtualRootPath}" portal.
+
+
+^You receive this email because you are an administrator of the "${__VirtualRootPath}":"${__VirtualRootPath}" portal. If you do not want to receive the notifications about profile updates, please manage your "subscription settings":"$RecipientSubscriptionConfigURL".^</value>
+  </data>
+  <data name="subject_user_has_join">
+    <value>New User Added to TeamLab Portal</value>
+  </data>
+  <data name="pattern_user_has_join">
+    <value>h1.New User Added to "${__VirtualRootPath}":"${__VirtualRootPath}" Portal
+
+"$__AuthorName":"$__AuthorUrl" has joined your portal at "${__VirtualRootPath}":"${__VirtualRootPath}".
+
+
+^You receive this email because you are an administrator user of the "${__VirtualRootPath}":"${__VirtualRootPath}" portal. If you do not want to receive the notifications about new users, please manage your "subscription settings":"$RecipientSubscriptionConfigURL".^</value>
+  </data>
+  <data name="subject_send_whats_new">
+    <value>What's New on Your Portal for $Date</value>
+  </data>
+  <data name="pattern_send_whats_new">
+    <value>h1.What's New on "${__VirtualRootPath}":"${__VirtualRootPath}" Portal for $Date
+
+#foreach($activity in $Activities)
+
+h2.$activity.Key
+
+#foreach($whatsNewActivity in $activity.Value)
+#foreach($b in $whatsNewActivity.BreadCrumbs) h3.$b
+#end "$whatsNewActivity.Title":"$whatsNewActivity.URL"
+*Author*: "$whatsNewActivity.UserName":"$whatsNewActivity.UserAbsoluteURL", published: $whatsNewActivity.Date.ToShortTimeString()
+ 
+ 
+#end
+ 
+#end
+
+
+^You receive this email because you are a registered user of the "${__VirtualRootPath}":"${__VirtualRootPath}" portal. If you do not want to receive the notifications about the new events on the "${__VirtualRootPath}":"${__VirtualRootPath}" portal, please manage your "subscription settings":"$RecipientSubscriptionConfigURL".^</value>
+  </data>
+  <data name="subject_backup_created">
+    <value>TeamLab. ${__VirtualRootPath} Portal Backup Created</value>
+  </data>
+  <data name="pattern_backup_created">
+    <value>h1."${__VirtualRootPath}":"${__VirtualRootPath}" Portal Backup Created
+
+Dear $OwnerName,
+
+A backup file containing data from your "${__VirtualRootPath}":"${__VirtualRootPath}" portal has been created. It is available for download under the following link:
+"$BackupUrl":"$BackupUrl"
+
+*Note*: this link is valid for $BackupHours hours only. Please complete the operation within that period.
+
+To learn more on the backup/restore procedure please refer to our "How to Create and Restore the TeamLab Portal Backup":"http://www.teamlab.com/content/CreateandRestoreBackup.pdf" PDF user guide.
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_portal_deactivate">
+    <value>Deactivation of the ${__VirtualRootPath} Portal</value>
+  </data>
+  <data name="pattern_portal_deactivate">
+    <value>h1.Deactivation of the "${__VirtualRootPath}":"${__VirtualRootPath}" Portal
+
+Dear $OwnerName,
+
+You have requested a temporary deactivation of your "${__VirtualRootPath}":"${__VirtualRootPath}" portal. Please follow the link below to confirm the operation:
+"$DeactivateUrl":"$DeactivateUrl"
+
+*Note*: this link is valid for 7 days only. Please complete the portal deactivation process within that period. 
+
+You can reactivate your portal any time by clicking the following link:
+"$ActivateUrl":"$ActivateUrl" (this link has no time limit)
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_portal_delete">
+    <value>Deletion of the ${__VirtualRootPath} Portal</value>
+  </data>
+  <data name="pattern_portal_delete">
+    <value>h1.Deletion of the "${__VirtualRootPath}":"${__VirtualRootPath}" Portal
+
+Dear $OwnerName,
+
+You have requested to permanently delete your "${__VirtualRootPath}":"${__VirtualRootPath}" portal.
+
+*Important! All the data stored on your portal, as well as your registration details will be lost and cannot be recovered.*
+
+If you still want to delete your "${__VirtualRootPath}":"${__VirtualRootPath}" portal please follow the link below to confirm the operation:
+"$DeleteUrl":"$DeleteUrl"
+
+*Note*: this link is valid for 7 days only. Please complete the portal deletion process within that period. 
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_dns_change">
+    <value>TeamLab. Change of Portal Address</value>
+  </data>
+  <data name="pattern_dns_change">
+    <value>h1.Change of Portal Address
+
+Dear $OwnerName,
+
+There has been a request to change the "${__VirtualRootPath}":"${__VirtualRootPath}" portal address to "$PortalAddress":"$PortalAddress" #if($PortalDns != "") ("$PortalDns":"$PortalDns" )#end.
+
+Please follow the link below to confirm the operation:
+"$ConfirmDnsUpdate":"$ConfirmDnsUpdate"
+
+*Note*: this link is valid for 7 days only. Please complete the portal address change process within that period.  
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="pattern_confirm_owner_change">
+    <value>h1.Change of "${__VirtualRootPath}":"${__VirtualRootPath}" Portal Owner
+
+Dear $OwnerName,
+
+There has been a request to change the "${__VirtualRootPath}":"${__VirtualRootPath}" portal owner to $UserName.
+
+Please follow the link below to confirm the operation:
+"$ConfirmPortalOwnerUpdate":"$ConfirmPortalOwnerUpdate"
+
+*Note*: this link is valid for 7 days only. Please complete the portal owner change process within that period.  
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_confirm_owner_change">
+    <value>TeamLab. Change of Portal Owner</value>
+  </data>
+  <data name="pattern_activate">
+    <value>h1. You're Invited to Join $__AuthorName's "${__VirtualRootPath}":"$InviteLink" Portal
+
+Hello $UserDisplayName,
+
+$__AuthorName has invited you to join his/her portal at TeamLab platform - "${__VirtualRootPath}":"$InviteLink".
+
+To accept the invitation please enter your name and password following this link:
+"$InviteLink":"$InviteLink"
+
+*Note*: this link is valid for 7 days only. Please complete the operation within that period.
+
+Joining $__AuthorName's portal you can:
+
+* participate in blogs and forums, share news, photos, bookmarks, chat with $__AuthorName and other users;
+* create projects and manage your workflow by adding milestones and tasks, leading discussions;
+* upload, create, edit and share documents, spreadsheets, presentations and image files;
+* manage your customer relations, identify priority contacts, track communication history and sales performance.
+
+You can also access it and keep track of all the recent news using your mobile phone.
+
+
+If you have any questions or need assistance please feel free to contact us at
+"support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="pattern_change_email">
+    <value>h1.Email Address Change Request
+
+You have requested to change your email address used to enter the TeamLab portal.
+
+Please follow the link below to change your email address:
+"$InviteLink":"$InviteLink"
+
+*Note*: this link is valid for 7 days only. Please complete your email change process within that period.
+
+If you do not want to change your email or received this email by mistake, please ignore it or contact your portal administrator to find out the details.
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_activate">
+    <value>Invitation from $__AuthorName to Join ${__VirtualRootPath} Portal</value>
+  </data>
+  <data name="subject_change_email">
+    <value>TeamLab. Email change request</value>
+  </data>
+  <data name="pattern_change_password">
+    <value>h1.Password Change Request for the "${__VirtualRootPath}":"${__VirtualRootPath}" Portal
+
+There has been a request to change your password used to enter the "${__VirtualRootPath}":"${__VirtualRootPath}" portal.
+
+Please follow the link below to change your password:
+"$InviteLink":"$InviteLink"
+
+*Note*: this link is valid for 7 days only. Please complete the password change process within that period.
+
+If you do not want to change your password or received this email by mistake, please ignore it or contact your "${__VirtualRootPath}":"${__VirtualRootPath}" portal administrator to find out the details.
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_change_password">
+    <value>TeamLab Password Assistance</value>
+  </data>
+  <data name="pattern_activate_email">
+    <value>h1.Activate Your Email for "${__VirtualRootPath}":"$InviteLink" Portal.
+
+Hello $UserDisplayName,
+
+To start participating in the "${__VirtualRootPath}":"$InviteLink" portal life you need to activate your email address. This is done for security reasons.
+
+Please follow the link below or access the link by copying and pasting it to your Internet browser's address bar:
+"$InviteLink":"$InviteLink"
+
+*Note*: this link is valid for 7 days only. Please complete your email activation within that period.
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_activate_email">
+    <value>TeamLab. Please activate your email address</value>
+  </data>
+  <data name="pattern_change_phone">
+    <value>h1.Mobile Phone Change Request
+
+You have requested to change your mobile phone used to enter the TeamLab portal.
+
+Please follow the link below to change your mobile phone:
+"$InviteLink":"$InviteLink"
+
+*Note*: this link is valid for 7 days only. Please complete your mobile phone change process within that period.
+
+If you do not want to change your mobile phone or received this email by mistake, please ignore it or contact your portal administrator to find out the details.
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="pattern_profile_delete">
+    <value>h1.Removal of the Profile from the "${__VirtualRootPath}":"${__VirtualRootPath}" Portal
+
+You have requested to permanently delete your profile from the "${__VirtualRootPath}":"${__VirtualRootPath}" portal.
+
+If you still want to delete your profile please follow the link below to confirm the operation:
+"$InviteLink":"$InviteLink"
+
+*Note*: this link is valid for 7 days only. Please complete the profile deletion process within that period. 
+
+
+If you have any questions or need assistance please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com"
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://teamlab.com/"</value>
+  </data>
+  <data name="subject_change_phone">
+    <value>TeamLab. Mobile Phone Change Request</value>
+  </data>
+  <data name="subject_profile_delete">
+    <value>Deletion of Your Profile on ${__VirtualRootPath} Portal</value>
+  </data>
+  <data name="pattern_change_phone" xml:space="preserve">
+    <value>h1.Mobile Phone Change Request
+
+You have requested to change your mobile phone used to enter the TeamLab portal.
+
+Please follow the link below to change your mobile phone:
+
+"$InviteLink":"$InviteLink"
+
+If you do not want to change your mobile phone or received this email by mistake, please ignore it or contact your portal administrator to find out the details.</value>
+  </data>
+  <data name="subject_change_phone" xml:space="preserve">
+    <value>TeamLab. Mobile Phone change request</value>
+  </data>
+  <data name="pattern_for_admin_notify" xml:space="preserve">
+    <value>Email: $UserEmail 
+
+$Body</value>
+  </data>
+  <data name="subject_for_admin_notify" xml:space="preserve">
+    <value>User message to administrators</value>
+  </data>
+  <data name="pattern_congratulations" xml:space="preserve">
+    <value>h1.Welcome to TeamLab!
+
+Dear $UserName
+
+Your portal has been created at "${__VirtualRootPath}":"${__VirtualRootPath}"
+
+h2.Get started with your portal
+"Watch video":"http://www.teamlab.com/Help/Video/TL-FreeBusiness.aspx"
+
+* - "Invite employees":"${__VirtualRootPath}" to join your portal.
+* - Change your company "name and logo":"${__VirtualRootPath}/management.aspx?type=7", as well as many other portal settings.
+* - Edit your "profile":"${__VirtualRootPath}/my.aspx" to add personal and contact details.
+* - Use "Community":"${__VirtualRootPath}/products/community/" to start your blogs, forums, add events, photos, and more.
+* - Create "Projects":"${__VirtualRootPath}/products/projects/" and manage your workflow by adding milestones and tasks.
+* - Upload, edit and organize "Documents":"${__VirtualRootPath}/products/files/".
+* - Manage your customer relations using "CRM":"${__VirtualRootPath}/products/crm/" module, identify priority contacts, track communication history and sales performance.
+* - Organize your work schedule with the built-in "Calendar":"${__VirtualRootPath}/addons/calendar/" tracking tasks and milestones due dates.
+* - Start "Talk":"${__VirtualRootPath}/addons/talk/" to chat with your team members online.
+
+If you need help with your portal we invite you to browse our "Help Center":"http://www.teamlab.com/ru/Help/helpcenter.aspx".
+For any additional questions or feedback please feel free to contact us at "support@teamlab.com":"mailto:support@teamlab.com".
+
+Follow us on !http://cdn.teamlab.com/facebook.png(Facebook)!:http://www.facebook.com/TeamLab !http://cdn.teamlab.com/youtube.png(Youtube)!:http://www.youtube.com/user/TeamLabdotcom !http://cdn.teamlab.com/twitter.png(Twitter)!:http://twitter.com/teamlabdotcom !http://cdn.teamlab.com/linkedin.png(Linked In)!:http://www.linkedin.com/groups?home=&amp;gid=3159387&amp;trk=anet_ug_hm
+
+Best regards,
+TeamLab Support Team
+"www.teamlab.com":"http://www.teamlab.com/"
+
+^Ascensio System SIA^
+^Lubanas st. 125a-25,^
+^Riga, Latvia, EU,^
+^LV-1021^
+^Phone: +371 66016425^
+
+^This email is generated automatically and you do not need to answer it. You receive this email because you are a registered user of "TeamLab.com":"http://www.teamlab.com/"^</value>
+  </data>
+  <data name="subject_congratulations" xml:space="preserve">
+    <value>Welcome to TeamLab Portal!</value>
+  </data>
+</root>

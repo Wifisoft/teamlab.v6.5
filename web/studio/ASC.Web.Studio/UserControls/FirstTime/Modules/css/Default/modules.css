@@ -1,0 +1,32 @@
+﻿#modules
+{
+    padding: 3px 0px;
+}
+
+#modules .item
+{
+    float:left;
+    width:350px;
+   
+    margin: 20px 60px 0 0px;
+}
+
+#modules .item .logo
+{
+    float:left;
+    width:34px;
+    height:34px;
+    background: url(images/no-logo.png) center top no-repeat;
+}
+
+#modules .item .named
+{
+    float:left;width:250px;
+    margin-left:15px;
+}
+
+#modules .item .named .description
+{
+    font-size:12px;
+    font-weight:normal;
+}

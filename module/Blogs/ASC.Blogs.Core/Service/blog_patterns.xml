@@ -1,0 +1,31 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <pattern id="new_post" name="new post" contentType="html">
+        <subject resource="|subject_new_post|ASC.Blogs.Core.Service.BlogPatternResource,ASC.Blogs.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_new_post|ASC.Blogs.Core.Service.BlogPatternResource,ASC.Blogs.Core" />
+      </pattern>
+      <pattern id="new_post_jabber" name="new post" contentType="html">
+        <subject resource="|subject_new_post|ASC.Blogs.Core.Service.BlogPatternResource,ASC.Blogs.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$PostPreview
+
+$URL</body>
+      </pattern>
+      <pattern id="new_comment" name="new comment" contentType="html">
+        <subject resource="|subject_new_comment|ASC.Blogs.Core.Service.BlogPatternResource,ASC.Blogs.Core" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_new_comment|ASC.Blogs.Core.Service.BlogPatternResource,ASC.Blogs.Core" />
+      </pattern>
+      <pattern id="new_comment_jabber" name="new comment" contentType="html">
+        <subject resource="|subject_new_comment|ASC.Blogs.Core.Service.BlogPatternResource,ASC.Blogs.Core" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$CommentBody
+
+$CommentURL</body>
+      </pattern>
+    </patterns>
+  </block>
+</pt:catalog>

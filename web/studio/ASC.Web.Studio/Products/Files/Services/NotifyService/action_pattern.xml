@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+  <action actionID="ShareDocument" defaultPatternID="ShareDocument">
+    <sender senderName="messanger.sender" patternID="ShareDocument_jabber" />
+  </action>
+  <action actionID="UpdateDocument" defaultPatternID="UpdateDocument">
+    <sender senderName="messanger.sender" patternID="UpdateDocument_jabber" />
+  </action>
+</act:accordings>

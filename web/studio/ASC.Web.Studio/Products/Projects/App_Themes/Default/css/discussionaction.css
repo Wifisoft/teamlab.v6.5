@@ -1,0 +1,224 @@
+﻿#discussionProjectContainer
+{
+	margin-bottom: 20px;
+}
+
+#discussionProject, #discussionProject option
+{
+	width: 250px;
+}
+
+#discussionTitleContainer
+{
+	margin-bottom: 20px;	
+}
+
+#discussionTextContainer
+{
+	margin-bottom: 20px;	
+}
+
+#discussionButtonsContainer
+{ 
+	margin-bottom: 20px;
+}
+
+#discussionButtonsContainer a
+{
+	margin-right: 10px;
+}
+
+#discussionTabs
+{
+	padding-left: 25px;
+    padding-top: 10px;
+}
+
+#discussionTabs li
+{
+    background-color: #F3F3F3;
+    border: 1px solid #D1D1D1;
+    bottom: -1px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 16px;
+    height: 20px;
+    margin-left: 3px;
+    padding: 7px 16px;
+    position: relative;
+}
+
+#discussionTabs li.current
+{
+	background-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    font-weight: bold;
+}
+
+#discussionTabsContent
+{
+	border-top: 1px solid #D1D1D1;
+    clear: left;
+    padding-top: 20px;
+    width: 100%
+}
+
+#discussionParticipantsContainer
+{
+	max-width: 720px;
+	margin-bottom: 35px;
+}
+
+#discussionFilesContainer
+{
+	display: none;
+	margin-bottom: 45px;
+}
+ 
+#discussionFilesContainer .noContentBlock.emptyScrCtrl
+{
+	border-bottom: 1px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+#discussionParticipantsContainer .inviteMessage
+{
+	font-size: 12px;
+	margin-bottom: 15px;
+}
+
+
+#discussionParticipantsContainer .discussionParticipant
+{
+	margin-right: 15px;
+	line-height: 30px;
+	float: left;
+	font-size: 14px
+}
+
+#discussionParticipantsContainer .discussionParticipant span:hover
+{
+	background: url("../images/delete_small.png") no-repeat scroll left center transparent;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#addDiscussionParticipantButton
+{
+	background: url("../images/manage.png") no-repeat left;
+	padding-left: 20px;
+	margin-top: 10px;
+	font-size: 11px;
+	display: inline-block;
+}
+
+#discussionParticipantsSelector
+{
+	display: none;
+	position: absolute;
+	width: 600px;
+	padding: 10px;
+	border: 1px solid #000000;
+}
+
+#discussionParticipantsSelector .top
+{
+	background: url("../images/popup-corner.png") no-repeat scroll 0 0 transparent;
+    height: 5px;
+    left: 30px;
+    position: absolute;
+    top: -5px;
+    width: 9px;
+    z-index: 1;
+}
+
+#discussionActionsInfoContainer
+{
+	display: none;
+}
+
+#discussionPreviewContainer
+{
+	display: none;
+	padding-left: 15px;
+}
+
+.discussionContainer
+{
+	padding-bottom: 10px;
+}
+
+.discussionHeaderContainer
+{
+	padding-bottom: 20px;
+}
+
+.discussionHeader
+{
+	color: #111111;
+    font-family: Arial;
+    font-size: 24px;
+}
+
+.discussionMark
+{
+	display: inline-block;
+	background-color: #E4BC00;
+	font-weight: bold;
+	color: white;
+	padding: 0px 5px;
+	float: left;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	margin-right: 10px;
+	margin-top: 6px;
+}
+
+.discussionAuthorAvatar
+{
+	text-align: center;
+	float: left;
+	width: 100px;
+}
+
+.discussionDescriptionContainer
+{
+	margin-left: 110px;
+}
+
+.discussionAuthor
+{
+	color: black !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.discussionAuthor:hover
+{
+	text-decoration: underline;
+}
+
+.discussionCreatedDate
+{
+	color: #787878;
+    font-size: 12px;
+	padding-left: 5px;
+}
+
+.discussionAuthorTitle
+{
+	color: #787878;
+    font-size: 12px;
+}
+
+.discussionText
+{
+	overflow: auto;
+    padding-top: 10px;
+    word-wrap: break-word;
+}
+

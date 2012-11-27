@@ -1,0 +1,463 @@
+﻿#customFieldList, #tagList
+{
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    min-height: 350px;
+}
+#dealMilestoneList, #listView
+{
+    margin: 0px;
+    padding: 0px;
+    min-height: 350px;
+}
+#customFieldList textarea{
+    resize: none;
+}
+#customFieldList .headerCollapse, #customFieldList .headerExpand
+{
+    color: #1A6DB3;
+    cursor: pointer;
+    padding: 0 0 0 20px !important;
+}
+#customFieldList .headerCollapse
+{
+    background: url("../images/collapce_right.gif") no-repeat scroll left center transparent;
+}
+#customFieldList .headerExpand
+{
+    background: url("../images/expand.gif") no-repeat scroll left center transparent;
+}
+#customFieldList li, #customFieldList li:hover, #listView li,
+#listView li:hover, #dealMilestoneList li, #dealMilestoneList li:hover
+{
+    list-style: none outside none;
+    margin: 0 0 -1px -15px;
+    min-height: 50px;
+    position: relative;
+}
+#listView table.item_row, #customFieldList table.field_row,
+#dealMilestoneList table.deal_milestone_row
+{
+    clear: both;
+    width: 100%;
+    border: none;
+    height: 50px;
+}
+#customFieldList table.field_row td, #listView table.item_row td,
+#dealMilestoneList table.deal_milestone_row td
+{
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+}
+
+#manageField dt, #manageDealMilestone dt{
+    clear: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#manageField dd, #manageDealMilestone dd{
+    margin-bottom: 10px;
+}
+
+#manageField dd input, #manageField dd select, #manageItem input, #manageItem textarea,
+#manageDealMilestone dd input, #manageDealMilestone dd textarea
+{
+    width: 90%;
+}
+
+#addOptionButton{
+    border-bottom-color: #8E908F;
+    color: #272727;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#customFieldList div.checkbox_list label{
+    display: block;
+}
+
+#manageField dl ul{
+    margin: 0;
+    max-height: 200px;
+    overflow: auto;
+    padding: 1px 0;
+}
+
+#manageField dl ul li{
+    padding: 0px;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+#manageField dl ul li img{
+    cursor: pointer;
+}
+
+#manageField dl ul li:first-child{
+    margin-top: 0px;
+}
+
+#manageField dl dt.field_mask, #manageField dl dd.field_mask{
+    display: none;
+}
+#customFieldActionMenu, #dealMilestoneActionMenu, #listItemActionMenu{
+    z-index: 501;
+}
+
+#customFieldList div.ajax_loader, #customFieldList li:hover div.ajax_loader,
+#listView div.ajax_loader, #listView li:hover div.ajax_loader,
+#dealMilestoneList div.ajax_loader, #dealMilestoneList li:hover div.ajax_loader
+{
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 10px;
+    background-image: url("../images/ajax_loader_small.gif");
+    width: 16px;
+    height: 16px;
+}
+#tagList div.ajax_loader
+{
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 12px;
+    background-image: url("../images/ajax_loader_small.gif");
+    width: 16px;
+    height: 16px;
+}
+#listView li div.ajax_change_icon
+{
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    left: 22px;
+    background-image: url("../images/progress.gif");
+    width: 32px;
+    height: 32px;
+}
+#manageItem .change_icon
+{
+    background: url("../images/arrow_down.gif") no-repeat scroll right center transparent;
+    padding: 1px 10px 1px 0px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+#manageItem .change_color, #manageDealMilestone .change_color{
+    background: url("../images/arrow_down.gif") no-repeat scroll right center transparent;
+    padding: 1px 10px 1px 0px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+#customFieldList li div.sort_row_handle, #listView li div.sort_drag_handle,
+#dealMilestoneList li div.sort_drag_handle
+{
+    background-color: #FFFFFF;
+    background-image: url("../images/drag.png") !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-left: 1px solid #D1D1D1 !important;
+    cursor: move;
+    display: none;
+    left: 0;
+    min-height: 16px;
+    position: absolute;
+    width: 15px;
+    z-index: 500;
+    bottom: 0;
+    top: 0;
+}
+#customFieldList li div.sort_row_handle, #listView li div.sort_drag_handle,
+#dealMilestoneList li div.sort_drag_handle{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+#customFieldList li:hover div.sort_row_handle, #listView li:hover div.sort_drag_handle,
+#dealMilestoneList li:hover div.sort_drag_handle
+{
+    display: block;
+}
+#customFieldList li:hover, #listView li:hover,
+#dealMilestoneList li:hover{
+    background-color: #F2F2F2;
+    z-index:500;
+}
+
+#colorsPanel, #popup_colorsPanel
+{
+    background-color: #FFFFFF;
+    border: 1px solid #8E908F;
+    display: none;
+    height: 40px;
+    padding: 2px;
+    position: absolute;
+    width: 160px;
+    z-index: 1000;
+}
+#colorsPanel div.popup-corner, #popup_colorsPanel div.popup-corner
+{
+    background: url("../images/popup_corner.png") no-repeat scroll 0 0 transparent;
+    height: 5px;
+    margin: -7px 0 2px 20px;
+    position: relative;
+    width: 9px;
+    float: none;
+}
+
+#colorsPanel div, #popup_colorsPanel div, #listView .currentColor, #dealMilestoneList .currentColor,
+#manageItem .selectedColor, #manageDealMilestone .selectedColor{
+    width: 16px;
+    height: 16px;
+    float:left;
+    cursor:pointer;
+}
+#colorsPanel div, #popup_colorsPanel div, #listView .currentColor, #dealMilestoneList .currentColor{
+    margin:2px;
+}
+
+#colorsPanel .style1, #popup_colorsPanel .style1 {background-color:#e34603;}
+#colorsPanel .style2, #popup_colorsPanel .style2 {background-color:#f88e14;}
+#colorsPanel .style3, #popup_colorsPanel .style3 {background-color:#ffb403;}
+#colorsPanel .style4, #popup_colorsPanel .style4 {background-color:#9fbb4c;}
+#colorsPanel .style5, #popup_colorsPanel .style5 {background-color:#288e31;}
+#colorsPanel .style6, #popup_colorsPanel .style6 {background-color:#4cbb78;}
+#colorsPanel .style7, #popup_colorsPanel .style7 {background-color:#0797ba;}
+#colorsPanel .style8, #popup_colorsPanel .style8 {background-color:#1d5f99;}
+#colorsPanel .style9, #popup_colorsPanel .style9 {background-color:#4c76bb;}
+#colorsPanel .style10, #popup_colorsPanel .style10 {background-color:#3552d2;}
+#colorsPanel .style11, #popup_colorsPanel .style11 {background-color:#473388;}
+#colorsPanel .style12, #popup_colorsPanel .style12 {background-color:#884cbb;}
+#colorsPanel .style13, #popup_colorsPanel .style13 {background-color:#cb59ba;}
+#colorsPanel .style14, #popup_colorsPanel .style14 {background-color:#ca3083;}
+#colorsPanel .style15, #popup_colorsPanel .style15 {background-color:#e24e78;}
+#colorsPanel .style16, #popup_colorsPanel .style16 {background-color:#bf0036;}
+
+.iconsPanelSettings
+{
+    background-color: #FFFFFF;
+    border: 1px solid #8E908F;
+    display: none;
+    padding: 4px;
+    position: absolute;
+    z-index: 1000;
+}
+.iconsPanelSettings div.popup-corner
+{
+    background: url("../images/popup_corner.png") no-repeat scroll 0 0 transparent;
+    height: 5px;
+    margin: -9px 0 0 27px;
+    position: relative;
+    width: 9px;
+}
+
+.iconsPanelSettings img, #listView img.currentIcon {
+    border: solid 1px Transparent;
+    cursor:pointer;
+    float:left;
+    margin: 1px;
+    width: 32px;
+    height: 32px;
+}
+#manageItem img.selectedIcon
+{
+    border: solid 1px Transparent;
+    margin: 1px;
+    width: 32px;
+    height: 32px;
+}
+.iconsPanelSettings img{
+    padding: 4px;
+}
+#listView img.currentIcon{
+    padding: 1px;
+}
+
+.iconsPanelSettings img:hover
+{
+    border: 1px solid #D5D5D5;
+    background: #F5F5F5;
+}
+
+#emptyCustomFieldContent, #emptyListItemContent, #emptyDealMilestoneContent, #emptyTagContent, #emptyTeplateContent{
+    display: none;
+}
+
+#manageDealMilestone ul{
+    display: block;
+    margin-bottom: -10px;
+    margin-top: -5px;
+    padding: 5px;
+}
+#manageDealMilestone ul li {
+    line-height: 9pt;
+    list-style: none outside none;
+    margin-left: 20px;
+    padding: 5px 2px;
+}
+
+#manageDealMilestone li > input {
+    margin-left: -20px;
+    vertical-align: middle;
+    width: auto;
+}
+#manageDealMilestone li > label {
+    vertical-align: bottom;
+}
+.panelSplitter
+{
+    margin-bottom: 10px;
+}
+dl.pm-flexible dt {
+    float: left;
+    text-align: right;
+}
+#propertiesPanel dt {
+    padding-bottom: 15px;
+    width: 100px;
+    padding-top: 2px;
+}
+#propertiesPanel dd {
+    margin-left: 110px;
+    padding-bottom: 15px;
+}
+td.digits {
+    color: #3186AF;
+    float: left;
+    font-family: Verdana;
+    font-size: 46px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+.error_info_panel
+{
+    background-color: #FEECD6;
+}
+
+/*************************
+* Tags
+**************************/
+#tagList li, #tagList li:hover
+{
+    border-left: none;
+    border-right: none;
+    list-style: none outside none;
+    margin: 0 0 -1px 0;
+    min-height: 40px;
+    position: relative;
+}
+#tagList .tag_row
+{
+    clear: both;
+    width: 100%;
+    border: none;
+    height: 40px;
+}
+
+#tagList .title
+{
+    vertical-align: middle;
+    padding-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+}
+#deleteUnusedTagsButton
+{
+    border-bottom: 1px dotted;
+    display:none;
+    text-decoration: none;
+}
+
+.settingsHeader
+{
+    border-left: medium none;
+    border-right: medium none;
+    border-top: medium none;
+    border-bottom: 1px solid #D1D1D1;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+.headerTitle
+{
+    margin-bottom: 5px;
+}
+/*************************
+* Task Templates
+**************************/
+.templateHeader-splitter
+{
+    margin-bottom: 15px;
+}
+.templateHeaderSmall-splitter
+{
+    margin-bottom: 5px;
+}
+.templateTitle
+{
+    color: #1A6DB3 !important;
+    font-size: 14px;
+    font-weight: bold;
+}
+.divForTemplateTitle
+{
+    max-width: 360px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#templateConatainerContent
+{
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    min-height: 350px;
+}
+#templateConatainerContent .headerCollapse, #templateConatainerContent .headerExpand
+{
+    color: #1A6DB3;
+    cursor: pointer;
+    padding: 0 0 0 20px !important;
+}
+#templateConatainerContent .headerCollapse
+{
+    background: url("../images/collapce_right.gif") no-repeat scroll left center transparent;
+}
+#templateConatainerContent .headerExpand
+{
+    background: url("../images/expand.gif") no-repeat scroll left center transparent;
+}
+#templateConatainerContent li, #templateConatainerContent li:hover
+{
+    list-style: none outside none;
+    margin-bottom: -1px;
+    min-height: 50px;
+}
+#templateConatainerContent .templateContainer_row
+{
+    width: 100%;
+    height: 50px;
+}
+#templateConatainerContent table.templateContainer_row td
+{
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+}
+#templateConatainerContent img.deleteImg, #templateConatainerContent li:hover img.deleteImg,
+#templateConatainerContent img.editImg, #templateConatainerContent li:hover img.editImg,
+#templateConatainerContent img.addImg, #templateConatainerContent li:hover img.addImg,
+#templateConatainerContent img.loaderImg, #templateConatainerContent li:hover img.loaderImg
+{
+    cursor: pointer;
+    margin: 0 2px;
+    width: 16px;
+    height: 16px;
+}

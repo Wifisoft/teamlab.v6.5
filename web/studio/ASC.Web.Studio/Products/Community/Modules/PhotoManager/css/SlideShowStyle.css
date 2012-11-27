@@ -1,0 +1,154 @@
+﻿body
+{
+	background-color:#1F2126;
+	color:#FFF;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.SlideShow_Slider
+{
+	width:100%;
+	height:100%;	
+}
+.SlideShow_Picture
+{
+	background-color:#1F2126;
+}
+
+.SlideShow_PanelControls
+{
+	background-color:#000;
+	height:36px;
+	width:33%;
+	padding-left:10px;
+	padding-right:10px;
+}
+.SlideShow_RightAlign
+{
+	text-align:right;
+}
+.SlideShow_LeftAlign
+{
+	text-align:left;
+}
+.SlideShow_CenterAlign
+{
+ width:34%;
+ text-align:center;
+}
+.SlideShow_PanelInfo
+{
+	background-color:#070809;
+	height:72px;
+	border-bottom: solid 1px #1E1E1E;
+	padding-left:30px;
+	padding-right:30px;
+}
+.SlideShow_Title
+{
+	font-family:Tahoma, Arial, sans-serif;
+	font-size:16px;
+	color:#FFF;
+}
+
+a.SlideShow_Link, a.SlideShow_Link:visited
+{
+	color:#FFF;
+	font-size:16px;
+	text-decoration:none;
+	font-family:Tahoma, Arial, sans-serif;
+	
+}
+a.SlideShow_Link:hover
+{
+	color:#FFF;
+	font-size:16px;
+	text-decoration:underline;
+	font-family:Tahoma, Arial, sans-serif;
+}
+a.SlideShow_Link:active
+{
+	color:#FFF;
+	font-size:16px;
+	text-decoration:none;
+	font-family:Tahoma, Arial, sans-serif;
+}
+
+.SlideShow_AlbumInfo
+{
+  display:block;
+	padding-top:5px;
+	font-family:Tahoma, Arial, sans-serif;
+	font-size:11px;
+}
+.SildeShow_SlideContainer
+{
+	height:auto;
+	text-align:center;
+	vertical-align:middle;
+	padding:10px;
+}
+
+span.button
+{
+  display:inline-block;
+  margin:0 2px;
+  width:42px;
+  height:24px;
+  background:url(./imagescss/ssbuttons.gif) no-repeat;
+  cursor:pointer;
+}
+
+span#prevImg
+{
+  background-position:0 0;
+}
+
+span#prevImg:hover
+{
+  background-position:0 -26px;
+}
+
+span#nextImg
+{
+  background-position:-50px 0;
+}
+
+span#nextImg:hover
+{
+  background-position:-50px -26px;
+}
+
+span#runSlideShow
+{
+  background-position:-100px 0;
+}
+
+span#runSlideShow:hover
+{
+  background-position:-100px -26px;
+}
+
+span#runSlideShow.stoped
+{
+  background-position:-150px 0;
+}
+
+span#runSlideShow.stoped:hover
+{
+  background-position:-150px -26px;
+}
+
+span#closeSlideShow
+{
+  background-position:-200px 0;
+}
+
+span#closeSlideShow:hover
+{
+  background-position:-200px -26px;
+}

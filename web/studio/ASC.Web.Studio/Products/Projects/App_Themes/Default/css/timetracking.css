@@ -1,0 +1,191 @@
+    td.pm-ts-dateColumn
+    {
+    	width: 100px;
+    	text-align:center !important;
+    }
+    td.pm-ts-personColumn
+    {
+    	width: 150px;
+    }
+    td.pm-ts-hoursColumn
+    {
+    	width: 40px;
+    	text-align:right !important;
+    }
+    td.pm-ts-noteColumn
+    {
+    	
+    }
+    td.pm-ts-actionsColumn
+    {
+      width: 30px;
+    }
+
+    .editLogPanel-infoPanel
+    {
+         margin: 0px 0px 25px 0px !important;
+         background-image: url('../images/clock_active.png')!important;
+    }
+    .editLogPanel-infoPanelBody
+    {
+        padding: 7px 0 0 35px !important;
+    }
+    .editLogPanel-elementContainer
+    {
+    	float: left;
+    	margin-right: 30px;
+    }
+    .addLogPanel-infoPanel
+    {
+         margin: 0px 0px 25px 0px !important;
+         background-image: url('../images/clock_active.png')!important;
+    }
+    .addLogPanel-infoPanelBody
+    {
+        padding:7px 0 0 35px !important;
+    }
+    .addLogPanel-elementContainer
+    {
+    	float:left;
+    	margin-right:10px;
+    }
+    #TimeLogTaskTitle
+    {
+    	overflow: hidden;
+    }
+
+#timeSpendsList {margin-bottom:15px;}
+.timeSpendsList .menupoint {
+	display:block;
+	margin-top: -4px;
+	background: url('../images/action.png') no-repeat;
+	width:24px;
+	height:24px;
+	float:left;	
+	cursor:pointer;
+}
+.timeSpendsList .timeSpendRecord:hover .menupoint
+{
+  background: url('../images/action_hover.png') no-repeat;
+  display: block;
+}
+.timeSpendsList .menupoint.show,
+.timeSpendsList .timeSpendRecord:hover .menupoint.show,
+.timeSpendsList .timeSpendRecord .menupoint.show:hover
+{
+  background: url('../images/action_click.png') no-repeat;
+  display: block;
+}
+.timeSpendsList .timeSpendRecord:hover {
+background: #f2f2f2;
+}
+.timeSpendsList .noResult {margin-top:20px;}
+
+.timesHeader {border-bottom: 1px solid #D1D1D1; margin-top:27px; height:24px; display: none;}
+.timeSpendRecord {border-bottom: 1px solid #D1D1D1;height:49px;}
+.timeSpendRecord>div {
+  padding-top:17px;
+  float:left;
+/*  display: table-cell;
+  vertical-align: middle;*/
+}
+.timeSpendsList .timesHeader div {float:left;
+  padding-top:0 !important;
+  color:#82878D !important;
+  font-size:12px !important;
+}
+.timeSpendsList .pm-ts-dateColumn
+{
+  color:#333;
+  margin-left:15px;
+	width: 67px;
+}
+.timeSpendsList .pm-ts-noteColumn
+{
+  width:638px;
+  padding-top:10px;
+	color:#83888d;
+	white-space:nowrap;
+	overflow:hidden;	
+}
+.timeSpendsList .pm-ts-noteColumn .alone
+{
+  padding-top:8px;
+}
+.timeSpendsList .pm-ts-noteColumn a {
+  display:block;
+  color:#333;
+  font-weight:bold;
+  text-decoration:none;
+}
+.timeSpendsList .timeSpendRecord:hover .pm-ts-noteColumn a,
+.timeSpendsList .pm-ts-noteColumn a:hover {text-decoration:underline;}
+.timeSpendsList .pm-ts-hoursColumn
+{
+  color:#333;
+	width: 63px;
+	margin-right:10px;
+	text-align:center;
+}
+.timeSpendsList .pm-ts-personColumn
+{
+  overflow: hidden;
+  margin-right:10px;
+  white-space: nowrap;
+  width: 116px;
+  height:20px;  
+}
+#timeSpendsList.forProject .pm-ts-personColumn span
+{  
+  cursor:pointer;   
+}
+#timeSpendsList.forProject .timeSpendRecord:hover .pm-ts-personColumn span,
+#timeSpendsList.forProject .pm-ts-personColumn span:hover
+{
+  border-bottom: 1px dotted #000000;   
+}
+.timeSpendsList .pm-ts-personColumn span b
+{
+  color:#666;   
+}
+.timeSpendsList .pm-ts-actionsColumn
+{
+  width: 30px;
+}
+#emptyScreen, #emptyListForFilter {
+	display: none;
+}
+
+#emptyScreen .noContentBlock, #emptyListForFilter .noContentBlock
+{
+    display:block;
+}
+
+#showNext {
+  color:rgb(156,160,164);
+  text-decoration:underline;
+  font-weight: bold;
+  margin:14px 0 0 66px;
+  cursor: pointer;
+  display: none;  
+}
+#showNext:hover {
+  color: #1A6DB3;
+}
+#showNextProcess {display:none;}
+.taskProcess {
+  height:25px;
+  margin:14px 0 0 66px;
+  background: url('../images/loader16.gif') no-repeat 2px 7px;
+}
+.pm-headerPanelSmall-splitter .textEdit {
+	width: 30px;
+}
+.totalHoursContainer {
+	display: inline-block; 
+	margin-right:8px;
+}
+.pm-headerPanelSmall-splitter #timeTrakingErrorPanel {
+    padding: 1px 0;
+    position: absolute;
+}

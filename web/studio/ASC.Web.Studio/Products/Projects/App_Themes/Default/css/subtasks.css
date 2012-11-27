@@ -1,0 +1,250 @@
+.subtask .dottedLink {
+  display:table;
+}
+.subtask .dottedLink:hover {
+  color: #000;
+  border-bottom: #000 1px dotted;
+}
+#usersActionPanel.actionPanel {
+	width: 140px;
+}
+.chooseWrap {
+  width:145px;
+  float:right;
+  cursor: pointer;
+  margin-right: 18px;
+  background: url("../images/min_expand.gif") no-repeat scroll right center; 
+}
+.chooseWrap:hover .dottedLink{
+	color: #000;
+}
+.quickAddSubTaskField .choose.responsible {
+  white-space:nowrap;
+  padding-right:16px;
+  display: inline-block;
+}
+.quickAddSubTaskField .choose.responsible .dottedLink{
+	max-width: 130px;
+    overflow: hidden;
+	display: block;
+}
+.actionPanel .user {
+  white-space:nowrap;
+  line-height:23px;
+  xbackground: url("../images/profile.gif") no-repeat left center;
+  xpadding: 0 0 0 17px;
+  overflow: hidden;
+  width: 250px;
+}
+.subtask .menupoint {
+	background: url('../images/action_16.png') no-repeat;
+	width:16px;
+	height:16px;
+	float:right;
+	right: 0px;	
+	cursor:pointer;
+}
+.subtask:hover .menupoint.show, .subtask .menupoint.show,
+.subtask .menupoint:hover, .subtask:hover .menupoint 
+{
+  background: url('../images/action_16_hover.png') no-repeat;
+  display: block;
+}
+.subtask .menupoint.show, 
+.subtask.menuopen  .menupoint, .subtask.menuopen  .menupoint:hover,
+.subtask:hover .menupoint.show, .subtask .menupoint.show:hover
+{
+  background: url('../images/action_16_click.png') no-repeat;
+  display: block;
+}
+.nomenupoint {
+	width:16px;
+	height:16px;
+	float:right;
+  margin: 0 15px 0 15px;	
+}
+.subtask .menupoint {
+    float: right;
+    line-height: 30px;
+    margin: 5px 15px 0 15px;
+}
+.subtask .taskProcess {
+  height:25px;
+  padding-left:25px;
+  background: url('../images/loader16.gif') no-repeat 2px 7px;
+}
+
+.subtasks {
+  display:none;
+  margin:10px 0 10px 0;
+}
+.subtask {
+  margin-left: 48px;
+}
+.subtask:hover {
+  background: #f2f2f2;
+}
+.subtask.last {
+  border-bottom: none;
+}
+.subtask .check {
+  float:left;
+  width:13px;
+  height:29px; 
+  margin-left: 7px; 
+}
+.subtask .check input {
+  margin-top:5px;
+  margin-left:0px;
+}
+*:first-child+html .subtask .check input {
+  margin-top:5px;
+}
+.subtask .check input, #ie#fix {
+  margin-top:8px;
+}
+.subtask .taskName {
+  float:left;
+  width:696px;
+  margin-left:10px;
+  line-height:29px;
+  overflow:hidden;
+  padding-bottom: 7px;
+}
+.subtask .taskName span {
+	display: block;
+	margin-top: 6px;
+	line-height:16px;
+}
+.subtask.done .taskName {
+  color:#83888d;
+  font-size:11px;
+  text-decoration:line-through;
+}
+.subtask .user {
+  white-space:nowrap;
+  float:right;
+  overflow:hidden;
+  line-height:29px;
+  width:116px;
+  display: inline-block;
+}                                       
+.subtask .user b {
+  color:#666;
+}
+.subtask.done .user {
+  color:#83888d;
+  font-size:12px;  
+}
+.quickAddSubTaskLink {
+  margin: 8px 0 2px 38px;
+  height:25px;
+  border: #fff 1px solid;    
+}
+.quickAddSubTaskLink span {
+  margin:4px 0 0 39px;
+}
+.quickAddSubTaskField 
+{
+  padding-top: 2px;
+  margin:8px 0 2px 54px;
+  width:896px;
+  display:none;
+  height:23px;
+  border: #d1d1d1 1px solid;
+}
+.quickAddSubTaskField .choose {
+  margin-top:3px;
+}
+.quickAddSubTaskField input {
+  width:620px;
+  height:19px;
+  border:none;
+  margin-left:22px;
+  font:12px Arial;    
+}
+.quickAddSubTaskField input, .quickAddSubTaskField input:focus 
+{
+  border-color: transparent;
+  outline: none;
+}
+.gettask {  
+  white-space:nowrap;
+  float:right;
+  overflow:hidden;  
+  width:116px;
+  line-height:30px;
+}  
+.subtasks .gettask {  
+  line-height:29px;
+}
+.closed .gettask {
+  display:none;
+}
+.subtask .gettask span {
+  padding-top:3px;    
+}
+.gettask span {
+  padding-top:6px;    
+}
+.subtaskSaving {
+  position:absolute;
+  display:none;
+  height:29px;
+  line-height:29px;
+  padding-left:25px;
+  margin: 4px 0 0 34px;
+  xwidth: 921px;
+  background: url('../images/loader16.gif') no-repeat 0 3px;
+}
+.subtask.closed .taskName {
+  color:#83888d;
+  font-size: 11px;
+  text-decoration:line-through;    
+}
+.subtask.closed .user{
+  color:#83888d;
+  xfont-size: 11px;
+  width:115px;
+}
+#quickAddSubTaskField {  
+  position:absolute;
+  background-color: #FFFFFF;
+  margin-top:-28px !important;
+  xmargin-left:20px !important;
+  xwidth:928px !important;
+}
+#quickAddSubTaskField input.subTaskName {
+  margin-left:22px;
+}
+  
+/*********Describe panel*****************/
+div#subTaskDescrPanel {
+  min-width:300px;
+  max-width:420px;
+  line-height: 20px;
+  xoverflow:hidden;
+}
+div#subTaskDescrPanel div.popup-corner {
+  left:10px;
+}
+div#subTaskDescrPanel .param {
+  float:left;
+  height:20px;
+  padding-right:12px;  
+  color:#9ca0a4;
+  width:100px;
+}
+div#subTaskDescrPanel .param div {height:20px;}
+div#subTaskDescrPanel .value {
+  height:20px;
+  display: table;
+  color:#333333;
+}
+
+div#subTaskDescrPanel .value .createdby div {
+  display: inline-block;
+  margin-right:15px;
+  white-space: nowrap;
+  line-height: 20px;
+}

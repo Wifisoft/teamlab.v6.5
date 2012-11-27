@@ -1,0 +1,352 @@
+﻿/*-----common--------*/
+.buttonContainer {
+	padding-top: 40px;
+	padding-left: 15px;
+	clear: left;
+}
+.watermark {
+	color: #83888D;
+}
+
+/*--popup--*/
+div.actionPanel {
+    background-color: #FFFFFF;
+    border: 1px solid #8E908F;
+    display: none;
+    width: 160px;
+    padding: 7px 10px;
+    position: absolute;
+    z-index: 1000;
+}
+div.actionPanel div.popup-corner {
+    background: url("../images/popup-corner.png") no-repeat scroll 0 0 transparent;
+    height: 5px;
+    margin-top: -12px;
+    position: absolute;
+    right: 10px;
+    width: 9px;
+}
+div.actionPanel .actionList {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+div.actionPanel .actionList li {
+	display: block;
+	padding: 3px 0 3px 0;
+	cursor: pointer;
+}
+div.actionPanel .actionList li:hover {
+	background-color: #F5F5F5;
+}
+
+/*--menuButton--*/
+.menuButtonContainer{}
+.menuButton{
+	background: url("../images/action_16.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: none;
+    float: right;
+    height: 16px;
+    width: 16px;
+	display: block;
+	margin-top: -1px;
+}
+.menuButtonContainer:hover .menuButton,
+.menuButtonContainer.open .menuButton{
+	background-image: url("../images/action_16_hover.png");
+}
+.menuButtonContainer.open .menuButton,
+.menuButtonContainer.open .menuButton:hover,
+.menuButtonContainer.open:hover .menuButton,
+.open .mainInfo.menuButtonContainer .menuButton,
+.open .mainInfo.menuButtonContainer .menuButton:hover,
+.open .mainInfo.menuButtonContainer:hover .menuButton{
+	background-image: url("../images/action_16_click.png");
+}
+/*----end common------*/
+
+/*-----list templates----*/
+.addTemplate {
+	display:inline-block;
+	background-image: url("../images/plus.png");
+	background-position:left;
+	background-repeat:no-repeat;
+	padding: 3px 0px 3px 20px;
+	margin-bottom:18px;
+}
+#emptyListTemplates .projectsEmpty {
+	border: none;
+	text-decoration: underline !important;
+}
+#listTemplates {
+	border-bottom: 1px solid #D1D1D1;
+}
+#listTemplates .template {
+	padding: 7px 15px 6px 15px;
+	border-top: 1px solid #D1D1D1;
+}
+#listTemplates .template:hover {
+	background-color: #F5F5F5;
+}
+
+#listTemplates .template a.title {
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	margin-right: 5px;
+}
+#listTemplates .template:hover a.title {
+	text-decoration: underline;
+}
+#listTemplates .template span.description {
+	color: #666668;
+}
+
+/*----end list templates--------*/
+
+/*---------edit template-------*/
+.templTitle 
+{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: #333;
+    font-family: Arial;
+    font-size: 18px;
+}
+#templateTitle, #projectTitle 
+{
+	padding-left: 10px; 
+	width: 938px;
+	height: 20px;
+}
+#addMilestone, #addNotAssignTask {
+	padding-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#addMilestoneContainer, #addTaskContainer {
+	border: 1px solid #D1D1D1;
+	padding: 1px;
+	display: none;
+	margin-bottom: 5px;
+}
+#addMilestoneContainer #newMilestoneTitle {
+	border: none;
+	width: 815px;
+}
+#addMilestoneContainer select {
+	width: 100px;
+	border:1px solid #D1D1D1;
+	margin-right: 10px;
+}
+#addTaskContainer #newTaskTitle {
+	border: none;
+	margin-left: 15px;
+	width: 930px;
+}
+/*----list milestones-----*/
+#listAddedMilestone {
+	clear: left;
+}
+.milestone {
+}
+.milestone .mainInfo {
+	height: 20px;
+	padding: 5px 15px;
+	font: bold 14px Arial;
+}
+.milestone .mainInfo .addTask {
+	margin-left: 15px;
+	color: #333;
+	border-bottom: 1px dotted #333333;
+    padding: 0;
+	font-size: 11px;
+	display: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+.milestone .mainInfo .addTask.hide, .milestone .mainInfo:hover .addTask.hide {
+	display: none;
+}
+.milestone .mainInfo:hover .addTask {
+	display: inline-block;
+}
+.milestone .mainInfo .menuButton, .task .menuButton {
+	margin-top: 2px;
+}
+.milestone .mainInfo:hover {
+	background-color: #F5F5F5;
+}
+.milestone.open .mainInfo{
+	background-color: #F5F5F5;
+}
+.milestone.open .mainInfo{
+	background-color: #F5F5F5;
+}
+.milestone .mainInfo .daysCount,
+.milestone .mainInfo .dueDate {
+	color: #1D5F99;
+	margin-right: 10px;
+	width: 85px;
+	display: inline-block;
+}
+.milestone .mainInfo:hover .daysCount span,
+.milestone .mainInfo:hover .dueDate span{
+	border-bottom: 1px dotted #1D5F99;
+	cursor: pointer;
+}
+
+
+.milestone .mainInfo .title {
+	color: #333;
+	display: inline-block;
+}
+.milestone .mainInfo:hover .title {
+	border-bottom: 1px dotted #333;
+	cursor: pointer;
+}
+
+/*--list tasks--*/
+.milestoneTasksContainer{ display: none;}
+
+.task {
+	height: 20px;
+	padding: 5px 15px 5px 35px;
+	font-weight:normal;
+}
+.task.open {
+	background-color: #F5F5F5;
+}
+.task:hover {
+	background-color: #F5F5F5;
+}
+.task:hover .title {
+	border-bottom: 1px dotted #333;
+}
+.addTaskContainer {
+	padding-left: 35px;
+	padding-bottom: 10px;
+	display: none;
+}
+#noAssignTaskContainer .addTaskContainer {
+	display: inline-block;
+}
+.unlocatedTaskTitle 
+{
+	padding-left: 15px;
+	font: bold 14px Arial;
+	color: #666;
+}
+.disable.grayLinkButton, .disable.grayLinkButton:hover {
+ 	color: #999;
+ 	border-color: #D1D1D1;
+	cursor: default;
+	background-color: #E8E8E8;
+	background-image: none;
+ }
+
+/*---------end edit template-------*/
+
+/*-------create project from template----*/
+#projectDescription {
+	width: 100%;
+	height: 70px;
+	resize: none;
+}
+.notifyContainer {
+	margin-top: 27px;
+}
+#projectManagerContainer .notifyContainer {
+	margin-top: 0;
+    padding-top: 3px;
+}
+#projectManagerContainer #projectManagerSelector {
+    float: left;
+    margin-right: 15px;
+}
+#notifyManagerCheckbox,
+#notifyResponsibles,
+#projectPrivacyCkeckbox {
+    margin: 1px 0 0;
+    padding: 0;
+	float: left;
+}
+.notifyContainer label {
+    padding-left: 8px;
+}
+#projectTeamContainer #manageTeamButton {
+	margin-left: 15px;
+}
+#projectTeamContainer #Team {
+	overflow: hidden;
+	display: block;
+}
+#projectTeamContainer .projectMember {
+	float: left;
+	margin-right: 25px;
+	margin-bottom: 15px;
+}
+
+#projectTeamContainer .projectMember span:hover {
+	background: url("../images/delete_small.png") no-repeat scroll left center transparent;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#addMilestoneContainer .textEditCalendar {
+	height: 16px;
+}
+
+/*---choose responsible---*/
+.chooseResponsible {
+	float: right;
+	margin-right: 30px;
+	font-weight: normal;
+	font-size: 12px;
+	background: url("../images/min_expand.gif") no-repeat right center;
+	padding-top: 2px;
+	padding-right: 15px;
+	cursor: pointer;
+	width: 145px;
+	text-align: right
+}
+.chooseResponsible .dottedLink {
+	max-width: 140px;
+	display: inline-block;
+	overflow: hidden;
+}
+.chooseResponsible.nobody {
+	display: none;
+}
+.task:hover > .chooseResponsible.nobody, .task.open > .chooseResponsible.nobody,
+.mainInfo:hover .chooseResponsible.nobody, .milestone.open .mainInfo .chooseResponsible.nobody {
+	display: inline-block;
+}
+
+/*--add task container---*/
+
+.newProject {
+	border: 1px solid #D1D1D1;
+	height: 22px;
+}
+#addTaskContainer.newProject #newTaskTitle {
+	margin-top: 2px;
+	border: none;
+	width: 700px;
+	float: left;
+}
+#addTaskContainer .chooseResponsible {
+	margin-right: 59px;
+	display: inline-block;
+}
+
+#addMilestoneContainer.newProject #newMilestoneTitle {
+	width: 600px;
+	border: none;
+}
+#addMilestoneContainer .chooseResponsible {
+	margin-right: 59px;
+	display: inline-block;
+}

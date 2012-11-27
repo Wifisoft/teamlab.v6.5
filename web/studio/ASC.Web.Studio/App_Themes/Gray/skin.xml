@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--unique skin id-->
+  <ID>gray</ID>
+  <!--skin name-->  
+  <Name>ASC.Web.Studio.PublicResources.SkinNameResource,ASC.Web.Studio;GraySkin</Name>
+  <!--main css file-->
+  <BaseCSSFileName>common_style.css</BaseCSSFileName>
+  <CSSFileName>override.css</CSSFileName>
+  <ASPTheme>Default</ASPTheme>
+  <SortOrder>6</SortOrder>
+</root>

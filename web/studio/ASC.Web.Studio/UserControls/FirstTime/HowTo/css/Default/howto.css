@@ -1,0 +1,25 @@
+﻿.howtoBlock
+{
+    width:100%;
+    padding-bottom: 30px;
+}
+
+.howtoBlock .title {
+font-size: 18px;
+color: #7B7B7B;
+padding-bottom: 10px;
+}
+
+.howtoBlock .video, .howtoBlock .articles
+{
+    float:left;
+}
+.howtoBlock .video
+{
+    margin-right:48px;
+}
+
+.howtoBlock .articles
+{
+    line-height:26px;
+}

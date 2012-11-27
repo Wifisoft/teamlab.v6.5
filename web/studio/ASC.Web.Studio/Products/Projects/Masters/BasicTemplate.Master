@@ -1,0 +1,87 @@
+﻿<%@ Import Namespace="ASC.Web.Projects.Classes" %>
+<%@ Import Namespace="ASC.Data.Storage" %>
+<%@ Assembly Name="ASC.Projects.Core" %>
+<%@ Assembly Name="ASC.Web.Projects" %>
+<%@ Assembly Name="ASC.Web.Studio" %>
+
+<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/Masters/BaseTemplate.master"
+    CodeBehind="BasicTemplate.master.cs" Inherits="ASC.Web.Projects.Masters.BasicTemplate" %>
+
+<%@ Register Assembly="ASC.Web.Studio" Namespace="ASC.Web.Studio.Controls.Common"
+    TagPrefix="ascwc" %>
+<%@ Register TagPrefix="feeduc" Namespace="ASC.Web.Studio.UserControls.Common.WhatsNew"
+    Assembly="ASC.Web.Studio" %>
+<%@ Register Assembly="ASC.Web.Studio" Namespace="ASC.Web.Studio.UserControls.Common"
+    TagPrefix="ascwc" %>
+<%@ Register Assembly="ASC.Web.Controls" Namespace="ASC.Web.Controls" TagPrefix="ascwc" %>
+<asp:Content ID="HeaderContent" ContentPlaceHolderID="HeaderContent" runat="server">
+
+    <script type="text/javascript" src="<%= PathProvider.GetFileStaticRelativePath("common.js")%>"></script>
+
+    <script type="text/javascript" src="<%= PathProvider.GetFileStaticRelativePath("projects.js") %>"></script>
+
+    <script type="text/javascript" language="javascript">
+     
+      jq(document).click(function(event) 
+      {
+      
+           jq.dropdownToggle().registerAutoHide(event, "#projects_dropdown_switch","#projects_dropdown");
+            
+      });    
+    
+      function FCKConfig_OnLoad(config)
+      {
+         config.AddDirectUrlToUpload('<%=  String.Concat(PathProvider.BaseVirtualPath, "Data/HtmlEditorFiles/")  %>');  
+      }
+      
+      ASC.Projects.Constants.MINI_LOADER_IMG = "<%= String.Format("<img title='{0}' width='23px' height='23px'  alt='{1}' src='{2}'  />", "", "",ASC.Web.Core.Utility.Skins.WebImageSupplier.GetAbsoluteWebPath("mini_loader.gif")  ) %>";
+          
+    </script>
+
+    <link type="text/css" rel="Stylesheet" href="<%= PathProvider.GetFileStaticRelativePath("common.css") %>" />
+    <!-- RSS Feeds -->
+    <feeduc:feedcontrol runat="server" title="Teamlab Projects" AutoFill="true" />
+    <feeduc:feedcontrol ID="InterestedProjectsFeedControl" runat="server" title="My Projects"
+        AutoFill="true" />
+    <feeduc:feedcontrol ID="ConcreteProjectFeedControl" runat="server" AutoFill="true"
+        Visible="false" />
+    <asp:ContentPlaceHolder runat="server" ID="BTHeaderContent">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="TopContent" runat="server" ID="TopContent">
+    <asp:PlaceHolder runat="server" ID="_topNavigationPanelPlaceHolder"></asp:PlaceHolder>
+    <div class="clearFix belowNavigationPanelClass" runat="server" id="BelowNavigationPanel"
+        visible="false">
+        <div class="clearFix mainPageLayout belowNavigationPanelText" id="BelowNavigationPanelText"
+            runat="server">
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="TitleContent" ContentPlaceHolderID="TitleContent" runat="server">
+    <div style="height: 20px;">
+    </div>
+</asp:Content>
+<asp:Content ID="PageContent" ContentPlaceHolderID="PageContent" runat="server">
+    <asp:PlaceHolder ID="_contentHolder" runat="server"></asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="BTPageContentWithoutCommonContainer" runat="server">
+    </asp:ContentPlaceHolder>
+    <ascwc:Container ID="_commonContainer" runat="server">
+        <header>      
+        </header>
+        <body>
+            <asp:ContentPlaceHolder ID="BTPageContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </body>
+    </ascwc:Container>
+    <asp:PlaceHolder runat="server" ID="phOnlineUsers" />
+    <asp:PlaceHolder runat="server" ID="phVisitedUsers" />
+</asp:Content>
+<asp:Content ID="SidePanel" ContentPlaceHolderID="SidePanel" runat="server">
+    <asp:ContentPlaceHolder ID="BTSidePanel" runat="server">
+    </asp:ContentPlaceHolder>
+    <ascwc:SideContainer runat="server" ID="_aboutContainer">
+    </ascwc:SideContainer>
+</asp:Content>
+<asp:Content ID="FooterContent" ContentPlaceHolderID="FooterContent" runat="server">
+    <asp:PlaceHolder runat="server" ID="_bottomNavigatorPlaceHolder"></asp:PlaceHolder>
+</asp:Content>

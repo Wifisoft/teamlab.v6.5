@@ -1,0 +1,111 @@
+.BoxNet
+{
+    background-image: url("images/thirdparty_boxnet.png") !important;
+}
+.DropBox
+{
+    background-image: url("images/thirdparty_dropbox.png") !important;
+}
+.Google
+{
+    background-image: url("images/thirdparty_google.png") !important;
+}
+
+/*******************************************************************************
+    Third Party
+*******************************************************************************/
+#thirdPartyPanel
+{
+    margin-bottom: 15px;
+}
+#thirdPartyName,
+#thirdPartyPass
+{
+    margin-top: 4px;
+    width: 350px;
+    height: 20px;
+}
+#thirdPartyGetToken span
+{
+}
+#thirdPartyDivTitle
+{
+    background-position: 7px -23px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 1px solid #C7C7C7;
+    height: 22px;
+    width: 350px;
+    margin-top: 4px;
+}
+#thirdPartyTitle
+{
+    border: medium none;
+    float: right;
+    width: 320px;
+    height: 20px;
+}
+#thirdPartyLabelCorporate
+{
+    border-bottom: 1px solid #D1D1D1;
+    display: block;
+    line-height: 23px;
+    margin-top: 12px;
+    padding-bottom: 8px;
+}
+#thirdPartyCorporate
+{
+    float: left;
+    margin-right: 7px;
+    margin-top: 5px;
+}
+/*******************************************************************************
+    Top menu
+*******************************************************************************/
+#addThirdPartyPanel a 
+{
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+}
+/*******************************************************************************
+    Content
+*******************************************************************************/
+li.fileRow.errorEntry
+{
+    background-color: #FFECE3;
+}
+li.fileRow.errorEntry div.entryTitle a
+{
+    color: #666668;
+}
+li.fileRow.errorEntry div.entryInfo
+{
+    color: #aa2c2c;
+}
+li.fileRow.thirdPartyEntry div.share_action
+{
+    display: none;
+}
+li.fileRow div.thumb-folder div
+{
+    background-color: transparent;
+    background-position: 0 -52px;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    height: 18px;
+    position: absolute;
+    right: 0;
+    width: 18px;
+}
+#files_mainContent.compact .thumb-folder div, #files_moving.compact .thumb-folder div
+{
+    background-position: 0 -80px;
+    height: 14px;
+    width: 14px;
+}
+.treeViewPanel .thirdPartyEntry .jstree-icon {
+    background-position: 2px -79px;
+}
+.without-third-party .jstree .thirdPartyEntry {
+    display: none;
+}

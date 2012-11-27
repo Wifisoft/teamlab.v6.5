@@ -1,0 +1,41 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <pattern id="new_text" name="new feed" contentType="html">
+        <subject resource="|subject_new_text|ASC.Web.Community.News.Resources.NewsPatternResource,ASC.Web.Community.News" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_new_text|ASC.Web.Community.News.Resources.NewsPatternResource,ASC.Web.Community.News" />
+      </pattern>
+      <!--New Event Added-->
+      <pattern id="new_text_jabber" name="new feed" contentType="html">
+        <subject resource="|subject_new_text|ASC.Web.Community.News.Resources.NewsPatternResource,ASC.Web.Community.News" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">#if($FEED_TYPE == "feed")$UserName
+
+$Text
+
+$URL#end#if($FEED_TYPE == "poll")$UserName
+#foreach($Answer in $Answers)
+#each
+
+$Answer
+#end
+
+$URL#end</body>
+      </pattern>
+      <!--new feed comment-->
+      <pattern id="new_text_comment" name="new feed comment" contentType="html">
+        <subject resource="|subject_new_text_comment|ASC.Web.Community.News.Resources.NewsPatternResource,ASC.Web.Community.News" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_new_text_comment|ASC.Web.Community.News.Resources.NewsPatternResource,ASC.Web.Community.News" />
+      </pattern>
+      <!--new feed comment-->
+      <pattern id="new_text_comment_jabber" name="new feed comment" contentType="html">
+        <subject resource="|subject_new_text_comment|ASC.Web.Community.News.Resources.NewsPatternResource,ASC.Web.Community.News" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$CommentBody
+
+$CommentURL</body>
+      </pattern>
+    </patterns>
+  </block>
+</pt:catalog>

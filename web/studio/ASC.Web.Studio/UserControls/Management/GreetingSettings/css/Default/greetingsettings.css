@@ -1,0 +1,27 @@
+﻿.greetingTitle
+{
+    padding-left:15px; 
+    padding-bottom:5px;
+    border-top:none;
+    border-right:none; 
+    border-left:none;
+}
+#studio_greetingSettingsBox
+{
+    padding:20px 15px;
+}
+#saveGreetSettingsBtn
+{
+    float:left;
+    margin-right:10px;
+}
+
+#restoreGreetSettingsBtn
+{
+    float:left;
+}
+
+#studio_greetingHeader
+{
+    width:400px;
+}

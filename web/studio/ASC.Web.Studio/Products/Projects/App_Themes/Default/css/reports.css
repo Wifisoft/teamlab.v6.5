@@ -1,0 +1,222 @@
+﻿table.sortable
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+table.sortable thead th
+{
+	cursor: pointer;
+	cursor: hand;
+	color: #82878D;
+	font-size: 12px;
+}
+table.sortable tbody td
+{
+	text-align: left;
+	border-left: none;
+	border-right: none;
+	vertical-align: middle;
+}
+
+.reportInfo
+{
+	background-color: #FFFFFF;
+	border: 1px solid #8E908F;
+	z-index: 10001;
+	display: none;
+	width: 400px;
+	padding: 10px 10px 10px 0px;
+	white-space:normal;
+}
+
+.pm-report-userName
+{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.pm-report-Info
+{
+	margin: 20px 0px;
+}
+.pm-report-select
+{
+	width: 190px;
+}
+
+#reportSettings
+{
+	float: left;
+}
+
+.pm-report-filtersHeader
+{
+	padding-bottom: 10px;
+}
+
+#reportDescription
+{
+	padding-left: 5px;
+}
+
+#reportDescriptionContent
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#reportFilters
+{
+	margin-bottom: 20px;
+}
+
+.pm-report-leftColumn
+{
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+.pm-report-rightColumn
+{
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.pm-report-lastLeftColumn
+{
+	text-align: right;
+}
+
+.pm-report-lastRightColumn
+{
+	padding-left: 10px;
+}
+
+td.pm-template-checkbox
+{
+	padding-left:5px;
+    padding-right:5px;
+    width:10px;
+}
+.templateName
+{
+	width:400px;
+    overflow:hidden;
+}
+/**********************************************************************************************/
+a.smallLinkHeader, a.smallLinkHeader:visited, a.smallLinkHeader:hover, a.smallLinkHeader:active
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.smallLinkHeader:hover
+{
+	text-decoration: underline;
+}
+a.smallLinkHeader:active
+{
+	text-decoration: none;
+}
+
+a.bigLinkHeader, a.bigLinkHeader:visited, a.bigLinkHeader:hover, a.bigLinkHeader:active
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: normal;
+	text-decoration: none;
+}
+a.bigLinkHeader:hover
+{
+	text-decoration: underline;
+}
+a.bigLinkHeader:active
+{
+	text-decoration: none;
+}
+
+#faux
+{
+	margin: 10px 0;
+	overflow: auto;
+	width: 100%
+}
+#leftcolumn
+{ 
+	width: 50%;
+	float: left;
+	display: inline;
+}
+#rightcolumn
+{ 
+	float: right;
+	width: 50%;
+	display: inline;
+	position: relative;
+}
+#rightcolumn ul
+{ 
+	margin-top:0;
+}
+.clear
+{
+	clear: both;
+}
+table.filterTable td.filterRowTitle
+{
+	font-weight: bold;
+    padding-right: 10px;
+    text-align: right;
+}
+.tintMedium
+{
+	background-color:#EDF6FD;
+}
+.headerBaseMedium 
+{
+	color:#3C4046;font-family:Arial;font-size:14px;font-weight:bolder;
+}
+.splitter 
+{
+	padding:0 6px;
+}
+.borderBase 
+{
+	border:1px solid #D1D1D1;
+}
+.userLink 
+{
+	display:inline-block;padding:0px;
+}
+a.linkDescribe
+{
+	color:#646567;font-family:Arial,sans-serif;font-size:11px;text-decoration:underline;
+}
+a.linkAction
+{
+	color:#272727;font-size:12px !important;text-decoration:underline;
+}
+a  
+{
+	color:#1A6DB3;font-family:Arial,Tahoma,sans-serif;font-size:12px;font-weight:normal;text-decoration:underline;
+}
+a.report-closedTask
+{
+	color: #83888D !important;
+}
+.report-tableColumnHeader
+{
+	border-bottom: 1px dotted;
+	color: #111111;
+	text-decoration:none;
+	cursor:pointer;
+	
+	user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    MozUserSelect:none
+}

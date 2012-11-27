@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" MasterPageFile="~/masters/basetemplate.master"
+    CodeBehind="StudioTemplate.master.cs" Inherits="ASC.Web.Studio.Masters.StudioTemplate" %>
+
+<asp:Content ContentPlaceHolderID="TopContent" runat="server" ID="TopContent">
+    <asp:PlaceHolder runat="server" ID="_topNavigatorPlaceHolder"></asp:PlaceHolder>
+     <asp:ContentPlaceHolder ID="StudioTitleContent" runat="server">
+        </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="TitleContent" runat="server" ID="TitleContent">
+    <div id="studio_sidePanelUpHeight20" style="height: 20px;">
+    </div>
+</asp:Content>
+<asp:Content ID="_studioPageContent" ContentPlaceHolderID="PageContent" runat="server">
+    <div style="margin-bottom: 10px">
+        <asp:PlaceHolder ID="_contentHolder" runat="server"></asp:PlaceHolder>
+        <asp:ContentPlaceHolder ID="StudioPageContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+<asp:Content ID="_studioSidePanel" ContentPlaceHolderID="SidePanel" runat="server">
+    <asp:PlaceHolder ID="_sideHolder" runat="server"></asp:PlaceHolder>
+    <asp:ContentPlaceHolder ID="StudioSidePanel" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="FooterContent" runat="server">
+    <asp:PlaceHolder runat="server" ID="_bottomNavigatorPlaceHolder"></asp:PlaceHolder>
+</asp:Content>

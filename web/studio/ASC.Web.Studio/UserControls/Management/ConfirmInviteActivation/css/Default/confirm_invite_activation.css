@@ -1,0 +1,111 @@
+﻿
+.confirmTitle
+{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.confirmTitle .subTitle
+{
+    margin-top:10px;
+    font-size:16px;
+}
+
+.confirmBlock{}
+
+.confirmBlock .leftPart
+{   
+    margin-right:330px;
+    padding-top:20px;
+}
+
+.confirmBlock .leftPart .portalInfo
+{    
+    padding:20px;
+    min-height:150px;
+}
+.confirmBlock .leftPart .portalInfo .headerBase
+{
+    margin-top:10px;
+}
+
+.confirmBlock .leftPart .portalInfo .user
+{
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+    padding-top:15px;
+    margin-top:15px;
+    overflow: auto;
+}
+
+.confirmBlock .leftPart .description
+{
+    font-size:14px;
+    margin-top:30px;
+    padding-left:20px;
+}
+
+.confirmBlock .leftPart .description span.blue
+{
+    color:#0e5f84;
+    font-weight:bolder;
+}
+
+.confirmBlock .leftPart .portalInfo .user .avatar
+{
+    float:left;
+}
+
+.confirmBlock .leftPart .portalInfo .user .name
+{
+    float:left;
+    margin-left:10px;    
+}
+
+.confirmBlock .leftPart .portalInfo .user .name .headerBaseSmall
+{
+    font-size:16px;
+    font-weight:normal;
+    margin-bottom:5px;
+}
+
+.confirmBlock .rightPart
+{
+    width:260px;
+    float:right;
+    text-align:left;
+}
+
+.confirmBlock .rightPart .property
+{
+    margin-bottom:15px;
+}
+
+.confirmBlock .rightPart .property .name
+{
+    margin-bottom:3px;
+    font-weight:bolder;
+}
+
+.confirmBlock .rightPart .property .name .hintImg
+{
+    margin-left:1px;
+    margin-bottom:-2px;
+}
+
+.confirmBlock .rightPart .property .textEdit
+{
+    width:250px;
+    padding:3px;
+}
+
+.confirmBlock .rightPart .btnBox
+{
+    margin-top:35px;
+}
+
+.confirmBlock .rightPart .btnBox .bigLinkButton
+{
+    width:230px;
+}

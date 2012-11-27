@@ -1,0 +1,135 @@
+﻿#files_treeViewPanelSelector
+{
+    z-index: 700;
+}
+ul#mainMenuHolder li
+{
+    max-width: 25% !important;
+}
+*:first-child+html ul#mainMenuHolder li
+{
+    max-width: 24% !important;
+}
+#import_from_google a
+{
+    background-image: url("images/import_google.png");
+}
+#import_from_zoho a
+{
+    background-image: url("images/import_zoho.png");
+}
+#import_from_boxnet a
+{
+    background-image: url("images/import_boxnet.png");
+}
+/*******************************************************************************
+        Import Table
+*******************************************************************************/
+table.fl-tablebase
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+table.fl-tablebase thead td
+{
+    color: #82878D;
+    font-size: 12px;
+}
+table.fl-tablebase tbody td
+{
+    border-left: none;
+    border-right: none;
+    vertical-align: middle;
+}
+table.fl-tablebase tbody td div.import_title
+{
+    width: 560px;
+    overflow: hidden;
+}
+table.fl-tablebase tbody td div.import_author
+{
+    width: 120px;
+    overflow: hidden;
+}
+#ImportDialog table.fl-tablebase td
+{
+    padding: 4px;
+}
+div.import_data_table
+{
+    height: 300px;
+    overflow: auto;
+    padding: 8px 10px;
+}
+.import_data_check, .import_head_check
+{
+    width: 30px;
+    text-align: center;
+}
+.import_data_check input, .import_head_check input
+{
+    cursor: pointer;
+}
+.import_data_author
+{
+    width: 125px;
+}
+.import_data_date, .import_head_date
+{
+    width: 90px;
+    text-align: center;
+}
+#import_to_folder
+{
+    padding: 8px 0;
+}
+a.import_tree
+{
+    background: url("images/tree.png") no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    cursor: pointer;
+}
+.startHide
+{
+    display: none;
+}
+/*******************************************************************************
+   Import Panel
+*******************************************************************************/
+
+#ImportLoginDialog .containerBodyBlock input
+{
+    margin-top: 4px;
+    width: 350px;
+}
+#ImportDialog .import_progress_panel
+{
+    width: 550px;
+    float: right;
+    position: relative;
+    top: -10px;
+}
+.studioFileUploaderProgressBorder
+{
+    border: solid 1px #787878;
+    background-color: #ffffff;
+    height: 8px;
+    line-height: 8px;
+    font-size: 1px;
+    margin-top: 2px;
+}
+* + html div.studioFileUploaderProgressBar
+{
+    z-index: 190;
+    max-width: 507px;
+}
+
+/*******************************************************************************
+    Mobile
+*******************************************************************************/
+body.mobile div.import_data_table
+{
+    width: auto !important;
+}

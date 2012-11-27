@@ -1,0 +1,26 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    
+    <!--sharing-->
+    <patterns>
+      <pattern id="CalendarSharingPattern" name="sharing of calendars and events" contentType="html">
+        <subject resource="|CalendarSharingSubject|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|CalendarSharingEmailPattern|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar" />
+      </pattern>      
+      <pattern id="CalendarSharingPattern_jabber" name="sharing of calendars and events" contentType="html">
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile" resource="|CalendarSharingJabberPattern|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar" />          
+      </pattern>
+      
+      <!--alerts-->
+      <pattern id="EventAlertPattern" name="alerts about events" contentType="html">
+          <subject resource="|EventAlertSubject|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar" />
+          <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|EventAlertEmailPattern|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar" />
+      </pattern>      
+      <pattern id="EventAlertPattern_jabber" name="alerts about events" contentType="html">        
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile" resource="|EventAlertJabberPattern|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar"/>        
+      </pattern>
+      
+    </patterns>
+  </block>
+</pt:catalog>

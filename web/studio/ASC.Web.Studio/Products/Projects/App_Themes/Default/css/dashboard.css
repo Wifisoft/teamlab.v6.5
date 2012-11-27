@@ -1,0 +1,410 @@
+﻿.pm-dashboard-fadeParent
+{
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+}
+
+.pm-dashboard-fade
+{
+	height: 20px;
+	width: 25px;
+	position: absolute;
+	right: 0px;
+	background-image: url('../images/fade.png');
+}
+
+/*My Projects and Tasks Widget*/
+
+#myProjectsListContainer, #followingProjectsListContainer, #followingTasksListContainer
+{
+	margin-left: 20px;
+	margin-bottom: 15px;
+}
+
+.listHeader
+{
+	color: #999999;
+	margin: 2px 5px 10px 0px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.projectContainer
+{
+	margin-bottom: 8px;
+	margin-left: 20px;
+}
+
+#followingProjectsListContainer
+{
+	margin-top: 38px;
+}
+
+#followingTasksListContainer
+{
+	margin-top: 28px;
+}
+
+.projectContainer a:link, .projectContainer a:active, .projectContainer a:hover, .projectContainer a:visited,
+.taskContainer a:link, .taskContainer a:active, .taskContainer a:hover, .taskContainer a:visited
+{
+	color: #000;
+}
+
+.projectContainer a:link, .projectContainer a:visited,
+.taskContainer a:link, .taskContainer a:visited
+{
+	text-decoration: none;
+}
+
+.projectContainer a:hover,
+.taskContainer a:hover
+{
+	text-decoration: underline;
+}
+
+
+
+.projectsListHeader.follow
+{
+	margin-top: 38px;
+}
+
+.tasksListHeader
+{
+	margin-top: 28px;
+	margin-bottom: 15px;
+}
+
+.projectLinkContainer.follow
+{
+	margin-bottom: 0px;
+}
+
+.projectsListContainer .splitter
+{
+	color: #1A6DB3;
+	padding: 0 9px;
+}
+
+.projectLinkContainer a.projectLink:link, .projectLinkContainer a.projectLink:visited
+{
+	display: inline-block;
+	max-width: 600px;
+	font-size: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.projectLinkContainer a.projectLink:hover
+{
+	text-decoration: underline;
+}
+
+.taskIndicator
+{
+	border-radius: 4px;
+	color: white;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 1px 4px;
+	text-align: center;
+	width: 44px;
+	float: left;
+	margin-right: 5px;
+}
+
+.overdueTask
+{
+	background: none repeat scroll 0 0 #F03E00;
+}
+
+.nextTask
+{
+	background: none repeat scroll 0 0 #87A826;
+}
+
+.tasksContainer
+{
+	margin-top: 15px;
+	margin-left: 20px;
+}
+
+.taskLinkContainer
+{
+	clear: right;
+	margin-bottom: 7px;
+}
+
+.taskLink
+{
+	display: inline-block;
+	max-width: 550px;
+	font-size: 13px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.taskContainer
+{
+	margin-left: 20px;
+}
+
+.linksContainer
+{
+	margin: 18px 0px 16px 20px;
+}
+
+/*My Milestones Widget*/
+
+.myMilestonesListContainer
+{
+	margin-left: 5px;
+}
+
+.myMilestonesListHeader
+{
+	margin-left: 5px;
+	font-size: 14px;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #999999;
+}
+
+.myMilestonesList
+{
+}
+
+.myMilestonesList td
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.myMilestonesList td.firstColumn
+{
+	padding-right: 5px;
+}
+
+.myMilestonesList td.lastRow
+{
+	padding-bottom: 10px;
+}
+
+.myMilestoneDeadline
+{	
+	width: 45px;
+	font-size: 12px;
+	text-align: left;
+	font-weight: bold;
+	padding-bottom: 6px;
+}
+
+.nextDeadline
+{
+	color: #568203;
+}
+
+.overdueDeadline
+{
+	color: #AC3838;
+}
+
+.myMilestoneTitleContainer
+{
+	width: 250px;
+    margin-bottom: 5px;
+}
+
+.myMilestoneTitle
+{
+    display: block;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.daysAfterMyMilestoneDeadline
+{
+	text-align: right;
+	color: #AC3838;
+	width: 57px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.daysAfterMyMilestoneCreateOn
+{
+	text-align: right;
+	color: #568203;
+	width: 57px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.myMilestoneProjectLinkContainer
+{
+	width: 250px;
+	margin-bottom: 5px;
+}
+
+.myMilestoneProjectLink
+{
+	display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 245px;
+    text-align: left;
+	color: #979797;
+}
+
+.myMilestoneProjectLink:visited, .myMilestoneProjectLink:hover
+{
+	color: #646567;
+}
+
+.generateReportLink
+{
+	cursor: pointer;
+}
+
+.keyMilestone
+{
+	display: block;
+    float: left;
+    margin-right: 5px;
+}
+
+/*Discussions Widget*/
+
+.discussionsList
+{
+	width: 100%;
+	margin-left: 5px;
+}
+
+.discussionsList td
+{
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+.discussionDateContainer
+{
+	margin-top: 7px;
+}
+.discussionCreatedDate
+{
+	margin-bottom: 3px;
+}
+
+.discussionLinkContainer
+{
+	margin-bottom: 5px;
+}
+
+.discussionLink
+{
+	font-size: 14px;
+}
+
+.discussionCommentCount
+{
+	margin-left: 3px;
+}
+
+.discussionDescriptionContainer
+{
+	margin-bottom: 5px;
+}
+
+.discussionDescription
+{
+	display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 500px;
+}
+
+.discussionProjectContainer
+{
+	margin-bottom: 5px;
+}
+
+.discussionProjectHeader
+{
+	float: left;
+	padding-right: 5px;
+}
+
+.discussionProjectLink
+{
+	display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 450px;
+    color: #272727 !important;
+}
+
+.discussionAuthorContainer
+{
+	margin-bottom: 5px;
+}
+
+.discussionAuthorHeader
+{
+	float: left;
+	padding-right: 5px;
+}
+
+.discussionAuthorLink
+{
+	display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 450px;
+}
+
+.discussionAuthorLink span
+{
+	background: none;
+	color: #646567;
+	padding: 0px;
+}
+
+/*Empty Widget*/
+
+.emptyWidgetImageContainer
+{
+	float: left;
+}
+
+.emptyWidgetImage
+{
+	margin-left: 170px;
+    max-width: 150px;
+    vertical-align: middle;
+}
+
+.emptyWidgetDescription
+{
+	
+}
+
+.emptyWidgetHeader 
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 24px;
+    font-weight: bold;
+}
+
+.emptyWidgetMessage
+{
+	margin-bottom: 20px;
+}

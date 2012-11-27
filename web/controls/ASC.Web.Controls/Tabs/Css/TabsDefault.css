@@ -1,0 +1,100 @@
+﻿.tabs_clearFix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+/* MSIE6- */
+* html .tabs_clearFix {
+    height: 1%;
+}
+
+/* MSIE7- */
+.tabs_clearFix {
+    zoom: 1;
+}
+.tabs_clearFix {
+    display:block;
+}
+
+.TabsControl
+{
+}
+
+.TabsControl .TabsContainer
+{
+	border-right: solid 1px #DADBDF;
+}
+
+.TabsControl .Tab
+{
+	float:right;
+	background-color:#FFF;
+	font-size:14px;
+	color:#323A3C;
+	min-width: 72px;
+	height: 32px;
+	background-position: 12px center;
+	background-repeat:no-repeat;
+	border: solid 1px #DADBDF;
+	border-right: none;
+	cursor:pointer;
+}
+.TabsControl .Selected
+{
+	background-color:#FBF9C8;
+	cursor:default;
+}
+
+.TabsControl .TabListTop
+{
+	border:none;
+	cursor:default;
+	border-bottom: solid 1px #DADBDF;
+	background-color:#FFF;
+	height: 32px;
+	position:relative;
+	top: -31px;
+	padding-bottom:1px;
+}
+
+.TabsControl .TabListBottom
+{
+	border:none;
+	cursor:default;
+	border-top: solid 1px #DADBDF;
+	background-color:#FFF;
+	height: 32px;
+}
+
+.TabsControl .TabListTop .Tab, .TabsControl .TabListTop .Selected
+{
+	border-bottom:none;
+}
+
+.TabsControl .TabListBottom .Tab, .TabsControl .TabListBottom .Selected
+{
+	border-top:none;
+}
+
+.TabsControl .Tab div
+{
+	padding:8px 30px 10px 43px;
+}
+
+.TabsControl .First
+{
+	border: solid 1px #DADBDF;
+}
+
+.TabsControl .Selected
+{
+	background-color:#FBF9C8;
+	cursor:default;
+}
+
+.TabsControl .Content
+{	
+	padding: 10px 0px;
+}

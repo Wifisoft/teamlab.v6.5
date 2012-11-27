@@ -1,0 +1,29 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <pattern id="1" name="new photo uploaded" contentType="html">
+        <subject resource="|subject_1|ASC.PhotoManager.Service.PhotoPatternResource,ASC.PhotoManager" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_1|ASC.PhotoManager.Service.PhotoPatternResource,ASC.PhotoManager" />
+      </pattern>
+      <pattern id="1_jabber" name="new photo uploaded" contentType="html">
+        <subject resource="|subject_1|ASC.PhotoManager.Service.PhotoPatternResource,ASC.PhotoManager" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$URL</body>
+      </pattern>
+      <pattern id="2" name="new event comment" contentType="html">
+        <subject resource="|subject_2|ASC.PhotoManager.Service.PhotoPatternResource,ASC.PhotoManager" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_2|ASC.PhotoManager.Service.PhotoPatternResource,ASC.PhotoManager" />
+      </pattern>
+      <pattern id="2_jabber" name="new event comment" contentType="html">
+        <subject resource="|subject_2|ASC.PhotoManager.Service.PhotoPatternResource,ASC.PhotoManager" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$CommentBody
+
+$URL</body>
+      </pattern>
+    </patterns>
+  </block>
+</pt:catalog>

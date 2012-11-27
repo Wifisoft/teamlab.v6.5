@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Module ModuleID="28B10049-DD20-4f54-B986-873BC14CCFC7"
+        Category="Community"
+        NameResourceKey="AddonName"
+        SortOrder="4"
+        ThemesFolderVirtualPath="~/products/community/modules/bookmarking/app_themes"
+        DescriptionResourceKey="AddonDescriptionResourceKey"
+        ImageFolder="images"
+		SmallIconFileName="bookmarking_mini_icon.png"
+		IconFileName="bookmarking_icon.png"
+        ResourceClassTypeName="ASC.Web.Community.Bookmarking.Resources.BookmarkingResource, ASC.Web.Community.Bookmarking"
+		SubscriptionManagerFullTypeName="ASC.Bookmarking.Business.Subscriptions.BookmarkingSubscriptionManager, ASC.Bookmarking"
+		SearchHandlerFullTypeName="ASC.Web.UserControls.Bookmarking.Common.Search.BookmarkingSearchHandler, ASC.Web.UserControls.Bookmarking"
+		StatisticProviderFullTypeName="ASC.Bookmarking.Business.Statistics.BookmarkingStatisticProvider, ASC.Bookmarking"
+		UserActivityPublisherFullTypeName="ASC.Bookmarking.Business.UserActivityPublisher.BookmarkingUserActivityPublisher, ASC.Bookmarking"
+		AuthCategoriesProviderFullTypeName="ASC.Bookmarking.Business.Permissions.BookmarkingAuthCategoriesProvider, ASC.Bookmarking"
+		GlobalHandlerFullTypeName="ASC.Web.Community.Bookmarking.Util.BookmarkingGlobalHandler, ASC.Web.Community.Bookmarking">
+
+
+  <GetCreateContentPageAbsoluteUrlMethod MethodName="GetCreateContentPageUrl" ClassType="ASC.Web.Community.Bookmarking.Util.BookmarkingNavigationUtil, ASC.Web.Community.Bookmarking"/>
+
+	<MainWidget ID="E6B0ED54-7CF4-4385-9638-73879A11B620"
+			NameResourceKey="BookmarkingWidgetTitle"
+			DescriptionResourceKey="BookmarkingWidgetDescription"
+			ImageFileName="bookmarking_icon.png"
+			WidgetVirtualURL="~/products/community/modules/bookmarking/"
+			SettingsProviderFullTypeName="ASC.Web.Community.Bookmarking.Widget.BookmarkingWidgetSettingsProvider, ASC.Web.Community.Bookmarking"
+			FullTypeName ="ASC.Web.Community.Bookmarking.Widget.BookmarkingWidget, ASC.Web.Community.Bookmarking"/>
+
+	<MainShortcutCategory ID="DA81F7CD-C3EC-4e8b-B5DB-DED968DF1C95"
+							StartURL="~/products/community/modules/bookmarking/"
+							NameResourceKey="AddonName">
+	</MainShortcutCategory>  
+</Module>

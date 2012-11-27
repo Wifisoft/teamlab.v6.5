@@ -1,0 +1,8 @@
+﻿
+\obj\
+\bin\
+\.svn\
+.csproj.user
+.suo
+.sln
+.db3

@@ -1,0 +1,118 @@
+﻿#accountLinks
+{
+    text-align:left;
+}
+
+#accountLinks ul
+{
+    margin:0px;
+    padding:0;
+    list-style:none;
+    display:inline-block;
+}
+
+#accountLinks li
+{
+  vertical-align:middle;
+    height:35px;
+    line-height:35px;
+    padding-left:40px;
+     background:url('');
+    background-position:left center;
+    background-repeat:no-repeat;
+}
+#accountLinks li.facebook
+{
+    background:url('./images/acc_facebook.png');
+    background-position:left center;
+    background-repeat:no-repeat;
+}
+#accountLinks li.linkedin
+{
+    background:url('./images/acc_linkedin.png');
+    background-position:left center;
+    background-repeat:no-repeat;
+}
+#accountLinks li.openid
+{
+    background:url('./images/acc_google.png');
+    background-position:left center;
+    background-repeat:no-repeat;
+}
+
+#accountLinks li.twitter
+{
+    background:url('./images/acc_twitter.png');
+    background-position:left center;
+    background-repeat:no-repeat;
+}
+
+#accountLinks li a
+{
+    margin:5px;
+}
+
+/* ------------------ */
+#social #accountLinks
+{
+    text-align:center;
+    float:right;
+}
+
+#social #accountLinks ul
+{
+    padding:0;
+    list-style:none;
+    display:inline-block;
+    margin:0;
+}
+
+#social #accountLinks li
+{
+      height:24px;
+    line-height:24px;
+    padding-left:0px;
+    float:left;
+}
+
+#social #accountLinks li a
+{
+    display:block;
+    width:24px;
+    height:24px;
+    margin:0 0 0 6px;
+    text-indent:-10000px;
+    position:relative;
+}
+
+#social #accountLinks li a span.linked
+{
+    display:block;
+    position:absolute;
+    width:16px;
+    height:16px;
+    background:url('./images/acc_linked.png');
+    bottom:0px;
+    right:0px;
+}
+
+
+#social #accountLinks li .facebook
+{
+    background:url('./images/acc_facebook_small.png');
+}
+
+#social #accountLinks li .linkedin
+{
+    background:url('./images/acc_linkedin_small.png');
+}
+
+#social #accountLinks li .openid
+{
+    background:url('./images/acc_google_small.png');
+}
+
+#social #accountLinks li .twitter
+{
+    background:url('./images/acc_twitter_small.png');
+}

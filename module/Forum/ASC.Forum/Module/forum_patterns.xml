@@ -1,0 +1,33 @@
+<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <pattern id="PostInTopicEmailPattern" name="new post in topic" contentType="html">
+        <subject resource="|subject_PostInTopicEmailPattern|ASC.Forum.Module.ForumPatternResource,ASC.Forum" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_PostInTopicEmailPattern|ASC.Forum.Module.ForumPatternResource,ASC.Forum" />
+      </pattern>
+      <!--New Post in Forum Topic-->
+      <pattern id="PostInTopicEmailPattern_jabber" name="new post in topic" contentType="html">
+        <subject resource="|subject_PostInTopicEmailPattern|ASC.Forum.Module.ForumPatternResource,ASC.Forum" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$PostText
+
+$PostURL</body>
+      </pattern>
+      <pattern id="TopicInForumEmailPattern" name="new topic in forum" contentType="html">
+        <subject resource="|subject_TopicInForumEmailPattern|ASC.Forum.Module.ForumPatternResource,ASC.Forum" />
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_TopicInForumEmailPattern|ASC.Forum.Module.ForumPatternResource,ASC.Forum" />
+      </pattern>
+      <!--New Topic in Forums-->
+      <pattern id="TopicInForumEmailPattern_jabber" name="new topic in forum" contentType="html">
+        <subject resource="|subject_TopicInForumEmailPattern|ASC.Forum.Module.ForumPatternResource,ASC.Forum" />
+        <body styler="ASC.Notify.Textile.JabberStyler,ASC.Notify.Textile">$UserName
+
+$PostText
+
+$PostURL</body>
+      </pattern>
+    </patterns>
+  </block>
+</pt:catalog>

@@ -1,0 +1,183 @@
+﻿/*******************************************************************************
+ListTaskView.ascx
+*******************************************************************************/
+.headerPanelSmall-splitter
+{
+    margin-bottom: 5px;
+}
+.headerPanel-splitter
+{
+    margin-bottom: 15px;
+}
+.activeTaskTitles
+{
+    color: #1A6DB3 !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+.lateTaskTitles
+{
+    color: #CC3333 !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+.closedTaskTitles
+{
+    color: #83888D !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+#taskList .divForTaskTitle
+{
+    max-width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#taskList .divForEntity
+{
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#taskList .divForEntity .crm-peopleInfoCardLink, #taskList .divForEntity .crm-companyInfoCardLink {
+    display: inline;
+}
+#taskFilterContainer, #emptyContentForTasksFilter, #tasksEmptyScreen
+{
+    display:none;
+}
+#showMoreTasksButtons
+{
+    padding-top: 20px;
+    padiing-left: 15px;
+}
+#taskButtonsPanel
+{
+    display: none;
+    margin-bottom: 15px;
+}
+#taskTable tbody tr
+{
+    height: 50px;
+    width: 100%;
+}
+#taskTable tbody td
+{
+    text-align: left;
+}
+#taskTable thead td
+{
+    height:0px;
+    padding:0px;
+}
+.taskRow
+{
+    min-height: 50px;
+    border-top:medium none;
+    border-right:medium none;
+    border-left:medium none;
+}
+#taskTable .ajax_edit_task
+{
+    margin-left: 10px;
+}
+#taskActionMenu
+{
+    min-width:120px;
+}
+#taskActionMenu .dropDownCornerRight
+{
+    margin-right: 22px;
+}
+#taskStatusListContainer {
+    display: none;
+    min-width: 115px;
+    position: absolute;
+    z-index: 101;
+}
+#taskStatusListContainer div.popup-corner {
+    background: url("../images/popup_corner.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 5px;
+    left: 20px;
+    position: absolute;
+    top: 6px;
+    width: 9px;
+    z-index: 1;
+}
+#taskStatusListContainer ul {
+    background-color: #FFFFFF;
+    border: 1px solid #8E908F;
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 10px;
+}
+#taskStatusListContainer li {
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    padding: 6px 5px 5px 24px;
+}
+#taskStatusListContainer li:hover {
+    background-color: #DDEAF4;
+}
+#taskStatusListContainer li.open {
+    background-image: url("../images/status_open_active.png");
+}
+#taskStatusListContainer li.selected {
+}
+#taskStatusListContainer li.closed {
+    background-image: url("../images/status_closed.png");
+}
+#taskTable tr .check {
+   margin-left: 2px;
+}
+#taskTable tr .changeStatusCombobox {
+    height: 22px;
+    margin-top: 3px;
+    text-align: center;
+    width: 38px;
+}
+#taskTable .changeStatusCombobox.canEdit {
+    background: url("../images/tr_off.png") no-repeat scroll 24px 9px white;
+    border: 1px solid #D1D1D1;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+}
+#taskTable tr:hover .changeStatusCombobox.canEdit, #taskTable .changeStatusCombobox.canEdit.selected {
+    background: url("../images/tr_on.png") no-repeat scroll 24px 9px, -moz-linear-gradient(center bottom , #CECECE, #F6F6F6) repeat scroll 0 0 transparent;
+    border-color: #A8A8A8;
+}
+
+
+
+#taskTable .changeStatusCombobox {
+    border: 1px solid transparent;
+    display: block;
+    width: 35px;
+}
+
+
+
+
+
+
+#taskTable .changeStatusCombobox .closed {
+    background-image: url("../images/status_closed.png");
+}
+#taskTable .changeStatusCombobox .open, #taskTable .changeStatusCombobox .overdue {
+    background-image: url("../images/status_open_active.png");
+}
+#taskTable .changeStatusCombobox span {
+    display: block;
+    height: 16px;
+    margin: 3px 0 3px 4px;
+    width: 16px;
+}
+/*******************************************************************************
+TaskActionView.ascx
+*******************************************************************************/
+#taskDeadline{
+    width: 75px;
+}

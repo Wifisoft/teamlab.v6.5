@@ -1,0 +1,24 @@
+﻿.tintMedium
+{
+    background-color:#EFF0F0;
+}
+
+#studioFooter
+{
+    background: #DADBDB url('imgcss/footer_bg.gif') bottom repeat-x;
+}
+span.footerCopyright,
+.footerMenu
+{
+    color:#666666 !important;
+}
+
+#linkAllProjectsCombobox, #linkAllProjectsCombobox:visited
+{
+    color:#8A8A8A !important;
+}
+
+#projTitle
+{
+    color: #333333 !important;
+}

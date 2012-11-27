@@ -1,0 +1,2 @@
+﻿<%@ Register Namespace="ASC.Web.Controls" TagPrefix="ascwc"  Assembly="ASC.Web.Controls" %>
+<ascwc:Tabs runat="server" CssClass="studioTabsControl"/>

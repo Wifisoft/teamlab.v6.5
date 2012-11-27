@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02C40A64-FE22-41D0-9037-69F0D6F787A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASC.Web.Core</RootNamespace>
+    <AssemblyName>ASC.Web.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <TrunkDir>..\..\..\</TrunkDir>
+    <AssemblyOriginatorKeyFile>$(TrunkDir)ASC.snk</AssemblyOriginatorKeyFile>
+    <RedDir Condition=" '$(RedDir)' == '' ">$(TrunkDir)redistributable\asc\</RedDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2, Version=7.7.31.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\third-party\Web\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Data.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Data.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Licensing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2d6f2c3da2c8d200, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\asc\ASC.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\redistributable\third-party\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddonAttribute.cs" />
+    <Compile Include="AddonContext.cs" />
+    <Compile Include="AddonManager.cs" />
+    <Compile Include="Calendars\BaseCalendar.cs" />
+    <Compile Include="Calendars\BaseEvent.cs" />
+    <Compile Include="Calendars\CalendarColors.cs" />
+    <Compile Include="Calendars\CalendarManager.cs" />
+    <Compile Include="Calendars\IEvent.cs" />
+    <Compile Include="Calendars\IExternalCalendar.cs" />
+    <Compile Include="Calendars\IiCalFormatView.cs" />
+    <Compile Include="Calendars\OlsenTimeZoneConverter.cs" />
+    <Compile Include="Calendars\RecurrenceRule.cs" />
+    <Compile Include="Calendars\SharingOptions.cs" />
+    <Compile Include="CookiesManager.cs" />
+    <Compile Include="WebItemSecurityInfo.cs" />
+    <Compile Include="ModuleAttribute.cs" />
+    <Compile Include="Extensions\ClientScriptManagerExtension.cs" />
+    <Compile Include="Extensions\WebItemExtension.cs" />
+    <Compile Include="Helpers\AuthorizationHelper.cs" />
+    <Compile Include="IAddon.cs" />
+    <Compile Include="Extensions\EnumExtension.cs" />
+    <Compile Include="Extensions\ProductModuleExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Extensions\UserInfoExtension.cs" />
+    <Compile Include="Helpers\EXIFHelper.cs" />
+    <Compile Include="Helpers\GrammaticalHelper.cs" />
+    <Compile Include="Helpers\ImageHelpers.cs" />
+    <Compile Include="Helpers\ResourceEnumConverter.cs" />
+    <Compile Include="IHtmlInjectionProvider.cs" />
+    <Compile Include="IWebItem.cs" />
+    <Compile Include="Mobile\MobileDetector.cs" />
+    <Compile Include="ModuleContext.cs" />
+    <Compile Include="IGlobalHandler.cs" />
+    <Compile Include="IModule.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="ModuleManagement\Common\IStatisticProvider.cs" />
+    <Compile Include="ModuleManagement\Common\ISearchHandler.cs" />
+    <Compile Include="ModuleManagement\Common\IShortcutProvider.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductManager.cs" />
+    <Compile Include="Security\Ajax\AjaxSecurityAttribute.cs" />
+    <Compile Include="SpaceUsageStatManager.cs" />
+    <Compile Include="Security\AntiXssModule.cs" />
+    <Compile Include="Security\HtmlSanitizer.cs" />
+    <Compile Include="Subscriptions\IProductSubscriptionManager.cs" />
+    <Compile Include="Subscriptions\ISubscriptionManager.cs" />
+    <Compile Include="Subscriptions\SubscriptionGroup.cs" />
+    <Compile Include="Subscriptions\SubscriptionObject.cs" />
+    <Compile Include="Subscriptions\SubscriptionType.cs" />
+    <Compile Include="Users\Activity\IUserActivityControlLoader.cs" />
+    <Compile Include="Users\Activity\IUserActivityFilter.cs" />
+    <Compile Include="Users\Activity\IWhatsNewHandler.cs" />
+    <Compile Include="Users\Activity\UserActivity.cs" />
+    <Compile Include="Users\Activity\UserActivityConstants.cs" />
+    <Compile Include="Users\Activity\UserActivityManager.cs" />
+    <Compile Include="Users\Activity\UserActivityPublisher.cs" />
+    <Compile Include="Users\Activity\WhatsNewUserActivity.cs" />
+    <Compile Include="Users\DisplayUserSettings.cs" />
+    <Compile Include="Users\Import\IUserImporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Users\Import\OutlookCSVUserImporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Users\Import\TextFileUserImporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Users\UserInfoComparer.cs" />
+    <Compile Include="Users\UserPhotoManager.cs" />
+    <Compile Include="Users\UserSortOrder.cs" />
+    <Compile Include="Utility\AssemblyResourceProvider.cs" />
+    <Compile Include="Utility\CommonLinkUtility.cs" />
+    <Compile Include="Utility\FileUtility.cs" />
+    <Compile Include="Utility\IFileUploadHandler.cs" />
+    <Compile Include="Utility\SearchHandlerManager.cs" />
+    <Compile Include="Utility\SecureFilter.cs" />
+    <Compile Include="Utility\Settings\WebItemSettings.cs" />
+    <Compile Include="Utility\Settings\ISettings.cs" />
+    <Compile Include="Utility\Settings\SettingsManager.cs" />
+    <Compile Include="Utility\Skins\ImageOptions.cs" />
+    <Compile Include="Utility\Skins\JsSkinHash.cs" />
+    <Compile Include="Utility\Skins\WebSkinSettings.cs" />
+    <Compile Include="ModuleManagement\Module.cs" />
+    <Compile Include="ModuleManagement\ModuleManager.cs" />
+    <Compile Include="ModuleManagement\Widget.cs" />
+    <Compile Include="ProductAttribute.cs" />
+    <Compile Include="ProductContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\GlobalHandlerComposite.cs" />
+    <Compile Include="Utility\Skins\WebImageSupplier.cs" />
+    <Compile Include="Utility\TenantProvider.cs" />
+    <Compile Include="Utility\UrlSwitcher.cs" />
+    <Compile Include="Utility\UserOnlineManager.cs" />
+    <Compile Include="WebItemContext.cs" />
+    <Compile Include="NavigationWebItem.cs" />
+    <Compile Include="WebItemManager.cs" />
+    <Compile Include="WebItemSecurity.cs" />
+    <Compile Include="WebZones\IRenderCustomNavigation.cs" />
+    <Compile Include="WebZones\IRenderMyTools.cs" />
+    <Compile Include="WebZones\WebZoneAttribute.cs" />
+    <Compile Include="WidePageAttribute.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <Message Importance="High" Text="Copy assemblies to redistributable: $(MSBuildProjectName) -&gt; @(MainAssembly-&gt;'$(RedDir)%(FileName)%(Extension)') @(FinalDocFile-&gt;'$(RedDir)%(FileName)%(Extension)') @(IntermediateSatelliteAssembliesWithTargetPath-&gt;'$(RedDir)%(Culture)\$(TargetName).resources.dll')" />
+    <!-- Copy the build product (.dll or .exe). -->
+    <Copy SourceFiles="@(IntermediateAssembly)" DestinationFolder="$(RedDir)" SkipUnchangedFiles="true" />
+    <!-- Copy the resulting XML documentation file, if any. -->
+    <Copy SourceFiles="@(DocFileItem)" DestinationFiles="@(FinalDocFile-&gt;'$(RedDir)%(FileName)%(Extension)')" SkipUnchangedFiles="true" Condition="'$(_DocumentationFileProduced)'=='true'" />
+    <!-- Copy satellite assemblies. -->
+    <Copy SourceFiles="@(IntermediateSatelliteAssembliesWithTargetPath)" DestinationFiles="@(IntermediateSatelliteAssembliesWithTargetPath-&gt;'$(RedDir)%(Culture)\$(TargetName).resources.dll')" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

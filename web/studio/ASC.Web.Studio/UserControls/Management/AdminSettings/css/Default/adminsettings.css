@@ -1,0 +1,81 @@
+﻿#studio_adminSettingsBox .ownerSettings
+{
+    margin-bottom:30px;
+}
+
+#studio_adminSettingsBox .ownerSettings .curOwner
+{
+    float: left;
+    
+}
+
+#studio_adminSettingsBox .ownerSettings .changeOwner
+{
+    float:right;
+}
+
+#studio_adminSettingsBox .ownerSettings .curOwner span,
+#studio_adminSettingsBox .ownerSettings .changeOwner span
+{
+    margin-right:10px;
+}
+
+#studio_adminSettingsBox .ownerSettings .changeOwner span
+{
+    float:left;
+    margin-right:10px;
+    
+}
+#studio_adminSettingsBox .ownerSettings .changeOwner select
+{
+    width:150px;
+    float:left;
+}
+
+#studio_adminSettingsBox .ownerSettings .changeOwner .textBigDescribe
+{
+    float:left;
+    margin-left:10px;
+    margin-right:0px;
+    padding-top:3px;
+}
+
+#changeOwnerBtn
+{
+    float:left;
+    margin-left:10px;
+    
+}
+
+#studio_adminSettingsBox .btnBox
+{
+    margin-top:20px;
+}
+
+#studio_adminSettingsBox .borderAdminRow
+{
+    border-bottom: solid 1px #d1d1d1;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+#studio_adminSettingsBox .borderAdminRow div
+{
+    overflow: hidden;
+    width: 210px;    
+}
+
+#studio_adminSettingsBox .borderAdminHeaderRow
+{
+    border-bottom: solid 1px #d1d1d1;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 10px;
+}
+
+#editAdminBtn
+{
+    float:left;
+}

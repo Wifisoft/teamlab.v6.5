@@ -1,0 +1,4 @@
+﻿<%@ Register Namespace="ASC.Web.Controls" TagPrefix="ascwc"  Assembly="ASC.Web.Controls" %>
+<ascwc:PageNavigator SplitterCSSClass="splitter"  NavigationLinkCSSClass = "pagerNavigationLinkCSSClass" 
+BoxCSSClass = "pagerNavigationLinkBox" CurrentPositionCSSClass = "pagerCurrentPosition" PrevButtonCSSClass="pagerPrevButtonCSSClass" NextButtonCSSClass="pagerNextButtonCSSClass" runat="server"/>
+    

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<act:accordings xmlns:act="urn:asc.notify.action_pattern.xsd">
+  
+  <!-- admin notification-->
+  <action actionID="self_profile_updated" defaultPatternID="self_profile_updated">
+    <sender senderName="messanger.sender" patternID="self_profile_updated_jabber" />
+  </action>
+  <action actionID="user_has_join" defaultPatternID="user_has_join">
+    <sender senderName="messanger.sender" patternID="user_has_join_jabber" />
+  </action>
+
+  <action actionID="for_admin_notify" defaultPatternID="for_admin_notify">
+  </action>
+
+  
+
+  <action actionID="change_pwd" defaultPatternID="change_pwd">
+    <sender senderName="messanger.sender" patternID="change_pwd_jabber" />
+	</action>
+
+
+	<action actionID="you_added" defaultPatternID="you_added">
+    <sender senderName="messanger.sender" patternID="you_added_jabber" />
+	</action>
+	<action actionID="you_added_after_invite" defaultPatternID="you_added_after_invite">
+    <sender senderName="messanger.sender" patternID="you_added_after_invite_jabber" />
+  </action>
+  <action actionID="profile_updated" defaultPatternID="profile_updated">
+    <sender senderName="messanger.sender" patternID="profile_updated_jabber" />
+  </action>
+
+
+  <action actionID="send_pwd" defaultPatternID="pwd_reminder">
+    <sender senderName="messanger.sender" patternID="pwd_reminder_jabber" />
+	</action>
+	<action actionID="invite" defaultPatternID="invite">
+    <sender senderName="messanger.sender" patternID="invite_jabber" />
+	</action>
+	<action actionID="join" defaultPatternID="join">
+    <sender senderName="messanger.sender" patternID="join_jabber" />
+  </action>
+  <action actionID="send_whats_new" defaultPatternID="send_whats_new">
+    <sender senderName="messanger.sender" patternID="send_whats_new_jabber" />
+  </action>
+	<action actionID="backup_created" defaultPatternID="backup_created">
+    <sender senderName="messanger.sender" patternID="backup_created_jabber" />
+	</action>
+	<action actionID="portal_deactivate" defaultPatternID="portal_deactivate">
+    <sender senderName="messanger.sender" patternID="portal_deactivate_jabber" />
+	</action>
+	<action actionID="portal_delete" defaultPatternID="portal_delete">
+    <sender senderName="messanger.sender" patternID="portal_delete_jabber" />
+	</action>
+
+	<action actionID="dns_change" defaultPatternID="dns_change"></action>
+    <action actionID="owner_confirm_change" defaultPatternID="owner_confirm_change"></action>
+  
+  <action actionID="activate" defaultPatternID="activate">
+  </action>
+  <action actionID="change_email" defaultPatternID="change_email">
+  </action>
+  <action actionID="change_password" defaultPatternID="change_password">
+  </action>  
+  <action actionID="activate_email" defaultPatternID="activate_email">
+  </action>
+  <action actionID="profile_delete" defaultPatternID="profile_delete">
+  </action>
+  <action actionID="change_phone" defaultPatternID="change_phone">
+  </action>
+  <action actionID="congratulations" defaultPatternID="congratulations">
+  </action>
+</act:accordings>

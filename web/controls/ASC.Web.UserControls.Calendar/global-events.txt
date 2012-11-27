@@ -1,0 +1,380 @@
+﻿Описание генерируемых событий
+
+loadEventSources(callback)
+editCalendar(param: {}, callback)
+editEvent(param: {}, callback)
+
+loadSubscriptions(callback)
+manageSubscriptions(param: {}, callback)
+
+editPermissions(param: {}, callback)
+removePermissions(param: {}, callback)
+
+***editTodo(param: {})
+
+viewChanged(currentViewName, currentDate)
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Загрузить список календарей и подписок (для отображения) - loadEventSources(callback)
+
+параметры: callback(response)
+
+результат: сформировать объект response и передать его в callback
+
+  response:
+  {
+    result: true/false,
+
+    eventSources:
+    [
+      {
+        objectId: {},                                 // для сервера
+        owner: {},
+
+        title: "Project 123",
+        description: "Project ...",
+        textColor: "#000",
+        backgroundColor: "#fa9191",
+
+        isHidden: true/false,                         // показывать события календаря/подписки
+
+        isSubscription: true/false,
+        isShared: true/false,                         // календарь доступен для других пользователей
+
+        defaultAlert:                                 // серверные данные для напоминаний по событиям
+        {
+          type: Number()                              // 0-6 {never, }
+        },
+
+        //---  когда isSubscription == false (календари), добавляются поля
+
+        permissions:
+        {
+          ...,                                        // серверные данные для диалога 'TeamLab Permissions'
+
+          users:                                      // данные для отображения в диалоге 'Edit Calendar'
+          [
+            {/*user*/
+              objectId: {},                           // для сервера
+              name: "User 123"
+            }
+          ]
+        },
+
+        todos:
+        [
+          {
+            objectId: {},                             // для сервера
+
+            title: "Todo 123",
+            description: "Todo ...",
+            completed: true/false,
+            priority: Number()                        // 0-3 {urgent, hi, normal, low}
+          }
+        ],
+
+        //---  когда isSubscription == true (подписки), добавляются поля
+
+        isEditable: true/false
+
+        //===
+
+        events:
+        [
+          {
+            objectId: {},                             // для сервера
+            owner: {},
+            sourceId: {},
+
+            title: "Event 1",
+            description: "Event ...",
+            start: Date(),
+            end: Date(),
+            allDay: true/false,
+
+            id: Number(),                             // повторяемое событие
+                                                      // например: событие - каждый день, вид календаря - месяц
+                                                      // в ответе на запрос (return из колбэка)
+                                                      // за запрошенный период надо автоматически сгенерировать
+                                                      // 30(28,31) событий и задать им один и тотже id
+
+            repeat:                                   // серверные данные для повторяемых событий
+            {
+              type: Number()                          // 0-6 {never, }
+            },
+
+            alert:                                    // серверные данные для напоминаний по событиям
+            {
+              type: Number()                          // 0-6 {never, }
+            },
+
+            isShared: true/false,                     // другие пользователи приглашены на это событие
+            canUnsubscribe: true/false,               // пользователь может отписаться от этого события
+
+            permissions:
+            {
+              ...,                                    // серверные данные для диалога TeamLab Permissions
+
+              users:                                  // данные для отображения в диалоге 'Edit Event'
+              [
+                {/*user*/
+                  objectId: {},                       // для сервера
+                  name: "User 123"
+                }
+              ]
+            }
+          }
+        ]
+
+      }
+    ]
+  }
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Добавить/удалить/изменить календарь - editCalendar(param: {}, callback)
+
+параметры:
+
+  param:
+  {
+    action: 1-3,                                      // 1-add, 2-change, 3-delete, 4-hide
+    objectId: {},                                     // для action 2 и 3
+
+    title: "",
+    description: "",
+    textColor: "",
+    backgroundColor: "",
+
+    isHidden: true/false,
+
+    isSubscription: false,
+
+    isShared: true/false,
+    permissions: {},
+
+    todos: []
+  },
+
+  callback({result: true/false, source: {как элемент массива eventSources в loadEventSources}})
+
+результат: получить ответ от сервера и передать его в callback
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Добавить/удалить/изменить событие - editEvent(param: {}, callback)
+
+параметры:
+
+  param:
+  {
+    action: 1-3,                                      // 1-add, 2-change, 3-delete
+    objectId: {},                                     // для action 2 и 3
+
+    sourceId: {},                                     // id календаря или подписки
+    newSourceId: {},                                  // новый id календаря или подписки
+
+    title: "",
+    description: "",
+    start: Date(),
+    end: Date(),
+    allDay: true/false,
+
+    id: Number(),
+
+    repeat:
+    {
+      type: Number()
+    },
+
+    alert:
+    {
+      type: Number()
+    },
+
+    permissions: {серверные данные для диалога 'TeamLab Permissions'}
+  },
+
+  callback({result: true/false, event: {}})
+
+результат: получить ответ от сервера и передать его в callback
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Вызвать диалог 'TeamLab Permissions' - editPermissions(param: {}, callback)
+
+параметры:
+
+  param:
+  {
+    type: 1-2,                                        // 1-календарь, 2-событие
+    objectId: {},                                     // id календаря или события
+    ...,                                              // другие требуемые данные для сервера
+
+    permissions:
+    {
+      ...,                                            // серверные данные для диалога TeamLab Permissions
+
+      users:                                          // данные для отображения в диалоге 'Edit Calendar'
+      [
+        {/*user*/
+          objectId: {},                               // для сервера
+          name: "User 123"
+        }
+      ]
+    }
+  },
+
+  callback(response)
+
+результат: заполнить поле permissions новыми данными и передать в callback
+
+  response:
+  {
+    result: true/false,
+
+    permissions: {}
+  }
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Удалить пользователя из Permissions - removePermissions(param: {}, callback)
+
+параметры:
+
+  param:
+  {
+    type: 1-2,                                        // 1-календарь, 2-событие
+    objectId: {},                                     // id календаря или события
+    userId: {}
+
+    permissions:
+    {
+      ...,                                            // серверные данные для диалога TeamLab Permissions
+
+      users:                                          // данные для отображения в диалоге 'Edit Calendar'
+      [
+        {/*user*/
+          objectId: {},                               // для сервера
+          name: "User 123"
+        }
+      ]
+    }
+  },
+
+  callback(response: {})
+
+результат: передать ответ в callback
+
+  response:
+  {
+    result: true/false,
+    
+    permissions:                                      // новые разрешения (с учетом удаленных)
+    {
+      ...,                                            // серверные данные для диалога TeamLab Permissions
+
+      users:                                          // данные для отображения в диалоге 'Edit Calendar'
+      [
+        {/*user*/
+          objectId: {},                               // для сервера
+          name: "User 123"
+        }
+      ]
+    }
+  }
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Загрузить подписки (для управления) - loadSubscriptions(callback)
+
+параметры: callback(response)
+
+результат: сформировать объект response и передать его в callback
+
+  response:
+  {
+    result: true/false,
+
+    subscriptions:
+    [
+      {
+        objectId: {},                                 // для сервера
+
+        group: "",                                    // для группировки в диалоге
+
+        title: "Администрация",
+        description: "...",
+        textColor: "#000",
+        backgroundColor: "#fa9191",
+
+        isHidden: true/false,
+
+        isSubscription: true,
+        isShared: true,
+        isEditable: true/false,
+        isNew: true/false,
+        isSubscribed: true/false
+      }
+    ]
+  }
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Управление подписками - manageSubscriptions(param: [], callback)
+
+параметры:
+
+  param:
+  [
+    {
+      action: 1-3,                                    // 1-add, 3-remove
+      objectId: {},
+
+      isNew: false
+    }
+  ],
+
+  callback({result: true/false})
+
+результат: получить ответ от сервера и передать его в callback
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+***Добавить/удалить/изменить todo - editTodo(param: {})
+
+параметры:
+{
+  action: 1-3,                                        // 1-add, 2-change, 3-delete
+  objectId: {},                                       // для action 2 и 3
+
+  sourceId: {},                                       // id календаря
+
+  title: "",
+  description: "",
+  completed: true/false,
+  priority: Number()
+}
+
+результат:
+{
+  objectId: {}                                        // для action 1
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Произошло изменение вида/даты - viewChanged(currentViewName, currentDate)
+
+параметры:
+
+  currentViewName - текущий вид (строка)
+  currentDate     - текущая дата

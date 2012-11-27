@@ -1,0 +1,4 @@
+﻿<%@ Assembly Name="ASC.Web.Files" %>
+<%@ ServiceHost Language="C#" Debug="true" Factory="ASC.Web.Files.Services.WCFService.ServiceFactory"
+    Service="ASC.Web.Files.Services.WCFService.Service" CodeBehind="Service.svc.cs" %>
+

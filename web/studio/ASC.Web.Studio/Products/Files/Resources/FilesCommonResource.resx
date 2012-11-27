@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FlashUploader" xml:space="preserve">
+    <value>Upload with Flash</value>
+  </data>
+  <data name="FlashUploaderDescription" xml:space="preserve">
+    <value>Flash uploader version...</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="HtmlUploader" xml:space="preserve">
+    <value>Upload with Html</value>
+  </data>
+  <data name="ManagmentGroup" xml:space="preserve">
+    <value>Group management</value>
+  </data>
+  <data name="ModuleName" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="ProductDescription" xml:space="preserve">
+    <value>Create, edit, save and share documents directly on your portal.  Import docs base from Google Docs, Zoho, Box.net</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>ver.</value>
+  </data>
+  <data name="ShowVersions" xml:space="preserve">
+    <value>Show Versions</value>
+  </data>
+  <data name="TitleShowActions" xml:space="preserve">
+    <value>Show File Actions</value>
+  </data>
+  <data name="TitleShowFolderActions" xml:space="preserve">
+    <value>Show Folder Actions</value>
+  </data>
+  <data name="ErrorMassage_SecurityException" xml:space="preserve">
+    <value>You don't have enough permission to perform the operation</value>
+  </data>
+  <data name="ErrorMassage_MoveFolder" xml:space="preserve">
+    <value>The folder with the same name already exists. Rename the folder and try again.</value>
+  </data>
+  <data name="ErrorMassage_DifferentName" xml:space="preserve">
+    <value>The name of the file to upload is different from the source file</value>
+  </data>
+  <data name="ErrorMassage_NotSupportedFormat" xml:space="preserve">
+    <value>Sorry, this file format isn't supported</value>
+  </data>
+  <data name="SharedForMe" xml:space="preserve">
+    <value>Shared with Me</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_DeleteEditingFile" xml:space="preserve">
+    <value>Cannot delete the file because it is opened for editing</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_DeleteEditingFolder" xml:space="preserve">
+    <value>Cannot delete the folder because one of the files is opened for editing</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_DeleteFile" xml:space="preserve">
+    <value>You don't have enough permission to delete the file</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_DeleteFolder" xml:space="preserve">
+    <value>You don't have enough permission to delete the folder</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_ReadFile" xml:space="preserve">
+    <value>You don't have enough permission to view the file</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_ReadFolder" xml:space="preserve">
+    <value>You don't have enough permission to view the folder content</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_UpdateEditingFile" xml:space="preserve">
+    <value>Cannot update the file because it's opened for editing</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_ViewFolder" xml:space="preserve">
+    <value>You don't have enough permission to view the folder content</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_RenameFile" xml:space="preserve">
+    <value>You don't have enough permission to rename the file</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_RenameFolder" xml:space="preserve">
+    <value>You don't have enough permission to rename the folder</value>
+  </data>
+  <data name="SearchText" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="ErrorMassage_ImportToTrash" xml:space="preserve">
+    <value>You are not allowed to import to Trash</value>
+  </data>
+  <data name="ErrorMassage_CreateNewFolderInTrash" xml:space="preserve">
+    <value>You are not allowed to create folders in the Trash</value>
+  </data>
+  <data name="ErrorMassage_ViewTrashItem" xml:space="preserve">
+    <value>You are not allowed to preview the elements in the Trash</value>
+  </data>
+  <data name="ErrorMassage_FolderNotFound" xml:space="preserve">
+    <value>The required folder was not found</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="IsNew" xml:space="preserve">
+    <value>new</value>
+  </data>
+  <data name="RemoveIsNew" xml:space="preserve">
+    <value>Mark as read</value>
+  </data>
+  <data name="NothingFound" xml:space="preserve">
+    <value>Nothing has been found.</value>
+  </data>
+  <data name="SearchNotFoundDescript" xml:space="preserve">
+    <value>Make sure all words are spelled correctly. Try using different keywords.</value>
+  </data>
+  <data name="PreviewHeader" xml:space="preserve">
+    <value>Preview documents</value>
+  </data>
+  <data name="ShowAllResults" xml:space="preserve">
+    <value>Show All Results</value>
+  </data>
+  <data name="TotalFound" xml:space="preserve">
+    <value>Total found</value>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="MakeCurrent" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="TitleCreated" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="TitleFiles" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="TitleFolders" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="TitleKb" xml:space="preserve">
+    <value>Kb</value>
+  </data>
+  <data name="TitleRemoved" xml:space="preserve">
+    <value>Deleted</value>
+  </data>
+  <data name="TitleRemoveVersion" xml:space="preserve">
+    <value>Delete version</value>
+  </data>
+  <data name="TitleSelectFile" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="TitleShareFile" xml:space="preserve">
+    <value>Permission Settings</value>
+  </data>
+  <data name="TitleSubfolders" xml:space="preserve">
+    <value>Subfolders</value>
+  </data>
+  <data name="TitleUploaded" xml:space="preserve">
+    <value>Uploaded</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Employees" xml:space="preserve">
+    <value>Employees</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="ErrorMassage_UpdateEditingFile" xml:space="preserve">
+    <value>You cannot update a file which is opened for editing</value>
+  </data>
+  <data name="TitlePage" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="TitleModified" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+  <data name="CreatingDate" xml:space="preserve">
+    <value>Creation date:</value>
+  </data>
+  <data name="DocumentName" xml:space="preserve">
+    <value>Document Name:</value>
+  </data>
+  <data name="FolderName" xml:space="preserve">
+    <value>Folder Name:</value>
+  </data>
+  <data name="ButtonPreviewBack" xml:space="preserve">
+    <value>Back to the folder</value>
+  </data>
+  <data name="ErrorMassage_EmptyFile" xml:space="preserve">
+    <value>Empty file</value>
+  </data>
+  <data name="ErrorMassage_FileNotFound" xml:space="preserve">
+    <value>The required file was not found</value>
+  </data>
+  <data name="ImportFromBoxNet" xml:space="preserve">
+    <value>Import from Box.Net</value>
+  </data>
+  <data name="ImportFromGoogle" xml:space="preserve">
+    <value>Import from Google Docs</value>
+  </data>
+  <data name="ImportFromZoho" xml:space="preserve">
+    <value>Import from Zoho</value>
+  </data>
+  <data name="Author_Me" xml:space="preserve">
+    <value>Me</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_EditFile" xml:space="preserve">
+    <value>Недостаточно прав для редактирования файла</value>
+  </data>
+  <data name="ButtonEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="ButtonDownload" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="OpenFile" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ErrorMassage_ManyDownloads" xml:space="preserve">
+    <value>Too many downloads.</value>
+  </data>
+  <data name="ErrorMassage_ManyImports" xml:space="preserve">
+    <value>Too many imports.</value>
+  </data>
+  <data name="ErrorMassage_SecurityException_Create" xml:space="preserve">
+    <value>You don't have enough permission to create</value>
+  </data>
+  <data name="ErrorMassage_BadRequest" xml:space="preserve">
+    <value>Bad request.</value>
+  </data>
+  <data name="ActivityCreateDocument" xml:space="preserve">
+    <value>Создал документ</value>
+  </data>
+  <data name="ActivityUploadDocument" xml:space="preserve">
+    <value>Загрузил документ</value>
+  </data>
+  <data name="ActivityDeleteDocument" xml:space="preserve">
+    <value>Удалил документ</value>
+  </data>
+  <data name="ActivityDeleteFolder" xml:space="preserve">
+    <value>Удалил папку</value>
+  </data>
+  <data name="ActivityUpdateDocument" xml:space="preserve">
+    <value>Обновил документ</value>
+  </data>
+  <data name="ActivityOpenEditorDocument" xml:space="preserve">
+    <value>Open the document for editing</value>
+  </data>
+  <data name="Access" xml:space="preserve">
+    <value>Access</value>
+  </data>
+  <data name="ErrorMassage_FolderCopyError" xml:space="preserve">
+    <value>You cannot copy the folder to its subfolder</value>
+  </data>
+  <data name="SubscriptForAccess" xml:space="preserve">
+    <value>Оповещать при расшаривании</value>
+  </data>
+  <data name="SubscriptForUpdate" xml:space="preserve">
+    <value>Оповещать при обновлении</value>
+  </data>
+  <data name="AceStatusEnum_Read" xml:space="preserve">
+    <value>Read Only</value>
+  </data>
+  <data name="AceStatusEnum_ReadWrite" xml:space="preserve">
+    <value>Full Access</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Everyone" xml:space="preserve">
+    <value>Everyone</value>
+  </data>
+  <data name="Guest" xml:space="preserve">
+    <value>Guest</value>
+  </data>
+  <data name="ErrorEntry" xml:space="preserve">
+    <value>Error:</value>
+  </data>
+  <data name="NavigationPanelTitle" xml:space="preserve">
+    <value>Docs Feed</value>
+  </data>
+  <data name="ProductDescriptionEx" xml:space="preserve">
+    <value>Create, edit, save and share documents directly on your portal.</value>
+  </data>
+  <data name="ProductAdminOpportunities" xml:space="preserve">
+    <value>Делать все то же, что и пользователь|Подключать аккаунты dropbox, boxnet и т.д. в разделе "Общие документы"|Настраивать права доступа к документам и папкам в разделе "Общие документы"</value>
+  </data>
+  <data name="ProductUserOpportunities" xml:space="preserve">
+    <value>Создавать и редактировать документы, как свои, так и те к которым предоставлен доступ с соответствующими правами|Предоставлять доступ другим пользователям к документам и папкам с правами на чтение/редатирование|Подключать аккаунты dropbox, boxnet и т.д. в разделе "Мои документы"</value>
+  </data>
+  <data name="Error_FileAlreadyExists" xml:space="preserve">
+    <value>File with name {0} already exists</value>
+  </data>
+  <data name="Error_FolderAlreadyExists" xml:space="preserve">
+    <value>Folder with name {0} already exists</value>
+  </data>
+</root>

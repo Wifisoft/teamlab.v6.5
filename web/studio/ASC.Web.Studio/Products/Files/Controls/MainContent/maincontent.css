@@ -1,0 +1,989 @@
+﻿/*******************************************************************************
+    header
+*******************************************************************************/
+.mainContainerClass .infoPanel
+{
+    display: none;
+}
+#currentFolderInfo
+{
+    color: #808080;
+    cursor: default;
+    font-size: 11px;
+    overflow: hidden;
+    padding: 3px 0 0;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#files_listUp
+{
+    background: url("images/ontop.png") no-repeat scroll 0 5px transparent;
+    color: #666;
+    cursor: pointer;
+    display: none;
+    float: right;
+    font-size: 11px;
+    max-width: 50px;
+    overflow: hidden;
+    padding: 3px 25px 0 16px;
+    white-space: nowrap;
+}
+.fixed #files_listUp
+{
+    display: list-item;
+}
+div.fade_title
+{
+    height: 100%;
+    width: 25px;
+    position: absolute;
+    right: 0px;
+    background-image: url("images/fade.png");
+}
+li.even div.fade_title 
+{
+    background-image: url("images/fade_even.png");
+}
+li.row-over div.fade_title,
+li.row-selected div.fade_title
+{
+    background-image: url("images/fade_over.png");
+}
+*html div.fade_title
+{
+    display: none;
+}
+#files_pageNavigatorHolder
+{
+    display: none;
+    padding-top: 20px;
+    text-align: center;
+}
+/*************************************************************
+    Info Panel
+*************************************************************/
+div.containerBodyBlock div.files_infoPanel
+{
+    display:none;
+    left: 50%;
+    margin: 0;
+    max-width: 900px;
+    position: fixed;
+    top: 0;
+    z-index: 700;
+}
+div.containerBodyBlock div.files_infoPanel div
+{
+    padding-right: 10px;
+    overflow: hidden;
+}
+/*************************************************************
+    Loading
+*************************************************************/
+.fileRow.checkloading div.checkbox
+{
+    background: url("images/throbber.gif") no-repeat 0 0;
+    margin: 6px 1px 0 -1px;
+}
+/*******************************************************************************
+    files_breadCrumbs
+*******************************************************************************/
+#folderHeader
+{
+    margin: 13px 9px 10px;
+    height: 24px;
+}
+#files_breadCrumbsContainer
+{
+    float: left;
+    width: 770px;
+    overflow: hidden;
+}
+#files_breadCrumbsRoot
+{
+    background: url("") no-repeat 3px center transparent;
+    border: 1px solid #D1D1D1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    float: left;
+    height: 18px;
+    max-width: 200px;
+    padding: 3px 2px 1px 22px;
+}
+#files_breadCrumbsRoot.myFiles{background-image: url("images/myfiles.png");}
+#files_breadCrumbsRoot.corporateFiles{background-image: url("images/corporatefiles.png");}
+#files_breadCrumbsRoot.shareformeFiles{background-image: url("images/sharedforme.png");}
+#files_breadCrumbsRoot.projectFiles{background-image: url("images/projectfiles.png");}
+#files_breadCrumbsRoot.trashFiles{background-image: url("images/trash_container.png");}
+
+#files_breadCrumbsCaption
+{
+    color: #333333;
+    float: left;
+    max-width: 180px;
+    outline: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#files_breadCrumbsContainer #files_showTreeView
+{
+    cursor: pointer;
+    float: left;
+    height: 12px;
+    margin: 0 0 0 3px;
+    padding: 2px 0 0 2px;
+    width: 12px;
+}
+#files_breadCrumbs
+{
+    float: left;
+    margin: 4px 0 0 4px;
+    max-width: 590px;
+    overflow: hidden;
+}
+#files_breadCrumbs.previewBreadCrumbs
+{
+    margin: 0 0 0 42px;
+    width: 890px;
+}
+#files_breadCrumbs a
+{
+    color: #333;
+    white-space: nowrap;
+    outline: none;
+}
+#files_breadCrumbs span
+{
+    color: #333;
+    margin: 0pt 8px;
+}
+#files_breadCrumbs .breadCrumbs_cur
+{
+    cursor: default;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+}
+
+#files_breadCrumbsNew
+{
+    float: left;
+    margin-left: 3px;
+}
+.new_inshare
+{
+    color: #C0351A;
+    cursor: default;
+    font-weight: bold;
+}
+
+#switchViewFolder
+{
+    float: right;
+}
+#switchToNormal,
+#switchToCompact
+{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url("images/switch_view.png");
+    display: inline-block;
+    height: 21px;
+}
+#switchToNormal
+{
+    background-position: 0 0;
+    margin-right: -3px;
+    width: 26px;
+}
+#switchViewFolder.compact #switchToNormal
+{
+    background-position: 0 -26px;
+    cursor: pointer;
+}
+#switchViewFolder.compact #switchToNormal:hover
+{
+    background-position: 0 -52px;
+    width: 26px;
+}
+#switchToCompact
+{
+    background-position: -29px -26px;
+    cursor: pointer;
+    width: 24px;
+}
+#switchViewFolder.compact #switchToCompact
+{
+    background-position: -29px 0 !important;
+    cursor: default;
+}
+#switchToCompact:hover
+{
+    background-position: -29px -52px;
+    width: 24px;
+}
+/*******************************************************************************
+   Advansed Filter
+*******************************************************************************/
+#files_filterContainer
+{
+    height: 30px;
+    margin: 0 9px 9px;
+    position: relative;
+    z-index: 1;
+}
+/*******************************************************************************
+    Content Menu
+*******************************************************************************/
+#mainContentHeaderSpacer
+{
+    display: none;
+    height: 21px;
+    width: 100%;
+    padding: 9px 0;
+}
+/*************************************************************
+   Main Content
+*************************************************************/
+#mainContent
+{
+    min-height: 355px;
+    overflow: hidden;
+    width: 952px;
+}
+li.fileRow div
+{
+    float: left;
+}
+li.fileRow
+{
+    padding: 4px 10px;
+    z-index: 100;
+    list-style: none outside none;
+}
+li.fileRow,
+li.fileRow a,
+li.fileRow span,
+li.fileRow div,
+li.fileRow input
+{
+    outline: none;
+}
+li.row-over, li.row-selected
+{
+    background-color: #D2E5F0;
+}
+#files_mainContent
+{
+    border-color: #D2E5F0 #FFF #FFF;
+    border-style: solid;
+    border-width: 1px;
+    display: none;
+    margin: 0;
+    min-height: 340px;
+    padding: 0;
+}
+#files_mainContent.selected
+{
+    border: 1px dashed #a1a1a1;
+}
+li.fileRow div.thumb-file,
+li.fileRow div.thumb-folder
+{
+    cursor: pointer;
+    margin: 2px 8px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+li.fileRow div.checkbox
+{
+    margin: 8px 0px 0;
+    height: 28px;
+    width: 36px;
+}
+li.fileRow.newFolder div.fade_title,
+li.fileRow.newFile div.fade_title,
+li.fileRow.rowRename div.fade_title,
+li.fileRow.row-to div.fade_title,
+li.fileRow.newFolder div.checkbox,
+li.fileRow.newFile div.checkbox,
+li.fileRow.rowRename div.checkbox,
+li.fileRow.newFolder div.rowActions,
+li.fileRow.newFile div.rowActions,
+li.fileRow.rowRename div.rowActions,
+li.fileRow.checkloading.newFolder div.checkbox,
+li.fileRow.checkloading.newFile div.checkbox,
+li.fileRow.checkloading.rowRename div.checkbox,
+li.fileRow.checkloading div.checkbox input,
+li.fileRow.checkloading div.rowActions,
+li.fileRow.checkloading div.share_action
+{
+    visibility: hidden;
+}
+li.fileRow.checkloading.newFolder div.entryTitle,
+li.fileRow.checkloading.newFile div.entryTitle,
+li.fileRow.checkloading.rowRename div.entryTitle
+{
+    margin: 6px 0 8px;
+}
+* + html li.fileRow div.checkbox input
+{
+    padding: 0px;
+    margin: -1px 0 0 0;
+}
+li.fileRow div.entryTitle
+{
+    float: none;
+    z-index: 90;
+    color: #333333;
+    font-family: Arial;
+    white-space: nowrap;
+    overflow: hidden;
+}
+li.fileRow div.entryTitle,
+li.fileRow div.entryInfo
+{
+    width: 770px;
+}
+li.fileRow div.fade_title
+{
+    left: 670px;
+}
+li.fileRow.folderRow div.fade_title
+{
+    left: 740px;
+}
+li.fileRow div.entryTitle div.name
+{
+    max-width: 695px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+li.fileRow.folderRow div.entryTitle div.name
+{
+    max-width: 765px;
+}
+li.fileRow div.entryTitle a
+{
+    cursor: pointer;
+    color: #333333;
+    font-family: Arial;
+    font-size: 18px;
+    text-decoration: none;
+    outline: none;
+}
+li.fileRow div.entryTitle a span
+{
+    color: #A2A2A2;
+}
+li.fileRow div.entryTitle a:hover 
+{
+    text-decoration: underline;
+}
+ul#files_mainContent li.fileRow input.renameInput
+{
+    font-size: 16px;
+    height: 18px;
+    cursor: text;
+    color: #333333;
+    font-family: Arial;
+    width: 530px;
+}
+li.rowRename div.entry-info
+{
+    width: 550px;    
+}
+ul#files_mainContent li.newFolder input.renameInput,
+ul#files_mainContent li.newFile input.renameInput,
+ul#files_mainContent li.rowRename input.renameInput
+{
+    margin-top: 7px;
+}
+.renameAction
+{
+    margin-top: 10px;
+}
+li.newFolder div.apllyName,
+li.newFile div.apllyName,
+li.rowRename div.apllyName
+{
+    background: url("images/name_action.png") no-repeat scroll 0 0px transparent;
+}
+li.newFolder div.cancelName,
+li.newFile div.cancelName,
+li.rowRename div.cancelName
+{
+    background: url("images/name_action.png") no-repeat scroll -19px 0px transparent;
+}
+li.newFolder div.apllyName,
+li.newFile div.apllyName,
+li.rowRename div.apllyName,
+li.newFolder div.cancelName,
+li.newFile div.cancelName,
+li.rowRename div.cancelName
+{
+    height: 16px;
+    width: 16px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+li.rowRename div.entryTitle a.name,
+li.rowRename div.entryInfo,
+li.rowRename div.pencil,
+li.rowRename div.version,
+li.rowRename div.is_new,
+li.rowRename div.share_action,
+li.fileRow.newFolder div.entryInfo,
+li.fileRow.newFile div.entryInfo,
+li.fileRow.newFile div.pencil
+{
+    display: none !important;
+}
+li.fileRow div.version,
+li.fileRow div.is_new
+{
+    font-size: 10px !important;
+    color: #FFF !important;
+    cursor: pointer;
+    padding: 0 2px;
+    margin: 6px 0 0 5px;
+    max-width: 40px;
+    overflow: hidden;
+    text-decoration: none !important;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+li.fileRow div.version
+{
+    background-color: #4AA4BB;
+}
+li.fileRow div.version:hover
+{
+    background-color: #60afc3;
+}
+li.fileRow div.is_new
+{
+    background-color: #E35413;
+}
+li.fileRow div.is_new:hover
+{
+    background-color: #e66930;
+}
+li.fileRow div.entryInfo
+{
+    color: #787878;
+    font-family: Arial;
+    font-size: 10px;
+    cursor: default;
+    float: none;
+    z-index: 90;
+    overflow: hidden;
+    white-space: nowrap;
+}
+li.fileRow div.entryInfo span.create_by
+{
+    display: inline-block;
+    max-width: 280px;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+li.fileRow.cannotEdit div.entryInfo span.create_by
+{
+    max-width:405px;
+}
+div.fileEditing
+{
+    display: none;
+}
+li.fileRow.onEdit div.fileEdit
+{
+    display: none !important;
+}
+li.fileRow.onEdit div.fileEditing
+{
+    cursor: default;
+    display: block;
+}
+li.fileRow div.pencil,
+div.share_action,
+div.rowActions
+{
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    float: right !important;
+    height: 16px;
+    margin: 10px 0 0 10px;
+    width: 16px;
+}
+li.fileRow div.fileEdit.pencil:hover,
+li.fileRow div.fileEditing.pencil,
+div.share_action:hover,
+div.share_action.shareBlue, 
+div.rowActions:hover
+{
+    background-position: 0 -19px;
+}
+div.rowActions
+{
+    background-image: url("images/actions_icon.png");
+    cursor: pointer;
+}
+li.fileRow div.pencil
+{
+    margin-left: 0;
+    cursor: pointer;
+    background-image: url("images/edit_pencil.png");
+}
+div.share_action
+{
+    background-image: url("images/share_action.png");
+    cursor: pointer;
+    display:none;
+}
+.withShare div.share_action
+{
+    display: block;
+}
+/*******************************************************************************
+   compact view
+*******************************************************************************/
+#files_mainContent.compact .fileRow.checkloading div.checkbox
+{
+    height: 26px;
+    margin-top: 2px;
+}
+#files_mainContent.compact li.fileRow, #files_moving.compact li.fileRow
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#files_mainContent.compact div.checkbox, #files_moving.compact div.checkbox
+{
+    height: 24px;
+    margin-top: 4px;
+}
+#files_mainContent.compact li.fileRow div.entryTitle div.name, #files_moving.compact li.fileRow div.entryTitle div.name
+{
+    max-width: 555px;
+    padding-top: 5px;
+}
+#files_mainContent.compact li.fileRow.folderRow div.entryTitle div.name, #files_moving.compact li.fileRow.folderRow div.entryTitle div.name
+{
+    max-width: 625px;
+}
+#files_mainContent.compact li.fileRow div.entryTitle, #files_moving.compact li.fileRow div.entryTitle
+{
+    margin: 0;
+}
+#files_mainContent.compact li.fileRow div.entryTitle, #files_moving li.fileRow div.entryTitle
+{
+    float: left;
+    width: 630px;
+}
+#files_mainContent.compact li.fileRow div.entryInfo, #files_moving li.fileRow div.entryInfo
+{
+    float: left;
+    font-size: 12px;
+    margin-top: 7px;
+    text-align: right;
+    width: 140px;
+}
+#files_mainContent.compact span.entryInfoHidden, #files_moving.compact span.entryInfoHidden
+{
+    display: none;
+}
+#files_mainContent.compact li.fileRow div.fade_title,#files_moving.compact li.fileRow div.fade_title
+{
+    left: 530px;
+}
+#files_mainContent.compact li.fileRow.folderRow div.fade_title,#files_moving.compact li.fileRow.folderRow div.fade_title
+{
+    left: 600px;
+}
+#files_mainContent.compact li.fileRow div.entryTitle a, #files_moving.compact li.fileRow div.entryTitle a
+{
+    font-size: 14px;
+}
+#files_mainContent.compact .thumb-file, #files_moving.compact .thumb-file,
+#files_mainContent.compact .thumb-folder, #files_moving.compact .thumb-folder
+{
+    margin-top: 3px;
+}
+ul#files_mainContent.compact div input.renameInput
+{
+    margin-top: -3px;
+}
+#files_mainContent.compact .renameAction
+{
+    margin-top: 6px;
+}
+#files_mainContent.compact div.apllyName,
+#files_mainContent.compact div.cancelName
+{
+    margin-left: 4px;
+}
+#files_mainContent.compact div.pencil,
+#files_mainContent.compact div.share_action,
+#files_mainContent.compact div.rowActions
+{
+    margin-top: 6px;
+}
+#files_mainContent.compact #content_versions,
+#files_moving.compact #content_versions
+{
+    margin: 4px 0;
+}
+#files_mainContent.compact li.fileRow div.version,
+#files_mainContent.compact li.fileRow div.is_new
+{
+    margin-top: 7px;
+}
+
+/*******************************************************************************
+    Mouse moving
+*******************************************************************************/
+#files_moving
+{
+    cursor: move;
+    display: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 300;
+}
+#files_moving, #ie#fix
+{
+    cursor: alias;
+}
+* + html #files_moving
+{
+    cursor: move;
+}
+#files_moving.copy
+{
+    cursor: copy;
+}
+#files_moving.copy, #ie#fix
+{
+    cursor: crosshair;
+}
+#files_moving div.fade_title,
+#files_moving li.fileRow div.fileEdit,
+#files_moving div.rowActions,
+#files_moving div.share_action
+{
+    display: none !important;
+}
+* + html #files_moving.copy
+{
+    cursor: copy;
+}
+#files_moving_tooltip
+{   
+    background-color: #FFFFE1;
+    border: 1px solid #000;
+    color: #333;
+    cursor: move;
+    display: block;
+    font-family: Arial;
+    font-size: 10px;
+    height: auto;
+    margin-left: 5px;
+    max-width: 500px;
+    padding: 5px 10px;
+    position: absolute;
+    word-wrap: break-word;
+    z-index: 301;
+}
+#files_moving_tooltip, #ie#fix
+{
+    cursor: alias;
+}
+* + html #files_moving_tooltip
+{
+    cursor: move;
+}
+/*******************************************************************************
+     Action panel
+*******************************************************************************/
+#files_actionPanel li a,
+#files_actionsPanel li a
+{
+    background-image: url("images/action_icons.png");
+    background-position: 30px 30px;
+}
+li#files_open_files a
+{
+    background-position: 4px -204px;
+}
+li#files_open_folders a
+{
+    background-position: 4px -178px; 
+}
+li#files_edit_files a, li#files_change_thirdparty a
+{
+    background-position: 4px -74px;
+}
+li#files_shareaccess_files a, li#files_shareAccess_folders a
+{
+    background-position: 4px -282px;
+}
+li#files_download_files a, li#files_download_folders a, li#files_downloadButton a
+{
+    background-position: 4px -48px; 
+}
+li#files_unsubscribe_files a, li#files_unsubscribe_folders a, li#files_unsubscribeButton a
+{
+    background-position:4px -308px;
+}
+li#files_versions_files a
+{
+    background-position: 4px -126px;
+}
+li#files_moveto_files a, li#files_moveto_folders a, li#files_movetoButton a
+{
+    background-position: 4px -152px;
+}
+li#files_copyto_files a, li#files_copyto_folders a, li#files_copytoButton a
+{
+    background-position: 4px 4px;
+}
+li#files_restore_files a, li#files_restore_folders a, li#files_restoreButton a
+{
+    background-position: 4px -256px; 
+}
+li#files_rename_files a, li#files_rename_folders a
+{
+    background-position: 4px -230px;
+}
+li#files_remove_files a, li#files_remove_folders a, li#files_deleteButton a, li#files_remove_thirdparty a
+{
+     background-position: 4px -22px; 
+}
+li#files_emptyTrashButton a
+{
+    background-position: 4px -100px;
+}
+/*******************************************************************************
+     Dialog window
+*******************************************************************************/
+
+div.files_remove_list
+{
+    border: 1px solid #D1D1D1;
+    line-height: 20px;
+    margin: 15px 0 0;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 15px 15px;
+}
+dd.confirmRemoveFolders, dd.confirmRemoveFiles
+{
+    padding: 10px 0 0 80px;
+}
+dd.confirmRemoveFolders label, dd.confirmRemoveFiles label
+{
+    display:block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 270px;
+}
+dt.confirmRemoveFolders, dt.confirmRemoveFiles
+{
+    float: left;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+    width: 70px;
+}
+#files_overwrite_list
+{
+    border: 1px solid #D1D1D1;
+    line-height: 20px;
+    list-style-type: none;
+    margin: 15px 0 0;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 15px;
+}
+#files_overwrite_list li
+{
+    width: 330px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*******************************************************************************
+     Progress
+*******************************************************************************/
+#files_bottom_loader
+{
+    background-color: #FFF;
+    bottom: 0;
+    left: 50%;
+    margin: 0;
+    position: fixed;
+    width: 200px;
+    z-index: 200;
+}
+div.files_progress_box .terminateTasks
+{
+    background: url("images/cross.png") no-repeat;
+    cursor: pointer;
+    float: right;
+    height: 9px;
+    margin-right: -20px;
+    width: 9px;
+}
+
+/*******************************************************************************
+    versions
+*******************************************************************************/
+#content_versions
+{
+    border-top: 1px solid #D2E5F0;
+    width: 100%;
+    margin-top: 10px;
+}
+li.even #content_versions,
+li.row-over #content_versions,
+li.row-selected #content_versions
+{
+    border-top-color: #FFF;
+}
+span.versionsTitle
+{
+    color: #111111;
+    font-size: 14px;
+    font-weight: bolder;
+    margin: 12px 5px 10px;
+}
+div.versionRow
+{
+    border-bottom: 1px solid #D1D1D1;
+    color: #323232;
+    height: 16px;
+    padding: 5px;
+    width: 100%;
+}
+div.versionRow div
+{
+    padding:0 5px;
+}
+div.versionRow a
+{
+    color: #323232;
+}
+div.version_num
+{
+    text-align: center;
+    width: 55px;
+}
+div.version_datetime
+{
+    max-width: 140px;
+    min-width: 125px;
+}
+div.version_size
+{
+    width:60px;
+}
+div.version_author.userLink
+{
+    min-width:130px;
+    max-width:450px;
+    padding-left:20px;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.versionRow div.version_operation
+{
+    float: right;
+    max-width: 175px;
+    padding-right: 10px;
+    text-align: right;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+div.version_operation a
+{
+    font-size: 11px;
+}
+.versionRow .version_operation div
+{
+    cursor: pointer;
+    display:none;
+    height:16px;
+    width:16px;
+    margin-right:8px;
+    padding:0;
+}
+.versionRow .version_operation .downloadVersion
+{
+    background: url("images/action_icons.png") no-repeat 0px -48px;
+}
+.versionRow .version_operation .previewVersion
+{
+    background: url("images/action_icons.png") no-repeat 0px -206px;
+}
+.versionRow.actionRow .downloadVersion,
+.versionRow.actionRow .previewVersion
+{
+    display:block;
+}
+#content_versions.notPreview .previewVersion
+{
+    display:none;
+}
+/*******************************************************************************
+    Tooltip
+*******************************************************************************/
+#entryTooltip 
+{
+    background-color: #FFF;
+    border: 1px solid #d1d1d1;
+    display: none;
+    line-height: 20px;
+    margin: 6px 0 0 -13px;
+    padding: 10px 15px 15px;
+    position: absolute;
+    z-index: 254;
+    
+    -moz-box-shadow: 0 0 8px #D1D1D1;
+    -webkit-box-shadow: 0 0 8px #D1D1D1;
+    box-shadow: 0 0 8px #D1D1D1;
+}
+#entryTooltip dt
+{
+    color: #9CA0A4;
+    float: left;
+    width: 130px;    
+}
+#entryTooltip dd
+{
+    margin-left: 135px;
+}
+/*******************************************************************************
+    Mobile
+*******************************************************************************/
+body.mobile #content_versions .previewVersion
+{
+    display: block;
+}
+body.mobile #files_download_folders,
+body.mobile #files_download_files,
+body.mobile #files_downloadButton,
+body.mobile #files_mainDownload,
+body.mobile #content_versions .downloadVersion
+{
+    display: none !important;
+}

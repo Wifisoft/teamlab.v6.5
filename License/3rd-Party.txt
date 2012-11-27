@@ -1,0 +1,177 @@
+TeamLab uses code from the following 3rd party projects.
+
+
+1. AWSSDK - Amazon Web Services SDK for .NET. (http://aws.amazon.com/sdkfornet/)
+
+License:        Apache 2.0 license
+License File:   redistributable\third-party\Amazon\AWSLicense.txt
+File:           redistributable\third-party\Amazon\AWSSDK.dll
+
+
+2. MySql.Data - Connector/Net is a fully-managed ADO.NET driver for MySQL. (http://dev.mysql.com/downloads/connector/net/)
+
+License:        GPL v2
+License File:   redistributable\third-party\db\mysql\COPYING
+File:           redistributable\third-party\db\mysql\MySql.Data.dll
+
+
+3. System.Data.SQLite - ADO.NET 2.0/3.5 SQLite Data Provider. (http://sqlite.phxsoftware.com/)
+
+License:        Public Domain
+File:           redistributable\third-party\db\sqlite\System.Data.SQLite.DLL
+
+
+4. HtmlAgilityPack - This is an agile HTML parser that builds a read/write DOM and supports plain XPATH or XSLT. (http://htmlagilitypack.codeplex.com/)
+
+License:        Microsoft Public License (Ms-PL)
+License File:   redistributable\third-party\HtmlAgilityPack\HtmlAgilityPack.license
+File:           redistributable\third-party\HtmlAgilityPack\HtmlAgilityPack.dll
+
+
+5. log4net - log4net is a tool to help the programmer output log statements to a variety of output targets. (http://logging.apache.org/log4net/index.html)
+
+License:        Apache 2.0 license
+License File:   redistributable\third-party\log4net\log4net.license
+File:           redistributable\third-party\log4net\log4net.dll
+
+
+6. Lucene.Net - dotLucene/Lucene.Net is the .NET implementation of the Lucene full-text search engine library. (http://sourceforge.net/projects/dotlucene/)
+
+License:        Apache 2.0 license
+License File:   redistributable\third-party\Lucene.Net\LICENSE.TXT
+File:           redistributable\third-party\Lucene.Net\Lucene.Net.dll
+
+
+7. NUnit - NUnit is a unit-testing framework for all .Net languages. (http://www.nunit.org/)
+
+License:        AS-IS
+License File:   redistributable\third-party\NUnit 2.4.6\license.txt
+File:           redistributable\third-party\NUnit 2.4.6\nunit.framework.dll
+
+
+8. NVelocity - NVelocity is a port of the excellent Apache Jakarta Velocity project. (http://www.castleproject.org/others/nvelocity/index.html)
+
+License:        Apache 2.0 license
+License File:   redistributable\third-party\NVelocity\ASL - Apache Software Foundation License.txt
+File:           redistributable\third-party\NVelocity\NVelocity.dll
+
+
+9. AjaxPro - Ajax.NET Professional (AjaxPro) is one of the first AJAX frameworks available for Microsoft ASP.NET and is working with .NET 1.1 and 2.0. (http://www.ajaxpro.info/)
+
+License:        AS-IS
+License File:   redistributable\third-party\Web\AjaxPro.2.license
+Files:          redistributable\third-party\Web\AjaxPro.2.dll
+                redistributable\third-party\Web\AjaxControlToolkit.dll
+
+
+10. ICSharpCode.SharpZipLib - The Zip, GZip, BZip2 and Tar Implementation For .NET. (http://www.icsharpcode.net/opensource/sharpziplib/)
+
+License:        GPL v2(with Exception)
+License File:   redistributable\third-party\SharpZipLib\COPYING.txt
+File:           redistributable\third-party\SharpZipLib\ICSharpCode.SharpZipLib.dll
+
+11. FredCK.FCKeditorV2 - FCKeditor is a text editor to be used inside web pages. In 2009 it was renamed CKEditor. (http://ckeditor.com/what-is-ckeditor)
+
+License:        LGPL v3
+License File:   redistributable\third-party\Web\FCKeditor.license
+Files:          redistributable\third-party\Web\FredCK.FCKeditorV2.dll
+                web\studio\ASC.Web.Studio\UserControls\Common\fckeditor
+Modifications:  web\studio\ASC.Web.Studio\UserControls\Common\fckeditor
+
+Used and modified the plugin MediaWiki+FCKeditor.  (http://mediawiki.fckeditor.net/)
+Files:          web\controls\ASC.Web.UserControls.Wiki\UC\fck_wysiwyg
+
+
+12. Microsoft.ServiceModel.Web - WCF REST Starter Kit Preview 2. (http://aspnet.codeplex.com/wikipage?title=WCF%20REST&referringTitle=Home)
+
+License:        Microsoft Source License for ASP.NET Pre-Release Components
+License File:   redistributable\third-party\Microsoft\Microsoft Source License for ASP.NET Pre-Release Components.license
+File:           redistributable\third-party\Microsoft\Microsoft.ServiceModel.Web.dll
+
+
+13. LumiSoft Mail Server - Programm LumiSoft Mail Server is a mailserver. (http://www.lumisoft.ee/)
+
+License:        AS-IS
+License File:   module\ASC.Mail\ASC.Mail.Core\Net\license.txt
+Files:          module\ASC.Mail\ASC.Mail.Core\Net\
+
+
+14. jQuery - Query is a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. (http://jquery.com/)
+
+License:        MIT License
+License File:   web\studio\ASC.Web.Studio\js\MIT-LICENSE.txt
+Files:          web\studio\ASC.Web.Studio\js\auto\jquery_full.js (merged some files project jQuery)
+                web\studio\ASC.Web.Studio\js\auto\jquery.color.js
+                web\studio\ASC.Web.Studio\js\auto\jquery.cookies.js
+                web\studio\ASC.Web.Studio\js\auto\jquery.dimensions.js
+                web\studio\ASC.Web.Studio\js\auto\jquery.fancyzoom.js
+                web\studio\ASC.Web.Studio\js\auto\jquery.ifixpng.js
+                web\studio\ASC.Web.Studio\js\auto\jquery.shadow.js
+                web\studio\ASC.Web.Studio\js\jquery-jtemplates.js
+                web\studio\ASC.Web.Studio\Products\Community\Modules\PhotoManager\js\jquery.history.js
+                web\studio\ASC.Web.Studio\Products\Projects\js\jquery.fancybox-1.2.6.js
+                web\studio\ASC.Web.Studio\UserControls\Statistics\VisitorsChart\js\jquery.flot.js
+
+
+15. BaseCampRestAPI - C# API to access the REST based BaseCamp services http://basecamprestapi.codeplex.com
+
+License:        LGPL
+License File:   redistributable\third-party\BaseCampRestAPI-1.1.0\BasecampRestAPI.license 
+Files:          redistributable\third-party\BaseCampRestAPI-1.1.0\BasecampRestAPI.dll
+
+
+16. LumenWorks.Framework.IO - A Fast CSV Reader http://www.codeproject.com/Articles/9258/A-Fast-CSV-Reader
+
+License:        MIT License
+License File:   redistributable\third-party\CSVReader\MIT-LICENSE.txt 
+Files:          redistributable\third-party\CSVReader\LumenWorks.Framework.IO.dll 
+
+
+17. DotNetOpenAuth is a well established open source library that bring OpenID, OAuth, and ICard capabilities to the Microsoft .NET Framework. http://www.dotnetopenauth.net/
+
+License:        MIT License
+License File:   redistributable\third-party\DotNetOpenAuth\4\MIT-LICENSE.txt
+Files:          redistributable\third-party\DotNetOpenAuth\4\DotNetOpenAuth.dll
+
+
+18. Facebook.dll The Facebook C# SDK helps .Net developers build web, desktop, phone and Windows 8 Metro style applications that integrate with Facebook. http://csharpsdk.org/
+
+License:        MIT License
+License File:   redistributable\third-party\FacebookSDK\LICENSE.txt 
+Files:          redistributable\third-party\FacebookSDK\Facebook.dll 
+
+
+19. LinkedIn.dll The LinkedIn Developer Toolkit is a open source library build in C# for using the LinkedIn® API in your .Net web applications. http://linkedintoolkit.codeplex.com/
+
+License:        Microsoft Public License (Ms-PL)
+License File:   redistributable\third-party\LinkedIn\LinkedIn.license 
+Files:          redistributable\third-party\LinkedIn\LinkedIn.dll 
+
+
+20. SharpBox - Store everything http://sharpbox.codeplex.com/
+
+License:        Microsoft Public License (Ms-PL)
+License File:   redistributable\third-party\ShrapBox\SharpBox-1.2.0.542\MIT - MIT license.txt
+Files:          redistributable\third-party\ShrapBox\compiled\AppLimit.CloudComputing.SharpBox.dll
+
+
+21. Textile.NET is, surprisingly, a textile formatter for .NET projects. http://textilenet.codeplex.com/
+
+License:        Creative Commons' Attribution-ShareAlike 3.0 Unported License
+License File:   redistributable\third-party\Textile\src\LICENSE.txt 
+Files:          redistributable\third-party\Textile\Textile.dll 
+
+
+22. YUICompressor - http://developer.yahoo.com/yui/compressor/
+
+License:        New BSD License
+License File:   redistributable\third-party\YUICompressor\New BSD License.txt
+Files:          redistributable\third-party\YUICompressor\Yahoo.Yui.Compressor.dll 
+
+
+23. Twitterizer2 - http://www.twitterizer.net/tag/twitterizer2/
+
+License:        AS-IS
+License File:   redistributable\third-party\Twitterizer2-2.3.3\Twitterizer2.license.txt 
+Files:          redistributable\third-party\Twitterizer2-2.3.3\Twitterizer2.dll 
+

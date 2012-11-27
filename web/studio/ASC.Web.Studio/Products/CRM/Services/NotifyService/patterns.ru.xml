@@ -1,0 +1,12 @@
+﻿<pt:catalog xmlns:pt="urn:asc.notify.pattern.xsd">
+  <block>
+    <formatter type="ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common" />
+    <patterns>
+      <!--Наступление deadline'а задачи -->
+      <pattern id="TaskDeadLine" name="task deadLine pattern" contentType="html">
+        <subject><![CDATA[Projects [$ProjectTitle]. Discussion Edited: $EntityTitle]]></subject>
+        <body styler="ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile" resource="|pattern_EditMessage|ASC.Projects.Core.Services.NotifyService.PatternResource.en,ASC.Projects.Core"></body>
+      </pattern>    
+    </patterns>
+  </block>
+</pt:catalog>
